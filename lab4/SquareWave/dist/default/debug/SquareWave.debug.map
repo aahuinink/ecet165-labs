@@ -1,0 +1,239 @@
+Microchip MPLAB XC8 PIC(R) Assembler V2.40
+
+Linker command line:
+
+-W-3 \
+  --edf=C:\Program Files\Microchip\xc8\v2.40\pic\dat\20220703182018_en.msgs \
+  -cs -h+dist/default/debug\SquareWave.debug.sym \
+  --cmf=dist/default/debug\SquareWave.debug.cmf -z -Q18F57Q43 \
+  -oC:\Users\a_hui\AppData\Local\Temp\xcAsark.4 -PresetVec=0h \
+  --fixupoverflow=error -ver=XC8 PIC(R) Assembler --fixupoverflow=lstwarn \
+  -Mdist/default/debug/SquareWave.debug.map -E1 --acfsm=1493 \
+  -ACODE=00h-01FFFFh -ACONST=00h-01FFFFh -ASMALLCONST=02600h-026FFhx474 \
+  -AMEDIUMCONST=02600h-0FFFFh,012600h-01FFFFh -ACOMRAM=0500h-055Fh \
+  -AABS1=0500h-024FFh -ABIGRAM=0500h-024FFh \
+  -ARAM=0560h-05FFh,0600h-06FFhx31 -ABANK5=0560h-05FFh -ABANK6=0600h-06FFh \
+  -ABANK7=0700h-07FFh -ABANK8=0800h-08FFh -ABANK9=0900h-09FFh \
+  -ABANK10=0A00h-0AFFh -ABANK11=0B00h-0BFFh -ABANK12=0C00h-0CFFh \
+  -ABANK13=0D00h-0DFFh -ABANK14=0E00h-0EFFh -ABANK15=0F00h-0FFFh \
+  -ABANK16=01000h-010FFh -ABANK17=01100h-011FFh -ABANK18=01200h-012FFh \
+  -ABANK19=01300h-013FFh -ABANK20=01400h-014FFh -ABANK21=01500h-015FFh \
+  -ABANK22=01600h-016FFh -ABANK23=01700h-017FFh -ABANK24=01800h-018FFh \
+  -ABANK25=01900h-019FFh -ABANK26=01A00h-01AFFh -ABANK27=01B00h-01BFFh \
+  -ABANK28=01C00h-01CFFh -ABANK29=01D00h-01DFFh -ABANK30=01E00h-01EFFh \
+  -ABANK31=01F00h-01FFFh -ABANK32=02000h-020FFh -ABANK33=02100h-021FFh \
+  -ABANK34=02200h-022FFh -ABANK35=02300h-023FFh -ABANK36=02400h-024FFh \
+  -ASFR=00h-0FFhx4,0400h-045Fh,0460h-04FFh,02500h-025FFh \
+  -ABIGSFR=00h-04FFh,02500h-025FFh -ACONFIG=0300000h-0300011h \
+  -AIDLOC=0200000h-020003Fh -AEEDATA=0380000h-03803FFh \
+  build/default/debug/squareWave.o 
+
+Object code version is 3.11
+
+Machine type is 18F57Q43
+
+
+
+                Name                               Link     Load   Length Selector   Space Scale
+build/default/debug/squareWave.o
+                resetVec                              0        0        4        0       0
+                code                              1FFC6    1FFC6       3A     FFE3       0
+
+TOTAL           Name                               Link     Load   Length     Space
+        CLASS   CODE           
+                resetVec                              0        0        4         0
+                code                              1FFC6    1FFC6       3A         0
+
+        CLASS   CONST          
+
+        CLASS   SMALLCONST     
+
+        CLASS   MEDIUMCONST    
+
+        CLASS   COMRAM         
+
+        CLASS   ABS1           
+
+        CLASS   BIGRAM         
+
+        CLASS   RAM            
+
+        CLASS   BANK5          
+
+        CLASS   BANK6          
+
+        CLASS   BANK7          
+
+        CLASS   BANK8          
+
+        CLASS   BANK9          
+
+        CLASS   BANK10         
+
+        CLASS   BANK11         
+
+        CLASS   BANK12         
+
+        CLASS   BANK13         
+
+        CLASS   BANK14         
+
+        CLASS   BANK15         
+
+        CLASS   BANK16         
+
+        CLASS   BANK17         
+
+        CLASS   BANK18         
+
+        CLASS   BANK19         
+
+        CLASS   BANK20         
+
+        CLASS   BANK21         
+
+        CLASS   BANK22         
+
+        CLASS   BANK23         
+
+        CLASS   BANK24         
+
+        CLASS   BANK25         
+
+        CLASS   BANK26         
+
+        CLASS   BANK27         
+
+        CLASS   BANK28         
+
+        CLASS   BANK29         
+
+        CLASS   BANK30         
+
+        CLASS   BANK31         
+
+        CLASS   BANK32         
+
+        CLASS   BANK33         
+
+        CLASS   BANK34         
+
+        CLASS   BANK35         
+
+        CLASS   BANK36         
+
+        CLASS   SFR            
+
+        CLASS   BIGSFR         
+
+        CLASS   CONFIG         
+
+        CLASS   IDLOC          
+
+        CLASS   EEDATA         
+
+
+
+SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class
+
+                resetVec                       000000  000004  000004         0       0  CODE    
+                code                           01FFC6  00003A  020000      FFE3       0  CODE    
+
+
+UNUSED ADDRESS RANGES
+
+        Name                Unused          Largest block    Delta
+        BANK10           00A00-00AFF             100
+        BANK11           00B00-00BFF             100
+        BANK12           00C00-00CFF             100
+        BANK13           00D00-00DFF             100
+        BANK14           00E00-00EFF             100
+        BANK15           00F00-00FFF             100
+        BANK16           01000-010FF             100
+        BANK17           01100-011FF             100
+        BANK18           01200-012FF             100
+        BANK19           01300-013FF             100
+        BANK20           01400-014FF             100
+        BANK21           01500-015FF             100
+        BANK22           01600-016FF             100
+        BANK23           01700-017FF             100
+        BANK24           01800-018FF             100
+        BANK25           01900-019FF             100
+        BANK26           01A00-01AFF             100
+        BANK27           01B00-01BFF             100
+        BANK28           01C00-01CFF             100
+        BANK29           01D00-01DFF             100
+        BANK30           01E00-01EFF             100
+        BANK31           01F00-01FFF             100
+        BANK32           02000-020FF             100
+        BANK33           02100-021FF             100
+        BANK34           02200-022FF             100
+        BANK35           02300-023FF             100
+        BANK36           02400-024FF             100
+        BANK5            00560-005FF              A0
+        BANK6            00600-006FF             100
+        BANK7            00700-007FF             100
+        BANK8            00800-008FF             100
+        BANK9            00900-009FF             100
+        BIGRAM           00500-024FF            2000
+        BIGSFR           00004-004FF             4FC
+                         02500-025FF             100
+        CODE             00004-1FFC5           1FFC2
+        COMRAM           00500-0055F              60
+        CONFIG           300000-300011              12
+        CONST            00004-1FFC5           1FFC2
+        EEDATA           380000-3803FF             400
+        IDLOC            200000-20003F              40
+        MEDIUMCONST      02600-0FFFF            DA00
+                         12600-1FFC5            D9C6
+        RAM              00560-024FF             100
+        SFR              00004-004FF             100
+                         02500-025FF             100
+        SMALLCONST       02600-1FFC5             100
+
+                                  Symbol Table
+
+__Hcode         code         00004  __Hdata         data         00004
+__Hedata        edata        00004  __HresetVec     resetVec     00004
+__Hspace_0      (abs)        20000  __Hspace_1      (abs)        00000
+__Hspace_3      (abs)        00000  __Hudata        udata        00004
+__Hudata_acs    udata_acs    00004  __Hudata_bank10 udata_bank10 00004
+__Hudata_bank11 udata_bank11 00004  __Hudata_bank12 udata_bank12 00004
+__Hudata_bank13 udata_bank13 00004  __Hudata_bank14 udata_bank14 00004
+__Hudata_bank15 udata_bank15 00004  __Hudata_bank16 udata_bank16 00004
+__Hudata_bank17 udata_bank17 00004  __Hudata_bank18 udata_bank18 00004
+__Hudata_bank19 udata_bank19 00004  __Hudata_bank20 udata_bank20 00004
+__Hudata_bank21 udata_bank21 00004  __Hudata_bank22 udata_bank22 00004
+__Hudata_bank23 udata_bank23 00004  __Hudata_bank24 udata_bank24 00004
+__Hudata_bank25 udata_bank25 00004  __Hudata_bank26 udata_bank26 00004
+__Hudata_bank27 udata_bank27 00004  __Hudata_bank28 udata_bank28 00004
+__Hudata_bank29 udata_bank29 00004  __Hudata_bank30 udata_bank30 00004
+__Hudata_bank31 udata_bank31 00004  __Hudata_bank32 udata_bank32 00004
+__Hudata_bank33 udata_bank33 00004  __Hudata_bank34 udata_bank34 00004
+__Hudata_bank35 udata_bank35 00004  __Hudata_bank36 udata_bank36 00004
+__Hudata_bank5  udata_bank5  00004  __Hudata_bank6  udata_bank6  00004
+__Hudata_bank7  udata_bank7  00004  __Hudata_bank8  udata_bank8  00004
+__Hudata_bank9  udata_bank9  00004  __Lcode         code         00004
+__Ldata         data         00004  __Ledata        edata        00004
+__LresetVec     resetVec     00000  __Lspace_0      (abs)        00000
+__Lspace_1      (abs)        00000  __Lspace_3      (abs)        00000
+__Ludata        udata        00004  __Ludata_acs    udata_acs    00004
+__Ludata_bank10 udata_bank10 00004  __Ludata_bank11 udata_bank11 00004
+__Ludata_bank12 udata_bank12 00004  __Ludata_bank13 udata_bank13 00004
+__Ludata_bank14 udata_bank14 00004  __Ludata_bank15 udata_bank15 00004
+__Ludata_bank16 udata_bank16 00004  __Ludata_bank17 udata_bank17 00004
+__Ludata_bank18 udata_bank18 00004  __Ludata_bank19 udata_bank19 00004
+__Ludata_bank20 udata_bank20 00004  __Ludata_bank21 udata_bank21 00004
+__Ludata_bank22 udata_bank22 00004  __Ludata_bank23 udata_bank23 00004
+__Ludata_bank24 udata_bank24 00004  __Ludata_bank25 udata_bank25 00004
+__Ludata_bank26 udata_bank26 00004  __Ludata_bank27 udata_bank27 00004
+__Ludata_bank28 udata_bank28 00004  __Ludata_bank29 udata_bank29 00004
+__Ludata_bank30 udata_bank30 00004  __Ludata_bank31 udata_bank31 00004
+__Ludata_bank32 udata_bank32 00004  __Ludata_bank33 udata_bank33 00004
+__Ludata_bank34 udata_bank34 00004  __Ludata_bank35 udata_bank35 00004
+__Ludata_bank36 udata_bank36 00004  __Ludata_bank5  udata_bank5  00004
+__Ludata_bank6  udata_bank6  00004  __Ludata_bank7  udata_bank7  00004
+__Ludata_bank8  udata_bank8  00004  __Ludata_bank9  udata_bank9  00004
+__S0            (abs)        20000  __S1            (abs)        00000
+__S3            (abs)        00000  isa$std         (abs)        00001
+isa$xinst       (abs)        00000  

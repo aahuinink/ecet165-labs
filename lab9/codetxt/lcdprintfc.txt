@@ -1,0 +1,60 @@
+// ----- toString ----- //
+/*
+* converts an integer into a string
+* ARGS: [
+ *      number<unsigned char> : the number to convert to a string;
+ *      length<unsigned char> : the number of digits in the number;
+* RETURNS: [string<char*> : the address of the string containing the integer]
+*/
+extern char* toString(unsigned char number, unsigned char length);
+
+// definition //
+char* toString(unsigned char number, unsigned char length){
+    char string[4] = ""; // max number is 255, so max string length is 3
+    unsigned char copy_num = number;
+    
+    for(signed char i = length-1; i > -1; i--){
+        string[i] = (copy_num % 10) + '0';
+        copy_num /= 10;
+    };
+    return &string;
+}
+
+// ----- LCDprintf ----- //
+/*
+* printf function for the LCD display
+* ARGS: [
+ *          shell<char*> : string to format variables into;
+ *          inputs<char**> : array of pointers to the addresses of the variables to input into shell string;
+ *          length<unsigned char> : length of the largest integer in the variables;
+ *      ]
+* RETURNS: [void]
+*/
+extern void LCDprintf(char* shell, char* inputs[], unsigned char length);
+
+// definition //
+void LCDprintf(char* shell, char* inputs[], unsigned char length){
+    while(*shell != 0x0){
+        // if %s
+        if((*shell == '%') & (*(shell+1) == 's')){
+            // deref inputs, pass pointer, increment inputs
+            LCDprints(*inputs++);
+            shell+=2; //skip "%s"
+        }
+        // if %i
+        else if((*shell == '%') & (*(shell+1) == 'i')){
+            // deref inputs, deref pointer, convert to string, increment inputs
+            LCDprints(toString(**inputs++, length));
+            shell+=2; // skip "%i"
+        // if %c
+        }else if((*shell == '%') & (*(shell+1) == 'c')){
+            // deref inputs, deref char pointer, 
+            LCDprintc(**inputs++); 
+            shell+=2; // skip "%c"
+        }else{
+            // print the char in shell and increment shell
+            LCDprintc(*shell++);
+        }
+    }
+    return;
+}

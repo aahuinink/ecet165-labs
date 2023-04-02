@@ -1,0 +1,386 @@
+[p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F57Q43 ]
+[d frameptr 1249 ]
+"21 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/lab10/setRTC_test.c
+[v _main main `(v  1 e 1 0 ]
+"15 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/lab6/lcd18f.c
+[v _LCDinstruct LCDinstruct `(v  1 e 1 0 ]
+"34
+[v _LCDinit LCDinit `(v  1 e 1 0 ]
+"71
+[v _LCDprintc LCDprintc `(v  1 e 1 0 ]
+"86
+[v _LCDprints LCDprints `(v  1 e 1 0 ]
+"107
+[v _LCDgoto LCDgoto `(v  1 e 1 0 ]
+"133
+[v _toString toString `(*.39uc  1 e 2 0 ]
+"144
+[v _LCDprintf LCDprintf `(v  1 e 1 0 ]
+"4 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/lab8/timer0.c
+[v _timerInit timerInit `(v  1 e 1 0 ]
+"28
+[v _tickINT tickINT `IIH(v  1 e 1 0 ]
+"34
+[v _defaultINT defaultINT `IIH(v  1 e 1 0 ]
+"23 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/lab9/RealTimeClock.c
+[v _RTCrun RTCrun `(v  1 e 1 0 ]
+"80
+[v _setINT setINT `IIL(v  1 e 1 0 ]
+"27 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/matrixkeypad/keypad18f.c
+[v _keyScan keyScan `(uc  1 e 1 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"86 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"19 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"11 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"19 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/lab8/timer0.h
+[v _tick_count tick_count `VEuc  1 e 1 0 ]
+"21 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/lab9/RealTimeClock.h
+[v _nSetRTC nSetRTC `uc  1 e 1 0 ]
+"23437 C:\Program Files\Microchip\xc8\v2.40\pic\include\proc\pic18f57q43.h
+[v _TMR0H TMR0H `VEuc  1 e 1 @793 ]
+"23691
+[v _T0CON0 T0CON0 `VEuc  1 e 1 @794 ]
+[s S203 . 1 `uc 1 OUTPS 1 0 :4:0 
+`uc 1 MD16 1 0 :1:4 
+`uc 1 OUT 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 EN 1 0 :1:7 
+]
+"23719
+[s S209 . 1 `uc 1 T0OUTPS 1 0 :4:0 
+`uc 1 T0MD16 1 0 :1:4 
+`uc 1 T0OUT 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 T0EN 1 0 :1:7 
+]
+[s S215 . 1 `uc 1 OUTPS0 1 0 :1:0 
+`uc 1 OUTPS1 1 0 :1:1 
+`uc 1 OUTPS2 1 0 :1:2 
+`uc 1 OUTPS3 1 0 :1:3 
+`uc 1 T016BIT 1 0 :1:4 
+]
+[u S221 . 1 `S203 1 . 1 0 `S209 1 . 1 0 `S215 1 . 1 0 ]
+[v _T0CON0bits T0CON0bits `VES221  1 e 1 @794 ]
+"23789
+[v _T0CON1 T0CON1 `VEuc  1 e 1 @795 ]
+[s S432 . 1 `uc 1 SPI1RXIP 1 0 :1:0 
+`uc 1 SPI1TXIP 1 0 :1:1 
+`uc 1 SPI1IP 1 0 :1:2 
+`uc 1 TMR2IP 1 0 :1:3 
+`uc 1 TMR1IP 1 0 :1:4 
+`uc 1 TMR1GIP 1 0 :1:5 
+`uc 1 CCP1IP 1 0 :1:6 
+`uc 1 TMR0IP 1 0 :1:7 
+]
+"31141
+[u S441 . 1 `S432 1 . 1 0 ]
+[v _IPR3bits IPR3bits `VES441  1 e 1 @869 ]
+[s S104 . 1 `uc 1 ANSELB0 1 0 :1:0 
+`uc 1 ANSELB1 1 0 :1:1 
+`uc 1 ANSELB2 1 0 :1:2 
+`uc 1 ANSELB3 1 0 :1:3 
+`uc 1 ANSELB4 1 0 :1:4 
+`uc 1 ANSELB5 1 0 :1:5 
+`uc 1 ANSELB6 1 0 :1:6 
+`uc 1 ANSELB7 1 0 :1:7 
+]
+"39630
+[u S113 . 1 `S104 1 . 1 0 ]
+"39630
+"39630
+[v _ANSELBbits ANSELBbits `VES113  1 e 1 @1032 ]
+[s S125 . 1 `uc 1 WPUB0 1 0 :1:0 
+`uc 1 WPUB1 1 0 :1:1 
+`uc 1 WPUB2 1 0 :1:2 
+`uc 1 WPUB3 1 0 :1:3 
+`uc 1 WPUB4 1 0 :1:4 
+`uc 1 WPUB5 1 0 :1:5 
+`uc 1 WPUB6 1 0 :1:6 
+`uc 1 WPUB7 1 0 :1:7 
+]
+"39692
+[u S134 . 1 `S125 1 . 1 0 ]
+"39692
+"39692
+[v _WPUBbits WPUBbits `VES134  1 e 1 @1033 ]
+"40047
+[v _IOCBF IOCBF `VEuc  1 e 1 @1039 ]
+"40605
+[v _ANSELD ANSELD `VEuc  1 e 1 @1048 ]
+"40667
+[v _WPUD WPUD `VEuc  1 e 1 @1049 ]
+"41150
+[v _ANSELF ANSELF `VEuc  1 e 1 @1064 ]
+"41212
+[v _WPUF WPUF `VEuc  1 e 1 @1065 ]
+[s S172 . 1 `uc 1 SWIE 1 0 :1:0 
+`uc 1 HLVDIE 1 0 :1:1 
+`uc 1 OSFIE 1 0 :1:2 
+`uc 1 CSWIE 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 CLC1IE 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 IOCIE 1 0 :1:7 
+]
+"45782
+[u S181 . 1 `S172 1 . 1 0 ]
+"45782
+"45782
+[v _PIE0bits PIE0bits `VES181  1 e 1 @1182 ]
+[s S390 . 1 `uc 1 SPI1RXIE 1 0 :1:0 
+`uc 1 SPI1TXIE 1 0 :1:1 
+`uc 1 SPI1IE 1 0 :1:2 
+`uc 1 TMR2IE 1 0 :1:3 
+`uc 1 TMR1IE 1 0 :1:4 
+`uc 1 TMR1GIE 1 0 :1:5 
+`uc 1 CCP1IE 1 0 :1:6 
+`uc 1 TMR0IE 1 0 :1:7 
+]
+"45941
+[u S399 . 1 `S390 1 . 1 0 ]
+"45941
+"45941
+[v _PIE3bits PIE3bits `VES399  1 e 1 @1185 ]
+[s S411 . 1 `uc 1 SPI1RXIF 1 0 :1:0 
+`uc 1 SPI1TXIF 1 0 :1:1 
+`uc 1 SPI1IF 1 0 :1:2 
+`uc 1 TMR2IF 1 0 :1:3 
+`uc 1 TMR1IF 1 0 :1:4 
+`uc 1 TMR1GIF 1 0 :1:5 
+`uc 1 CCP1IF 1 0 :1:6 
+`uc 1 TMR0IF 1 0 :1:7 
+]
+"46815
+[u S420 . 1 `S411 1 . 1 0 ]
+"46815
+"46815
+[v _PIR3bits PIR3bits `VES420  1 e 1 @1201 ]
+"47699
+[v _LATD LATD `VEuc  1 e 1 @1217 ]
+[s S309 . 1 `uc 1 LATD0 1 0 :1:0 
+`uc 1 LATD1 1 0 :1:1 
+`uc 1 LATD2 1 0 :1:2 
+`uc 1 LATD3 1 0 :1:3 
+`uc 1 LATD4 1 0 :1:4 
+`uc 1 LATD5 1 0 :1:5 
+`uc 1 LATD6 1 0 :1:6 
+`uc 1 LATD7 1 0 :1:7 
+]
+"47716
+[u S318 . 1 `S309 1 . 1 0 ]
+"47716
+"47716
+[v _LATDbits LATDbits `VES318  1 e 1 @1217 ]
+"47793
+[v _LATF LATF `VEuc  1 e 1 @1219 ]
+[s S83 . 1 `uc 1 TRISB0 1 0 :1:0 
+`uc 1 TRISB1 1 0 :1:1 
+`uc 1 TRISB2 1 0 :1:2 
+`uc 1 TRISB3 1 0 :1:3 
+`uc 1 TRISB4 1 0 :1:4 
+`uc 1 TRISB5 1 0 :1:5 
+`uc 1 TRISB6 1 0 :1:6 
+`uc 1 TRISB7 1 0 :1:7 
+]
+"47934
+[u S92 . 1 `S83 1 . 1 0 ]
+"47934
+"47934
+[v _TRISBbits TRISBbits `VES92  1 e 1 @1223 ]
+"48041
+[v _TRISD TRISD `VEuc  1 e 1 @1225 ]
+"48135
+[v _TRISF TRISF `VEuc  1 e 1 @1227 ]
+"48483
+[v _PORTF PORTF `VEuc  1 e 1 @1235 ]
+[s S146 . 1 `uc 1 INT0EDG 1 0 :1:0 
+`uc 1 INT1EDG 1 0 :1:1 
+`uc 1 INT2EDG 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 IPEN 1 0 :1:5 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"48565
+[s S154 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 GIEH 1 0 :1:7 
+]
+"48565
+[u S157 . 1 `S146 1 . 1 0 `S154 1 . 1 0 ]
+"48565
+"48565
+[v _INTCON0bits INTCON0bits `VES157  1 e 1 @1238 ]
+"54270
+[v _IOCBF4 IOCBF4 `VEb  1 e 0 @8316 ]
+"54294
+[v _IOCBN4 IOCBN4 `VEb  1 e 0 @8308 ]
+"21 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/lab10/setRTC_test.c
+[v _main main `(v  1 e 1 0 ]
+{
+"36
+[v main@indexer indexer `[12]uc  1 a 12 43 ]
+[s S24 realtime 4 `uc 1 hours 1 0 `uc 1 minutes 1 1 `uc 1 seconds 1 2 `uc 1 meridian 1 3 ]
+"26
+[v main@current_time current_time `S24  1 a 4 59 ]
+"39
+[v main@key key `uc  1 a 1 58 ]
+"33
+[v main@position position `uc  1 a 1 57 ]
+[v main@F16727 F16727 `[12]uc  1 s 12 F16727 ]
+"135
+} 0
+"27 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/matrixkeypad/keypad18f.c
+[v _keyScan keyScan `(uc  1 e 1 0 ]
+{
+"34
+[v keyScan@lookup lookup `[4][4]uc  1 a 16 4 ]
+"31
+[v keyScan@rowshift rowshift `uc  1 a 1 22 ]
+"30
+[v keyScan@cols cols `uc  1 a 1 21 ]
+"29
+[v keyScan@colshift colshift `uc  1 a 1 20 ]
+"31
+[v keyScan@F16694 F16694 `[4][4]uc  1 s 16 F16694 ]
+"80
+} 0
+"23 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/lab9/RealTimeClock.c
+[v _RTCrun RTCrun `(v  1 e 1 0 ]
+{
+"25
+[v RTCrun@current_time current_time `[4]*.39uc  1 a 8 31 ]
+[s S24 realtime 4 `uc 1 hours 1 0 `uc 1 minutes 1 1 `uc 1 seconds 1 2 `uc 1 meridian 1 3 ]
+"23
+[v RTCrun@start_time start_time `*.39S24  1 p 2 28 ]
+"78
+} 0
+"4 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/lab8/timer0.c
+[v _timerInit timerInit `(v  1 e 1 0 ]
+{
+"26
+} 0
+"144 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/lab6/lcd18f.c
+[v _LCDprintf LCDprintf `(v  1 e 1 0 ]
+{
+[v LCDprintf@shell shell `*.32uc  1 p 2 20 ]
+[v LCDprintf@inputs inputs `*.39*.39uc  1 p 2 22 ]
+"168
+} 0
+"133
+[v _toString toString `(*.39uc  1 e 2 0 ]
+{
+[v toString@number number `uc  1 a 1 wreg ]
+"137
+[v toString@i i `c  1 a 1 17 ]
+"134
+[v toString@string string `[4]uc  1 a 4 11 ]
+"135
+[v toString@copy_num copy_num `uc  1 a 1 16 ]
+"133
+[v toString@number number `uc  1 a 1 wreg ]
+[v toString@length length `uc  1 p 1 9 ]
+[v toString@number number `uc  1 a 1 15 ]
+"142
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"10
+[v ___awmod@sign sign `uc  1 a 1 6 ]
+[v ___awmod@counter counter `uc  1 a 1 5 ]
+"7
+[v ___awmod@dividend dividend `i  1 p 2 1 ]
+[v ___awmod@divisor divisor `i  1 p 2 3 ]
+"34
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"10
+[v ___awdiv@quotient quotient `i  1 a 2 7 ]
+"11
+[v ___awdiv@sign sign `uc  1 a 1 6 ]
+[v ___awdiv@counter counter `uc  1 a 1 5 ]
+"7
+[v ___awdiv@dividend dividend `i  1 p 2 1 ]
+[v ___awdiv@divisor divisor `i  1 p 2 3 ]
+"41
+} 0
+"86 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/lab6/lcd18f.c
+[v _LCDprints LCDprints `(v  1 e 1 0 ]
+{
+[v LCDprints@c c `*.39uc  1 p 2 18 ]
+"103
+} 0
+"71
+[v _LCDprintc LCDprintc `(v  1 e 1 0 ]
+{
+[v LCDprintc@c c `uc  1 a 1 wreg ]
+[v LCDprintc@c c `uc  1 a 1 wreg ]
+[v LCDprintc@c c `uc  1 a 1 2 ]
+"85
+} 0
+"34
+[v _LCDinit LCDinit `(v  1 e 1 0 ]
+{
+"69
+} 0
+"107
+[v _LCDgoto LCDgoto `(v  1 e 1 0 ]
+{
+[v LCDgoto@pos pos `uc  1 a 1 wreg ]
+[v LCDgoto@pos pos `uc  1 a 1 wreg ]
+[v LCDgoto@pos pos `uc  1 a 1 3 ]
+"110
+} 0
+"15
+[v _LCDinstruct LCDinstruct `(v  1 e 1 0 ]
+{
+[v LCDinstruct@instr instr `uc  1 a 1 wreg ]
+[v LCDinstruct@instr instr `uc  1 a 1 wreg ]
+"17
+[v LCDinstruct@instr instr `uc  1 a 1 2 ]
+"31
+} 0
+"80 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/lab9/RealTimeClock.c
+[v _setINT setINT `IIL(v  1 e 1 0 ]
+{
+"86
+} 0
+"28 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/lab8/timer0.c
+[v _tickINT tickINT `IIH(v  1 e 1 0 ]
+{
+"32
+} 0
+"34
+[v _defaultINT defaultINT `IIH(v  1 e 1 0 ]
+{
+"36
+} 0

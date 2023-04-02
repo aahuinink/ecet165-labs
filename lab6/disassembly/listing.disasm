@@ -1,0 +1,709 @@
+Disassembly Listing for lcdtest
+Generated From:
+C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/lab6/dist/default/production/lab6.production.elf
+6-Mar-2023 6:16:30 PM
+
+---  C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/lab6/lcdtest.c  -----------
+1:              /********************************************************************************
+2:              * lcdtest.c
+3:              * ECET165 Embedded Micro-controllers
+4:              * Created: 13 Feb 2023
+5:              * Aaron Huinink
+6:              * Demonstrates functionality of the lcd18f library for an LCD on port d.
+7:             ********************************************************************************/
+8:             
+9:             #include "lcd18f.h"
+10:            #include <xc.h>
+11:            
+12:            
+13:            // ============================ PRAGMA CONFIG =================================//
+14:            #pragma config WDTE = OFF               // Watchdog timer enable off
+15:            #pragma config FEXTOSC = OFF            // External oscillator off
+16:            #pragma config RSTOSC = HFINTOSC_64MHZ  // Set reset oscillator to high freq internal osc at 64MHz
+17:            
+18:            // ============================ MAIN LOOP =================================//
+19:            
+20:            void main(void) {
+21:                   // setup port c
+22:                TRISC = 0x00;
+28A2  0E00     MOVLW 0x0
+28A4  6EC8     MOVWF 0xFC8, ACCESS
+23:                ANSELC = 0x00;
+28A6  0E00     MOVLW 0x0
+28A8  0104     MOVLB 0x4
+28AA  6F10     MOVWF 0x10, BANKED
+24:                LATC = 0x0;
+28AC  0E00     MOVLW 0x0
+28AE  6EC0     MOVWF 0xFC0, ACCESS
+25:                WPUC = 0x00;
+28B0  0E00     MOVLW 0x0
+28B2  6F11     MOVWF 0x11, BANKED
+26:                
+27:                LCDinit();
+28B4  EC02     CALL 0x2604, 0
+28B6  F013     NOP
+28:                
+29:                LCDgoto(0x04);
+28B8  0E04     MOVLW 0x4
+28BA  ECD9     CALL 0x29B2, 0
+28BC  F014     NOP
+30:                
+31:                unsigned char address = LCDgetCursor();
+28BE  EC7B     CALL 0x26F6, 0
+28C0  F013     NOP
+28C2  6E0D     MOVWF 0xD, ACCESS
+32:                unsigned char hello[] = "hello";
+28C4  EE21     LFSR 2, 0x50E
+28C6  F10E     NOP
+28C8  EE11     LFSR 1, 0x507
+28CA  F107     NOP
+28CC  0E05     MOVLW 0x5
+28CE  C4DB     MOVFF PLUSW2, PLUSW1
+28D0  F4E3     NOP
+28D2  06E8     DECF 0xFE8, F, ACCESS
+28D4  E2FC     BC 0x28CE
+33:                
+34:                LATC = address;
+28D6  C50D     MOVFF address, LATC
+28D8  F4C0     NOP
+35:                
+36:                LCD_HOME;
+28DA  0E02     MOVLW 0x2
+28DC  ECDF     CALL 0x27BE, 0
+28DE  F013     NOP
+37:                
+38:                LATC = LCDgetCursor();
+28E0  EC7B     CALL 0x26F6, 0
+28E2  F013     NOP
+28E4  6EC0     MOVWF 0xFC0, ACCESS
+39:                
+40:                LCDprints(hello);
+28E6  0E07     MOVLW 0x7
+28E8  6E04     MOVWF 0x4, ACCESS
+28EA  0E05     MOVLW 0x5
+28EC  6E05     MOVWF 0x5, ACCESS
+28EE  EC1C     CALL 0x2838, 0
+28F0  F014     NOP
+41:                
+42:                
+43:                while(1){
+44:                    
+45:                };
+28F2  EF79     GOTO 0x28F2
+28F4  F014     NOP
+28F6  EFFE     GOTO 0x1FFFC
+28F8  F0FF     NOP
+46:            }
+---  C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/lab6/lcd18f.c  ------------
+1:              /********************************************************************************
+2:              * lcd18f.c
+3:              * ECET165 Embedded Micro-controllers
+4:              * Created: 13 Feb 2023
+5:              * Aaron Huinink
+6:              * Provides functionality for pic18f micro-controllers to connect to a 4bit
+7:              * 1 line 5x8 font lcd on port d. 
+8:             ********************************************************************************/
+9:             
+10:            // ============================ INCLUDES/DEFINES =================================//
+11:            #include <xc.h>
+12:            #include "lcd18f.h"  
+13:            
+14:            // ============================ FUNCTION DEFS =================================//
+15:            void busy(){
+16:            
+17:                LCD_RW = 1;     // set lcd to read mode
+294C  8AC1     BSF 0xFC1, 5, ACCESS
+18:                LCD_RS = 0;
+294E  98C1     BCF 0xFC1, 4, ACCESS
+19:                
+20:                LCD_STROBE;                  // strobe lcd   
+2950  8CC1     BSF 0xFC1, 6, ACCESS
+2952  0E05     MOVLW 0x5
+2954  2EE8     DECFSZ 0xFE8, F, ACCESS
+2956  D7FE     BRA 0x2954
+2958  F000     NOP
+295A  9CC1     BCF 0xFC1, 6, ACCESS
+21:                __delay_us(5);
+295C  0E1A     MOVLW 0x1A
+295E  2EE8     DECFSZ 0xFE8, F, ACCESS
+2960  D7FE     BRA 0x295E
+2962  D000     BRA 0x2964
+22:                LCD_STROBE;                  // strobe lcd
+2964  8CC1     BSF 0xFC1, 6, ACCESS
+2966  0E05     MOVLW 0x5
+2968  2EE8     DECFSZ 0xFE8, F, ACCESS
+296A  D7FE     BRA 0x2968
+296C  F000     NOP
+296E  9CC1     BCF 0xFC1, 6, ACCESS
+23:                
+24:                __delay_ms(5);              // allow instruction to finish executing
+2970  0E68     MOVLW 0x68
+2972  6E01     MOVWF __mediumconst, ACCESS
+2974  0EE4     MOVLW 0xE4
+2976  2EE8     DECFSZ 0xFE8, F, ACCESS
+2978  D7FE     BRA 0x2976
+297A  2E01     DECFSZ __mediumconst, F, ACCESS
+297C  D7FC     BRA 0x2976
+297E  D000     BRA 0x2980
+25:                
+26:                LCD_RW = 0;     // set back to write mode
+2980  9AC1     BCF 0xFC1, 5, ACCESS
+27:                
+28:            }
+2982  0012     RETURN 0
+29:            
+30:            void LCDinstruct(unsigned char instr){
+27BE  6E03     MOVWF 0x3, ACCESS
+31:                
+32:                LCD_PORTEN; // enable LCD port
+27C0  0E00     MOVLW 0x0
+27C2  0104     MOVLB 0x4
+27C4  6F18     MOVWF 0x18, BANKED
+27C6  0E05     MOVLW 0x5
+27C8  2EE8     DECFSZ 0xFE8, F, ACCESS
+27CA  D7FE     BRA 0x27C8
+27CC  F000     NOP
+27CE  0E00     MOVLW 0x0
+27D0  6EC9     MOVWF 0xFC9, ACCESS
+27D2  0E05     MOVLW 0x5
+27D4  2EE8     DECFSZ 0xFE8, F, ACCESS
+27D6  D7FE     BRA 0x27D4
+27D8  F000     NOP
+27DA  8EC1     BSF 0xFC1, 7, ACCESS
+27DC  0E05     MOVLW 0x5
+27DE  2EE8     DECFSZ 0xFE8, F, ACCESS
+27E0  D7FE     BRA 0x27DE
+27E2  F000     NOP
+33:                
+34:                // set rs to instruction register, write mode
+35:                LCD_RW = 0;
+27E4  9AC1     BCF 0xFC1, 5, ACCESS
+36:                LCD_RS = 0;
+27E6  98C1     BCF 0xFC1, 4, ACCESS
+37:                    
+38:                // send instruction
+39:                LCD_PORT = (LCD_PORT & 0xF0)| instr >> 4;   // send MSnibble
+27E8  C503     MOVFF c, 0x502
+27EA  F502     NOP
+27EC  3A02     SWAPF ___rparam_used, F, ACCESS
+27EE  0E0F     MOVLW 0xF
+27F0  1602     ANDWF ___rparam_used, F, ACCESS
+27F2  50D1     MOVF 0xFD1, W, ACCESS
+27F4  0BF0     ANDLW 0xF0
+27F6  1002     IORWF ___rparam_used, W, ACCESS
+27F8  6ED1     MOVWF 0xFD1, ACCESS
+40:                LCD_STROBE;   
+27FA  8CC1     BSF 0xFC1, 6, ACCESS
+27FC  0E05     MOVLW 0x5
+27FE  2EE8     DECFSZ 0xFE8, F, ACCESS
+2800  D7FE     BRA 0x27FE
+2802  F000     NOP
+2804  9CC1     BCF 0xFC1, 6, ACCESS
+41:                __delay_us(1);
+2806  0E05     MOVLW 0x5
+2808  2EE8     DECFSZ 0xFE8, F, ACCESS
+280A  D7FE     BRA 0x2808
+280C  F000     NOP
+42:                LCD_PORT = (LCD_PORT & 0xF0)|(instr & 0x0F);   // send LSnibble
+280E  C503     MOVFF c, 0x502
+2810  F502     NOP
+2812  0E0F     MOVLW 0xF
+2814  1602     ANDWF ___rparam_used, F, ACCESS
+2816  50D1     MOVF 0xFD1, W, ACCESS
+2818  0BF0     ANDLW 0xF0
+281A  1002     IORWF ___rparam_used, W, ACCESS
+281C  6ED1     MOVWF 0xFD1, ACCESS
+43:                LCD_STROBE;
+281E  8CC1     BSF 0xFC1, 6, ACCESS
+2820  0E05     MOVLW 0x5
+2822  2EE8     DECFSZ 0xFE8, F, ACCESS
+2824  D7FE     BRA 0x2822
+2826  F000     NOP
+2828  9CC1     BCF 0xFC1, 6, ACCESS
+44:                __delay_us(1);
+282A  0E05     MOVLW 0x5
+282C  2EE8     DECFSZ 0xFE8, F, ACCESS
+282E  D7FE     BRA 0x282C
+2830  F000     NOP
+45:                
+46:                // clear busy flag
+47:                busy();
+2832  ECA6     CALL 0x294C, 0
+2834  F014     NOP
+48:            };
+2836  0012     RETURN 0
+49:            
+50:            
+51:            void LCDinit(){
+52:                __delay_ms(30); // wait 
+2604  0E03     MOVLW 0x3
+2606  6E05     MOVWF 0x5, ACCESS
+2608  0E70     MOVLW 0x70
+260A  6E04     MOVWF 0x4, ACCESS
+260C  0E5C     MOVLW 0x5C
+260E  2EE8     DECFSZ 0xFE8, F, ACCESS
+2610  D7FE     BRA 0x260E
+2612  2E04     DECFSZ 0x4, F, ACCESS
+2614  D7FC     BRA 0x260E
+2616  2E05     DECFSZ 0x5, F, ACCESS
+2618  D7FA     BRA 0x260E
+261A  D000     BRA 0x261C
+53:                
+54:                LCD_PORTEN;     // enable the lcd port
+261C  0E00     MOVLW 0x0
+261E  0104     MOVLB 0x4
+2620  6F18     MOVWF 0x18, BANKED
+2622  0E05     MOVLW 0x5
+2624  2EE8     DECFSZ 0xFE8, F, ACCESS
+2626  D7FE     BRA 0x2624
+2628  F000     NOP
+262A  0E00     MOVLW 0x0
+262C  6EC9     MOVWF 0xFC9, ACCESS
+262E  0E05     MOVLW 0x5
+2630  2EE8     DECFSZ 0xFE8, F, ACCESS
+2632  D7FE     BRA 0x2630
+2634  F000     NOP
+2636  8EC1     BSF 0xFC1, 7, ACCESS
+2638  0E05     MOVLW 0x5
+263A  2EE8     DECFSZ 0xFE8, F, ACCESS
+263C  D7FE     BRA 0x263A
+263E  F000     NOP
+55:                
+56:                // send the function set instruction 3 times
+57:                LCD_PORT = (LCD_PORT & 0xF0) | 0x03; 
+2640  50D1     MOVF 0xFD1, W, ACCESS
+2642  0BF0     ANDLW 0xF0
+2644  0903     IORLW 0x3
+2646  6ED1     MOVWF 0xFD1, ACCESS
+58:                LCD_STROBE;
+2648  8CC1     BSF 0xFC1, 6, ACCESS
+264A  0E05     MOVLW 0x5
+264C  2EE8     DECFSZ 0xFE8, F, ACCESS
+264E  D7FE     BRA 0x264C
+2650  F000     NOP
+2652  9CC1     BCF 0xFC1, 6, ACCESS
+59:                __delay_ms(5);
+2654  0E68     MOVLW 0x68
+2656  6E04     MOVWF 0x4, ACCESS
+2658  0EE4     MOVLW 0xE4
+265A  2EE8     DECFSZ 0xFE8, F, ACCESS
+265C  D7FE     BRA 0x265A
+265E  2E04     DECFSZ 0x4, F, ACCESS
+2660  D7FC     BRA 0x265A
+2662  D000     BRA 0x2664
+60:                
+61:                LCD_PORT = (LCD_PORT & 0xF0) | 0x03; 
+2664  50D1     MOVF 0xFD1, W, ACCESS
+2666  0BF0     ANDLW 0xF0
+2668  0903     IORLW 0x3
+266A  6ED1     MOVWF 0xFD1, ACCESS
+62:                LCD_STROBE;
+266C  8CC1     BSF 0xFC1, 6, ACCESS
+266E  0E05     MOVLW 0x5
+2670  2EE8     DECFSZ 0xFE8, F, ACCESS
+2672  D7FE     BRA 0x2670
+2674  F000     NOP
+2676  9CC1     BCF 0xFC1, 6, ACCESS
+63:                __delay_ms(5);
+2678  0E68     MOVLW 0x68
+267A  6E04     MOVWF 0x4, ACCESS
+267C  0EE4     MOVLW 0xE4
+267E  2EE8     DECFSZ 0xFE8, F, ACCESS
+2680  D7FE     BRA 0x267E
+2682  2E04     DECFSZ 0x4, F, ACCESS
+2684  D7FC     BRA 0x267E
+2686  D000     BRA 0x2688
+64:                
+65:                LCD_PORT = (LCD_PORT & 0xF0) | 0x03; 
+2688  50D1     MOVF 0xFD1, W, ACCESS
+268A  0BF0     ANDLW 0xF0
+268C  0903     IORLW 0x3
+268E  6ED1     MOVWF 0xFD1, ACCESS
+66:                LCD_STROBE;
+2690  8CC1     BSF 0xFC1, 6, ACCESS
+2692  0E05     MOVLW 0x5
+2694  2EE8     DECFSZ 0xFE8, F, ACCESS
+2696  D7FE     BRA 0x2694
+2698  F000     NOP
+269A  9CC1     BCF 0xFC1, 6, ACCESS
+67:                __delay_ms(5);
+269C  0E68     MOVLW 0x68
+269E  6E04     MOVWF 0x4, ACCESS
+26A0  0EE4     MOVLW 0xE4
+26A2  2EE8     DECFSZ 0xFE8, F, ACCESS
+26A4  D7FE     BRA 0x26A2
+26A6  2E04     DECFSZ 0x4, F, ACCESS
+26A8  D7FC     BRA 0x26A2
+26AA  D000     BRA 0x26AC
+68:                
+69:                //set 4 bit mode
+70:                LCD_PORT = (LCD_PORT & 0xF0) | 0x02;
+26AC  50D1     MOVF 0xFD1, W, ACCESS
+26AE  0BF0     ANDLW 0xF0
+26B0  0902     IORLW 0x2
+26B2  6ED1     MOVWF 0xFD1, ACCESS
+71:                LCD_STROBE;
+26B4  8CC1     BSF 0xFC1, 6, ACCESS
+26B6  0E05     MOVLW 0x5
+26B8  2EE8     DECFSZ 0xFE8, F, ACCESS
+26BA  D7FE     BRA 0x26B8
+26BC  F000     NOP
+26BE  9CC1     BCF 0xFC1, 6, ACCESS
+72:                __delay_ms(5);
+26C0  0E68     MOVLW 0x68
+26C2  6E04     MOVWF 0x4, ACCESS
+26C4  0EE4     MOVLW 0xE4
+26C6  2EE8     DECFSZ 0xFE8, F, ACCESS
+26C8  D7FE     BRA 0x26C6
+26CA  2E04     DECFSZ 0x4, F, ACCESS
+26CC  D7FC     BRA 0x26C6
+26CE  D000     BRA 0x26D0
+73:                
+74:                // run setup functions    
+75:                LCDinstruct(0x28);      // set  4 bit mode, 2 line display, 5x8 font
+26D0  0E28     MOVLW 0x28
+26D2  ECDF     CALL 0x27BE, 0
+26D4  F013     NOP
+76:                LCDinstruct(0x08);      // display off
+26D6  0E08     MOVLW 0x8
+26D8  ECDF     CALL 0x27BE, 0
+26DA  F013     NOP
+77:                LCDinstruct(0x0F);      // display on, cursor on, blink on
+26DC  0E0F     MOVLW 0xF
+26DE  ECDF     CALL 0x27BE, 0
+26E0  F013     NOP
+78:                LCDinstruct(0x01);      // display clear
+26E2  0E01     MOVLW 0x1
+26E4  ECDF     CALL 0x27BE, 0
+26E6  F013     NOP
+79:                LCDinstruct(0x06);      // entry mode set
+26E8  0E06     MOVLW 0x6
+26EA  ECDF     CALL 0x27BE, 0
+26EC  F013     NOP
+80:                LCD_CLEAR;
+26EE  0E01     MOVLW 0x1
+26F0  ECDF     CALL 0x27BE, 0
+26F2  F013     NOP
+81:            };
+26F4  0012     RETURN 0
+82:            
+83:            void LCDprintc(unsigned char c){
+28FA  6E03     MOVWF 0x3, ACCESS
+84:                // print character from c
+85:                LCD_PORT = (LCD_PORT & 0xF0)|(c>>4);   // send MSnibble
+28FC  C503     MOVFF c, 0x502
+28FE  F502     NOP
+2900  3A02     SWAPF ___rparam_used, F, ACCESS
+2902  0E0F     MOVLW 0xF
+2904  1602     ANDWF ___rparam_used, F, ACCESS
+2906  50D1     MOVF 0xFD1, W, ACCESS
+2908  0BF0     ANDLW 0xF0
+290A  1002     IORWF ___rparam_used, W, ACCESS
+290C  6ED1     MOVWF 0xFD1, ACCESS
+86:                __delay_us(1);
+290E  0E05     MOVLW 0x5
+2910  2EE8     DECFSZ 0xFE8, F, ACCESS
+2912  D7FE     BRA 0x2910
+2914  F000     NOP
+87:                LCD_STROBE; 
+2916  8CC1     BSF 0xFC1, 6, ACCESS
+2918  0E05     MOVLW 0x5
+291A  2EE8     DECFSZ 0xFE8, F, ACCESS
+291C  D7FE     BRA 0x291A
+291E  F000     NOP
+2920  9CC1     BCF 0xFC1, 6, ACCESS
+88:                LCD_PORT = (LCD_PORT & 0xF0)|(c & 0x0F);   // send LSnibble
+2922  C503     MOVFF c, 0x502
+2924  F502     NOP
+2926  0E0F     MOVLW 0xF
+2928  1602     ANDWF ___rparam_used, F, ACCESS
+292A  50D1     MOVF 0xFD1, W, ACCESS
+292C  0BF0     ANDLW 0xF0
+292E  1002     IORWF ___rparam_used, W, ACCESS
+2930  6ED1     MOVWF 0xFD1, ACCESS
+89:                __delay_us(1);
+2932  0E05     MOVLW 0x5
+2934  2EE8     DECFSZ 0xFE8, F, ACCESS
+2936  D7FE     BRA 0x2934
+2938  F000     NOP
+90:                LCD_STROBE;
+293A  8CC1     BSF 0xFC1, 6, ACCESS
+293C  0E05     MOVLW 0x5
+293E  2EE8     DECFSZ 0xFE8, F, ACCESS
+2940  D7FE     BRA 0x293E
+2942  F000     NOP
+2944  9CC1     BCF 0xFC1, 6, ACCESS
+91:                busy();
+2946  ECA6     CALL 0x294C, 0
+2948  F014     NOP
+92:            }
+294A  0012     RETURN 0
+93:            void LCDprints(unsigned char *c){
+94:                
+95:                LCD_PORTEN;  // enable the lcd port
+2838  0E00     MOVLW 0x0
+283A  0104     MOVLB 0x4
+283C  6F18     MOVWF 0x18, BANKED
+283E  0E05     MOVLW 0x5
+2840  2EE8     DECFSZ 0xFE8, F, ACCESS
+2842  D7FE     BRA 0x2840
+2844  F000     NOP
+2846  0E00     MOVLW 0x0
+2848  6EC9     MOVWF 0xFC9, ACCESS
+284A  0E05     MOVLW 0x5
+284C  2EE8     DECFSZ 0xFE8, F, ACCESS
+284E  D7FE     BRA 0x284C
+2850  F000     NOP
+2852  8EC1     BSF 0xFC1, 7, ACCESS
+2854  0E05     MOVLW 0x5
+2856  2EE8     DECFSZ 0xFE8, F, ACCESS
+2858  D7FE     BRA 0x2856
+285A  F000     NOP
+96:                
+97:                // set rs to data register, r/w to write mode
+98:                LCD_RS = 1;
+285C  88C1     BSF 0xFC1, 4, ACCESS
+99:                LCD_RW = 0; 
+285E  9AC1     BCF 0xFC1, 5, ACCESS
+100:               
+101:               __delay_us(1);
+2860  0E05     MOVLW 0x5
+2862  2EE8     DECFSZ 0xFE8, F, ACCESS
+2864  D7FE     BRA 0x2862
+2866  F000     NOP
+102:               
+103:               unsigned char i = 0; // create an indexer variable
+2868  0E00     MOVLW 0x0
+286A  6E06     MOVWF 0x6, ACCESS
+104:           
+105:               while(c[i] != 0x0){ // while there are valid chars in the string
+286C  EF42     GOTO 0x2884
+286E  F014     NOP
+2884  5006     MOVF 0x6, W, ACCESS
+2886  2404     ADDWF 0x4, W, ACCESS
+2888  6ED9     MOVWF 0xFD9, ACCESS
+288A  0E00     MOVLW 0x0
+288C  2005     ADDWFC 0x5, W, ACCESS
+288E  6EDA     MOVWF 0xFDA, ACCESS
+2890  50DF     MOVF 0xFDF, W, ACCESS
+2892  A4D8     BTFSS 0xFD8, 2, ACCESS
+2894  EF4E     GOTO 0x289C
+2896  F014     NOP
+2898  EF50     GOTO 0x28A0
+289A  F014     NOP
+289C  EF38     GOTO 0x2870
+289E  F014     NOP
+106:                   
+107:                   LCDprintc(c[i]);
+2870  5006     MOVF 0x6, W, ACCESS
+2872  2404     ADDWF 0x4, W, ACCESS
+2874  6ED9     MOVWF 0xFD9, ACCESS
+2876  0E00     MOVLW 0x0
+2878  2005     ADDWFC 0x5, W, ACCESS
+287A  6EDA     MOVWF 0xFDA, ACCESS
+287C  50DF     MOVF 0xFDF, W, ACCESS
+287E  EC7D     CALL 0x28FA, 0
+2880  F014     NOP
+108:                   
+109:                   i++;        // increase index by 1
+2882  2A06     INCF 0x6, F, ACCESS
+110:                   
+111:               };
+112:           };
+28A0  0012     RETURN 0
+113:           
+114:           void LCDgoto(unsigned char pos){
+29B2  6E04     MOVWF 0x4, ACCESS
+115:               LCDinstruct(0x80+pos);
+29B4  5004     MOVF 0x4, W, ACCESS
+29B6  0F80     ADDLW 0x80
+29B8  ECDF     CALL 0x27BE, 0
+29BA  F013     NOP
+116:               busy();
+29BC  ECA6     CALL 0x294C, 0
+29BE  F014     NOP
+117:           }
+29C0  0012     RETURN 0
+118:           
+119:           
+120:           void LCDreturn(unsigned char pos){
+121:               LCD_PORTEN;     // enable the LCD port
+122:           
+123:               unsigned char next_line = 0x3F;       // next line begin address variable
+124:               
+125:               if (pos > 16){
+126:                   next_line = 0x00;
+127:               }
+128:               LCDgoto(next_line);     // go to the beginning of the next line on the lcd
+129:               
+130:               for(unsigned char i = 0; i < 40; i++){
+131:                   LCDprint(" ");
+132:               }
+133:               
+134:               LCDgoto(next_line);
+135:               
+136:           }
+137:           
+138:           unsigned char LCDgetCursor(){
+139:               
+140:               LCD_PORTEN;
+26F6  0E00     MOVLW 0x0
+26F8  0104     MOVLB 0x4
+26FA  6F18     MOVWF 0x18, BANKED
+26FC  0E05     MOVLW 0x5
+26FE  2EE8     DECFSZ 0xFE8, F, ACCESS
+2700  D7FE     BRA 0x26FE
+2702  F000     NOP
+2704  0E00     MOVLW 0x0
+2706  6EC9     MOVWF 0xFC9, ACCESS
+2708  0E05     MOVLW 0x5
+270A  2EE8     DECFSZ 0xFE8, F, ACCESS
+270C  D7FE     BRA 0x270A
+270E  F000     NOP
+2710  8EC1     BSF 0xFC1, 7, ACCESS
+2712  0E05     MOVLW 0x5
+2714  2EE8     DECFSZ 0xFE8, F, ACCESS
+2716  D7FE     BRA 0x2714
+2718  F000     NOP
+141:               
+142:               LCD_RS = 0;  // select IR
+271A  98C1     BCF 0xFC1, 4, ACCESS
+143:               
+144:               LCD_RW = 0;  // write mode
+271C  9AC1     BCF 0xFC1, 5, ACCESS
+145:               
+146:               __delay_us(1);
+271E  0E05     MOVLW 0x5
+2720  2EE8     DECFSZ 0xFE8, F, ACCESS
+2722  D7FE     BRA 0x2720
+2724  F000     NOP
+147:               
+148:               unsigned char cursorPos = 0x00;
+149:               
+150:               LCDinstruct(0x14); // shift cursor right
+2726  0E14     MOVLW 0x14
+2728  ECDF     CALL 0x27BE, 0
+272A  F013     NOP
+151:               
+152:               // shift cursor left (0x10) to reverse
+153:               LCD_LAT = (LCD_LAT & 0xF0)| 0x10 >> 4;   // send MSnibble
+272C  50C1     MOVF 0xFC1, W, ACCESS
+272E  0BF0     ANDLW 0xF0
+2730  0901     IORLW 0x1
+2732  6EC1     MOVWF 0xFC1, ACCESS
+154:               LCD_STROBE;   
+2734  8CC1     BSF 0xFC1, 6, ACCESS
+2736  0E05     MOVLW 0x5
+2738  2EE8     DECFSZ 0xFE8, F, ACCESS
+273A  D7FE     BRA 0x2738
+273C  F000     NOP
+273E  9CC1     BCF 0xFC1, 6, ACCESS
+155:               __delay_us(1);
+2740  0E05     MOVLW 0x5
+2742  2EE8     DECFSZ 0xFE8, F, ACCESS
+2744  D7FE     BRA 0x2742
+2746  F000     NOP
+156:               LCD_LAT = (LCD_LAT & 0xF0)|(0x10 & 0x0F);   // send LSnibble
+2748  50C1     MOVF 0xFC1, W, ACCESS
+274A  0BF0     ANDLW 0xF0
+274C  6EC1     MOVWF 0xFC1, ACCESS
+157:               LCD_STROBE;
+274E  8CC1     BSF 0xFC1, 6, ACCESS
+2750  0E05     MOVLW 0x5
+2752  2EE8     DECFSZ 0xFE8, F, ACCESS
+2754  D7FE     BRA 0x2752
+2756  F000     NOP
+2758  9CC1     BCF 0xFC1, 6, ACCESS
+158:               __delay_us(1);
+275A  0E05     MOVLW 0x5
+275C  2EE8     DECFSZ 0xFE8, F, ACCESS
+275E  D7FE     BRA 0x275C
+2760  F000     NOP
+159:               
+160:               LCD_RW = 1; // set to read mode
+2762  8AC1     BSF 0xFC1, 5, ACCESS
+161:               
+162:               LCD_TRIS = 0x0F; // set data bits to input
+2764  0E0F     MOVLW 0xF
+2766  6EC9     MOVWF 0xFC9, ACCESS
+163:               
+164:               // read the address counter
+165:               
+166:               LCD_STROBE;
+2768  8CC1     BSF 0xFC1, 6, ACCESS
+276A  0E05     MOVLW 0x5
+276C  2EE8     DECFSZ 0xFE8, F, ACCESS
+276E  D7FE     BRA 0x276C
+2770  F000     NOP
+2772  9CC1     BCF 0xFC1, 6, ACCESS
+167:               __delay_us(5);
+2774  0E1A     MOVLW 0x1A
+2776  2EE8     DECFSZ 0xFE8, F, ACCESS
+2778  D7FE     BRA 0x2776
+277A  D000     BRA 0x277C
+168:               cursorPos = (LCD_PORT & 0x0F); // read MSnibble
+277C  50D1     MOVF 0xFD1, W, ACCESS
+277E  0B0F     ANDLW 0xF
+2780  6E05     MOVWF 0x5, ACCESS
+169:               cursorPos = cursorPos<<4;
+2782  3805     SWAPF 0x5, W, ACCESS
+2784  0BF0     ANDLW 0xF0
+2786  6E05     MOVWF 0x5, ACCESS
+170:               
+171:               LCD_STROBE;
+2788  8CC1     BSF 0xFC1, 6, ACCESS
+278A  0E05     MOVLW 0x5
+278C  2EE8     DECFSZ 0xFE8, F, ACCESS
+278E  D7FE     BRA 0x278C
+2790  F000     NOP
+2792  9CC1     BCF 0xFC1, 6, ACCESS
+172:               __delay_us(5);
+2794  0E1A     MOVLW 0x1A
+2796  2EE8     DECFSZ 0xFE8, F, ACCESS
+2798  D7FE     BRA 0x2796
+279A  D000     BRA 0x279C
+173:               cursorPos = cursorPos | (LCD_PORT & 0x0F); // read LSnibble
+279C  50D1     MOVF 0xFD1, W, ACCESS
+279E  0B0F     ANDLW 0xF
+27A0  1005     IORWF 0x5, W, ACCESS
+27A2  6E05     MOVWF 0x5, ACCESS
+174:               
+175:               __delay_ms(1); // allow for busy flag to clear
+27A4  0E15     MOVLW 0x15
+27A6  6E04     MOVWF 0x4, ACCESS
+27A8  0EC6     MOVLW 0xC6
+27AA  2EE8     DECFSZ 0xFE8, F, ACCESS
+27AC  D7FE     BRA 0x27AA
+27AE  2E04     DECFSZ 0x4, F, ACCESS
+27B0  D7FC     BRA 0x27AA
+27B2  D000     BRA 0x27B4
+176:               
+177:               LCD_CURSORBLINK;
+27B4  0E0F     MOVLW 0xF
+27B6  ECDF     CALL 0x27BE, 0
+27B8  F013     NOP
+178:               
+179:               return cursorPos;
+27BA  5005     MOVF 0x5, W, ACCESS
+180:           }
+27BC  0012     RETURN 0
+---  C:/Users/a_hui/AppData/Local/Temp/xcAsjbg.s  -------------------------------------------------------
+2984  0EC2     MOVLW 0xC2
+2986  6EF6     MOVWF 0xFF6, ACCESS
+2988  0E29     MOVLW 0x29
+298A  6EF7     MOVWF 0xFF7, ACCESS
+298C  0E00     MOVLW 0x0
+298E  6EF8     MOVWF 0xFF8, ACCESS
+2990  EE01     LFSR 0, 0x50E
+2994  EE10     LFSR 1, 0x6
+2998  0009     TBLRD*+
+299A  C4F5     MOVFF TABLAT, POSTINC0
+299E  50E5     MOVF 0xFE5, W, ACCESS
+29A0  50E1     MOVF 0xFE1, W, ACCESS
+29A2  E1FA     BNZ 0x2998
+29A4  0E00     MOVLW 0x0
+29A6  6EF8     MOVWF 0xFF8, ACCESS
+29A8  0E26     MOVLW 0x26
+29AA  6EF7     MOVWF 0xFF7, ACCESS
+29AC  0100     MOVLB 0x0
+29AE  EF51     GOTO 0x28A2

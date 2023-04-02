@@ -1,0 +1,158 @@
+[p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F57Q43 ]
+[d frameptr 1249 ]
+"15 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/lab6/lcd18f.c
+[v _LCDinstruct LCDinstruct `(v  1 e 1 0 ]
+"34
+[v _LCDinit LCDinit `(v  1 e 1 0 ]
+"71
+[v _LCDprintc LCDprintc `(v  1 e 1 0 ]
+"86
+[v _LCDprints LCDprints `(v  1 e 1 0 ]
+"107
+[v _LCDgoto LCDgoto `(v  1 e 1 0 ]
+"113
+[v _LCDreturn LCDreturn `(uc  1 e 1 0 ]
+"133
+[v _toString toString `(*.39uc  1 e 2 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"86 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"19 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"11 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"27 C:\Users\a_hui\OneDrive - Camosun College\term2\ecet165_embedded_mc\labs\matrixkeypad\keypad18f.c
+[v _keyScan keyScan `(uc  1 e 1 0 ]
+"19 C:\Users\a_hui\OneDrive - Camosun College\term2\ecet165_embedded_mc\labs\matrixkeypad\keypad_test.c
+[v _main main `(v  1 e 1 0 ]
+"40109 C:\Program Files\Microchip\xc8\v2.40\pic\include\proc\pic18f57q43.h
+[v _ANSELC ANSELC `VEuc  1 e 1 @1040 ]
+"40171
+[v _WPUC WPUC `VEuc  1 e 1 @1041 ]
+"40605
+[v _ANSELD ANSELD `VEuc  1 e 1 @1048 ]
+"40667
+[v _WPUD WPUD `VEuc  1 e 1 @1049 ]
+"41150
+[v _ANSELF ANSELF `VEuc  1 e 1 @1064 ]
+"41212
+[v _WPUF WPUF `VEuc  1 e 1 @1065 ]
+"47637
+[v _LATC LATC `VEuc  1 e 1 @1216 ]
+"47699
+[v _LATD LATD `VEuc  1 e 1 @1217 ]
+[s S83 . 1 `uc 1 LATD0 1 0 :1:0 
+`uc 1 LATD1 1 0 :1:1 
+`uc 1 LATD2 1 0 :1:2 
+`uc 1 LATD3 1 0 :1:3 
+`uc 1 LATD4 1 0 :1:4 
+`uc 1 LATD5 1 0 :1:5 
+`uc 1 LATD6 1 0 :1:6 
+`uc 1 LATD7 1 0 :1:7 
+]
+"47716
+[u S92 . 1 `S83 1 . 1 0 ]
+"47716
+"47716
+[v _LATDbits LATDbits `VES92  1 e 1 @1217 ]
+"47793
+[v _LATF LATF `VEuc  1 e 1 @1219 ]
+"47979
+[v _TRISC TRISC `VEuc  1 e 1 @1224 ]
+"48041
+[v _TRISD TRISD `VEuc  1 e 1 @1225 ]
+"48135
+[v _TRISF TRISF `VEuc  1 e 1 @1227 ]
+"48483
+[v _PORTF PORTF `VEuc  1 e 1 @1235 ]
+"19 C:\Users\a_hui\OneDrive - Camosun College\term2\ecet165_embedded_mc\labs\matrixkeypad\keypad_test.c
+[v _main main `(v  1 e 1 0 ]
+{
+"55
+[v main@key key `uc  1 a 1 24 ]
+"33
+[v main@pos pos `uc  1 a 1 25 ]
+"80
+} 0
+"27 C:\Users\a_hui\OneDrive - Camosun College\term2\ecet165_embedded_mc\labs\matrixkeypad\keypad18f.c
+[v _keyScan keyScan `(uc  1 e 1 0 ]
+{
+"34
+[v keyScan@lookup lookup `[4][4]uc  1 a 16 3 ]
+"31
+[v keyScan@rowshift rowshift `uc  1 a 1 21 ]
+"30
+[v keyScan@cols cols `uc  1 a 1 20 ]
+"29
+[v keyScan@colshift colshift `uc  1 a 1 19 ]
+"31
+[v keyScan@F16694 F16694 `[4][4]uc  1 s 16 F16694 ]
+"80
+} 0
+"113 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/lab6/lcd18f.c
+[v _LCDreturn LCDreturn `(uc  1 e 1 0 ]
+{
+[v LCDreturn@pos pos `uc  1 a 1 wreg ]
+"123
+[v LCDreturn@i i `uc  1 a 1 4 ]
+"116
+[v LCDreturn@next_line next_line `uc  1 a 1 5 ]
+"113
+[v LCDreturn@pos pos `uc  1 a 1 wreg ]
+[v LCDreturn@pos pos `uc  1 a 1 3 ]
+"131
+} 0
+"71
+[v _LCDprintc LCDprintc `(v  1 e 1 0 ]
+{
+[v LCDprintc@c c `uc  1 a 1 wreg ]
+[v LCDprintc@c c `uc  1 a 1 wreg ]
+[v LCDprintc@c c `uc  1 a 1 1 ]
+"85
+} 0
+"107
+[v _LCDgoto LCDgoto `(v  1 e 1 0 ]
+{
+[v LCDgoto@pos pos `uc  1 a 1 wreg ]
+[v LCDgoto@pos pos `uc  1 a 1 wreg ]
+[v LCDgoto@pos pos `uc  1 a 1 2 ]
+"110
+} 0
+"34
+[v _LCDinit LCDinit `(v  1 e 1 0 ]
+{
+"69
+} 0
+"15
+[v _LCDinstruct LCDinstruct `(v  1 e 1 0 ]
+{
+[v LCDinstruct@instr instr `uc  1 a 1 wreg ]
+[v LCDinstruct@instr instr `uc  1 a 1 wreg ]
+"17
+[v LCDinstruct@instr instr `uc  1 a 1 1 ]
+"31
+} 0

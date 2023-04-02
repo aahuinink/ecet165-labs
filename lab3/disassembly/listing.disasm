@@ -1,0 +1,92 @@
+Disassembly Listing for lab3_ah
+Generated From:
+C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/lab3/dist/default/production/lab3.production.elf
+24-Jan-2023 10:09:05 AM
+
+---  C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/lab3/165L03CounterAH.s  ---
+                                                  1:     ;*******************************************************************************
+                                                  2:     ;Lab 3 - SWITCH COUNTER
+                                                  3:     ;ECET165 Embedded Microcontrollers
+                                                  4:     ;E165L03CounterAH.s
+                                                  5:     ;Jan 24, 2023
+                                                  6:     ;Aaron Huinink
+                                                  7:     ;This program increments a counter with each press of the onboard switch.
+                                                  8:     ;The switch is debounced to improve the counter accuracy.
+                                                  9:     ;*******************************************************************************
+                                                  10:    
+                                                  11:        
+                                                  12:    PROCESSOR 18F57Q43
+                                                  13:    #include <xc.inc>
+                                                  14:        
+                                                  15:    #define	BUTTON	RB4	;register b bit 4
+                                                  16:    #define	counter	0x00
+                                                  17:        
+                                                  18:        PSECT resetVec, class=CODE, reloc=2	
+                                                  19:        
+                                                  20:    resetVec:
+0000  EFDA     GOTO 0x1FFB4                       21:        goto main
+                                                  22:       
+                                                  23:        PSECT code
+                                                  24:     
+                                                  25:    main:			; program starts here
+                                                  26:        ;declare counter regs & set to 0 to start
+1FFB4  6B00     CLRF 0x0, BANKED                  27:        clrf    counter   ;clear count reg
+                                                  28:        
+                                                  29:        ;sleep setup
+1FFB6  9EF2     BCF 0xFF2, 7, ACCESS              30:        bcf	    IDLEN	;enable sleep
+                                                  31:        
+                                                  32:        ;from lab 2, set i/o ports
+1FFB8  0104     MOVLB 0x4                         33:        BANKSEL TRISC
+1FFBA  6AC8     CLRF 0xFC8, ACCESS                34:        clrf    TRISC	;make port C an output port
+                                                  35:        
+1FFBC  0104     MOVLB 0x4                         36:        BANKSEL TRISB
+1FFBE  88C7     BSF 0xFC7, 4, ACCESS              37:        bsf	    TRISB4	;make button bit input
+                                                  38:        
+1FFC0  0104     MOVLB 0x4                         39:        BANKSEL ANSELC
+1FFC2  6B10     CLRF 0x10, BANKED                 40:        clrf    ANSELC	;make led output port digital
+                                                  41:        
+1FFC4  0104     MOVLB 0x4                         42:        BANKSEL ANSELB
+1FFC6  9908     BCF 0x8, 4, BANKED                43:        bcf	    ANSELB4	;make button bit digital
+                                                  44:        
+1FFC8  0104     MOVLB 0x4                         45:        BANKSEL WPUB
+1FFCA  8909     BSF 0x9, 4, BANKED                46:        bsf	    WPUB4	;enable weak pullup for button
+                                                  47:        
+1FFCC  EFE8     GOTO 0x1FFD0                      48:        goto    loop	;
+                                                  49:        
+                                                  50:    loop:
+1FFD0  0003     SLEEP                             51:        sleep
+1FFD2  EFE8     GOTO 0x1FFD0                      52:        goto loop
+                                                  53:        
+1FFD6  A8CF     BTFSS 0xFCF, 4, ACCESS            54:        btfss   BUTTON	;is button pressed?
+1FFD8  ECF1     CALL 0x1FFE2, 0                   55:        call    delay	;yes - go to delay for debounce
+1FFDC  0004     CLRWDT                            56:        clrwdt		;clear watchdog timer
+                                                  57:        
+1FFDE  EFE8     GOTO 0x1FFD0                      58:        goto    loop	;no - loop again
+                                                  59:     
+                                                  60:    delay:
+1FFE2  0003     SLEEP                             61:        sleep		;sleep (interrupted by wdt running out)
+1FFE4  A8CF     BTFSS 0xFCF, 4, ACCESS            62:        btfss   BUTTON	;is button pressed?
+1FFE6  ECF7     CALL 0x1FFEE, 0                   63:        call    count	;yes - go to count
+1FFEA  EFE8     GOTO 0x1FFD0                      64:        goto    loop	;no - go back to main loop
+                                                  65:        
+                                                  66:    count:
+1FFEE  2A00     INCF 0x0, F, ACCESS               67:        incf    counter,a	;increment count
+1FFF0  5200     MOVF 0x0, F, ACCESS               68:        movf    counter,a	;move contents of the count reg to wreg
+1FFF2  6ED0     MOVWF 0xFD0, ACCESS               69:        movwf   PORTC,a	;move wreg contents to portc
+                                                  70:        
+                                                  71:    release:
+1FFF4  0004     CLRWDT                            72:        clrwdt		;clear watchdog timer
+1FFF6  B8CF     BTFSC 0xFCF, 4, ACCESS            73:        btfsc   BUTTON	;has button been released?
+1FFF8  ECF1     CALL 0x1FFE2, 0                   74:        call    delay	;yes - go to loop
+1FFFC  EFFA     GOTO 0x1FFF4                      75:        goto    release	;no - check for release again
+                                                  76:        
+                                                  77:        
+                                                  78:        
+                                                  79:    
+                                                  80:    end resetVec
+                                                  81:    
+                                                  82:    
+                                                  83:    
+                                                  84:    
+                                                  85:    
+                                                  86:    

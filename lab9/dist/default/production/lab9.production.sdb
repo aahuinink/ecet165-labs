@@ -1,0 +1,247 @@
+[p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F57Q43 ]
+[d frameptr 1249 ]
+"14 C:\Users\a_hui\OneDrive - Camosun College\term2\ecet165_embedded_mc\labs/lab6/test.c
+[v _main main `(i  1 e 2 0 ]
+"15 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/lab6/lcd18f.c
+[v _LCDinstruct LCDinstruct `(v  1 e 1 0 ]
+"71
+[v _LCDprintc LCDprintc `(v  1 e 1 0 ]
+"86
+[v _LCDprints LCDprints `(v  1 e 1 0 ]
+"107
+[v _LCDgoto LCDgoto `(v  1 e 1 0 ]
+"133
+[v _toString toString `(*.39uc  1 e 2 0 ]
+"144
+[v _LCDprintf LCDprintf `(v  1 e 1 0 ]
+"4 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/lab8/timer0.c
+[v _timerInit timerInit `(v  1 e 1 0 ]
+"28
+[v _tickINT tickINT `IIH(v  1 e 1 0 ]
+"34
+[v _defaultINT defaultINT `IIH(v  1 e 1 0 ]
+"80 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/lab9/RealTimeClock.c
+[v _setINT setINT `IIL(v  1 e 1 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"86 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"19 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"11 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\Umul64.c
+[v ___omul __omul `(ul  1 e 4 0 ]
+"23436 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h
+[v _TMR0H TMR0H `VEuc  1 e 1 @793 ]
+"23690
+[v _T0CON0 T0CON0 `VEuc  1 e 1 @794 ]
+[s S157 . 1 `uc 1 OUTPS 1 0 :4:0 
+`uc 1 MD16 1 0 :1:4 
+`uc 1 OUT 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 EN 1 0 :1:7 
+]
+"23718
+[s S163 . 1 `uc 1 T0OUTPS 1 0 :4:0 
+`uc 1 T0MD16 1 0 :1:4 
+`uc 1 T0OUT 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 T0EN 1 0 :1:7 
+]
+[s S169 . 1 `uc 1 OUTPS0 1 0 :1:0 
+`uc 1 OUTPS1 1 0 :1:1 
+`uc 1 OUTPS2 1 0 :1:2 
+`uc 1 OUTPS3 1 0 :1:3 
+`uc 1 T016BIT 1 0 :1:4 
+]
+[u S175 . 1 `S157 1 . 1 0 `S163 1 . 1 0 `S169 1 . 1 0 ]
+[v _T0CON0bits T0CON0bits `VES175  1 e 1 @794 ]
+"23788
+[v _T0CON1 T0CON1 `VEuc  1 e 1 @795 ]
+[s S388 . 1 `uc 1 SPI1RXIP 1 0 :1:0 
+`uc 1 SPI1TXIP 1 0 :1:1 
+`uc 1 SPI1IP 1 0 :1:2 
+`uc 1 TMR2IP 1 0 :1:3 
+`uc 1 TMR1IP 1 0 :1:4 
+`uc 1 TMR1GIP 1 0 :1:5 
+`uc 1 CCP1IP 1 0 :1:6 
+`uc 1 TMR0IP 1 0 :1:7 
+]
+"31140
+[u S397 . 1 `S388 1 . 1 0 ]
+[v _IPR3bits IPR3bits `VES397  1 e 1 @869 ]
+[s S54 . 1 `uc 1 ANSELB0 1 0 :1:0 
+`uc 1 ANSELB1 1 0 :1:1 
+`uc 1 ANSELB2 1 0 :1:2 
+`uc 1 ANSELB3 1 0 :1:3 
+`uc 1 ANSELB4 1 0 :1:4 
+`uc 1 ANSELB5 1 0 :1:5 
+`uc 1 ANSELB6 1 0 :1:6 
+`uc 1 ANSELB7 1 0 :1:7 
+]
+"39629
+[u S63 . 1 `S54 1 . 1 0 ]
+"39629
+"39629
+[v _ANSELBbits ANSELBbits `VES63  1 e 1 @1032 ]
+[s S75 . 1 `uc 1 WPUB0 1 0 :1:0 
+`uc 1 WPUB1 1 0 :1:1 
+`uc 1 WPUB2 1 0 :1:2 
+`uc 1 WPUB3 1 0 :1:3 
+`uc 1 WPUB4 1 0 :1:4 
+`uc 1 WPUB5 1 0 :1:5 
+`uc 1 WPUB6 1 0 :1:6 
+`uc 1 WPUB7 1 0 :1:7 
+]
+"39691
+[u S84 . 1 `S75 1 . 1 0 ]
+"39691
+"39691
+[v _WPUBbits WPUBbits `VES84  1 e 1 @1033 ]
+"40046
+[v _IOCBF IOCBF `VEuc  1 e 1 @1039 ]
+"40604
+[v _ANSELD ANSELD `VEuc  1 e 1 @1048 ]
+"40666
+[v _WPUD WPUD `VEuc  1 e 1 @1049 ]
+[s S122 . 1 `uc 1 SWIE 1 0 :1:0 
+`uc 1 HLVDIE 1 0 :1:1 
+`uc 1 OSFIE 1 0 :1:2 
+`uc 1 CSWIE 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 CLC1IE 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 IOCIE 1 0 :1:7 
+]
+"45781
+[u S131 . 1 `S122 1 . 1 0 ]
+"45781
+"45781
+[v _PIE0bits PIE0bits `VES131  1 e 1 @1182 ]
+[s S346 . 1 `uc 1 SPI1RXIE 1 0 :1:0 
+`uc 1 SPI1TXIE 1 0 :1:1 
+`uc 1 SPI1IE 1 0 :1:2 
+`uc 1 TMR2IE 1 0 :1:3 
+`uc 1 TMR1IE 1 0 :1:4 
+`uc 1 TMR1GIE 1 0 :1:5 
+`uc 1 CCP1IE 1 0 :1:6 
+`uc 1 TMR0IE 1 0 :1:7 
+]
+"45940
+[u S355 . 1 `S346 1 . 1 0 ]
+"45940
+"45940
+[v _PIE3bits PIE3bits `VES355  1 e 1 @1185 ]
+[s S367 . 1 `uc 1 SPI1RXIF 1 0 :1:0 
+`uc 1 SPI1TXIF 1 0 :1:1 
+`uc 1 SPI1IF 1 0 :1:2 
+`uc 1 TMR2IF 1 0 :1:3 
+`uc 1 TMR1IF 1 0 :1:4 
+`uc 1 TMR1GIF 1 0 :1:5 
+`uc 1 CCP1IF 1 0 :1:6 
+`uc 1 TMR0IF 1 0 :1:7 
+]
+"46814
+[u S376 . 1 `S367 1 . 1 0 ]
+"46814
+"46814
+[v _PIR3bits PIR3bits `VES376  1 e 1 @1201 ]
+"47698
+[v _LATD LATD `VEuc  1 e 1 @1217 ]
+[s S263 . 1 `uc 1 LATD0 1 0 :1:0 
+`uc 1 LATD1 1 0 :1:1 
+`uc 1 LATD2 1 0 :1:2 
+`uc 1 LATD3 1 0 :1:3 
+`uc 1 LATD4 1 0 :1:4 
+`uc 1 LATD5 1 0 :1:5 
+`uc 1 LATD6 1 0 :1:6 
+`uc 1 LATD7 1 0 :1:7 
+]
+"47715
+[u S272 . 1 `S263 1 . 1 0 ]
+"47715
+"47715
+[v _LATDbits LATDbits `VES272  1 e 1 @1217 ]
+[s S33 . 1 `uc 1 TRISB0 1 0 :1:0 
+`uc 1 TRISB1 1 0 :1:1 
+`uc 1 TRISB2 1 0 :1:2 
+`uc 1 TRISB3 1 0 :1:3 
+`uc 1 TRISB4 1 0 :1:4 
+`uc 1 TRISB5 1 0 :1:5 
+`uc 1 TRISB6 1 0 :1:6 
+`uc 1 TRISB7 1 0 :1:7 
+]
+"47933
+[u S42 . 1 `S33 1 . 1 0 ]
+"47933
+"47933
+[v _TRISBbits TRISBbits `VES42  1 e 1 @1223 ]
+"48040
+[v _TRISD TRISD `VEuc  1 e 1 @1225 ]
+[s S96 . 1 `uc 1 INT0EDG 1 0 :1:0 
+`uc 1 INT1EDG 1 0 :1:1 
+`uc 1 INT2EDG 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 IPEN 1 0 :1:5 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"48564
+[s S104 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 GIEH 1 0 :1:7 
+]
+"48564
+[u S107 . 1 `S96 1 . 1 0 `S104 1 . 1 0 ]
+"48564
+"48564
+[v _INTCON0bits INTCON0bits `VES107  1 e 1 @1238 ]
+"54269
+[v _IOCBF4 IOCBF4 `VEb  1 e 0 @8316 ]
+"54293
+[v _IOCBN4 IOCBN4 `VEb  1 e 0 @8308 ]
+"19 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/lab8/timer0.h
+[v _tick_count tick_count `VEuc  1 e 1 0 ]
+"21 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/lab9/RealTimeClock.h
+[v _nSetRTC nSetRTC `uc  1 e 1 0 ]
+"14 C:\Users\a_hui\OneDrive - Camosun College\term2\ecet165_embedded_mc\labs/lab6/test.c
+[v _main main `(i  1 e 2 0 ]
+{
+"17
+} 0
+"80 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/lab9/RealTimeClock.c
+[v _setINT setINT `IIL(v  1 e 1 0 ]
+{
+"86
+} 0
+"28 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/lab8/timer0.c
+[v _tickINT tickINT `IIH(v  1 e 1 0 ]
+{
+"32
+} 0
+"34
+[v _defaultINT defaultINT `IIH(v  1 e 1 0 ]
+{
+"36
+} 0

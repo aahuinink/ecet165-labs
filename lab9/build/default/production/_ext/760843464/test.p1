@@ -1,0 +1,16 @@
+Version 4.0 HI-TECH Software Intermediate Code
+[p mainexit ]
+[v $root$_main `(v ~T0 @X0 0 e ]
+"14 ../lab6/test.c
+[v _main `(i ~T0 @X0 1 ef2`i`**uc ]
+{
+[e :U _main ]
+[v _argc `i ~T0 @X0 1 r1 ]
+[v _argv `**uc ~T0 @X0 1 r2 ]
+[f ]
+"16
+[e ) -> 0 `i ]
+[e $UE 7  ]
+"17
+[e :UE 7 ]
+}

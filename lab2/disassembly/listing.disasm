@@ -1,0 +1,62 @@
+Disassembly Listing for E165L02LightAH
+Generated From:
+C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/lab2/dist/default/production/lab2.production.elf
+15-Feb-2023 5:14:07 PM
+
+---  C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/lab2/E165L02LightAH.s  ----
+                                                  1:     ;*******************************************************************************
+                                                  2:     ;Lab 2 - I HAVE SEEN THE LIGHT!
+                                                  3:     ;ECET165 Embedded Microcontrollers
+                                                  4:     ;E165L02LightAH.s
+                                                  5:     ;Jan 17, 2023
+                                                  6:     ;Aaron Huinink
+                                                  7:     ;This program turns the onboard LED on and off with the onboard switch.
+                                                  8:     ;*******************************************************************************
+                                                  9:     
+                                                  10:        
+                                                  11:    PROCESSOR 18F57Q43
+                                                  12:    #include <xc.inc>
+                                                  13:        
+                                                  14:    #define	BUTTON	RB4	;register b bit 4
+                                                  15:    #define LED	RF3	;register f bit 3
+                                                  16:        
+                                                  17:        PSECT resetVec, class=CODE, reloc=2	
+                                                  18:        
+                                                  19:    resetVec:
+0000  EFEB     GOTO 0x1FFD6                       20:        goto main
+                                                  21:       
+                                                  22:        PSECT code
+                                                  23:     
+                                                  24:    main:			; program starts here
+1FFD6  0104     MOVLB 0x4                         25:        BANKSEL TRISF
+1FFD8  96CB     BCF 0xFCB, 3, ACCESS              26:        bcf	    TRISF3	;make led bit output
+                                                  27:        
+1FFDA  0104     MOVLB 0x4                         28:        BANKSEL TRISB
+1FFDC  88C7     BSF 0xFC7, 4, ACCESS              29:        bsf	    TRISB4	;make button bit input
+                                                  30:        
+1FFDE  0104     MOVLB 0x4                         31:        BANKSEL ANSELF
+1FFE0  9728     BCF 0x28, 3, BANKED               32:        bcf	    ANSELF3	;make led bit digital
+                                                  33:        
+1FFE2  0104     MOVLB 0x4                         34:        BANKSEL ANSELB
+1FFE4  9908     BCF 0x8, 4, BANKED                35:        bcf	    ANSELB4	;make button bit digital
+                                                  36:        
+1FFE6  0104     MOVLB 0x4                         37:        BANKSEL WPUB
+1FFE8  8909     BSF 0x9, 4, BANKED                38:        bsf	    WPUB4	;enable weak pullup for button
+                                                  39:        
+1FFEA  88C7     BSF 0xFC7, 4, ACCESS              40:        bsf	    TRISB4
+1FFEC  96CB     BCF 0xFCB, 3, ACCESS              41:        bcf	    TRISF3
+                                                  42:        
+                                                  43:    loop:
+1FFEE  A8CF     BTFSS 0xFCF, 4, ACCESS            44:        btfss   BUTTON	;is button pressed?
+1FFF0  EFFD     GOTO 0x1FFFA                      45:        goto    ledON	;yes - go to ledON
+                                                  46:        
+1FFF4  86D3     BSF 0xFD3, 3, ACCESS              47:        bsf	    LED		;no  - turn off led
+1FFF6  EFF7     GOTO 0x1FFEE                      48:        goto    loop	;loop again
+                                                  49:        
+                                                  50:    ledON:
+1FFFA  96D3     BCF 0xFD3, 3, ACCESS              51:        bcf	    LED		;turn on led
+1FFFC  EFF7     GOTO 0x1FFEE                      52:        goto    loop	;loop again
+                                                  53:    end resetVec
+                                                  54:    
+                                                  55:    
+                                                  56:    

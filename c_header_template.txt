@@ -1,0 +1,39 @@
+/********************************************************************************
+ * TITLE
+ * ECET165 Embedded Micro-controllers
+ * XXX.c
+ * CREATED ***
+ * UPDATED ***
+ * v1.0
+ * BY Aaron Huinink
+ * DESCRIPTION
+ ********************************************************************************/
+
+#ifndef XXX_H
+#define	XXX_H
+
+#ifdef	__cplusplus
+extern "C" {
+#endif
+
+ // ============================ INCLUDES/DEFINES =================================//
+
+#include <xc.h>
+
+// ============================ GLOBAL VARIABLES ========================== //
+
+// ============================ FUNCTION PROTOTYPES ========================== //
+
+// ----- functionOne ----- //
+/*
+* DESCRIPTION
+* ARGS: []
+* RETURNS: []
+*/
+
+
+#ifdef	__cplusplus
+}
+#endif
+
+#endif	/* XXX_H */

@@ -1,0 +1,82 @@
+/**************************************************
+Student Name:     Aaron Huinink
+File Name: RealTimeClock.c
+Description: Implements a real time clock on the lcd display
+Demo Date:	March 14, 2023
+
+Marking Check List
+Good Comments: 
+Good Modular Code: 
+Unsigned Char used correctly: 
+Format HH:MM:SS Xm  correct: 
+Increments each Second: 
+10ms Tick correct: 
+Only valid characters are display: 
+Clock is accurate: 
+Am/pm roll over is correct: 
+Hours per day correct: 
+Bugs:
+Mark:
+**************************************************/
+
+#include <xc.h>
+#include "timer0.h"
+#include "lcd18f.h"
+#include "timer0config.h"
+
+// typedef struct for time variables
+typedef struct realtime{
+    char hours;
+    char minutes;
+    char seconds;
+    char meridian;
+}time;
+    
+/*
+ * 
+ */
+void main() {
+    // local variables
+    time current = {11,59,50,'a'}; // set initial time
+    
+    // array of pointers for printf statement
+    char* curtime[4] = {&current.hours, &current.minutes, &current.seconds, &current.meridian};
+    
+    // initialize lcd
+    LCDinit();
+    
+    // initialize timer0
+    timerInit();
+   
+    
+    // main loop
+    while(1){
+        // check 10ms timer0 interrupt variable
+        if(tick_count > 99){ // if a second has past
+            tick_count -= 100; // remove 100 10ms cycles from the count
+            current.seconds++; // increment seconds
+            if(current.seconds > 59){ // if a minute has past
+                current.seconds = 0; // rollover seconds
+                current.minutes++;  // increment minutes
+                if(current.minutes>59){ // if an hour has past
+                    current.minutes = 0; // rollover minutes
+                    current.hours++; // increment hours
+                    if(current.hours>11){ // if it's past 11am or 11pm
+                        if(current.hours >12){ // if it's past midnight or noon
+                            current.hours = 1; // rollover hours
+                        }else{                 // if its midnight or noon 
+                        current.meridian = (   // toggle am/pm
+                                (current.meridian == 'a')? 'p' : // if am then pm
+                                    'a'                          // otherwise am
+                                );
+                    }
+                }
+            }
+        };
+        // print time to lcd
+        LCD_HOME;            
+        LCDprintf("%i:%i:%i %cm", curtime, 2);        
+    }
+};
+};
+

@@ -1,0 +1,29 @@
+Disassembly Listing for counterExampleLab1
+Generated From:
+C:/Users/C0520296/OneDrive - Camosun College/term2/ecet165/labs/lab1/counterExampleLab1/dist/default/production/counterExampleLab1.production.elf
+10-Jan-2023 3:12:36 PM
+
+---  C:/Users/C0520296/OneDrive - Camosun College/term2/ecet165/labs/lab1/counterExampleLab1/counter.s  -
+                                                  1:     ;*******************************************************************************
+                                                  2:     ;Lab 1 first program and simulation
+                                                  3:     ;ECET165 Embedded Microcontrollers
+                                                  4:     ;counter.s
+                                                  5:     ;Jan 10,2021
+                                                  6:     ;Aaron Huinink
+                                                  7:     ;This program adds 1 to the working register in an infinite loop
+                                                  8:     ;*******************************************************************************
+                                                  9:     ;
+                                                  10:        
+                                                  11:    PROCESSOR 18F57Q43
+                                                  12:    #include <xc.inc>
+                                                  13:        
+                                                  14:        PSECT resetVec, class=CODE, reloc=2	
+                                                  15:    resetVec:
+1FFF4  EFFC     GOTO 0x1FFF8                      16:        goto main
+                                                  17:       
+                                                  18:        PSECT code
+                                                  19:    main:  ; program starts here
+1FFF8  6AE8     CLRF 0xFE8, ACCESS                20:    	clrf WREG, A	; clear the 'working' W register
+1FFFA  2AE8     INCF 0xFE8, F, ACCESS             21:    loop:	incf WREG, F, A ; adds  to the W register puts back in the file reg W
+1FFFC  EFFD     GOTO 0x1FFFA                      22:    	goto loop	; loop back to do it again
+                                                  23:    	end resetVec
