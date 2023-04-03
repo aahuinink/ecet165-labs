@@ -28792,8 +28792,8 @@ double analogMap(
             unsigned int analog_reading,
             unsigned int analog_max,
             unsigned int analog_min,
-            double sensor_max,
-            double sensor_min
+            float sensor_max,
+            float sensor_min
             );
 # 16 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c" 2
 # 30 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c"
@@ -28816,8 +28816,8 @@ double analogMap(
             unsigned int analog_reading,
             unsigned int analog_max,
             unsigned int analog_min,
-            double sensor_max,
-            double sensor_min)
+            float sensor_max,
+            float sensor_min)
     {
-    return (sensor_min + ((analog_reading-analog_min)/((double)(analog_max-analog_min)))*(sensor_max-sensor_min));
+    return (sensor_min + ((analog_reading-analog_min)/((float)(analog_max-analog_min)))*(sensor_max-sensor_min));
     }

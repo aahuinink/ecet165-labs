@@ -33,7 +33,9 @@ void main(void){
     while(1){
         LCD_HOME;
         pot_voltage = analogMap(POT_READ, 4000, 0, 5.00, 0.00);
-        LCDprintf("%1f2", pot_voltage);
+        LCDprintf("Pot voltage: ");
+        LCDgoto(0x40);
+        LCDprintf("%1f2 V", pot_voltage);
         __delay_ms(1000);
     };
     return;

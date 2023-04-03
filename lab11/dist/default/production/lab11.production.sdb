@@ -25,6 +25,10 @@
 [v _LCDprintf LCDprintf `(v  1 e 1 0 ]
 "80 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c
 [v _setINT setINT `IIL(v  1 e 1 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fleq.c
 [v ___fleq __fleq `(b  1 e 0 0 ]
 "62 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\float.c
@@ -84,7 +88,7 @@
 [v _ADRESH ADRESH `VEuc  1 e 1 @1003 ]
 "37674
 [v _ADPCH ADPCH `VEuc  1 e 1 @1004 ]
-[s S340 . 1 `uc 1 GO 1 0 :1:0 
+[s S341 . 1 `uc 1 GO 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 FM 1 0 :2:2 
 `uc 1 CS 1 0 :1:4 
@@ -93,7 +97,7 @@
 `uc 1 ON 1 0 :1:7 
 ]
 "38276
-[s S348 . 1 `uc 1 ADGO 1 0 :1:0 
+[s S349 . 1 `uc 1 ADGO 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 ADFM 1 0 :2:2 
 `uc 1 ADCS 1 0 :1:4 
@@ -102,24 +106,24 @@
 `uc 1 ADON 1 0 :1:7 
 ]
 "38276
-[s S356 . 1 `uc 1 DONE 1 0 :1:0 
+[s S357 . 1 `uc 1 DONE 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 FM0 1 0 :1:2 
 ]
 "38276
-[s S360 . 1 `uc 1 GO_NOT_DONE 1 0 :1:0 
+[s S361 . 1 `uc 1 GO_NOT_DONE 1 0 :1:0 
 ]
 "38276
-[s S362 . 1 `uc 1 GO_nDONE 1 0 :1:0 
+[s S363 . 1 `uc 1 GO_nDONE 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 ADFM0 1 0 :1:2 
 ]
 "38276
-[u S366 . 1 `S340 1 . 1 0 `S348 1 . 1 0 `S356 1 . 1 0 `S360 1 . 1 0 `S362 1 . 1 0 ]
+[u S367 . 1 `S341 1 . 1 0 `S349 1 . 1 0 `S357 1 . 1 0 `S361 1 . 1 0 `S363 1 . 1 0 ]
 "38276
 "38276
-[v _ADCON0bits ADCON0bits `VES366  1 e 1 @1011 ]
-[s S423 . 1 `uc 1 ANSELA0 1 0 :1:0 
+[v _ADCON0bits ADCON0bits `VES367  1 e 1 @1011 ]
+[s S424 . 1 `uc 1 ANSELA0 1 0 :1:0 
 `uc 1 ANSELA1 1 0 :1:1 
 `uc 1 ANSELA2 1 0 :1:2 
 `uc 1 ANSELA3 1 0 :1:3 
@@ -129,10 +133,10 @@
 `uc 1 ANSELA7 1 0 :1:7 
 ]
 "39133
-[u S432 . 1 `S423 1 . 1 0 ]
+[u S433 . 1 `S424 1 . 1 0 ]
 "39133
 "39133
-[v _ANSELAbits ANSELAbits `VES432  1 e 1 @1024 ]
+[v _ANSELAbits ANSELAbits `VES433  1 e 1 @1024 ]
 [s S54 . 1 `uc 1 ANSELB0 1 0 :1:0 
 `uc 1 ANSELB1 1 0 :1:1 
 `uc 1 ANSELB2 1 0 :1:2 
@@ -197,7 +201,7 @@
 "48165
 "48165
 [v _LATDbits LATDbits `VES271  1 e 1 @1217 ]
-[s S444 . 1 `uc 1 TRISA0 1 0 :1:0 
+[s S445 . 1 `uc 1 TRISA0 1 0 :1:0 
 `uc 1 TRISA1 1 0 :1:1 
 `uc 1 TRISA2 1 0 :1:2 
 `uc 1 TRISA3 1 0 :1:3 
@@ -207,10 +211,10 @@
 `uc 1 TRISA7 1 0 :1:7 
 ]
 "48321
-[u S453 . 1 `S444 1 . 1 0 ]
+[u S454 . 1 `S445 1 . 1 0 ]
 "48321
 "48321
-[v _TRISAbits TRISAbits `VES453  1 e 1 @1222 ]
+[v _TRISAbits TRISAbits `VES454  1 e 1 @1222 ]
 [s S33 . 1 `uc 1 TRISB0 1 0 :1:0 
 `uc 1 TRISB1 1 0 :1:1 
 `uc 1 TRISB2 1 0 :1:2 
@@ -256,8 +260,8 @@
 [v _main main `(v  1 e 1 0 ]
 {
 "30
-[v main@pot_voltage pot_voltage `d  1 a 4 33 ]
-"40
+[v main@pot_voltage pot_voltage `d  1 a 4 43 ]
+"42
 } 0
 "30 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c
 [v _analogRead analogRead `(ui  1 e 2 0 ]
@@ -277,10 +281,25 @@
 "60
 [v analogMap@analog_min analog_min `ui  1 p 2 4 ]
 "61
-[v analogMap@sensor_max sensor_max `d  1 p 4 6 ]
+[v analogMap@sensor_max sensor_max `f  1 p 4 6 ]
 "62
-[v analogMap@sensor_min sensor_min `d  1 p 4 10 ]
+[v analogMap@sensor_min sensor_min `f  1 p 4 10 ]
 "65
+} 0
+"10 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+{
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+"13
+[v ___xxtofl@arg arg `ul  1 a 4 11 ]
+"12
+[v ___xxtofl@exp exp `uc  1 a 1 10 ]
+"10
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+[v ___xxtofl@val val `l  1 p 4 1 ]
+"15
+[v ___xxtofl@sign sign `uc  1 a 1 9 ]
+"44
 } 0
 "245 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcadd.c
 [v ___flsub __flsub `(d  1 e 4 0 ]
@@ -328,19 +347,21 @@
 "143 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
 [v _LCDprintf LCDprintf `(v  1 e 1 0 ]
 {
-"146
-[v LCDprintf@f_string f_string `[10]uc  1 a 10 12 ]
+"179
+[v LCDprintf@i i `uc  1 a 1 33 ]
+"176
+[v LCDprintf@f_string f_string `[20]uc  1 a 20 13 ]
 "145
-[v LCDprintf@f_input f_input `d  1 a 4 24 ]
-"150
-[v LCDprintf@args args `[1]*.39v  1 a 2 30 ]
+[v LCDprintf@f_input f_input `d  1 a 4 34 ]
+"149
+[v LCDprintf@args args `[1]*.39v  1 a 2 41 ]
+"146
+[v LCDprintf@f_int f_int `i  1 a 2 38 ]
 "147
-[v LCDprintf@f_int f_int `ui  1 a 2 28 ]
-"148
-[v LCDprintf@indexer indexer `c  1 a 1 32 ]
+[v LCDprintf@indexer indexer `c  1 a 1 40 ]
 "143
 [v LCDprintf@shell shell `*.32uc  1 p 2 0 ]
-"206
+"208
 } 0
 "133
 [v _toString toString `(*.39uc  1 e 2 0 ]
@@ -376,21 +397,6 @@
 [v ___lwdiv@divisor divisor `ui  1 p 2 3 ]
 "30
 } 0
-"10 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
-[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
-{
-[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
-"13
-[v ___xxtofl@arg arg `ul  1 a 4 11 ]
-"12
-[v ___xxtofl@exp exp `uc  1 a 1 10 ]
-"10
-[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
-[v ___xxtofl@val val `l  1 p 4 1 ]
-"15
-[v ___xxtofl@sign sign `uc  1 a 1 9 ]
-"44
-} 0
 "43 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fltol.c
 [v ___fltol __fltol `(l  1 e 4 0 ]
 {
@@ -404,17 +410,17 @@
 "8 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S796 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S799 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S801 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
-[u S804 . 4 `l 1 i 4 0 `d 1 f 4 0 `S796 1 fAsBytes 4 0 `S801 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S804  1 a 4 83 ]
+[s S804 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
+[u S807 . 4 `l 1 i 4 0 `d 1 f 4 0 `S799 1 fAsBytes 4 0 `S804 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S807  1 a 4 83 ]
 "12
 [v ___flmul@grs grs `ul  1 a 4 77 ]
-[s S872 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[s S875 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S875 . 2 `s 1 i 2 0 `us 1 n 2 0 `S872 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S875  1 a 2 87 ]
+[u S878 . 2 `s 1 i 2 0 `us 1 n 2 0 `S875 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S878  1 a 2 87 ]
 "10
 [v ___flmul@bexp bexp `uc  1 a 1 82 ]
 "11
@@ -425,6 +431,30 @@
 [v ___flmul@b b `d  1 p 4 64 ]
 [v ___flmul@a a `d  1 p 4 68 ]
 "205
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"10
+[v ___awmod@sign sign `uc  1 a 1 6 ]
+[v ___awmod@counter counter `uc  1 a 1 5 ]
+"7
+[v ___awmod@dividend dividend `i  1 p 2 1 ]
+[v ___awmod@divisor divisor `i  1 p 2 3 ]
+"34
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"10
+[v ___awdiv@quotient quotient `i  1 a 2 7 ]
+"11
+[v ___awdiv@sign sign `uc  1 a 1 6 ]
+[v ___awdiv@counter counter `uc  1 a 1 5 ]
+"7
+[v ___awdiv@dividend dividend `i  1 p 2 1 ]
+[v ___awdiv@divisor divisor `i  1 p 2 3 ]
+"41
 } 0
 "86 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
 [v _LCDprints LCDprints `(v  1 e 1 0 ]
@@ -444,6 +474,14 @@
 [v _LCDinit LCDinit `(v  1 e 1 0 ]
 {
 "69
+} 0
+"107
+[v _LCDgoto LCDgoto `(v  1 e 1 0 ]
+{
+[v LCDgoto@pos pos `uc  1 a 1 wreg ]
+[v LCDgoto@pos pos `uc  1 a 1 wreg ]
+[v LCDgoto@pos pos `uc  1 a 1 3 ]
+"110
 } 0
 "15
 [v _LCDinstruct LCDinstruct `(v  1 e 1 0 ]

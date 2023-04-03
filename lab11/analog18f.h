@@ -55,8 +55,8 @@ double analogMap(
             unsigned int analog_reading,
             unsigned int analog_max,
             unsigned int analog_min,
-            double sensor_max,
-            double sensor_min
+            float sensor_max,
+            float sensor_min
             );
 #ifdef	__cplusplus
 }

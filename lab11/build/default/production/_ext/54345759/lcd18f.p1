@@ -2961,169 +2961,189 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 145:     double f_input;
 [v _f_input `d ~T0 @X0 1 a ]
 "146
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 146:     char f_string[10];
-[v _f_string `uc ~T0 @X0 -> 10 `i a ]
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 146:     int f_int;
+[v _f_int `i ~T0 @X0 1 a ]
 "147
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 147:     unsigned int f_int;
-[v _f_int `ui ~T0 @X0 1 a ]
-"148
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 148:     signed char indexer;
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 147:     signed char indexer;
 [v _indexer `c ~T0 @X0 1 a ]
-"150
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 150:     va_list args;
+"149
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 149:     va_list args;
 [v _args `*v ~T0 @X0 -> -> 1 `i `ux a ]
-"151
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 151:     *args = __va_start();
+"150
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 150:     *args = __va_start();
 [e = *U &U _args ( ___va_start ..  ]
-"153
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 153:     while(*shell != 0x0){
+"152
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 152:     while(*shell != 0x0){
 [e $U 2382  ]
 [e :U 2383 ]
 {
-"155
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 155:         if(*shell != '%'){
+"154
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 154:         if(*shell != '%'){
 [e $ ! != -> *U _shell `ui -> 37 `ui 2385  ]
 {
-"156
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 156:             LCDprintc(*shell++);
+"155
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 155:             LCDprintc(*shell++);
 [e ( _LCDprintc (1 *U ++ _shell * -> -> 1 `i `x -> -> # *U _shell `i `x ]
-"158
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 158:         }else if(*(shell+1) == 's'){
+"157
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 157:         }else if(*(shell+1) == 's'){
 }
 [e $U 2386  ]
 [e :U 2385 ]
 [e $ ! == -> *U + _shell * -> -> 1 `i `x -> -> # *U _shell `i `x `ui -> 115 `ui 2387  ]
 {
-"160
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 160:             LCDprints((*(char* *)__va_arg(*(char* **)args, (char*)0)));
+"159
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 159:             LCDprints((*(char* *)__va_arg(*(char* **)args, (char*)0)));
 [e ( _LCDprints (1 *U -> ( ___va_arg , (. -> *U -> &U _args `***uc `*v -> -> 0 `i `*uc `**uc ]
-"161
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 161:             shell+=2;
+"160
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 160:             shell+=2;
 [e =+ _shell * -> -> 2 `i `x -> -> # *U _shell `i `x ]
-"162
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 162:         }
+"161
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 161:         }
 }
 [e $U 2388  ]
-"164
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 164:         else if(*(shell+1) == 'i'){
+"163
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 163:         else if(*(shell+1) == 'i'){
 [e :U 2387 ]
 [e $ ! == -> *U + _shell * -> -> 1 `i `x -> -> # *U _shell `i `x `ui -> 105 `ui 2389  ]
 {
-"166
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 166:             LCDprints(toString((*(unsigned int *)__va_arg(*(unsigned int **)args, (unsigned int)0)), (*(shell+2)-'0')));
+"165
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 165:             LCDprints(toString((*(unsigned int *)__va_arg(*(unsigned int **)args, (unsigned int)0)), (*(shell+2)-'0')));
 [e ( _LCDprints (1 ( _toString (2 , *U -> ( ___va_arg , (. -> *U -> &U _args `**ui `*v -> -> 0 `i `ui `*ui -> - -> *U + _shell * -> -> 2 `i `x -> -> # *U _shell `i `x `ui -> 48 `ui `uc ]
-"167
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 167:             shell+=3;
+"166
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 166:             shell+=3;
 [e =+ _shell * -> -> 3 `i `x -> -> # *U _shell `i `x ]
-"169
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 169:         }else if(*(shell+1) == 'c'){
+"168
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 168:         }else if(*(shell+1) == 'c'){
 }
 [e $U 2390  ]
 [e :U 2389 ]
 [e $ ! == -> *U + _shell * -> -> 1 `i `x -> -> # *U _shell `i `x `ui -> 99 `ui 2391  ]
 {
-"171
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 171:             LCDprintc((*(char *)__va_arg(*(char **)args, (char)0)));
+"170
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 170:             LCDprintc((*(char *)__va_arg(*(char **)args, (char)0)));
 [e ( _LCDprintc (1 *U -> ( ___va_arg , (. -> *U -> &U _args `**uc `*v -> -> -> 0 `i `uc `i `*uc ]
-"172
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 172:             shell+=2;
+"171
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 171:             shell+=2;
 [e =+ _shell * -> -> 2 `i `x -> -> # *U _shell `i `x ]
-"175
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 175:         }else if(*(shell+2) == 'f'){
+"174
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 174:         }else if(*(shell+2) == 'f'){
 }
 [e $U 2392  ]
 [e :U 2391 ]
 [e $ ! == -> *U + _shell * -> -> 2 `i `x -> -> # *U _shell `i `x `ui -> 102 `ui 2393  ]
 {
-"177
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 177:             f_input = (*(double *)__va_arg(*(double **)args, (double)0));
-[e = _f_input *U -> ( ___va_arg , (. -> *U -> &U _args `**d `*v -> -> 0 `i `d `*d ]
+[v F16825 `uc ~T0 @X0 -> 20 `i s ]
+[i F16825
+:U ..
+"176
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 176:             char f_string[20] = "";
+-> 0 `c
+..
+]
+[v _f_string `uc ~T0 @X0 -> 20 `i a ]
+[e = _f_string F16825 ]
 "178
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 178:             f_input *= 10*(*(shell+3));
-[e =* _f_input -> * -> 10 `i -> *U + _shell * -> -> 3 `i `x -> -> # *U _shell `i `x `i `d ]
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 178:             f_input = (*(float *)__va_arg(*(float **)args, (float)0));
+[e = _f_input -> *U -> ( ___va_arg , (. -> *U -> &U _args `**f `*v -> -> -> 0 `i `f `d `*f `d ]
 "179
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 179:             f_int = (unsigned int)f_input;
-[e = _f_int -> _f_input `ui ]
-"183
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 183:             indexer = (*(shell+1)-'0')+(*(shell+3)-'0');
-[e = _indexer -> + - -> *U + _shell * -> -> 1 `i `x -> -> # *U _shell `i `x `ui -> 48 `ui - -> *U + _shell * -> -> 3 `i `x -> -> # *U _shell `i `x `ui -> 48 `ui `c ]
-"184
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 184:             indexer = (indexer > 8)? 8 : indexer;
-[e = _indexer -> ? > -> _indexer `i -> 8 `i : -> 8 `i -> _indexer `i `c ]
-"185
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 185:             while(indexer > -1){
-[e $U 2394  ]
-[e :U 2395 ]
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 179:             for(unsigned char i = 0; i<(*(shell+3)-'0'); i++){
 {
-"187
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 187:                 if(indexer == (8-(*(shell+3)-'0'))){
-[e $ ! == -> -> _indexer `i `ui - -> -> 8 `i `ui - -> *U + _shell * -> -> 3 `i `x -> -> # *U _shell `i `x `ui -> 48 `ui 2397  ]
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $U 2397  ]
+[e :U 2394 ]
 {
-"188
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 188:                     f_string[indexer] = '.';
-[e = *U + &U _f_string * -> -> _indexer `uc `ux -> -> # *U &U _f_string `ui `ux -> -> 46 `ui `uc ]
-"190
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 190:                 }else{
+"180
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 180:                 f_input *= 10;
+[e =* _f_input -> -> 10 `i `d ]
+"181
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 181:             }
 }
-[e $U 2398  ]
+[e ++ _i -> -> 1 `i `uc ]
 [e :U 2397 ]
+[e $ < -> _i `ui - -> *U + _shell * -> -> 3 `i `x -> -> # *U _shell `i `x `ui -> 48 `ui 2394  ]
+[e :U 2395 ]
+}
+"182
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 182:             f_int = (int)f_input;
+[e = _f_int -> _f_input `i ]
+"186
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 186:             indexer = (*(shell+1)-'0')+(*(shell+3)-'0');
+[e = _indexer -> + - -> *U + _shell * -> -> 1 `i `x -> -> # *U _shell `i `x `ui -> 48 `ui - -> *U + _shell * -> -> 3 `i `x -> -> # *U _shell `i `x `ui -> 48 `ui `c ]
+"187
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 187:             while(indexer > -1){
+[e $U 2398  ]
+[e :U 2399 ]
 {
-"191
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 191:                     f_string[indexer] = f_int % 10;
-[e = *U + &U _f_string * -> -> _indexer `uc `ux -> -> # *U &U _f_string `ui `ux -> % _f_int -> -> 10 `i `ui `uc ]
+"189
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 189:                 if(indexer == (*(shell+1)-'0')){
+[e $ ! == -> -> _indexer `i `ui - -> *U + _shell * -> -> 1 `i `x -> -> # *U _shell `i `x `ui -> 48 `ui 2401  ]
+{
+"190
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 190:                     f_string[indexer] = '.';
+[e = *U + &U _f_string * -> -> _indexer `uc `ux -> -> # *U &U _f_string `ui `ux -> -> 46 `ui `uc ]
 "192
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 192:                     f_int /= 10;
-[e =/ _f_int -> -> 10 `i `ui ]
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 192:                 }else{
+}
+[e $U 2402  ]
+[e :U 2401 ]
+{
 "193
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 193:                 }
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 193:                     f_string[indexer] = (f_int % 10) + '0';
+[e = *U + &U _f_string * -> -> _indexer `uc `ux -> -> # *U &U _f_string `ui `ux -> + -> % _f_int -> 10 `i `ui -> 48 `ui `uc ]
+"194
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 194:                     f_int /= 10;
+[e =/ _f_int -> 10 `i ]
+"195
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 195:                 }
+}
+[e :U 2402 ]
+"196
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 196:                 indexer--;
+[e -- _indexer -> -> 1 `i `c ]
+"197
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 197:             }
 }
 [e :U 2398 ]
-"194
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 194:                 indexer--;
-[e -- _indexer -> -> 1 `i `c ]
-"195
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 195:             }
-}
-[e :U 2394 ]
-"185
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 185:             while(indexer > -1){
-[e $ > -> _indexer `i -U -> 1 `i 2395  ]
-[e :U 2396 ]
-"197
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 197:             LCDprints(f_string);
-[e ( _LCDprints (1 &U _f_string ]
+"187
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 187:             while(indexer > -1){
+[e $ > -> _indexer `i -U -> 1 `i 2399  ]
+[e :U 2400 ]
 "199
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 199:             shell +=4;
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 199:             LCDprints(f_string);
+[e ( _LCDprints (1 &U _f_string ]
+"201
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 201:             shell+=4;
 [e =+ _shell * -> -> 4 `i `x -> -> # *U _shell `i `x ]
-"200
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 200:         }else{
+"202
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 202:         }else{
 }
-[e $U 2399  ]
+[e $U 2403  ]
 [e :U 2393 ]
 {
-"202
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 202:             LCDprintc(*shell++);
+"204
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 204:             LCDprintc(*shell++);
 [e ( _LCDprintc (1 *U ++ _shell * -> -> 1 `i `x -> -> # *U _shell `i `x ]
-"203
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 203:         }
+"205
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 205:         }
 }
-[e :U 2399 ]
+[e :U 2403 ]
 [e :U 2392 ]
 [e :U 2390 ]
 [e :U 2388 ]
 [e :U 2386 ]
-"204
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 204:     }
+"206
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 206:     }
 }
 [e :U 2382 ]
-"153
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 153:     while(*shell != 0x0){
+"152
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 152:     while(*shell != 0x0){
 [e $ != -> *U _shell `i -> 0 `i 2383  ]
 [e :U 2384 ]
-"205
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 205:     return;
+"207
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 207:     return;
 [e $UE 2381  ]
-"206
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 206: }
+"208
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 208: }
 [e :UE 2381 ]
 }

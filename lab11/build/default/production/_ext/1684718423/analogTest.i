@@ -28791,8 +28791,8 @@ double analogMap(
             unsigned int analog_reading,
             unsigned int analog_max,
             unsigned int analog_min,
-            double sensor_max,
-            double sensor_min
+            float sensor_max,
+            float sensor_min
             );
 # 15 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c" 2
 
@@ -28889,7 +28889,9 @@ void main(void){
     while(1){
         LCDinstruct(0x02);
         pot_voltage = analogMap(analogRead(ANSELAbits.ANSELA3, TRISAbits.TRISA3, 0x03), 4000, 0, 5.00, 0.00);
-        LCDprintf("%1f2", pot_voltage);
+        LCDprintf("Pot voltage: ");
+        LCDgoto(0x40);
+        LCDprintf("%1f2 V", pot_voltage);
         _delay((unsigned long)((1000)*(64000000/4000.0)));
     };
     return;

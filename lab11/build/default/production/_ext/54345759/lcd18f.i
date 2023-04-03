@@ -28990,8 +28990,7 @@ char* toString(unsigned int number, unsigned char length){
 void LCDprintf(char* shell, ... ){
 
     double f_input;
-    char f_string[10];
-    unsigned int f_int;
+    int f_int;
     signed char indexer;
 
     va_list args;
@@ -29021,21 +29020,24 @@ void LCDprintf(char* shell, ... ){
 
         }else if(*(shell+2) == 'f'){
 
-            f_input = (*(double *)__va_arg(*(double **)args, (double)0));
-            f_input *= 10*(*(shell+3));
-            f_int = (unsigned int)f_input;
+            char f_string[20] = "";
+
+            f_input = (*(float *)__va_arg(*(float **)args, (float)0));
+            for(unsigned char i = 0; i<(*(shell+3)-'0'); i++){
+                f_input *= 10;
+            }
+            f_int = (int)f_input;
 
 
 
             indexer = (*(shell+1)-'0')+(*(shell+3)-'0');
-            indexer = (indexer > 8)? 8 : indexer;
             while(indexer > -1){
 
-                if(indexer == (8-(*(shell+3)-'0'))){
+                if(indexer == (*(shell+1)-'0')){
                     f_string[indexer] = '.';
 
                 }else{
-                    f_string[indexer] = f_int % 10;
+                    f_string[indexer] = (f_int % 10) + '0';
                     f_int /= 10;
                 }
                 indexer--;
@@ -29043,7 +29045,7 @@ void LCDprintf(char* shell, ... ){
 
             LCDprints(f_string);
 
-            shell +=4;
+            shell+=4;
         }else{
 
             LCDprintc(*shell++);
