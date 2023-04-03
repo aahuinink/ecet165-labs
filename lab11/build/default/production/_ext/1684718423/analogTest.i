@@ -1,4 +1,4 @@
-# 1 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c"
+# 1 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,10 +6,8 @@
 # 1 "<built-in>" 2
 # 1 "C:/Users/a_hui/.mchp_packs/Microchip/PIC18F-Q_DFP/1.16.368/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c" 2
-# 21 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c"
-# 1 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.h" 1
-# 14 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.h"
+# 1 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c" 2
+# 14 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c"
 # 1 "C:/Users/a_hui/.mchp_packs/Microchip/PIC18F-Q_DFP/1.16.368/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Users/a_hui/.mchp_packs/Microchip/PIC18F-Q_DFP/1.16.368/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -28783,25 +28781,13 @@ __attribute__((__unsupported__("The READTIMER" "3" "() macro is not available wi
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "C:/Users/a_hui/.mchp_packs/Microchip/PIC18F-Q_DFP/1.16.368/xc8\\pic\\include\\xc.h" 2 3
-# 14 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.h" 2
+# 14 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c" 2
 
 
-
-# 1 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab8\\timer0.h" 1
-# 19 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab8\\timer0.h"
-volatile unsigned char tick_count = 0;
-
-
-extern void timerInit(void);
-
-extern void tickINT(void);
-
-extern void defaultINT(void);
-
-extern void __attribute__((picinterrupt(("irq(TMR0),high_priority"))))tickINT(void);
-
-extern void __attribute__((picinterrupt(("irq(default),high_priority"))))defaultINT(void);
-# 17 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.h" 2
+# 1 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.h" 1
+# 40 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.h"
+unsigned int analogRead(uint32_t pin_ansel, uint32_t pin_tris, unsigned char pin_designation);
+# 16 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c" 2
 
 # 1 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6\\lcd18f.h" 1
 # 48 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6\\lcd18f.h"
@@ -28850,141 +28836,24 @@ extern unsigned char LCDreturn(unsigned char pos);
 extern char* toString(unsigned int number, unsigned char length);
 # 109 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6\\lcd18f.h"
 extern void LCDprintf(char* shell, char* inputs[]);
-# 18 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.h" 2
-
-# 1 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab8\\timer0config.h" 1
-# 20 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab8\\timer0config.h"
-#pragma config FEXTOSC = OFF
-#pragma config RSTOSC = HFINTOSC_64MHZ
-
-
-#pragma config CLKOUTEN = OFF
-#pragma config PR1WAY = ON
-#pragma config CSWEN = ON
-#pragma config FCMEN = ON
-
-
-#pragma config MCLRE = EXTMCLR
-#pragma config PWRTS = PWRT_OFF
-#pragma config MVECEN = ON
-#pragma config IVT1WAY = OFF
-#pragma config LPBOREN = OFF
-#pragma config BOREN = SBORDIS
-
-
-#pragma config BORV = VBOR_1P9
-#pragma config ZCD = OFF
-#pragma config PPS1WAY = ON
-#pragma config STVREN = ON
-#pragma config LVP = ON
-#pragma config XINST = OFF
-
-
-#pragma config WDTCPS = WDTCPS_31
-#pragma config WDTE = OFF
-
-
-#pragma config WDTCWS = WDTCWS_7
-#pragma config WDTCCS = SC
-
-
-#pragma config BBSIZE = BBSIZE_512
-#pragma config BBEN = OFF
-#pragma config SAFEN = OFF
-#pragma config DEBUG = OFF
-
-
-#pragma config WRTB = OFF
-#pragma config WRTC = OFF
-#pragma config WRTD = OFF
-#pragma config WRTSAF = OFF
-#pragma config WRTAPP = OFF
-
-
-#pragma config CP = OFF
-# 19 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.h" 2
-
-
-    unsigned char nSetRTC = 1;
-
-
-typedef struct realtime{
-    char hours;
-    char minutes;
-    char seconds;
-    char meridian;
-}time;
-# 39 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.h"
-void __attribute__((picinterrupt(("irq(IOC),low_priority"))))setINT(void);
-
-
-void setINT(void);
-# 52 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.h"
-void RTCrun(time *start_time);
-# 21 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c" 2
-
-
-void RTCrun(time *start_time) {
-
-    char* current_time[4] = {&start_time->hours, &start_time->minutes, &start_time->seconds, &start_time->meridian};
-
-
-    nSetRTC = 1;
-
-
-    timerInit();
-
-
-    TRISBbits.TRISB4 = 1;
-    ANSELBbits.ANSELB4 = 0;
-    WPUBbits.WPUB4 = 1;
+# 17 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c" 2
 
 
 
-    INTCON0bits.IPEN = 1;
 
 
-    PIE0bits.IOCIE = 1;
-    IOCBN4 = 1;
-    IOCBF = 0x00;
-
-    void __attribute__((picinterrupt(("irq(IOC),high_priority"))))setINT(void);
+void main(void){
 
 
-    while(nSetRTC){
+    LCDinit();
 
-        if(tick_count > 99){
-            tick_count -= 100;
-            (start_time)->seconds++;
-            if((start_time)->seconds > 59){
-                (start_time)->seconds = 0;
-                (start_time)->minutes++;
-                if((start_time)->minutes>59){
-                    (start_time)->minutes = 0;
-                    (start_time)->hours++;
-                    if((start_time)->hours>11){
-                        if((start_time)->hours >12){
-                            (start_time)->hours = 1;
-                        }else{
-                        (start_time)->meridian = (
-                                ((start_time)->meridian == 'a')? 'p' :
-                                    'a'
-                                );
-                    }
-                }
-            }
-        };
 
+    while(1){
+        unsigned int reading = analogRead(ANSELAbits.ANSELA3, TRISAbits.TRISA3, 0x03);
+        char* adc_string = toString(reading, 4);
         LCDinstruct(0x02);
-        LCDprintf("%i2:%i2:%i2 %cm", current_time);
-        }
+        LCDprints(adc_string);
+        _delay((unsigned long)((1000)*(64000000/4000.0)));
     };
-};
-
-void setINT(void){
-    IOCBN4 = 0;
-    IOCBF4 = 0;
-    T0CON0bits.EN = 0;
-    nSetRTC = 0;
     return;
 }

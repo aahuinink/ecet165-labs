@@ -1,31 +1,46 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"40604 C:/Users/a_hui/.mchp_packs/Microchip/PIC18F-Q_DFP/1.16.368/xc8\pic\include\proc\pic18f57q43.h
-[; ;C:/Users/a_hui/.mchp_packs/Microchip/PIC18F-Q_DFP/1.16.368/xc8\pic\include\proc\pic18f57q43.h: 40604: extern volatile unsigned char ANSELD __attribute__((address(0x418)));
-[v _ANSELD `Vuc ~T0 @X0 0 e@1048 ]
-"48490
-[; ;C:/Users/a_hui/.mchp_packs/Microchip/PIC18F-Q_DFP/1.16.368/xc8\pic\include\proc\pic18f57q43.h: 48490: extern volatile unsigned char TRISD __attribute__((address(0x4C9)));
-[v _TRISD `Vuc ~T0 @X0 0 e@1225 ]
-"40666
-[; ;C:/Users/a_hui/.mchp_packs/Microchip/PIC18F-Q_DFP/1.16.368/xc8\pic\include\proc\pic18f57q43.h: 40666: extern volatile unsigned char WPUD __attribute__((address(0x419)));
-[v _WPUD `Vuc ~T0 @X0 0 e@1049 ]
-"48154
-[; ;C:/Users/a_hui/.mchp_packs/Microchip/PIC18F-Q_DFP/1.16.368/xc8\pic\include\proc\pic18f57q43.h: 48154:     struct {
-[s S2239 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S2239 . LATD0 LATD1 LATD2 LATD3 LATD4 LATD5 LATD6 LATD7 ]
-"48153
-[; ;C:/Users/a_hui/.mchp_packs/Microchip/PIC18F-Q_DFP/1.16.368/xc8\pic\include\proc\pic18f57q43.h: 48153: typedef union {
-[u S2238 `S2239 1 ]
-[n S2238 . . ]
-"48165
-[; ;C:/Users/a_hui/.mchp_packs/Microchip/PIC18F-Q_DFP/1.16.368/xc8\pic\include\proc\pic18f57q43.h: 48165: extern volatile LATDbits_t LATDbits __attribute__((address(0x4C1)));
-[v _LATDbits `VS2238 ~T0 @X0 0 e@1217 ]
+[p mainexit ]
+"56 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6\lcd18f.h
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6\lcd18f.h: 56: extern void LCDinit(void);
+[v _LCDinit `(v ~T0 @X0 0 ef ]
+"40 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.h
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.h: 40: unsigned int analogRead(uint32_t pin_ansel, uint32_t pin_tris, unsigned char pin_designation);
+[v _analogRead `(ui ~T0 @X0 0 ef3`ul`ul`uc ]
+"39122 C:/Users/a_hui/.mchp_packs/Microchip/PIC18F-Q_DFP/1.16.368/xc8\pic\include\proc\pic18f57q43.h
+[; ;C:/Users/a_hui/.mchp_packs/Microchip/PIC18F-Q_DFP/1.16.368/xc8\pic\include\proc\pic18f57q43.h: 39122:     struct {
+[s S1851 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1851 . ANSELA0 ANSELA1 ANSELA2 ANSELA3 ANSELA4 ANSELA5 ANSELA6 ANSELA7 ]
+"39121
+[; ;C:/Users/a_hui/.mchp_packs/Microchip/PIC18F-Q_DFP/1.16.368/xc8\pic\include\proc\pic18f57q43.h: 39121: typedef union {
+[u S1850 `S1851 1 ]
+[n S1850 . . ]
+"39133
+[; ;C:/Users/a_hui/.mchp_packs/Microchip/PIC18F-Q_DFP/1.16.368/xc8\pic\include\proc\pic18f57q43.h: 39133: extern volatile ANSELAbits_t ANSELAbits __attribute__((address(0x400)));
+[v _ANSELAbits `VS1850 ~T0 @X0 0 e@1024 ]
+"48310
+[; ;C:/Users/a_hui/.mchp_packs/Microchip/PIC18F-Q_DFP/1.16.368/xc8\pic\include\proc\pic18f57q43.h: 48310:     struct {
+[s S2245 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S2245 . TRISA0 TRISA1 TRISA2 TRISA3 TRISA4 TRISA5 TRISA6 TRISA7 ]
+"48309
+[; ;C:/Users/a_hui/.mchp_packs/Microchip/PIC18F-Q_DFP/1.16.368/xc8\pic\include\proc\pic18f57q43.h: 48309: typedef union {
+[u S2244 `S2245 1 ]
+[n S2244 . . ]
+"48321
+[; ;C:/Users/a_hui/.mchp_packs/Microchip/PIC18F-Q_DFP/1.16.368/xc8\pic\include\proc\pic18f57q43.h: 48321: extern volatile TRISAbits_t TRISAbits __attribute__((address(0x4C6)));
+[v _TRISAbits `VS2244 ~T0 @X0 0 e@1222 ]
+"98 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6\lcd18f.h
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6\lcd18f.h: 98: extern char* toString(unsigned int number, unsigned char length);
+[v _toString `(*uc ~T0 @X0 0 ef2`ui`uc ]
+"48
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6\lcd18f.h: 48: extern void LCDinstruct(unsigned char instr);
+[v _LCDinstruct `(v ~T0 @X0 0 ef1`uc ]
+"72
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6\lcd18f.h: 72: extern void LCDprints(char *c);
+[v _LCDprints `(v ~T0 @X0 0 ef1`*uc ]
 [v F192 `(v ~T0 @X0 1 tf1`ul ]
 "12 C:/Users/a_hui/.mchp_packs/Microchip/PIC18F-Q_DFP/1.16.368/xc8\pic\include\builtins.h
 [v __delay `JF192 ~T0 @X0 0 e ]
 [p i __delay ]
-"48148 C:/Users/a_hui/.mchp_packs/Microchip/PIC18F-Q_DFP/1.16.368/xc8\pic\include\proc\pic18f57q43.h
-[; ;C:/Users/a_hui/.mchp_packs/Microchip/PIC18F-Q_DFP/1.16.368/xc8\pic\include\proc\pic18f57q43.h: 48148: extern volatile unsigned char LATD __attribute__((address(0x4C1)));
-[v _LATD `Vuc ~T0 @X0 0 e@1217 ]
 "328 C:/Users/a_hui/.mchp_packs/Microchip/PIC18F-Q_DFP/1.16.368/xc8\pic\include\proc\pic18f57q43.h
 [; ;C:/Users/a_hui/.mchp_packs/Microchip/PIC18F-Q_DFP/1.16.368/xc8\pic\include\proc\pic18f57q43.h: 328: __asm("CLKRCON equ 039h");
 [; <" CLKRCON equ 039h ;# ">
@@ -2579,449 +2594,47 @@ Version 4.0 HI-TECH Software Intermediate Code
 "50272
 [; ;C:/Users/a_hui/.mchp_packs/Microchip/PIC18F-Q_DFP/1.16.368/xc8\pic\include\proc\pic18f57q43.h: 50272: __asm("TOSU equ 04FFh");
 [; <" TOSU equ 04FFh ;# ">
-"15 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 15: void LCDinstruct(unsigned char instr){
-[v _LCDinstruct `(v ~T0 @X0 1 ef1`uc ]
+[v $root$_main `(v ~T0 @X0 0 e ]
+"22 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 22: void main(void){
+[v _main `(v ~T0 @X0 1 ef ]
 {
-[e :U _LCDinstruct ]
-[v _instr `uc ~T0 @X0 1 r1 ]
+[e :U _main ]
 [f ]
-"17
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 17:     ANSELD = 0x0; TRISD = 0x0; WPUD = 0xFF; LATDbits.LATD7 = 1; _delay((unsigned long)((1)*(64000000/4000000.0)));
-[e = _ANSELD -> -> 0 `i `uc ]
-[e = _TRISD -> -> 0 `i `uc ]
-[e = _WPUD -> -> 255 `i `uc ]
-[e = . . _LATDbits 0 7 -> -> 1 `i `uc ]
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 64000000 `l `d .4000000.0 `ul ]
-"20
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 20:     LATDbits.LATD5 = 0;
-[e = . . _LATDbits 0 5 -> -> 0 `i `uc ]
-"21
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 21:     LATDbits.LATD4 = 0;
-[e = . . _LATDbits 0 4 -> -> 0 `i `uc ]
-"24
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 24:     LATD = (LATD & 0xF0)| (instr >> 4 & 0x0F);
-[e = _LATD -> | & -> _LATD `i -> 240 `i & >> -> _instr `i -> 4 `i -> 15 `i `uc ]
 "25
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 25:     LATDbits.LATD6 = 1; _delay((unsigned long)((1)*(64000000/4000000.0))); LATDbits.LATD6 = 0;
-[e = . . _LATDbits 0 6 -> -> 1 `i `uc ]
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 64000000 `l `d .4000000.0 `ul ]
-[e = . . _LATDbits 0 6 -> -> 0 `i `uc ]
-"26
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 26:     _delay((unsigned long)((1)*(64000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 64000000 `l `d .4000000.0 `ul ]
-"27
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 27:     LATD = (LATD & 0xF0)|(instr & 0x0F);
-[e = _LATD -> | & -> _LATD `i -> 240 `i & -> _instr `i -> 15 `i `uc ]
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 25:     LCDinit();
+[e ( _LCDinit ..  ]
 "28
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 28:     LATDbits.LATD6 = 1; _delay((unsigned long)((1)*(64000000/4000000.0))); LATDbits.LATD6 = 0;
-[e = . . _LATDbits 0 6 -> -> 1 `i `uc ]
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 64000000 `l `d .4000000.0 `ul ]
-[e = . . _LATDbits 0 6 -> -> 0 `i `uc ]
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 28:     while(1){
+[e :U 2366 ]
+{
 "29
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 29:     _delay((unsigned long)((5)*(64000000/4000.0)));
-[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 29:         unsigned int reading = analogRead(ANSELAbits.ANSELA3, TRISAbits.TRISA3, 0x03);
+[v _reading `ui ~T0 @X0 1 a ]
+[e = _reading ( _analogRead (3 , , -> . . _ANSELAbits 0 3 `ul -> . . _TRISAbits 0 3 `ul -> -> 3 `i `uc ]
 "30
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 30:     return;
-[e $UE 2364  ]
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 30:         char* adc_string = toString(reading, 4);
+[v _adc_string `*uc ~T0 @X0 1 a ]
+[e = _adc_string ( _toString (2 , _reading -> -> 4 `i `uc ]
 "31
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 31: };
-[e :UE 2364 ]
-}
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 31:         LCDinstruct(0x02);
+[e ( _LCDinstruct (1 -> -> 2 `i `uc ]
+"32
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 32:         LCDprints(adc_string);
+[e ( _LCDprints (1 _adc_string ]
+"33
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 33:         _delay((unsigned long)((1000)*(64000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
 "34
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 34: void LCDinit(void){
-[v _LCDinit `(v ~T0 @X0 1 ef ]
-{
-[e :U _LCDinit ]
-[f ]
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 34:     };
+}
+[e :U 2365 ]
+[e $U 2366  ]
+[e :U 2367 ]
 "35
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 35:     _delay((unsigned long)((50)*(64000000/4000.0)));
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
-"37
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 37:     ANSELD = 0x0; TRISD = 0x0; WPUD = 0xFF; LATDbits.LATD7 = 1; _delay((unsigned long)((1)*(64000000/4000000.0)));
-[e = _ANSELD -> -> 0 `i `uc ]
-[e = _TRISD -> -> 0 `i `uc ]
-[e = _WPUD -> -> 255 `i `uc ]
-[e = . . _LATDbits 0 7 -> -> 1 `i `uc ]
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 64000000 `l `d .4000000.0 `ul ]
-"39
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 39:     LATDbits.LATD4 = 0;
-[e = . . _LATDbits 0 4 -> -> 0 `i `uc ]
-"40
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 40:     LATDbits.LATD5 = 0;
-[e = . . _LATDbits 0 5 -> -> 0 `i `uc ]
-"42
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 42:     _delay((unsigned long)((1)*(64000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 64000000 `l `d .4000000.0 `ul ]
-"45
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 45:     LATD = (LATD & 0xF0) | 0x03;
-[e = _LATD -> | & -> _LATD `i -> 240 `i -> 3 `i `uc ]
-"46
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 46:     LATDbits.LATD6 = 1; _delay((unsigned long)((1)*(64000000/4000000.0))); LATDbits.LATD6 = 0;
-[e = . . _LATDbits 0 6 -> -> 1 `i `uc ]
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 64000000 `l `d .4000000.0 `ul ]
-[e = . . _LATDbits 0 6 -> -> 0 `i `uc ]
-"47
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 47:     _delay((unsigned long)((5)*(64000000/4000.0)));
-[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
-"49
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 49:     LATD = (LATD & 0xF0) | 0x03;
-[e = _LATD -> | & -> _LATD `i -> 240 `i -> 3 `i `uc ]
-"50
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 50:     LATDbits.LATD6 = 1; _delay((unsigned long)((1)*(64000000/4000000.0))); LATDbits.LATD6 = 0;
-[e = . . _LATDbits 0 6 -> -> 1 `i `uc ]
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 64000000 `l `d .4000000.0 `ul ]
-[e = . . _LATDbits 0 6 -> -> 0 `i `uc ]
-"51
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 51:     _delay((unsigned long)((5)*(64000000/4000.0)));
-[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
-"53
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 53:     LATD = (LATD & 0xF0) | 0x03;
-[e = _LATD -> | & -> _LATD `i -> 240 `i -> 3 `i `uc ]
-"54
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 54:     LATDbits.LATD6 = 1; _delay((unsigned long)((1)*(64000000/4000000.0))); LATDbits.LATD6 = 0;
-[e = . . _LATDbits 0 6 -> -> 1 `i `uc ]
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 64000000 `l `d .4000000.0 `ul ]
-[e = . . _LATDbits 0 6 -> -> 0 `i `uc ]
-"55
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 55:     _delay((unsigned long)((5)*(64000000/4000.0)));
-[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
-"58
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 58:     LATD = (LATD & 0xF0) | 0x02;
-[e = _LATD -> | & -> _LATD `i -> 240 `i -> 2 `i `uc ]
-"59
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 59:     LATDbits.LATD6 = 1; _delay((unsigned long)((1)*(64000000/4000000.0))); LATDbits.LATD6 = 0;
-[e = . . _LATDbits 0 6 -> -> 1 `i `uc ]
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 64000000 `l `d .4000000.0 `ul ]
-[e = . . _LATDbits 0 6 -> -> 0 `i `uc ]
-"60
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 60:     _delay((unsigned long)((5)*(64000000/4000.0)));
-[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
-"63
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 63:     LCDinstruct(0x28);
-[e ( _LCDinstruct (1 -> -> 40 `i `uc ]
-"64
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 64:     LCDinstruct(0x08);
-[e ( _LCDinstruct (1 -> -> 8 `i `uc ]
-"65
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 65:     LCDinstruct(0x0F);
-[e ( _LCDinstruct (1 -> -> 15 `i `uc ]
-"66
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 66:     LCDinstruct(0x01);
-[e ( _LCDinstruct (1 -> -> 1 `i `uc ]
-"67
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 67:     LCDinstruct(0x06);
-[e ( _LCDinstruct (1 -> -> 6 `i `uc ]
-"68
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 68:     return;
-[e $UE 2365  ]
-"69
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 69: };
-[e :UE 2365 ]
-}
-"71
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 71: void LCDprintc(char c){
-[v _LCDprintc `(v ~T0 @X0 1 ef1`uc ]
-{
-[e :U _LCDprintc ]
-[v _c `uc ~T0 @X0 1 r1 ]
-[f ]
-"72
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 72:     ANSELD = 0x0; TRISD = 0x0; WPUD = 0xFF; LATDbits.LATD7 = 1; _delay((unsigned long)((1)*(64000000/4000000.0)));
-[e = _ANSELD -> -> 0 `i `uc ]
-[e = _TRISD -> -> 0 `i `uc ]
-[e = _WPUD -> -> 255 `i `uc ]
-[e = . . _LATDbits 0 7 -> -> 1 `i `uc ]
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 64000000 `l `d .4000000.0 `ul ]
-"73
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 73:     LATDbits.LATD4 = 1;
-[e = . . _LATDbits 0 4 -> -> 1 `i `uc ]
-"74
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 74:     LATDbits.LATD5 = 0;
-[e = . . _LATDbits 0 5 -> -> 0 `i `uc ]
-"77
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 77:     LATD = (LATD & 0xF0)|(c>>4);
-[e = _LATD -> | & -> _LATD `i -> 240 `i >> -> _c `i -> 4 `i `uc ]
-"78
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 78:     _delay((unsigned long)((1)*(64000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 64000000 `l `d .4000000.0 `ul ]
-"79
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 79:     LATDbits.LATD6 = 1; _delay((unsigned long)((1)*(64000000/4000000.0))); LATDbits.LATD6 = 0;
-[e = . . _LATDbits 0 6 -> -> 1 `i `uc ]
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 64000000 `l `d .4000000.0 `ul ]
-[e = . . _LATDbits 0 6 -> -> 0 `i `uc ]
-"80
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 80:     LATD = (LATD & 0xF0)|(c & 0x0F);
-[e = _LATD -> | & -> _LATD `i -> 240 `i & -> _c `i -> 15 `i `uc ]
-"81
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 81:     _delay((unsigned long)((1)*(64000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 64000000 `l `d .4000000.0 `ul ]
-"82
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 82:     LATDbits.LATD6 = 1; _delay((unsigned long)((1)*(64000000/4000000.0))); LATDbits.LATD6 = 0;
-[e = . . _LATDbits 0 6 -> -> 1 `i `uc ]
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 64000000 `l `d .4000000.0 `ul ]
-[e = . . _LATDbits 0 6 -> -> 0 `i `uc ]
-"83
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 83:     _delay((unsigned long)((5)*(64000000/4000.0)));
-[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
-"84
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 84:     return;
-[e $UE 2366  ]
-"85
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 85: }
-[e :UE 2366 ]
-}
-"86
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 86: void LCDprints(char *c){
-[v _LCDprints `(v ~T0 @X0 1 ef1`*uc ]
-{
-[e :U _LCDprints ]
-[v _c `*uc ~T0 @X0 1 r1 ]
-[f ]
-"88
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 88:     ANSELD = 0x0; TRISD = 0x0; WPUD = 0xFF; LATDbits.LATD7 = 1; _delay((unsigned long)((1)*(64000000/4000000.0)));
-[e = _ANSELD -> -> 0 `i `uc ]
-[e = _TRISD -> -> 0 `i `uc ]
-[e = _WPUD -> -> 255 `i `uc ]
-[e = . . _LATDbits 0 7 -> -> 1 `i `uc ]
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 64000000 `l `d .4000000.0 `ul ]
-"91
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 91:     LATDbits.LATD4 = 1;
-[e = . . _LATDbits 0 4 -> -> 1 `i `uc ]
-"92
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 92:     LATDbits.LATD5 = 0;
-[e = . . _LATDbits 0 5 -> -> 0 `i `uc ]
-"94
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 94:     _delay((unsigned long)((1)*(64000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 64000000 `l `d .4000000.0 `ul ]
-"98
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 98:     while(*c != 0x0){
-[e $U 2368  ]
-[e :U 2369 ]
-{
-"100
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 100:         LCDprintc(*c++);
-[e ( _LCDprintc (1 *U ++ _c * -> -> 1 `i `x -> -> # *U _c `i `x ]
-"101
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 101:     };
-}
-[e :U 2368 ]
-"98
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 98:     while(*c != 0x0){
-[e $ != -> *U _c `i -> 0 `i 2369  ]
-[e :U 2370 ]
-"102
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 102:     return;
-[e $UE 2367  ]
-"103
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 103: };
-[e :UE 2367 ]
-}
-"107
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 107: void LCDgoto(unsigned char pos){
-[v _LCDgoto `(v ~T0 @X0 1 ef1`uc ]
-{
-[e :U _LCDgoto ]
-[v _pos `uc ~T0 @X0 1 r1 ]
-[f ]
-"108
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 108:     LCDinstruct(0x80+pos);
-[e ( _LCDinstruct (1 -> + -> 128 `i -> _pos `i `uc ]
-"109
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 109:     return;
-[e $UE 2371  ]
-"110
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 110: }
-[e :UE 2371 ]
-}
-"113
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 113: unsigned char LCDreturn(unsigned char pos){
-[v _LCDreturn `(uc ~T0 @X0 1 ef1`uc ]
-{
-[e :U _LCDreturn ]
-[v _pos `uc ~T0 @X0 1 r1 ]
-[f ]
-"114
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 114:     ANSELD = 0x0; TRISD = 0x0; WPUD = 0xFF; LATDbits.LATD7 = 1; _delay((unsigned long)((1)*(64000000/4000000.0)));
-[e = _ANSELD -> -> 0 `i `uc ]
-[e = _TRISD -> -> 0 `i `uc ]
-[e = _WPUD -> -> 255 `i `uc ]
-[e = . . _LATDbits 0 7 -> -> 1 `i `uc ]
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 64000000 `l `d .4000000.0 `ul ]
-"116
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 116:     unsigned char next_line = 0x40;
-[v _next_line `uc ~T0 @X0 1 a ]
-[e = _next_line -> -> 64 `i `uc ]
-"118
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 118:     if (pos > 0x0F){
-[e $ ! > -> _pos `i -> 15 `i 2373  ]
-{
-"119
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 119:         next_line = 0x00;
-[e = _next_line -> -> 0 `i `uc ]
-"120
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 120:     }
-}
-[e :U 2373 ]
-"121
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 121:     LCDgoto(next_line);
-[e ( _LCDgoto (1 _next_line ]
-"123
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 123:     for(unsigned char i = 0; i < 40; i++){
-{
-[v _i `uc ~T0 @X0 1 a ]
-[e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 40 `i 2374  ]
-[e $U 2375  ]
-[e :U 2374 ]
-{
-"124
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 124:         LCDprintc(' ');
-[e ( _LCDprintc (1 -> -> 32 `ui `uc ]
-"125
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 125:     }
-}
-[e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 40 `i 2374  ]
-[e :U 2375 ]
-}
-"127
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 127:     LCDgoto(next_line);
-[e ( _LCDgoto (1 _next_line ]
-"129
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 129:     return next_line;
-[e ) _next_line ]
-[e $UE 2372  ]
-"131
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 131: }
-[e :UE 2372 ]
-}
-"133
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 133: char* toString(unsigned int number, unsigned char length){
-[v _toString `(*uc ~T0 @X0 1 ef2`ui`uc ]
-{
-[e :U _toString ]
-[v _number `ui ~T0 @X0 1 r1 ]
-[v _length `uc ~T0 @X0 1 r2 ]
-[f ]
-[v F16812 `uc ~T0 @X0 -> 6 `i s ]
-[i F16812
-:U ..
-"134
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 134:     char string[6] = "";
--> 0 `c
-..
-]
-[v _string `uc ~T0 @X0 -> 6 `i a ]
-[e = _string F16812 ]
-"136
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 136:     for(signed char i = length-1; i > -1; i--){
-{
-[v _i `c ~T0 @X0 1 a ]
-[e = _i -> - -> _length `i -> 1 `i `c ]
-[e $ > -> _i `i -U -> 1 `i 2378  ]
-[e $U 2379  ]
-[e :U 2378 ]
-{
-"137
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 137:         string[i] = (number % 10) + '0';
-[e = *U + &U _string * -> -> _i `uc `ux -> -> # *U &U _string `ui `ux -> + % _number -> -> 10 `i `ui -> 48 `ui `uc ]
-"138
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 138:         number /= 10;
-[e =/ _number -> -> 10 `i `ui ]
-"139
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 139:     };
-}
-[e -- _i -> -> 1 `i `c ]
-[e $ > -> _i `i -U -> 1 `i 2378  ]
-[e :U 2379 ]
-}
-"140
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 140:     return &string;
-[e ) -> &U _string `*uc ]
-[e $UE 2377  ]
-"141
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 141: }
-[e :UE 2377 ]
-}
-"143
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 143: void LCDprintf(char* shell, char* inputs[]){
-[v _LCDprintf `(v ~T0 @X0 1 ef2`*uc`**uc ]
-{
-[e :U _LCDprintf ]
-[v _shell `*uc ~T0 @X0 1 r1 ]
-[v _inputs `**uc ~T0 @X0 1 r2 ]
-[f ]
-"144
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 144:     while(*shell != 0x0){
-[e $U 2382  ]
-[e :U 2383 ]
-{
-"146
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 146:         if((*shell == '%') & (*(shell+1) == 's')){
-[e $ ! & == -> *U _shell `ui -> 37 `ui == -> *U + _shell * -> -> 1 `i `x -> -> # *U _shell `i `x `ui -> 115 `ui 2385  ]
-{
-"148
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 148:             LCDprints(*inputs++);
-[e ( _LCDprints (1 *U ++ _inputs * -> -> 1 `i `x -> -> # *U _inputs `i `x ]
-"149
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 149:             shell+=2;
-[e =+ _shell * -> -> 2 `i `x -> -> # *U _shell `i `x ]
-"150
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 150:         }
-}
-[e $U 2386  ]
-"152
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 152:         else if((*shell == '%') & (*(shell+1) == 'i')){
-[e :U 2385 ]
-[e $ ! & == -> *U _shell `ui -> 37 `ui == -> *U + _shell * -> -> 1 `i `x -> -> # *U _shell `i `x `ui -> 105 `ui 2387  ]
-{
-"154
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 154:             LCDprints(toString(**inputs++, (*(shell+2)-'0')));
-[e ( _LCDprints (1 ( _toString (2 , -> *U *U ++ _inputs * -> -> 1 `i `x -> -> # *U _inputs `i `x `ui -> - -> *U + _shell * -> -> 2 `i `x -> -> # *U _shell `i `x `ui -> 48 `ui `uc ]
-"155
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 155:             shell+=3;
-[e =+ _shell * -> -> 3 `i `x -> -> # *U _shell `i `x ]
-"157
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 157:         }else if((*shell == '%') & (*(shell+1) == 'c')){
-}
-[e $U 2388  ]
-[e :U 2387 ]
-[e $ ! & == -> *U _shell `ui -> 37 `ui == -> *U + _shell * -> -> 1 `i `x -> -> # *U _shell `i `x `ui -> 99 `ui 2389  ]
-{
-"159
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 159:             LCDprintc(**inputs++);
-[e ( _LCDprintc (1 *U *U ++ _inputs * -> -> 1 `i `x -> -> # *U _inputs `i `x ]
-"160
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 160:             shell+=2;
-[e =+ _shell * -> -> 2 `i `x -> -> # *U _shell `i `x ]
-"161
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 161:         }else{
-}
-[e $U 2390  ]
-[e :U 2389 ]
-{
-"163
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 163:             LCDprintc(*shell++);
-[e ( _LCDprintc (1 *U ++ _shell * -> -> 1 `i `x -> -> # *U _shell `i `x ]
-"164
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 164:         }
-}
-[e :U 2390 ]
-[e :U 2388 ]
-[e :U 2386 ]
-"165
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 165:     }
-}
-[e :U 2382 ]
-"144
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 144:     while(*shell != 0x0){
-[e $ != -> *U _shell `i -> 0 `i 2383  ]
-[e :U 2384 ]
-"166
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 166:     return;
-[e $UE 2381  ]
-"167
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c: 167: }
-[e :UE 2381 ]
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 35:     return;
+[e $UE 2364  ]
+"36
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 36: }
+[e :UE 2364 ]
 }

@@ -28827,7 +28827,7 @@ extern void LCDgoto(unsigned char pos);
 
 extern unsigned char LCDreturn(unsigned char pos);
 # 98 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.h"
-extern char* toString(unsigned char number, unsigned char length);
+extern char* toString(unsigned int number, unsigned char length);
 # 109 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.h"
 extern void LCDprintf(char* shell, char* inputs[]);
 # 12 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c" 2
@@ -28952,13 +28952,12 @@ unsigned char LCDreturn(unsigned char pos){
 
 }
 
-char* toString(unsigned char number, unsigned char length){
-    char string[4] = "";
-    unsigned char copy_num = number;
+char* toString(unsigned int number, unsigned char length){
+    char string[6] = "";
 
     for(signed char i = length-1; i > -1; i--){
-        string[i] = (copy_num % 10) + '0';
-        copy_num /= 10;
+        string[i] = (number % 10) + '0';
+        number /= 10;
     };
     return &string;
 }
