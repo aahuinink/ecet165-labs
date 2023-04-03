@@ -14,9 +14,9 @@ extern "C" {
 #include <xc.h>
 #include <pic18f57q43.h>
     
-#include "C:\Users\a_hui\OneDrive - Camosun College\term2\ecet165_embedded_mc\labs\lab8\timer0.h"
-#include "C:\Users\a_hui\OneDrive - Camosun College\term2\ecet165_embedded_mc\labs\lab6\lcd18f.h"
-#include "C:\Users\a_hui\OneDrive - Camosun College\term2\ecet165_embedded_mc\labs\lab8\timer0config.h"
+#include "timer0.h"
+#include "lcd18f.h"
+#include "timer0config.h"
 
     unsigned char nSetRTC = 1;
     

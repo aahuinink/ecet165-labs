@@ -1,12 +1,12 @@
 /********************************************************************************
- * ADC Implementation - Lab 11
+ * ADC Functions for PIC18F
  * ECET165 Embedded Micro-controllers
  * analog18f.h
- * CREATED 27/03/23
+ * CREATED April 2, 2023
  * UPDATED ***
  * v1.0
  * BY Aaron Huinink
- * DESCRIPTION: ADC functionality for a pic18f uC.
+ * ADC modules for pic18f uCs.
  ********************************************************************************/
 
 #ifndef ANALOG18F_H
@@ -19,25 +19,28 @@ extern "C" {
  // ============================ INCLUDES/DEFINES =================================//
 
 #include <xc.h>
-#include "pic18f57q43.h"
 
-#define PIN_A3 0b000011
-#define PIN_A4 0b000100
+#define ADC_A3 0x03
+#define ADC_A4 0x04
+
 // ============================ GLOBAL VARIABLES ========================== //
 
 // ============================ FUNCTION PROTOTYPES ========================== //
 
-// ----- ADCinit ----- //
+// ----- analogRead ----- //
 /*
-* Initializes the ADC module. 
-* ARGS: [pin<unsigned char> : 6-bit value from DS designating the pin to set up]
-* RETURNS: [void]
+* retrieves an analog reading from the specified io pin
+* ARGS: [
+ *          pin_ansel<uint32_t> : the ansel bit of the io pin;
+ *          pin_tris<uint32_t>  : the tris bit of the io pin;
+ *          pin_designation<unsigned char> : the 6-bit ADPCH value from the DS;
+ *      ]
+* RETURNS: [ADCval<unsigned int> : 12 bit analog reading from the pin]
 */
-void ADCinit(unsigned char pin);
+unsigned int analogRead(uint32_t pin_ansel, uint32_t pin_tris, unsigned char pin_designation);
 
 #ifdef	__cplusplus
 }
 #endif
 
 #endif	/* ANALOG18F_H */
-
