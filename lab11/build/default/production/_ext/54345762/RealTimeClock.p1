@@ -71,12 +71,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "40046
 [; ;C:/Users/a_hui/.mchp_packs/Microchip/PIC18F-Q_DFP/1.16.368/xc8\pic\include\proc\pic18f57q43.h: 40046: extern volatile unsigned char IOCBF __attribute__((address(0x40F)));
 [v _IOCBF `Vuc ~T0 @X0 0 e@1039 ]
-"48 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6\lcd18f.h
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6\lcd18f.h: 48: extern void LCDinstruct(unsigned char instr);
+"50 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6\lcd18f.h
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6\lcd18f.h: 50: extern void LCDinstruct(unsigned char instr);
 [v _LCDinstruct `(v ~T0 @X0 0 ef1`uc ]
-"109
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6\lcd18f.h: 109: extern void LCDprintf(char* shell, char* inputs[]);
-[v _LCDprintf `(v ~T0 @X0 0 ef2`*uc`**uc ]
+"111
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6\lcd18f.h: 111: extern void LCDprintf(char* shell, ... );
+[v _LCDprintf `(v ~T0 @X0 0 ev`*uc ]
 [t ~ __interrupt . k ]
 [t T6 __interrupt irq ( IOC ) low_priority ]
 "54719 C:/Users/a_hui/.mchp_packs/Microchip/PIC18F-Q_DFP/1.16.368/xc8\pic\include\proc\pic18f57q43.h
@@ -2737,8 +2737,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _RTCrun ]
 [v _start_time `*S2364 ~T0 @X0 1 r1 ]
 [f ]
-[v F16815 `*uc ~T0 @X0 -> 4 `i s ]
-[i F16815
+[v F16818 `*uc ~T0 @X0 -> 4 `i s ]
+[i F16818
 :U ..
 "25
 [; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 25:     char* current_time[4] = {&start_time->hours, &start_time->minutes, &start_time->seconds, &start_time->meridian};
@@ -2749,7 +2749,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _current_time `*uc ~T0 @X0 -> 4 `i a ]
-[e = _current_time F16815 ]
+[e = _current_time F16818 ]
 [e ; = *U + &U _current_time * -> -> -> 0 `i `ui `ux -> -> # *U &U _current_time `ui `ux &U . *U _start_time 0 ; = *U + &U _current_time * -> -> -> 1 `i `ui `ux -> -> # *U &U _current_time `ui `ux &U . *U _start_time 1 ; = *U + &U _current_time * -> -> -> 2 `i `ui `ux -> -> # *U &U _current_time `ui `ux &U . *U _start_time 2 = *U + &U _current_time * -> -> -> 3 `i `ui `ux -> -> # *U &U _current_time `ui `ux &U . *U _start_time 3 ]
 "28
 [; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 28:     nSetRTC = 1;
@@ -2854,7 +2854,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _LCDinstruct (1 -> -> 2 `i `uc ]
 "75
 [; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 75:         LCDprintf("%i2:%i2:%i2 %cm", current_time);
-[e ( _LCDprintf (2 , :s 1C &U _current_time ]
+[e ( _LCDprintf , (. :s 1C &U _current_time ]
 "76
 [; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 76:         }
 }

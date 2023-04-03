@@ -27,9 +27,8 @@ void main(void){
     // ----- main loop ----- //
     while(1){
         unsigned int reading = analogRead(ANSELAbits.ANSELA3, TRISAbits.TRISA3, ADC_A3);
-        char* adc_string = toString(reading, 4);
         LCD_HOME;
-        LCDprints(adc_string);
+        LCDprintf("%i4", reading);
         __delay_ms(1000);
     };
     return;

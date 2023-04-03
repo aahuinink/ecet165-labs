@@ -28784,7 +28784,32 @@ unsigned char __t3rd16on(void);
 # 11 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c" 2
 
 # 1 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.h" 1
-# 48 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.h"
+# 18 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.h"
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdarg.h" 1 3
+
+
+
+
+
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\bits/alltypes.h" 1 3
+
+
+
+
+
+typedef void * va_list[1];
+# 8 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdarg.h" 2 3
+
+
+#pragma intrinsic(__va_start)
+#pragma intrinsic(__va_arg)
+
+extern void * __va_start(void);
+extern void * __va_arg(void *, ...);
+# 18 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.h" 2
+# 50 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.h"
 extern void LCDinstruct(unsigned char instr);
 
 
@@ -28826,10 +28851,10 @@ extern void LCDgoto(unsigned char pos);
 
 
 extern unsigned char LCDreturn(unsigned char pos);
-# 98 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.h"
+# 100 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.h"
 extern char* toString(unsigned int number, unsigned char length);
-# 109 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.h"
-extern void LCDprintf(char* shell, char* inputs[]);
+# 111 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.h"
+extern void LCDprintf(char* shell, ... );
 # 12 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c" 2
 
 
@@ -28962,23 +28987,26 @@ char* toString(unsigned int number, unsigned char length){
     return &string;
 }
 
-void LCDprintf(char* shell, char* inputs[]){
+void LCDprintf(char* shell, ... ){
+    va_list args;
+    *args = __va_start();
+
     while(*shell != 0x0){
 
         if((*shell == '%') & (*(shell+1) == 's')){
 
-            LCDprints(*inputs++);
+            LCDprints((*(char* *)__va_arg(*(char* **)args, (char*)0)));
             shell+=2;
         }
 
         else if((*shell == '%') & (*(shell+1) == 'i')){
 
-            LCDprints(toString(**inputs++, (*(shell+2)-'0')));
+            LCDprints(toString((*(int *)__va_arg(*(int **)args, (int)0)), (*(shell+2)-'0')));
             shell+=3;
 
         }else if((*shell == '%') & (*(shell+1) == 'c')){
 
-            LCDprintc(**inputs++);
+            LCDprintc((*(char *)__va_arg(*(char **)args, (char)0)));
             shell+=2;
         }else{
 

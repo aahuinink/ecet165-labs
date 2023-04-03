@@ -1,7 +1,7 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [p mainexit ]
-"56 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6\lcd18f.h
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6\lcd18f.h: 56: extern void LCDinit(void);
+"58 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6\lcd18f.h
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6\lcd18f.h: 58: extern void LCDinit(void);
 [v _LCDinit `(v ~T0 @X0 0 ef ]
 "40 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.h
 [; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.h: 40: unsigned int analogRead(uint32_t pin_ansel, uint32_t pin_tris, unsigned char pin_designation);
@@ -28,15 +28,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "48321
 [; ;C:/Users/a_hui/.mchp_packs/Microchip/PIC18F-Q_DFP/1.16.368/xc8\pic\include\proc\pic18f57q43.h: 48321: extern volatile TRISAbits_t TRISAbits __attribute__((address(0x4C6)));
 [v _TRISAbits `VS2244 ~T0 @X0 0 e@1222 ]
-"98 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6\lcd18f.h
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6\lcd18f.h: 98: extern char* toString(unsigned int number, unsigned char length);
-[v _toString `(*uc ~T0 @X0 0 ef2`ui`uc ]
-"48
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6\lcd18f.h: 48: extern void LCDinstruct(unsigned char instr);
+"50 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6\lcd18f.h
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6\lcd18f.h: 50: extern void LCDinstruct(unsigned char instr);
 [v _LCDinstruct `(v ~T0 @X0 0 ef1`uc ]
-"72
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6\lcd18f.h: 72: extern void LCDprints(char *c);
-[v _LCDprints `(v ~T0 @X0 0 ef1`*uc ]
+"111
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6\lcd18f.h: 111: extern void LCDprintf(char* shell, ... );
+[v _LCDprintf `(v ~T0 @X0 0 ev`*uc ]
 [v F192 `(v ~T0 @X0 1 tf1`ul ]
 "12 C:/Users/a_hui/.mchp_packs/Microchip/PIC18F-Q_DFP/1.16.368/xc8\pic\include\builtins.h
 [v __delay `JF192 ~T0 @X0 0 e ]
@@ -2613,28 +2610,25 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _reading `ui ~T0 @X0 1 a ]
 [e = _reading ( _analogRead (3 , , -> . . _ANSELAbits 0 3 `ul -> . . _TRISAbits 0 3 `ul -> -> 3 `i `uc ]
 "30
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 30:         char* adc_string = toString(reading, 4);
-[v _adc_string `*uc ~T0 @X0 1 a ]
-[e = _adc_string ( _toString (2 , _reading -> -> 4 `i `uc ]
-"31
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 31:         LCDinstruct(0x02);
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 30:         LCDinstruct(0x02);
 [e ( _LCDinstruct (1 -> -> 2 `i `uc ]
+"31
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 31:         LCDprintf("%i4", reading);
+[e ( _LCDprintf , (. :s 1C _reading ]
 "32
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 32:         LCDprints(adc_string);
-[e ( _LCDprints (1 _adc_string ]
-"33
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 33:         _delay((unsigned long)((1000)*(64000000/4000.0)));
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 32:         _delay((unsigned long)((1000)*(64000000/4000.0)));
 [e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
-"34
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 34:     };
+"33
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 33:     };
 }
 [e :U 2365 ]
 [e $U 2366  ]
 [e :U 2367 ]
-"35
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 35:     return;
+"34
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 34:     return;
 [e $UE 2364  ]
-"36
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 36: }
+"35
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 35: }
 [e :UE 2364 ]
 }
+[a 1C 37 105 52 0 ]
