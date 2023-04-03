@@ -28988,26 +28988,62 @@ char* toString(unsigned int number, unsigned char length){
 }
 
 void LCDprintf(char* shell, ... ){
+
+    double f_input;
+    char f_string[10];
+    unsigned int f_int;
+    signed char indexer;
+
     va_list args;
     *args = __va_start();
 
     while(*shell != 0x0){
 
-        if((*shell == '%') & (*(shell+1) == 's')){
+        if(*shell != '%'){
+            LCDprintc(*shell++);
+
+        }else if(*(shell+1) == 's'){
 
             LCDprints((*(char* *)__va_arg(*(char* **)args, (char*)0)));
             shell+=2;
         }
 
-        else if((*shell == '%') & (*(shell+1) == 'i')){
+        else if(*(shell+1) == 'i'){
 
-            LCDprints(toString((*(int *)__va_arg(*(int **)args, (int)0)), (*(shell+2)-'0')));
+            LCDprints(toString((*(unsigned int *)__va_arg(*(unsigned int **)args, (unsigned int)0)), (*(shell+2)-'0')));
             shell+=3;
 
-        }else if((*shell == '%') & (*(shell+1) == 'c')){
+        }else if(*(shell+1) == 'c'){
 
             LCDprintc((*(char *)__va_arg(*(char **)args, (char)0)));
             shell+=2;
+
+
+        }else if(*(shell+2) == 'f'){
+
+            f_input = (*(double *)__va_arg(*(double **)args, (double)0));
+            f_input *= 10*(*(shell+3));
+            f_int = (unsigned int)f_input;
+
+
+
+            indexer = (*(shell+1)-'0')+(*(shell+3)-'0');
+            indexer = (indexer > 8)? 8 : indexer;
+            while(indexer > -1){
+
+                if(indexer == (8-(*(shell+3)-'0'))){
+                    f_string[indexer] = '.';
+
+                }else{
+                    f_string[indexer] = f_int % 10;
+                    f_int /= 10;
+                }
+                indexer--;
+            }
+
+            LCDprints(f_string);
+
+            shell +=4;
         }else{
 
             LCDprintc(*shell++);

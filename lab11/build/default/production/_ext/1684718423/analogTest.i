@@ -28889,7 +28889,7 @@ void main(void){
     while(1){
         LCDinstruct(0x02);
         pot_voltage = analogMap(analogRead(ANSELAbits.ANSELA3, TRISAbits.TRISA3, 0x03), 4000, 0, 5.00, 0.00);
-        LCDprintf("%i3", pot_voltage);
+        LCDprintf("%1f2", pot_voltage);
         _delay((unsigned long)((1000)*(64000000/4000.0)));
     };
     return;
