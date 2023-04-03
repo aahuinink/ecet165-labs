@@ -21,19 +21,23 @@ extern "C" {
 #include <xc.h>
 #include "pic18f57q43.h"
 
-#define PIN_A3 0b000011
-#define PIN_A4 0b000100
+#define ADC_A3 0x03
+#define ADC_A4 0x04
 // ============================ GLOBAL VARIABLES ========================== //
 
 // ============================ FUNCTION PROTOTYPES ========================== //
 
-// ----- ADCinit ----- //
+// ----- analogRead ----- //
 /*
-* Initializes the ADC module. 
-* ARGS: [pin<unsigned char> : 6-bit value from DS designating the pin to set up]
-* RETURNS: [void]
+* Initializes the ADC module on a pin and gets an analog reading from it. 
+* ARGS: [   
+ *          pin_ansel<uint32_t> : pin analog select register address;
+ *          pin_tris<uint32_t>  : pin tris register address; 
+ *          pin_designator<uint8_t> : 6-bit value from DS designating the pin to set up;
+ *      ]
+* RETURNS: [ADCval<int> : 12-bit reading from ADC module on that pin]
 */
-void ADCinit(unsigned char pin);
+extern unsigned int analogRead(uint32_t pin_ansel, uint32_t pin_tris, unsigned char pin_designator);
 
 #ifdef	__cplusplus
 }

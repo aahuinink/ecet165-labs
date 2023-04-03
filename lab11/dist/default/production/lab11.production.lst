@@ -1,0 +1,2680 @@
+
+
+Microchip MPLAB XC8 Assembler V2.40 build 20220703182018 
+                                                                                               Sun Apr 02 18:57:39 2023
+
+Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1 
+     1                           	processor	18F57Q43
+     2                           	fnconf	rparam,??,?,0
+     3                           	pagewidth 120
+     4                           	opt	flic
+     5                           	psect	idataCOMRAM,global,class=CODE,delta=1,noexec
+     6                           	psect	smallconst,global,reloc=2,class=SMALLCONST,delta=1,noexec
+     7                           	psect	cinit,global,reloc=2,class=CODE,delta=1
+     8                           	psect	bssCOMRAM,global,class=COMRAM,space=1,delta=1,lowdata,noexec
+     9                           	psect	dataCOMRAM,global,class=COMRAM,space=1,delta=1,lowdata,noexec
+    10                           	psect	cstackCOMRAM,global,class=COMRAM,space=1,delta=1,lowdata,noexec
+    11                           	psect	text0,global,reloc=2,class=CODE,delta=1
+    12                           	psect	text1,global,reloc=2,class=CODE,delta=1
+    13                           	psect	text2,global,reloc=2,class=CODE,delta=1
+    14                           	psect	text3,global,reloc=2,class=CODE,delta=1
+    15                           	psect	text4,global,reloc=2,class=CODE,delta=1,group=1
+    16                           	psect	text5,global,reloc=2,class=CODE,delta=1,group=1
+    17                           	psect	text6,global,reloc=2,class=CODE,delta=1
+    18                           	psect	text7,global,reloc=2,class=CODE,delta=1
+    19                           	psect	text8,global,reloc=2,class=CODE,delta=1
+    20                           	psect	text9,global,reloc=2,class=CODE,delta=1
+    21                           	psect	intsave_regs,global,class=BIGRAM,space=1,delta=1,noexec
+    22                           	psect	rparam,global,class=COMRAM,space=1,delta=1,noexec
+    23                           	psect	idloc,global,abs,ovrld,class=IDLOC,space=5,delta=1,noexec
+    24                           	psect	config,global,abs,ovrld,class=CONFIG,space=4,delta=1,noexec
+    25   000000                     
+    26                           ; Generated 09/02/2023 GMT
+    27                           ; 
+    28                           ; Copyright © 2023, Microchip Technology Inc. and its subsidiaries ("Microchip")
+    29                           ; All rights reserved.
+    30                           ; 
+    31                           ; This software is developed by Microchip Technology Inc. and its subsidiaries ("Microch
+      +                          ip").
+    32                           ; 
+    33                           ; Redistribution and use in source and binary forms, with or without modification, are
+    34                           ; permitted provided that the following conditions are met:
+    35                           ; 
+    36                           ;     1. Redistributions of source code must retain the above copyright notice, this lis
+      +                          t of
+    37                           ;        conditions and the following disclaimer.
+    38                           ; 
+    39                           ;     2. Redistributions in binary form must reproduce the above copyright notice, this 
+      +                          list
+    40                           ;        of conditions and the following disclaimer in the documentation and/or other
+    41                           ;        materials provided with the distribution. Publication is not required when
+    42                           ;        this file is used in an embedded application.
+    43                           ; 
+    44                           ;     3. Microchip's name may not be used to endorse or promote products derived from th
+      +                          is
+    45                           ;        software without specific prior written permission.
+    46                           ; 
+    47                           ; THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+    48                           ; INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS F
+      +                          OR
+    49                           ; PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIREC
+      +                          T,
+    50                           ; INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+    51                           ; PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
+    52                           ; INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, ST
+      +                          RICT
+    53                           ; LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE U
+      +                          SE OF
+    54                           ; THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    55                           ; 
+    56                           ; 
+    57                           ; Code-generator required, PIC18F57Q43 Definitions
+    58                           ; 
+    59                           ; SFR Addresses
+    60   000000                     
+    61                           	psect	idataCOMRAM
+    62   002C70                     __pidataCOMRAM:
+    63                           	callstack 0
+    64                           
+    65                           ;initializer for _nSetRTC
+    66   002C70  01                 	db	1
+    67   000000                     _ANSELAbits	set	1024
+    68   000000                     _LATD	set	1217
+    69   000000                     _ADRESL	set	1002
+    70   000000                     _ADRESH	set	1003
+    71   000000                     _ADPCH	set	1004
+    72   000000                     _ADCON0bits	set	1011
+    73   000000                     _ANSELA	set	1024
+    74   000000                     _ANSELD	set	1048
+    75   000000                     _LATC	set	1216
+    76   000000                     _LATDbits	set	1217
+    77   000000                     _WPUD	set	1049
+    78   000000                     _TRISD	set	1225
+    79   000000                     _TRISAbits	set	1222
+    80   000000                     _TRISC	set	1224
+    81   000000                     _ANSELC	set	1040
+    82                           
+    83                           	psect	smallconst
+    84   002600                     __psmallconst:
+    85                           	callstack 0
+    86   002600  00                 	db	0
+    87   002601  25                 	db	37
+    88   002602  69                 	db	105	;'i'
+    89   002603  32                 	db	50	;'2'
+    90   002604  3A                 	db	58	;':'
+    91   002605  25                 	db	37
+    92   002606  69                 	db	105	;'i'
+    93   002607  32                 	db	50	;'2'
+    94   002608  3A                 	db	58	;':'
+    95   002609  25                 	db	37
+    96   00260A  69                 	db	105	;'i'
+    97   00260B  32                 	db	50	;'2'
+    98   00260C  20                 	db	32
+    99   00260D  25                 	db	37
+   100   00260E  63                 	db	99	;'c'
+   101   00260F  6D                 	db	109	;'m'
+   102   002610  00                 	db	0
+   103   002611                     STR_2:
+   104   002611  25                 	db	37
+   105   002612  73                 	db	115	;'s'
+   106   002613  00                 	db	0
+   107   002614  00                 	db	0	; dummy byte at the end
+   108   000000                     
+   109                           ; #config settings
+   110                           
+   111                           	psect	cinit
+   112   002C44                     __pcinit:
+   113                           	callstack 0
+   114   002C44                     start_initialization:
+   115                           	callstack 0
+   116   002C44                     __initialization:
+   117                           	callstack 0
+   118                           
+   119                           ; Initialize objects allocated to COMRAM (1 bytes)
+   120                           ; load TBLPTR registers with __pidataCOMRAM
+   121   002C44  0E70               	movlw	low __pidataCOMRAM
+   122   002C46  6EF6               	movwf	tblptrl,c
+   123   002C48  0E2C               	movlw	high __pidataCOMRAM
+   124   002C4A  6EF7               	movwf	tblptrh,c
+   125   002C4C  0E00               	movlw	low (__pidataCOMRAM shr (0+16))
+   126   002C4E  6EF8               	movwf	tblptru,c
+   127   002C50  0009               	tblrd		*+	;fetch initializer
+   128   002C52  C4F5 F536          	movff	tablat,__pdataCOMRAM
+   129                           
+   130                           ; Clear objects allocated to COMRAM (17 bytes)
+   131   002C56  EE01  F125         	lfsr	0,__pbssCOMRAM
+   132   002C5A  0E11               	movlw	17
+   133   002C5C                     clear_0:
+   134   002C5C  6AEE               	clrf	postinc0,c
+   135   002C5E  06E8               	decf	wreg,f,c
+   136   002C60  E1FD               	bnz	clear_0
+   137   002C62                     end_of_initialization:
+   138                           	callstack 0
+   139   002C62                     __end_of__initialization:
+   140                           	callstack 0
+   141   002C62  0E00               	movlw	low (__Lsmallconst shr (0+16))
+   142   002C64  6EF8               	movwf	tblptru,c
+   143   002C66  0E26               	movlw	high __Lsmallconst
+   144   002C68  6EF7               	movwf	tblptrh,c
+   145   002C6A  0100               	movlb	0
+   146   002C6C  EF57  F014         	goto	_main	;jump to C main() function
+   147                           
+   148                           	psect	bssCOMRAM
+   149   000525                     __pbssCOMRAM:
+   150                           	callstack 0
+   151   000525                     	ds	8
+   152   00052D                     	ds	6
+   153   000533                     	ds	2
+   154   000535                     _tick_count:
+   155                           	callstack 0
+   156   000535                     	ds	1
+   157                           
+   158                           	psect	dataCOMRAM
+   159   000536                     __pdataCOMRAM:
+   160                           	callstack 0
+   161   000536                     _nSetRTC:
+   162                           	callstack 0
+   163   000536                     	ds	1
+   164                           
+   165                           	psect	cstackCOMRAM
+   166   000501                     __pcstackCOMRAM:
+   167                           	callstack 0
+   168   000501                     ??_LCDinstruct:
+   169   000501                     ??_LCDprintc:
+   170   000501                     ?_analogRead:
+   171                           	callstack 0
+   172   000501                     ?___lwdiv:
+   173                           	callstack 0
+   174   000501                     ?___lwmod:
+   175                           	callstack 0
+   176   000501                     ___lwdiv@dividend:
+   177                           	callstack 0
+   178   000501                     ___lwmod@dividend:
+   179                           	callstack 0
+   180   000501                     analogRead@pin_ansel:
+   181                           	callstack 0
+   182                           
+   183                           ; 4 bytes @ 0x0
+   184   000501                     	ds	1
+   185   000502                     LCDinstruct@instr:
+   186                           	callstack 0
+   187   000502                     LCDprintc@c:
+   188                           	callstack 0
+   189                           
+   190                           ; 1 bytes @ 0x1
+   191   000502                     	ds	1
+   192   000503                     ??_LCDinit:
+   193   000503                     ___lwdiv@divisor:
+   194                           	callstack 0
+   195   000503                     ___lwmod@divisor:
+   196                           	callstack 0
+   197                           
+   198                           ; 2 bytes @ 0x2
+   199   000503                     	ds	2
+   200   000505                     ___lwmod@counter:
+   201                           	callstack 0
+   202   000505                     ___lwdiv@quotient:
+   203                           	callstack 0
+   204   000505                     analogRead@pin_tris:
+   205                           	callstack 0
+   206                           
+   207                           ; 4 bytes @ 0x4
+   208   000505                     	ds	2
+   209   000507                     ___lwdiv@counter:
+   210                           	callstack 0
+   211                           
+   212                           ; 1 bytes @ 0x6
+   213   000507                     	ds	1
+   214   000508                     ?_toString:
+   215                           	callstack 0
+   216   000508                     toString@number:
+   217                           	callstack 0
+   218                           
+   219                           ; 2 bytes @ 0x7
+   220   000508                     	ds	1
+   221   000509                     analogRead@pin_designator:
+   222                           	callstack 0
+   223                           
+   224                           ; 1 bytes @ 0x8
+   225   000509                     	ds	1
+   226   00050A                     ??_analogRead:
+   227   00050A                     toString@length:
+   228                           	callstack 0
+   229                           
+   230                           ; 1 bytes @ 0x9
+   231   00050A                     	ds	1
+   232   00050B                     toString@string:
+   233                           	callstack 0
+   234                           
+   235                           ; 6 bytes @ 0xA
+   236   00050B                     	ds	6
+   237   000511                     toString@i:
+   238                           	callstack 0
+   239                           
+   240                           ; 1 bytes @ 0x10
+   241   000511                     	ds	1
+   242   000512                     LCDprints@c:
+   243                           	callstack 0
+   244                           
+   245                           ; 2 bytes @ 0x11
+   246   000512                     	ds	2
+   247   000514                     LCDprintf@shell:
+   248                           	callstack 0
+   249                           
+   250                           ; 2 bytes @ 0x13
+   251   000514                     	ds	2
+   252   000516                     LCDprintf@inputs:
+   253                           	callstack 0
+   254                           
+   255                           ; 2 bytes @ 0x15
+   256   000516                     	ds	2
+   257   000518                     ??_LCDprintf:
+   258                           
+   259                           ; 1 bytes @ 0x17
+   260   000518                     	ds	5
+   261   00051D                     ??_main:
+   262                           
+   263                           ; 1 bytes @ 0x1C
+   264   00051D                     	ds	2
+   265   00051F                     main@adc_string:
+   266                           	callstack 0
+   267                           
+   268                           ; 2 bytes @ 0x1E
+   269   00051F                     	ds	2
+   270   000521                     main@reading:
+   271                           	callstack 0
+   272                           
+   273                           ; 2 bytes @ 0x20
+   274   000521                     	ds	2
+   275   000523                     main@buffer:
+   276                           	callstack 0
+   277                           
+   278                           ; 2 bytes @ 0x22
+   279   000523                     	ds	2
+   280                           
+   281 ;;
+   282 ;;Main: autosize = 0, tempsize = 2, incstack = 0, save=0
+   283 ;;
+   284 ;; *************** function _main *****************
+   285 ;; Defined at:
+   286 ;;		line 22 in file "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogT
+      +est.c"
+   287 ;; Parameters:    Size  Location     Type
+   288 ;;		None
+   289 ;; Auto vars:     Size  Location     Type
+   290 ;;  buffer          2   34[COMRAM] PTR unsigned char [1]
+   291 ;;		 -> toString@string(6), RTCinit@start_time(4), NULL(0), 
+   292 ;;  reading         2   32[COMRAM] unsigned int 
+   293 ;;  adc_string      2   30[COMRAM] PTR unsigned char 
+   294 ;;		 -> toString@string(6), 
+   295 ;; Return value:  Size  Location     Type
+   296 ;;                  1    wreg      void 
+   297 ;; Registers used:
+   298 ;;		wreg, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru, cstack
+   299 ;; Tracked objects:
+   300 ;;		On entry : 0/0
+   301 ;;		On exit  : 0/0
+   302 ;;		Unchanged: 0/0
+   303 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+   304 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   305 ;;      Locals:         6       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   306 ;;      Temps:          2       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   307 ;;      Totals:         8       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   308 ;;Total ram usage:        8 bytes
+   309 ;; Hardware stack levels required when called: 3
+   310 ;; This function calls:
+   311 ;;		_LCDinit
+   312 ;;		_LCDinstruct
+   313 ;;		_LCDprintf
+   314 ;;		_analogRead
+   315 ;;		_toString
+   316 ;; This function is called by:
+   317 ;;		Startup code after reset
+   318 ;; This function uses a non-reentrant model
+   319 ;;
+   320                           
+   321                           	psect	text0
+   322   0028AE                     __ptext0:
+   323                           	callstack 0
+   324   0028AE                     _main:
+   325                           	callstack 124
+   326   0028AE                     
+   327                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab11/analogTest.c: 25:     ANSELA = 0x00;
+   328   0028AE  0E00               	movlw	0
+   329   0028B0  0104               	movlb	4	; () banked
+   330   0028B2  6F00               	movwf	0,b	;volatile
+   331                           
+   332                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab11/analogTest.c: 26:     TRISC = 0x00;
+   333   0028B4  0E00               	movlw	0
+   334   0028B6  6EC8               	movwf	200,c	;volatile
+   335                           
+   336                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab11/analogTest.c: 27:     ANSELC = 0x00;
+   337   0028B8  0E00               	movlw	0
+   338   0028BA  6F10               	movwf	16,b	;volatile
+   339   0028BC                     
+   340                           ; BSR set to: 4
+   341                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab11/analogTest.c: 29:     LCDinit();
+   342   0028BC  ECE2  F013         	call	_LCDinit	;wreg free
+   343   0028C0                     l1343:
+   344                           
+   345                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab11/analogTest.c: 32:         LCDinstruct(0x02);
+   346   0028C0  0E02               	movlw	2
+   347   0028C2  EC6A  F015         	call	_LCDinstruct
+   348   0028C6                     
+   349                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab11/analogTest.c: 33:         unsigned int reading = analogRead(ANSELAbits.ANSELA3, TRI
+      +                          SAbits.TRISA3, 0x03);
+   350   0028C6  0104               	movlb	4	; () banked
+   351   0028C8  B700               	btfsc	0,3,b	;volatile
+   352   0028CA  EF69  F014         	goto	u531
+   353   0028CE  EF6D  F014         	goto	u530
+   354   0028D2                     u531:
+   355   0028D2  6A1D               	clrf	??_main^(0+1280),c
+   356   0028D4  2A1D               	incf	??_main^(0+1280),f,c
+   357   0028D6  EF6E  F014         	goto	u538
+   358   0028DA                     u530:
+   359   0028DA  6A1D               	clrf	??_main^(0+1280),c
+   360   0028DC                     u538:
+   361   0028DC  501D               	movf	??_main^(0+1280),w,c
+   362   0028DE  6E01               	movwf	analogRead@pin_ansel^(0+1280),c
+   363   0028E0  6A02               	clrf	(analogRead@pin_ansel+1)^(0+1280),c
+   364   0028E2  6A03               	clrf	(analogRead@pin_ansel+2)^(0+1280),c
+   365   0028E4  6A04               	clrf	(analogRead@pin_ansel+3)^(0+1280),c
+   366   0028E6  B6C6               	btfsc	198,3,c	;volatile
+   367   0028E8  EF78  F014         	goto	u541
+   368   0028EC  EF7C  F014         	goto	u540
+   369   0028F0                     u541:
+   370   0028F0  6A1E               	clrf	(??_main+1)^(0+1280),c
+   371   0028F2  2A1E               	incf	(??_main+1)^(0+1280),f,c
+   372   0028F4  EF7D  F014         	goto	u548
+   373   0028F8                     u540:
+   374   0028F8  6A1E               	clrf	(??_main+1)^(0+1280),c
+   375   0028FA                     u548:
+   376   0028FA  501E               	movf	(??_main+1)^(0+1280),w,c
+   377   0028FC  6E05               	movwf	analogRead@pin_tris^(0+1280),c
+   378   0028FE  6A06               	clrf	(analogRead@pin_tris+1)^(0+1280),c
+   379   002900  6A07               	clrf	(analogRead@pin_tris+2)^(0+1280),c
+   380   002902  6A08               	clrf	(analogRead@pin_tris+3)^(0+1280),c
+   381   002904  0E03               	movlw	3
+   382   002906  6E09               	movwf	analogRead@pin_designator^(0+1280),c
+   383   002908  ECFF  F015         	call	_analogRead	;wreg free
+   384   00290C  C501  F521         	movff	?_analogRead,main@reading
+   385   002910  C502  F522         	movff	?_analogRead+1,main@reading+1
+   386   002914                     
+   387                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab11/analogTest.c: 34:         LATC = reading;
+   388   002914  C521  F4C0         	movff	main@reading,1216	;volatile
+   389   002918                     
+   390                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab11/analogTest.c: 35:         char* adc_string = toString(reading, 4);
+   391   002918  C521  F508         	movff	main@reading,toString@number
+   392   00291C  C522  F509         	movff	main@reading+1,toString@number+1
+   393   002920  0E04               	movlw	4
+   394   002922  6E0A               	movwf	toString@length^(0+1280),c
+   395   002924  ECF6  F014         	call	_toString	;wreg free
+   396   002928  C508  F51F         	movff	?_toString,main@adc_string
+   397   00292C  C509  F520         	movff	?_toString+1,main@adc_string+1
+   398   002930                     
+   399                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab11/analogTest.c: 36:         char* buffer[1] = {adc_string};
+   400   002930  0E00               	movlw	0
+   401   002932  6E24               	movwf	(main@buffer+1)^(0+1280),c
+   402   002934  0E00               	movlw	0
+   403   002936  6E23               	movwf	main@buffer^(0+1280),c
+   404   002938  C51F  F523         	movff	main@adc_string,main@buffer
+   405   00293C  C520  F524         	movff	main@adc_string+1,main@buffer+1
+   406   002940                     
+   407                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab11/analogTest.c: 37:         LCDprintf("%s", buffer);
+   408   002940  0E11               	movlw	low STR_2
+   409   002942  6E14               	movwf	LCDprintf@shell^(0+1280),c
+   410   002944  0E26               	movlw	high STR_2
+   411   002946  6E15               	movwf	(LCDprintf@shell+1)^(0+1280),c
+   412   002948  0E23               	movlw	low main@buffer
+   413   00294A  6E16               	movwf	LCDprintf@inputs^(0+1280),c
+   414   00294C  0E05               	movlw	high main@buffer
+   415   00294E  6E17               	movwf	(LCDprintf@inputs+1)^(0+1280),c
+   416   002950  EC0B  F013         	call	_LCDprintf	;wreg free
+   417   002954                     
+   418                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab11/analogTest.c: 38:         _delay((unsigned long)((1000)*(64000000/4000.0)));
+   419   002954  0E52               	movlw	82
+   420   002956  6E1E               	movwf	(??_main+1)^(0+1280),c
+   421   002958  0E2B               	movlw	43
+   422   00295A  6E1D               	movwf	??_main^(0+1280),c
+   423   00295C  0E00               	movlw	0
+   424   00295E                     u557:
+   425   00295E  2EE8               	decfsz	wreg,f,c
+   426   002960  D7FE               	bra	u557
+   427   002962  2E1D               	decfsz	??_main^(0+1280),f,c
+   428   002964  D7FC               	bra	u557
+   429   002966  2E1E               	decfsz	(??_main+1)^(0+1280),f,c
+   430   002968  D7FA               	bra	u557
+   431   00296A  D000               	nop2	
+   432   00296C  EF60  F014         	goto	l1343
+   433   002970  EFFE  F0FF         	goto	start
+   434   002974                     __end_of_main:
+   435                           	callstack 0
+   436                           
+   437 ;; *************** function _analogRead *****************
+   438 ;; Defined at:
+   439 ;;		line 32 in file "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog1
+      +8f.c"
+   440 ;; Parameters:    Size  Location     Type
+   441 ;;  pin_ansel       4    0[COMRAM] unsigned long 
+   442 ;;  pin_tris        4    4[COMRAM] unsigned long 
+   443 ;;  pin_designat    1    8[COMRAM] unsigned char 
+   444 ;; Auto vars:     Size  Location     Type
+   445 ;;		None
+   446 ;; Return value:  Size  Location     Type
+   447 ;;                  2    0[COMRAM] unsigned int 
+   448 ;; Registers used:
+   449 ;;		wreg, status,2, status,0
+   450 ;; Tracked objects:
+   451 ;;		On entry : 0/0
+   452 ;;		On exit  : 0/0
+   453 ;;		Unchanged: 0/0
+   454 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+   455 ;;      Params:         9       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   456 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   457 ;;      Temps:          2       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   458 ;;      Totals:        11       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   459 ;;Total ram usage:       11 bytes
+   460 ;; Hardware stack levels used: 1
+   461 ;; This function calls:
+   462 ;;		Nothing
+   463 ;; This function is called by:
+   464 ;;		_main
+   465 ;; This function uses a non-reentrant model
+   466 ;;
+   467                           
+   468                           	psect	text1
+   469   002BFE                     __ptext1:
+   470                           	callstack 0
+   471   002BFE                     _analogRead:
+   472                           	callstack 126
+   473   002BFE                     
+   474                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab11/analog18f.c: 34:      ADCON0bits.FM = 1;
+   475   002BFE  0103               	movlb	3	; () banked
+   476   002C00  51F3               	movf	243,w,b	;volatile
+   477   002C02  0BF3               	andlw	-13
+   478   002C04  0904               	iorlw	4
+   479   002C06  6FF3               	movwf	243,b	;volatile
+   480   002C08                     
+   481                           ; BSR set to: 3
+   482                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab11/analog18f.c: 35:      ADCON0bits.CS = 1;
+   483   002C08  89F3               	bsf	243,4,b	;volatile
+   484   002C0A                     
+   485                           ; BSR set to: 3
+   486                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab11/analog18f.c: 36:      ADPCH = pin_designator;
+   487   002C0A  C509  F3EC         	movff	analogRead@pin_designator,1004	;volatile
+   488                           
+   489                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab11/analog18f.c: 38:      pin_ansel = 1;
+   490   002C0E  0E01               	movlw	1
+   491   002C10  6E01               	movwf	analogRead@pin_ansel^(0+1280),c
+   492   002C12  0E00               	movlw	0
+   493   002C14  6E02               	movwf	(analogRead@pin_ansel+1)^(0+1280),c
+   494   002C16  0E00               	movlw	0
+   495   002C18  6E03               	movwf	(analogRead@pin_ansel+2)^(0+1280),c
+   496   002C1A  0E00               	movlw	0
+   497   002C1C  6E04               	movwf	(analogRead@pin_ansel+3)^(0+1280),c
+   498   002C1E                     
+   499                           ; BSR set to: 3
+   500                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab11/analog18f.c: 39:      ADCON0bits.ON = 1;
+   501   002C1E  8FF3               	bsf	243,7,b	;volatile
+   502   002C20                     
+   503                           ; BSR set to: 3
+   504                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab11/analog18f.c: 40:      ADCON0bits.GO = 1;
+   505   002C20  81F3               	bsf	243,0,b	;volatile
+   506   002C22                     l11:
+   507                           
+   508                           ; BSR set to: 3
+   509                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab11/analog18f.c: 41:      while (ADCON0bits.GO)
+   510   002C22  B1F3               	btfsc	243,0,b	;volatile
+   511   002C24  EF16  F016         	goto	u381
+   512   002C28  EF18  F016         	goto	u380
+   513   002C2C                     u381:
+   514   002C2C  EF11  F016         	goto	l11
+   515   002C30                     u380:
+   516   002C30                     
+   517                           ; BSR set to: 3
+   518                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab11/analog18f.c: 43:      return (ADRESH<<8)+ADRESL;
+   519   002C30  51EB               	movf	235,w,b	;volatile
+   520   002C32  6E0B               	movwf	(??_analogRead+1)^(0+1280),c
+   521   002C34  6A0A               	clrf	??_analogRead^(0+1280),c
+   522   002C36  51EA               	movf	234,w,b	;volatile
+   523   002C38  240A               	addwf	??_analogRead^(0+1280),w,c
+   524   002C3A  6E01               	movwf	?_analogRead^(0+1280),c
+   525   002C3C  0E00               	movlw	0
+   526   002C3E  200B               	addwfc	(??_analogRead+1)^(0+1280),w,c
+   527   002C40  6E02               	movwf	(?_analogRead+1)^(0+1280),c
+   528   002C42                     
+   529                           ; BSR set to: 3
+   530   002C42  0012               	return		;funcret
+   531   002C44                     __end_of_analogRead:
+   532                           	callstack 0
+   533                           
+   534 ;; *************** function _LCDprintf *****************
+   535 ;; Defined at:
+   536 ;;		line 142 in file "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.
+      +c"
+   537 ;; Parameters:    Size  Location     Type
+   538 ;;  shell           2   19[COMRAM] PTR unsigned char 
+   539 ;;		 -> STR_2(3), STR_1(16), 
+   540 ;;  inputs          2   21[COMRAM] PTR PTR unsigned char 
+   541 ;;		 -> main@buffer(2), RTCinit@current_time(8), 
+   542 ;; Auto vars:     Size  Location     Type
+   543 ;;		None
+   544 ;; Return value:  Size  Location     Type
+   545 ;;                  1    wreg      void 
+   546 ;; Registers used:
+   547 ;;		wreg, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru, cstack
+   548 ;; Tracked objects:
+   549 ;;		On entry : 0/0
+   550 ;;		On exit  : 0/0
+   551 ;;		Unchanged: 0/0
+   552 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+   553 ;;      Params:         4       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   554 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   555 ;;      Temps:          5       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   556 ;;      Totals:         9       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   557 ;;Total ram usage:        9 bytes
+   558 ;; Hardware stack levels used: 1
+   559 ;; Hardware stack levels required when called: 2
+   560 ;; This function calls:
+   561 ;;		_LCDprintc
+   562 ;;		_LCDprints
+   563 ;;		_toString
+   564 ;; This function is called by:
+   565 ;;		_main
+   566 ;;		_RTCinit
+   567 ;; This function uses a non-reentrant model
+   568 ;;
+   569                           
+   570                           	psect	text2
+   571   002616                     __ptext2:
+   572                           	callstack 0
+   573   002616                     _LCDprintf:
+   574                           	callstack 124
+   575   002616                     l1257:
+   576                           
+   577                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 143:     while(*shell != 0x0){
+   578   002616  EFD3  F013         	goto	l1293
+   579   00261A                     l1259:
+   580                           
+   581                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 145:         if((*shell == '%') & (*(shell+1) == 's')){
+   582   00261A  C514  F4F6         	movff	LCDprintf@shell,tblptrl
+   583   00261E  C515  F4F7         	movff	LCDprintf@shell+1,tblptrh
+   584   002622                     	if	0	;tblptru may be non-zero
+   585   002622                     	endif
+   586   002622                     	if	0	;tblptru may be non-zero
+   587   002622                     	endif
+   588   002622  0008               	tblrd		*
+   589   002624  50F5               	movf	tablat,w,c
+   590   002626  0A25               	xorlw	37
+   591   002628  A4D8               	btfss	status,2,c
+   592   00262A  EF19  F013         	goto	u391
+   593   00262E  EF1B  F013         	goto	u390
+   594   002632                     u391:
+   595   002632  EF43  F013         	goto	l1269
+   596   002636                     u390:
+   597   002636  0E01               	movlw	1
+   598   002638  2414               	addwf	LCDprintf@shell^(0+1280),w,c
+   599   00263A  6E18               	movwf	??_LCDprintf^(0+1280),c
+   600   00263C  0E00               	movlw	0
+   601   00263E  2015               	addwfc	(LCDprintf@shell+1)^(0+1280),w,c
+   602   002640  6E19               	movwf	(??_LCDprintf+1)^(0+1280),c
+   603   002642  C518  F4F6         	movff	??_LCDprintf,tblptrl
+   604   002646  C519  F4F7         	movff	??_LCDprintf+1,tblptrh
+   605   00264A                     	if	0	;tblptru may be non-zero
+   606   00264A                     	endif
+   607   00264A                     	if	0	;tblptru may be non-zero
+   608   00264A                     	endif
+   609   00264A  0008               	tblrd		*
+   610   00264C  50F5               	movf	tablat,w,c
+   611   00264E  0A73               	xorlw	115
+   612   002650  A4D8               	btfss	status,2,c
+   613   002652  EF2D  F013         	goto	u401
+   614   002656  EF2F  F013         	goto	u400
+   615   00265A                     u401:
+   616   00265A  EF43  F013         	goto	l1269
+   617   00265E                     u400:
+   618   00265E                     
+   619                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 147:             LCDprints(*inputs++);
+   620   00265E  C516  F4D9         	movff	LCDprintf@inputs,fsr2l
+   621   002662  C517  F4DA         	movff	LCDprintf@inputs+1,fsr2h
+   622   002666  C4DE F512          	movff	postinc2,LCDprints@c
+   623   00266A  C4DD F513          	movff	postdec2,LCDprints@c+1
+   624   00266E  ECD6  F015         	call	_LCDprints	;wreg free
+   625   002672                     l1265:
+   626   002672  0E02               	movlw	2
+   627   002674  2616               	addwf	LCDprintf@inputs^(0+1280),f,c
+   628   002676  0E00               	movlw	0
+   629   002678  2217               	addwfc	(LCDprintf@inputs+1)^(0+1280),f,c
+   630   00267A                     
+   631                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 148:             shell+=2;
+   632   00267A  0E02               	movlw	2
+   633   00267C  2614               	addwf	LCDprintf@shell^(0+1280),f,c
+   634   00267E  0E00               	movlw	0
+   635   002680  2215               	addwfc	(LCDprintf@shell+1)^(0+1280),f,c
+   636                           
+   637                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 149:         }
+   638   002682  EFD3  F013         	goto	l1293
+   639   002686                     l1269:
+   640   002686  C514  F4F6         	movff	LCDprintf@shell,tblptrl
+   641   00268A  C515  F4F7         	movff	LCDprintf@shell+1,tblptrh
+   642   00268E                     	if	0	;tblptru may be non-zero
+   643   00268E                     	endif
+   644   00268E                     	if	0	;tblptru may be non-zero
+   645   00268E                     	endif
+   646   00268E  0008               	tblrd		*
+   647   002690  50F5               	movf	tablat,w,c
+   648   002692  0A25               	xorlw	37
+   649   002694  A4D8               	btfss	status,2,c
+   650   002696  EF4F  F013         	goto	u411
+   651   00269A  EF51  F013         	goto	u410
+   652   00269E                     u411:
+   653   00269E  EF96  F013         	goto	l1279
+   654   0026A2                     u410:
+   655   0026A2  0E01               	movlw	1
+   656   0026A4  2414               	addwf	LCDprintf@shell^(0+1280),w,c
+   657   0026A6  6E18               	movwf	??_LCDprintf^(0+1280),c
+   658   0026A8  0E00               	movlw	0
+   659   0026AA  2015               	addwfc	(LCDprintf@shell+1)^(0+1280),w,c
+   660   0026AC  6E19               	movwf	(??_LCDprintf+1)^(0+1280),c
+   661   0026AE  C518  F4F6         	movff	??_LCDprintf,tblptrl
+   662   0026B2  C519  F4F7         	movff	??_LCDprintf+1,tblptrh
+   663   0026B6                     	if	0	;tblptru may be non-zero
+   664   0026B6                     	endif
+   665   0026B6                     	if	0	;tblptru may be non-zero
+   666   0026B6                     	endif
+   667   0026B6  0008               	tblrd		*
+   668   0026B8  50F5               	movf	tablat,w,c
+   669   0026BA  0A69               	xorlw	105
+   670   0026BC  A4D8               	btfss	status,2,c
+   671   0026BE  EF63  F013         	goto	u421
+   672   0026C2  EF65  F013         	goto	u420
+   673   0026C6                     u421:
+   674   0026C6  EF96  F013         	goto	l1279
+   675   0026CA                     u420:
+   676   0026CA                     
+   677                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 153:             LCDprints(toString(**inputs++, (*(shell+2)-'0')));
+   678   0026CA  C516  F4D9         	movff	LCDprintf@inputs,fsr2l
+   679   0026CE  C517  F4DA         	movff	LCDprintf@inputs+1,fsr2h
+   680   0026D2  C4DE F518          	movff	postinc2,??_LCDprintf
+   681   0026D6  C4DD F519          	movff	postdec2,??_LCDprintf+1
+   682   0026DA  C518  F4D9         	movff	??_LCDprintf,fsr2l
+   683   0026DE  C519  F4DA         	movff	??_LCDprintf+1,fsr2h
+   684   0026E2  50DF               	movf	indf2,w,c
+   685   0026E4  6E1A               	movwf	(??_LCDprintf+2)^(0+1280),c
+   686   0026E6  501A               	movf	(??_LCDprintf+2)^(0+1280),w,c
+   687   0026E8  6E08               	movwf	toString@number^(0+1280),c
+   688   0026EA  6A09               	clrf	(toString@number+1)^(0+1280),c
+   689   0026EC  0E02               	movlw	2
+   690   0026EE  2414               	addwf	LCDprintf@shell^(0+1280),w,c
+   691   0026F0  6E1B               	movwf	(??_LCDprintf+3)^(0+1280),c
+   692   0026F2  0E00               	movlw	0
+   693   0026F4  2015               	addwfc	(LCDprintf@shell+1)^(0+1280),w,c
+   694   0026F6  6E1C               	movwf	(??_LCDprintf+4)^(0+1280),c
+   695   0026F8  C51B  F4F6         	movff	??_LCDprintf+3,tblptrl
+   696   0026FC  C51C  F4F7         	movff	??_LCDprintf+4,tblptrh
+   697   002700                     	if	0	;tblptru may be non-zero
+   698   002700                     	endif
+   699   002700                     	if	0	;tblptru may be non-zero
+   700   002700                     	endif
+   701   002700  0008               	tblrd		*
+   702   002702  50F5               	movf	tablat,w,c
+   703   002704  0FD0               	addlw	208
+   704   002706  6E0A               	movwf	toString@length^(0+1280),c
+   705   002708  ECF6  F014         	call	_toString	;wreg free
+   706   00270C  C508  F512         	movff	?_toString,LCDprints@c
+   707   002710  C509  F513         	movff	?_toString+1,LCDprints@c+1
+   708   002714  ECD6  F015         	call	_LCDprints	;wreg free
+   709   002718  0E02               	movlw	2
+   710   00271A  2616               	addwf	LCDprintf@inputs^(0+1280),f,c
+   711   00271C  0E00               	movlw	0
+   712   00271E  2217               	addwfc	(LCDprintf@inputs+1)^(0+1280),f,c
+   713   002720                     
+   714                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 154:             shell+=3;
+   715   002720  0E03               	movlw	3
+   716   002722  2614               	addwf	LCDprintf@shell^(0+1280),f,c
+   717   002724  0E00               	movlw	0
+   718   002726  2215               	addwfc	(LCDprintf@shell+1)^(0+1280),f,c
+   719                           
+   720                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 156:         }else if((*shell == '%') & (*(shell+1) == 'c')){
+   721   002728  EF0B  F013         	goto	l1257
+   722   00272C                     l1279:
+   723   00272C  C514  F4F6         	movff	LCDprintf@shell,tblptrl
+   724   002730  C515  F4F7         	movff	LCDprintf@shell+1,tblptrh
+   725   002734                     	if	0	;tblptru may be non-zero
+   726   002734                     	endif
+   727   002734                     	if	0	;tblptru may be non-zero
+   728   002734                     	endif
+   729   002734  0008               	tblrd		*
+   730   002736  50F5               	movf	tablat,w,c
+   731   002738  0A25               	xorlw	37
+   732   00273A  A4D8               	btfss	status,2,c
+   733   00273C  EFA2  F013         	goto	u431
+   734   002740  EFA4  F013         	goto	u430
+   735   002744                     u431:
+   736   002744  EFC9  F013         	goto	l1289
+   737   002748                     u430:
+   738   002748  0E01               	movlw	1
+   739   00274A  2414               	addwf	LCDprintf@shell^(0+1280),w,c
+   740   00274C  6E18               	movwf	??_LCDprintf^(0+1280),c
+   741   00274E  0E00               	movlw	0
+   742   002750  2015               	addwfc	(LCDprintf@shell+1)^(0+1280),w,c
+   743   002752  6E19               	movwf	(??_LCDprintf+1)^(0+1280),c
+   744   002754  C518  F4F6         	movff	??_LCDprintf,tblptrl
+   745   002758  C519  F4F7         	movff	??_LCDprintf+1,tblptrh
+   746   00275C                     	if	0	;tblptru may be non-zero
+   747   00275C                     	endif
+   748   00275C                     	if	0	;tblptru may be non-zero
+   749   00275C                     	endif
+   750   00275C  0008               	tblrd		*
+   751   00275E  50F5               	movf	tablat,w,c
+   752   002760  0A63               	xorlw	99
+   753   002762  A4D8               	btfss	status,2,c
+   754   002764  EFB6  F013         	goto	u441
+   755   002768  EFB8  F013         	goto	u440
+   756   00276C                     u441:
+   757   00276C  EFC9  F013         	goto	l1289
+   758   002770                     u440:
+   759   002770                     
+   760                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 158:             LCDprintc(**inputs++);
+   761   002770  C516  F4D9         	movff	LCDprintf@inputs,fsr2l
+   762   002774  C517  F4DA         	movff	LCDprintf@inputs+1,fsr2h
+   763   002778  C4DE F518          	movff	postinc2,??_LCDprintf
+   764   00277C  C4DD F519          	movff	postdec2,??_LCDprintf+1
+   765   002780  C518  F4D9         	movff	??_LCDprintf,fsr2l
+   766   002784  C519  F4DA         	movff	??_LCDprintf+1,fsr2h
+   767   002788  50DF               	movf	indf2,w,c
+   768   00278A  ECBA  F014         	call	_LCDprintc
+   769   00278E  EF39  F013         	goto	l1265
+   770   002792                     l1289:
+   771                           
+   772                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 162:             LCDprintc(*shell++);
+   773   002792  C514  F4F6         	movff	LCDprintf@shell,tblptrl
+   774   002796  C515  F4F7         	movff	LCDprintf@shell+1,tblptrh
+   775   00279A                     	if	0	;tblptru may be non-zero
+   776   00279A                     	endif
+   777   00279A                     	if	0	;tblptru may be non-zero
+   778   00279A                     	endif
+   779   00279A  0008               	tblrd		*
+   780   00279C  50F5               	movf	tablat,w,c
+   781   00279E  ECBA  F014         	call	_LCDprintc
+   782   0027A2  4A14               	infsnz	LCDprintf@shell^(0+1280),f,c
+   783   0027A4  2A15               	incf	(LCDprintf@shell+1)^(0+1280),f,c
+   784   0027A6                     l1293:
+   785                           
+   786                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 143:     while(*shell != 0x0){
+   787   0027A6  C514  F4F6         	movff	LCDprintf@shell,tblptrl
+   788   0027AA  C515  F4F7         	movff	LCDprintf@shell+1,tblptrh
+   789   0027AE                     	if	0	;tblptru may be non-zero
+   790   0027AE                     	endif
+   791   0027AE                     	if	0	;tblptru may be non-zero
+   792   0027AE                     	endif
+   793   0027AE  0008               	tblrd		*
+   794   0027B0  50F5               	movf	tablat,w,c
+   795   0027B2  0900               	iorlw	0
+   796   0027B4  A4D8               	btfss	status,2,c
+   797   0027B6  EFDF  F013         	goto	u451
+   798   0027BA  EFE1  F013         	goto	u450
+   799   0027BE                     u451:
+   800   0027BE  EF0D  F013         	goto	l1259
+   801   0027C2                     u450:
+   802   0027C2  0012               	return		;funcret
+   803   0027C4                     __end_of_LCDprintf:
+   804                           	callstack 0
+   805                           
+   806 ;; *************** function _toString *****************
+   807 ;; Defined at:
+   808 ;;		line 133 in file "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.
+      +c"
+   809 ;; Parameters:    Size  Location     Type
+   810 ;;  number          2    7[COMRAM] unsigned int 
+   811 ;;  length          1    9[COMRAM] unsigned char 
+   812 ;; Auto vars:     Size  Location     Type
+   813 ;;  i               1   16[COMRAM] char 
+   814 ;;  string          6   10[COMRAM] unsigned char [6]
+   815 ;; Return value:  Size  Location     Type
+   816 ;;                  2    7[COMRAM] PTR unsigned char 
+   817 ;; Registers used:
+   818 ;;		wreg, fsr2l, fsr2h, status,2, status,0, cstack
+   819 ;; Tracked objects:
+   820 ;;		On entry : 0/0
+   821 ;;		On exit  : 0/0
+   822 ;;		Unchanged: 0/0
+   823 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+   824 ;;      Params:         3       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   825 ;;      Locals:         7       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   826 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   827 ;;      Totals:        10       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   828 ;;Total ram usage:       10 bytes
+   829 ;; Hardware stack levels used: 1
+   830 ;; Hardware stack levels required when called: 1
+   831 ;; This function calls:
+   832 ;;		___lwdiv
+   833 ;;		___lwmod
+   834 ;; This function is called by:
+   835 ;;		_LCDprintf
+   836 ;;		_main
+   837 ;; This function uses a non-reentrant model
+   838 ;;
+   839                           
+   840                           	psect	text3
+   841   0029EC                     __ptext3:
+   842                           	callstack 0
+   843   0029EC                     _toString:
+   844                           	callstack 125
+   845   0029EC                     
+   846                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 134:     char string[6] = "";
+   847   0029EC  EE21  F10B         	lfsr	2,toString@string
+   848   0029F0  0E05               	movlw	5
+   849   0029F2                     u361:
+   850   0029F2  6ADE               	clrf	postinc2,c
+   851   0029F4  06E8               	decf	wreg,f,c
+   852   0029F6  E2FD               	bc	u361
+   853   0029F8                     
+   854                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 135:     for(signed char i = length-1; i > -1; i--){
+   855   0029F8  040A               	decf	toString@length^(0+1280),w,c
+   856   0029FA  6E11               	movwf	toString@i^(0+1280),c
+   857   0029FC                     l1227:
+   858   0029FC  BE11               	btfsc	toString@i^(0+1280),7,c
+   859   0029FE  EF05  F015         	goto	u370
+   860   002A02  EF03  F015         	goto	u371
+   861   002A06                     u371:
+   862   002A06  EF07  F015         	goto	l1231
+   863   002A0A                     u370:
+   864   002A0A  EF2B  F015         	goto	l1239
+   865   002A0E                     l1231:
+   866                           
+   867                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 136:         string[i] = (number % 10) + '0';
+   868   002A0E  0E0B               	movlw	low toString@string
+   869   002A10  2411               	addwf	toString@i^(0+1280),w,c
+   870   002A12  6ED9               	movwf	fsr2l,c
+   871   002A14  6ADA               	clrf	fsr2h,c
+   872   002A16  0E05               	movlw	high toString@string
+   873   002A18  22DA               	addwfc	fsr2h,f,c
+   874   002A1A  C508  F501         	movff	toString@number,___lwmod@dividend
+   875   002A1E  C509  F502         	movff	toString@number+1,___lwmod@dividend+1
+   876   002A22  0E00               	movlw	0
+   877   002A24  6E04               	movwf	(___lwmod@divisor+1)^(0+1280),c
+   878   002A26  0E0A               	movlw	10
+   879   002A28  6E03               	movwf	___lwmod@divisor^(0+1280),c
+   880   002A2A  ECA4  F015         	call	___lwmod	;wreg free
+   881   002A2E  5001               	movf	?___lwmod^(0+1280),w,c
+   882   002A30  0F30               	addlw	48
+   883   002A32  6EDF               	movwf	indf2,c
+   884   002A34                     
+   885                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 137:         number /= 10;
+   886   002A34  C508  F501         	movff	toString@number,___lwdiv@dividend
+   887   002A38  C509  F502         	movff	toString@number+1,___lwdiv@dividend+1
+   888   002A3C  0E00               	movlw	0
+   889   002A3E  6E04               	movwf	(___lwdiv@divisor+1)^(0+1280),c
+   890   002A40  0E0A               	movlw	10
+   891   002A42  6E03               	movwf	___lwdiv@divisor^(0+1280),c
+   892   002A44  EC30  F015         	call	___lwdiv	;wreg free
+   893   002A48  C501  F508         	movff	?___lwdiv,toString@number
+   894   002A4C  C502  F509         	movff	?___lwdiv+1,toString@number+1
+   895   002A50                     
+   896                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 138:     };
+   897   002A50  0611               	decf	toString@i^(0+1280),f,c
+   898   002A52  EFFE  F014         	goto	l1227
+   899   002A56                     l1239:
+   900                           
+   901                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 139:     return &string;
+   902   002A56  0E0B               	movlw	low toString@string
+   903   002A58  6E08               	movwf	?_toString^(0+1280),c
+   904   002A5A  0E05               	movlw	high toString@string
+   905   002A5C  6E09               	movwf	(?_toString+1)^(0+1280),c
+   906   002A5E  0012               	return		;funcret
+   907   002A60                     __end_of_toString:
+   908                           	callstack 0
+   909                           
+   910 ;; *************** function ___lwmod *****************
+   911 ;; Defined at:
+   912 ;;		line 7 in file "C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwmod.c"
+   913 ;; Parameters:    Size  Location     Type
+   914 ;;  dividend        2    0[COMRAM] unsigned int 
+   915 ;;  divisor         2    2[COMRAM] unsigned int 
+   916 ;; Auto vars:     Size  Location     Type
+   917 ;;  counter         1    4[COMRAM] unsigned char 
+   918 ;; Return value:  Size  Location     Type
+   919 ;;                  2    0[COMRAM] unsigned int 
+   920 ;; Registers used:
+   921 ;;		wreg, status,2, status,0
+   922 ;; Tracked objects:
+   923 ;;		On entry : 0/0
+   924 ;;		On exit  : 0/0
+   925 ;;		Unchanged: 0/0
+   926 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+   927 ;;      Params:         4       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   928 ;;      Locals:         1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   929 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   930 ;;      Totals:         5       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   931 ;;Total ram usage:        5 bytes
+   932 ;; Hardware stack levels used: 1
+   933 ;; This function calls:
+   934 ;;		Nothing
+   935 ;; This function is called by:
+   936 ;;		_toString
+   937 ;; This function uses a non-reentrant model
+   938 ;;
+   939                           
+   940                           	psect	text4
+   941   002B48                     __ptext4:
+   942                           	callstack 0
+   943   002B48                     ___lwmod:
+   944                           	callstack 125
+   945   002B48  5003               	movf	___lwmod@divisor^(0+1280),w,c
+   946   002B4A  1004               	iorwf	(___lwmod@divisor+1)^(0+1280),w,c
+   947   002B4C  B4D8               	btfsc	status,2,c
+   948   002B4E  EFAB  F015         	goto	u321
+   949   002B52  EFAD  F015         	goto	u320
+   950   002B56                     u321:
+   951   002B56  EFD1  F015         	goto	l635
+   952   002B5A                     u320:
+   953   002B5A  0E01               	movlw	1
+   954   002B5C  6E05               	movwf	___lwmod@counter^(0+1280),c
+   955   002B5E  EFB5  F015         	goto	l1193
+   956   002B62                     l1191:
+   957   002B62  90D8               	bcf	status,0,c
+   958   002B64  3603               	rlcf	___lwmod@divisor^(0+1280),f,c
+   959   002B66  3604               	rlcf	(___lwmod@divisor+1)^(0+1280),f,c
+   960   002B68  2A05               	incf	___lwmod@counter^(0+1280),f,c
+   961   002B6A                     l1193:
+   962   002B6A  AE04               	btfss	(___lwmod@divisor+1)^(0+1280),7,c
+   963   002B6C  EFBA  F015         	goto	u331
+   964   002B70  EFBC  F015         	goto	u330
+   965   002B74                     u331:
+   966   002B74  EFB1  F015         	goto	l1191
+   967   002B78                     u330:
+   968   002B78                     l1195:
+   969   002B78  5003               	movf	___lwmod@divisor^(0+1280),w,c
+   970   002B7A  5C01               	subwf	___lwmod@dividend^(0+1280),w,c
+   971   002B7C  5004               	movf	(___lwmod@divisor+1)^(0+1280),w,c
+   972   002B7E  5802               	subwfb	(___lwmod@dividend+1)^(0+1280),w,c
+   973   002B80  A0D8               	btfss	status,0,c
+   974   002B82  EFC5  F015         	goto	u341
+   975   002B86  EFC7  F015         	goto	u340
+   976   002B8A                     u341:
+   977   002B8A  EFCB  F015         	goto	l1199
+   978   002B8E                     u340:
+   979   002B8E  5003               	movf	___lwmod@divisor^(0+1280),w,c
+   980   002B90  5E01               	subwf	___lwmod@dividend^(0+1280),f,c
+   981   002B92  5004               	movf	(___lwmod@divisor+1)^(0+1280),w,c
+   982   002B94  5A02               	subwfb	(___lwmod@dividend+1)^(0+1280),f,c
+   983   002B96                     l1199:
+   984   002B96  90D8               	bcf	status,0,c
+   985   002B98  3204               	rrcf	(___lwmod@divisor+1)^(0+1280),f,c
+   986   002B9A  3203               	rrcf	___lwmod@divisor^(0+1280),f,c
+   987   002B9C  2E05               	decfsz	___lwmod@counter^(0+1280),f,c
+   988   002B9E  EFBC  F015         	goto	l1195
+   989   002BA2                     l635:
+   990   002BA2  C501  F501         	movff	___lwmod@dividend,?___lwmod
+   991   002BA6  C502  F502         	movff	___lwmod@dividend+1,?___lwmod+1
+   992   002BAA  0012               	return		;funcret
+   993   002BAC                     __end_of___lwmod:
+   994                           	callstack 0
+   995                           
+   996 ;; *************** function ___lwdiv *****************
+   997 ;; Defined at:
+   998 ;;		line 7 in file "C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c"
+   999 ;; Parameters:    Size  Location     Type
+  1000 ;;  dividend        2    0[COMRAM] unsigned int 
+  1001 ;;  divisor         2    2[COMRAM] unsigned int 
+  1002 ;; Auto vars:     Size  Location     Type
+  1003 ;;  quotient        2    4[COMRAM] unsigned int 
+  1004 ;;  counter         1    6[COMRAM] unsigned char 
+  1005 ;; Return value:  Size  Location     Type
+  1006 ;;                  2    0[COMRAM] unsigned int 
+  1007 ;; Registers used:
+  1008 ;;		wreg, status,2, status,0
+  1009 ;; Tracked objects:
+  1010 ;;		On entry : 0/0
+  1011 ;;		On exit  : 0/0
+  1012 ;;		Unchanged: 0/0
+  1013 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+  1014 ;;      Params:         4       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1015 ;;      Locals:         3       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1016 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1017 ;;      Totals:         7       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1018 ;;Total ram usage:        7 bytes
+  1019 ;; Hardware stack levels used: 1
+  1020 ;; This function calls:
+  1021 ;;		Nothing
+  1022 ;; This function is called by:
+  1023 ;;		_toString
+  1024 ;; This function uses a non-reentrant model
+  1025 ;;
+  1026                           
+  1027                           	psect	text5
+  1028   002A60                     __ptext5:
+  1029                           	callstack 0
+  1030   002A60                     ___lwdiv:
+  1031                           	callstack 125
+  1032   002A60  0E00               	movlw	0
+  1033   002A62  6E06               	movwf	(___lwdiv@quotient+1)^(0+1280),c
+  1034   002A64  0E00               	movlw	0
+  1035   002A66  6E05               	movwf	___lwdiv@quotient^(0+1280),c
+  1036   002A68  5003               	movf	___lwdiv@divisor^(0+1280),w,c
+  1037   002A6A  1004               	iorwf	(___lwdiv@divisor+1)^(0+1280),w,c
+  1038   002A6C  B4D8               	btfsc	status,2,c
+  1039   002A6E  EF3B  F015         	goto	u291
+  1040   002A72  EF3D  F015         	goto	u290
+  1041   002A76                     u291:
+  1042   002A76  EF65  F015         	goto	l625
+  1043   002A7A                     u290:
+  1044   002A7A  0E01               	movlw	1
+  1045   002A7C  6E07               	movwf	___lwdiv@counter^(0+1280),c
+  1046   002A7E  EF45  F015         	goto	l1173
+  1047   002A82                     l1171:
+  1048   002A82  90D8               	bcf	status,0,c
+  1049   002A84  3603               	rlcf	___lwdiv@divisor^(0+1280),f,c
+  1050   002A86  3604               	rlcf	(___lwdiv@divisor+1)^(0+1280),f,c
+  1051   002A88  2A07               	incf	___lwdiv@counter^(0+1280),f,c
+  1052   002A8A                     l1173:
+  1053   002A8A  AE04               	btfss	(___lwdiv@divisor+1)^(0+1280),7,c
+  1054   002A8C  EF4A  F015         	goto	u301
+  1055   002A90  EF4C  F015         	goto	u300
+  1056   002A94                     u301:
+  1057   002A94  EF41  F015         	goto	l1171
+  1058   002A98                     u300:
+  1059   002A98                     l1175:
+  1060   002A98  90D8               	bcf	status,0,c
+  1061   002A9A  3605               	rlcf	___lwdiv@quotient^(0+1280),f,c
+  1062   002A9C  3606               	rlcf	(___lwdiv@quotient+1)^(0+1280),f,c
+  1063   002A9E  5003               	movf	___lwdiv@divisor^(0+1280),w,c
+  1064   002AA0  5C01               	subwf	___lwdiv@dividend^(0+1280),w,c
+  1065   002AA2  5004               	movf	(___lwdiv@divisor+1)^(0+1280),w,c
+  1066   002AA4  5802               	subwfb	(___lwdiv@dividend+1)^(0+1280),w,c
+  1067   002AA6  A0D8               	btfss	status,0,c
+  1068   002AA8  EF58  F015         	goto	u311
+  1069   002AAC  EF5A  F015         	goto	u310
+  1070   002AB0                     u311:
+  1071   002AB0  EF5F  F015         	goto	l1183
+  1072   002AB4                     u310:
+  1073   002AB4  5003               	movf	___lwdiv@divisor^(0+1280),w,c
+  1074   002AB6  5E01               	subwf	___lwdiv@dividend^(0+1280),f,c
+  1075   002AB8  5004               	movf	(___lwdiv@divisor+1)^(0+1280),w,c
+  1076   002ABA  5A02               	subwfb	(___lwdiv@dividend+1)^(0+1280),f,c
+  1077   002ABC  8005               	bsf	___lwdiv@quotient^(0+1280),0,c
+  1078   002ABE                     l1183:
+  1079   002ABE  90D8               	bcf	status,0,c
+  1080   002AC0  3204               	rrcf	(___lwdiv@divisor+1)^(0+1280),f,c
+  1081   002AC2  3203               	rrcf	___lwdiv@divisor^(0+1280),f,c
+  1082   002AC4  2E07               	decfsz	___lwdiv@counter^(0+1280),f,c
+  1083   002AC6  EF4C  F015         	goto	l1175
+  1084   002ACA                     l625:
+  1085   002ACA  C505  F501         	movff	___lwdiv@quotient,?___lwdiv
+  1086   002ACE  C506  F502         	movff	___lwdiv@quotient+1,?___lwdiv+1
+  1087   002AD2  0012               	return		;funcret
+  1088   002AD4                     __end_of___lwdiv:
+  1089                           	callstack 0
+  1090                           
+  1091 ;; *************** function _LCDprints *****************
+  1092 ;; Defined at:
+  1093 ;;		line 86 in file "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+      +"
+  1094 ;; Parameters:    Size  Location     Type
+  1095 ;;  c               2   17[COMRAM] PTR unsigned char 
+  1096 ;;		 -> toString@string(6), start_time.meridian(1), start_time.seconds(1), start_time.minutes(1), 
+  1097 ;;		 -> start_time.hours(1), RTCinit@start_time(4), NULL(0), 
+  1098 ;; Auto vars:     Size  Location     Type
+  1099 ;;		None
+  1100 ;; Return value:  Size  Location     Type
+  1101 ;;                  1    wreg      void 
+  1102 ;; Registers used:
+  1103 ;;		wreg, fsr2l, fsr2h, status,2, status,0, cstack
+  1104 ;; Tracked objects:
+  1105 ;;		On entry : 0/0
+  1106 ;;		On exit  : 0/0
+  1107 ;;		Unchanged: 0/0
+  1108 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+  1109 ;;      Params:         2       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1110 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1111 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1112 ;;      Totals:         2       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1113 ;;Total ram usage:        2 bytes
+  1114 ;; Hardware stack levels used: 1
+  1115 ;; Hardware stack levels required when called: 1
+  1116 ;; This function calls:
+  1117 ;;		_LCDprintc
+  1118 ;; This function is called by:
+  1119 ;;		_LCDprintf
+  1120 ;; This function uses a non-reentrant model
+  1121 ;;
+  1122                           
+  1123                           	psect	text6
+  1124   002BAC                     __ptext6:
+  1125                           	callstack 0
+  1126   002BAC                     _LCDprints:
+  1127                           	callstack 124
+  1128   002BAC                     
+  1129                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 88:     ANSELD = 0x0; TRISD = 0x0; WPUD = 0xFF; LATDbits.LATD7 = 1; _delay
+      +                          ((unsigned long)((1)*(64000000/4000000.0)));
+  1130   002BAC  0E00               	movlw	0
+  1131   002BAE  0104               	movlb	4	; () banked
+  1132   002BB0  6F18               	movwf	24,b	;volatile
+  1133   002BB2  0E00               	movlw	0
+  1134   002BB4  6EC9               	movwf	201,c	;volatile
+  1135   002BB6                     
+  1136                           ; BSR set to: 4
+  1137   002BB6  6919               	setf	25,b	;volatile
+  1138   002BB8                     
+  1139                           ; BSR set to: 4
+  1140   002BB8  8EC1               	bsf	193,7,c	;volatile
+  1141   002BBA                     
+  1142                           ; BSR set to: 4
+  1143   002BBA  0E05               	movlw	5
+  1144   002BBC                     u567:
+  1145   002BBC  2EE8               	decfsz	wreg,f,c
+  1146   002BBE  D7FE               	bra	u567
+  1147   002BC0  F000               	nop	
+  1148   002BC2                     
+  1149                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 91:     LATDbits.LATD4 = 1;
+  1150   002BC2  88C1               	bsf	193,4,c	;volatile
+  1151   002BC4                     
+  1152                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 92:     LATDbits.LATD5 = 0;
+  1153   002BC4  9AC1               	bcf	193,5,c	;volatile
+  1154   002BC6                     
+  1155                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 94:     _delay((unsigned long)((1)*(64000000/4000000.0)));
+  1156   002BC6  0E05               	movlw	5
+  1157   002BC8                     u577:
+  1158   002BC8  2EE8               	decfsz	wreg,f,c
+  1159   002BCA  D7FE               	bra	u577
+  1160   002BCC  F000               	nop	
+  1161                           
+  1162                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 98:     while(*c != 0x0){
+  1163   002BCE  EFF2  F015         	goto	l1221
+  1164   002BD2                     l1217:
+  1165                           
+  1166                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 100:         LCDprintc(*c++);
+  1167   002BD2  C512  F4D9         	movff	LCDprints@c,fsr2l
+  1168   002BD6  C513  F4DA         	movff	LCDprints@c+1,fsr2h
+  1169   002BDA  50DF               	movf	indf2,w,c
+  1170   002BDC  ECBA  F014         	call	_LCDprintc
+  1171   002BE0  4A12               	infsnz	LCDprints@c^(0+1280),f,c
+  1172   002BE2  2A13               	incf	(LCDprints@c+1)^(0+1280),f,c
+  1173   002BE4                     l1221:
+  1174                           
+  1175                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 98:     while(*c != 0x0){
+  1176   002BE4  C512  F4D9         	movff	LCDprints@c,fsr2l
+  1177   002BE8  C513  F4DA         	movff	LCDprints@c+1,fsr2h
+  1178   002BEC  50DF               	movf	indf2,w,c
+  1179   002BEE  A4D8               	btfss	status,2,c
+  1180   002BF0  EFFC  F015         	goto	u351
+  1181   002BF4  EFFE  F015         	goto	u350
+  1182   002BF8                     u351:
+  1183   002BF8  EFE9  F015         	goto	l1217
+  1184   002BFC                     u350:
+  1185   002BFC  0012               	return		;funcret
+  1186   002BFE                     __end_of_LCDprints:
+  1187                           	callstack 0
+  1188                           
+  1189 ;; *************** function _LCDprintc *****************
+  1190 ;; Defined at:
+  1191 ;;		line 71 in file "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+      +"
+  1192 ;; Parameters:    Size  Location     Type
+  1193 ;;  c               1    wreg     unsigned char 
+  1194 ;; Auto vars:     Size  Location     Type
+  1195 ;;  c               1    1[COMRAM] unsigned char 
+  1196 ;; Return value:  Size  Location     Type
+  1197 ;;                  1    wreg      void 
+  1198 ;; Registers used:
+  1199 ;;		wreg, status,2, status,0
+  1200 ;; Tracked objects:
+  1201 ;;		On entry : 0/0
+  1202 ;;		On exit  : 0/0
+  1203 ;;		Unchanged: 0/0
+  1204 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+  1205 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1206 ;;      Locals:         1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1207 ;;      Temps:          1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1208 ;;      Totals:         2       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1209 ;;Total ram usage:        2 bytes
+  1210 ;; Hardware stack levels used: 1
+  1211 ;; This function calls:
+  1212 ;;		Nothing
+  1213 ;; This function is called by:
+  1214 ;;		_LCDprints
+  1215 ;;		_LCDprintf
+  1216 ;;		_LCDreturn
+  1217 ;; This function uses a non-reentrant model
+  1218 ;;
+  1219                           
+  1220                           	psect	text7
+  1221   002974                     __ptext7:
+  1222                           	callstack 0
+  1223   002974                     _LCDprintc:
+  1224                           	callstack 124
+  1225                           
+  1226                           ;incstack = 0
+  1227                           ;LCDprintc@c stored from wreg
+  1228   002974  6E02               	movwf	LCDprintc@c^(0+1280),c
+  1229   002976                     
+  1230                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 72:     ANSELD = 0x0; TRISD = 0x0; WPUD = 0xFF; LATDbits.LATD7 = 1; _delay
+      +                          ((unsigned long)((1)*(64000000/4000000.0)));
+  1231   002976  0E00               	movlw	0
+  1232   002978  0104               	movlb	4	; () banked
+  1233   00297A  6F18               	movwf	24,b	;volatile
+  1234   00297C  0E00               	movlw	0
+  1235   00297E  6EC9               	movwf	201,c	;volatile
+  1236   002980                     
+  1237                           ; BSR set to: 4
+  1238   002980  6919               	setf	25,b	;volatile
+  1239   002982                     
+  1240                           ; BSR set to: 4
+  1241   002982  8EC1               	bsf	193,7,c	;volatile
+  1242   002984                     
+  1243                           ; BSR set to: 4
+  1244   002984  0E05               	movlw	5
+  1245   002986                     u587:
+  1246   002986  2EE8               	decfsz	wreg,f,c
+  1247   002988  D7FE               	bra	u587
+  1248   00298A  F000               	nop	
+  1249   00298C                     
+  1250                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 73:     LATDbits.LATD4 = 1;
+  1251   00298C  88C1               	bsf	193,4,c	;volatile
+  1252   00298E                     
+  1253                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 74:     LATDbits.LATD5 = 0;
+  1254   00298E  9AC1               	bcf	193,5,c	;volatile
+  1255   002990                     
+  1256                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 77:     LATD = (LATD & 0xF0)|(c>>4);
+  1257   002990  C502  F501         	movff	LCDprintc@c,??_LCDprintc
+  1258   002994  3A01               	swapf	??_LCDprintc^(0+1280),f,c
+  1259   002996  0E0F               	movlw	15
+  1260   002998  1601               	andwf	??_LCDprintc^(0+1280),f,c
+  1261   00299A  50C1               	movf	193,w,c	;volatile
+  1262   00299C  0BF0               	andlw	240
+  1263   00299E  1001               	iorwf	??_LCDprintc^(0+1280),w,c
+  1264   0029A0  6EC1               	movwf	193,c	;volatile
+  1265   0029A2                     
+  1266                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 78:     _delay((unsigned long)((1)*(64000000/4000000.0)));
+  1267   0029A2  0E05               	movlw	5
+  1268   0029A4                     u597:
+  1269   0029A4  2EE8               	decfsz	wreg,f,c
+  1270   0029A6  D7FE               	bra	u597
+  1271   0029A8  F000               	nop	
+  1272   0029AA                     
+  1273                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 79:     LATDbits.LATD6 = 1; _delay((unsigned long)((1)*(64000000/4000000.0
+      +                          ))); LATDbits.LATD6 = 0;
+  1274   0029AA  8CC1               	bsf	193,6,c	;volatile
+  1275   0029AC  0E05               	movlw	5
+  1276   0029AE                     u607:
+  1277   0029AE  2EE8               	decfsz	wreg,f,c
+  1278   0029B0  D7FE               	bra	u607
+  1279   0029B2  F000               	nop	
+  1280   0029B4  9CC1               	bcf	193,6,c	;volatile
+  1281   0029B6                     
+  1282                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 80:     LATD = (LATD & 0xF0)|(c & 0x0F);
+  1283   0029B6  C502  F501         	movff	LCDprintc@c,??_LCDprintc
+  1284   0029BA  0E0F               	movlw	15
+  1285   0029BC  1601               	andwf	??_LCDprintc^(0+1280),f,c
+  1286   0029BE  50C1               	movf	193,w,c	;volatile
+  1287   0029C0  0BF0               	andlw	240
+  1288   0029C2  1001               	iorwf	??_LCDprintc^(0+1280),w,c
+  1289   0029C4  6EC1               	movwf	193,c	;volatile
+  1290   0029C6                     
+  1291                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 81:     _delay((unsigned long)((1)*(64000000/4000000.0)));
+  1292   0029C6  0E05               	movlw	5
+  1293   0029C8                     u617:
+  1294   0029C8  2EE8               	decfsz	wreg,f,c
+  1295   0029CA  D7FE               	bra	u617
+  1296   0029CC  F000               	nop	
+  1297   0029CE                     
+  1298                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 82:     LATDbits.LATD6 = 1; _delay((unsigned long)((1)*(64000000/4000000.0
+      +                          ))); LATDbits.LATD6 = 0;
+  1299   0029CE  8CC1               	bsf	193,6,c	;volatile
+  1300   0029D0  0E05               	movlw	5
+  1301   0029D2                     u627:
+  1302   0029D2  2EE8               	decfsz	wreg,f,c
+  1303   0029D4  D7FE               	bra	u627
+  1304   0029D6  F000               	nop	
+  1305   0029D8  9CC1               	bcf	193,6,c	;volatile
+  1306   0029DA                     
+  1307                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 83:     _delay((unsigned long)((5)*(64000000/4000.0)));
+  1308   0029DA  0E68               	movlw	104
+  1309   0029DC  6E01               	movwf	??_LCDprintc^(0+1280),c
+  1310   0029DE  0EE4               	movlw	228
+  1311   0029E0                     u637:
+  1312   0029E0  2EE8               	decfsz	wreg,f,c
+  1313   0029E2  D7FE               	bra	u637
+  1314   0029E4  2E01               	decfsz	??_LCDprintc^(0+1280),f,c
+  1315   0029E6  D7FC               	bra	u637
+  1316   0029E8  D000               	nop2	
+  1317   0029EA  0012               	return		;funcret
+  1318   0029EC                     __end_of_LCDprintc:
+  1319                           	callstack 0
+  1320                           
+  1321 ;; *************** function _LCDinit *****************
+  1322 ;; Defined at:
+  1323 ;;		line 34 in file "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+      +"
+  1324 ;; Parameters:    Size  Location     Type
+  1325 ;;		None
+  1326 ;; Auto vars:     Size  Location     Type
+  1327 ;;		None
+  1328 ;; Return value:  Size  Location     Type
+  1329 ;;                  1    wreg      void 
+  1330 ;; Registers used:
+  1331 ;;		wreg, status,2, status,0, cstack
+  1332 ;; Tracked objects:
+  1333 ;;		On entry : 0/0
+  1334 ;;		On exit  : 0/0
+  1335 ;;		Unchanged: 0/0
+  1336 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+  1337 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1338 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1339 ;;      Temps:          2       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1340 ;;      Totals:         2       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1341 ;;Total ram usage:        2 bytes
+  1342 ;; Hardware stack levels used: 1
+  1343 ;; Hardware stack levels required when called: 1
+  1344 ;; This function calls:
+  1345 ;;		_LCDinstruct
+  1346 ;; This function is called by:
+  1347 ;;		_main
+  1348 ;; This function uses a non-reentrant model
+  1349 ;;
+  1350                           
+  1351                           	psect	text8
+  1352   0027C4                     __ptext8:
+  1353                           	callstack 0
+  1354   0027C4                     _LCDinit:
+  1355                           	callstack 125
+  1356   0027C4                     
+  1357                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 35:     _delay((unsigned long)((50)*(64000000/4000.0)));
+  1358   0027C4  0E05               	movlw	5
+  1359   0027C6  6E04               	movwf	(??_LCDinit+1)^(0+1280),c
+  1360   0027C8  0E0F               	movlw	15
+  1361   0027CA  6E03               	movwf	??_LCDinit^(0+1280),c
+  1362   0027CC  0EF1               	movlw	241
+  1363   0027CE                     u647:
+  1364   0027CE  2EE8               	decfsz	wreg,f,c
+  1365   0027D0  D7FE               	bra	u647
+  1366   0027D2  2E03               	decfsz	??_LCDinit^(0+1280),f,c
+  1367   0027D4  D7FC               	bra	u647
+  1368   0027D6  2E04               	decfsz	(??_LCDinit+1)^(0+1280),f,c
+  1369   0027D8  D7FA               	bra	u647
+  1370   0027DA  F000               	nop	
+  1371   0027DC                     
+  1372                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 37:     ANSELD = 0x0; TRISD = 0x0; WPUD = 0xFF; LATDbits.LATD7 = 1; _delay
+      +                          ((unsigned long)((1)*(64000000/4000000.0)));
+  1373   0027DC  0E00               	movlw	0
+  1374   0027DE  0104               	movlb	4	; () banked
+  1375   0027E0  6F18               	movwf	24,b	;volatile
+  1376   0027E2                     
+  1377                           ; BSR set to: 4
+  1378   0027E2  0E00               	movlw	0
+  1379   0027E4  6EC9               	movwf	201,c	;volatile
+  1380   0027E6                     
+  1381                           ; BSR set to: 4
+  1382   0027E6  6919               	setf	25,b	;volatile
+  1383   0027E8                     
+  1384                           ; BSR set to: 4
+  1385   0027E8  8EC1               	bsf	193,7,c	;volatile
+  1386   0027EA  0E05               	movlw	5
+  1387   0027EC                     u657:
+  1388   0027EC  2EE8               	decfsz	wreg,f,c
+  1389   0027EE  D7FE               	bra	u657
+  1390   0027F0  F000               	nop	
+  1391   0027F2                     
+  1392                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 39:     LATDbits.LATD4 = 0;
+  1393   0027F2  98C1               	bcf	193,4,c	;volatile
+  1394   0027F4                     
+  1395                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 40:     LATDbits.LATD5 = 0;
+  1396   0027F4  9AC1               	bcf	193,5,c	;volatile
+  1397                           
+  1398                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 42:     _delay((unsigned long)((1)*(64000000/4000000.0)));
+  1399   0027F6  0E05               	movlw	5
+  1400   0027F8                     u667:
+  1401   0027F8  2EE8               	decfsz	wreg,f,c
+  1402   0027FA  D7FE               	bra	u667
+  1403   0027FC  F000               	nop	
+  1404   0027FE                     
+  1405                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 45:     LATD = (LATD & 0xF0) | 0x03;
+  1406   0027FE  50C1               	movf	193,w,c	;volatile
+  1407   002800  0BF0               	andlw	240
+  1408   002802  0903               	iorlw	3
+  1409   002804  6EC1               	movwf	193,c	;volatile
+  1410   002806                     
+  1411                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 46:     LATDbits.LATD6 = 1; _delay((unsigned long)((1)*(64000000/4000000.0
+      +                          ))); LATDbits.LATD6 = 0;
+  1412   002806  8CC1               	bsf	193,6,c	;volatile
+  1413   002808  0E05               	movlw	5
+  1414   00280A                     u677:
+  1415   00280A  2EE8               	decfsz	wreg,f,c
+  1416   00280C  D7FE               	bra	u677
+  1417   00280E  F000               	nop	
+  1418   002810  9CC1               	bcf	193,6,c	;volatile
+  1419   002812                     
+  1420                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 47:     _delay((unsigned long)((5)*(64000000/4000.0)));
+  1421   002812  0E68               	movlw	104
+  1422   002814  6E03               	movwf	??_LCDinit^(0+1280),c
+  1423   002816  0EE4               	movlw	228
+  1424   002818                     u687:
+  1425   002818  2EE8               	decfsz	wreg,f,c
+  1426   00281A  D7FE               	bra	u687
+  1427   00281C  2E03               	decfsz	??_LCDinit^(0+1280),f,c
+  1428   00281E  D7FC               	bra	u687
+  1429   002820  D000               	nop2	
+  1430   002822                     
+  1431                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 49:     LATD = (LATD & 0xF0) | 0x03;
+  1432   002822  50C1               	movf	193,w,c	;volatile
+  1433   002824  0BF0               	andlw	240
+  1434   002826  0903               	iorlw	3
+  1435   002828  6EC1               	movwf	193,c	;volatile
+  1436   00282A                     
+  1437                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 50:     LATDbits.LATD6 = 1; _delay((unsigned long)((1)*(64000000/4000000.0
+      +                          ))); LATDbits.LATD6 = 0;
+  1438   00282A  8CC1               	bsf	193,6,c	;volatile
+  1439   00282C  0E05               	movlw	5
+  1440   00282E                     u697:
+  1441   00282E  2EE8               	decfsz	wreg,f,c
+  1442   002830  D7FE               	bra	u697
+  1443   002832  F000               	nop	
+  1444   002834  9CC1               	bcf	193,6,c	;volatile
+  1445                           
+  1446                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 51:     _delay((unsigned long)((5)*(64000000/4000.0)));
+  1447   002836  0E68               	movlw	104
+  1448   002838  6E03               	movwf	??_LCDinit^(0+1280),c
+  1449   00283A  0EE4               	movlw	228
+  1450   00283C                     u707:
+  1451   00283C  2EE8               	decfsz	wreg,f,c
+  1452   00283E  D7FE               	bra	u707
+  1453   002840  2E03               	decfsz	??_LCDinit^(0+1280),f,c
+  1454   002842  D7FC               	bra	u707
+  1455   002844  D000               	nop2	
+  1456   002846                     
+  1457                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 53:     LATD = (LATD & 0xF0) | 0x03;
+  1458   002846  50C1               	movf	193,w,c	;volatile
+  1459   002848  0BF0               	andlw	240
+  1460   00284A  0903               	iorlw	3
+  1461   00284C  6EC1               	movwf	193,c	;volatile
+  1462   00284E                     
+  1463                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 54:     LATDbits.LATD6 = 1; _delay((unsigned long)((1)*(64000000/4000000.0
+      +                          ))); LATDbits.LATD6 = 0;
+  1464   00284E  8CC1               	bsf	193,6,c	;volatile
+  1465   002850  0E05               	movlw	5
+  1466   002852                     u717:
+  1467   002852  2EE8               	decfsz	wreg,f,c
+  1468   002854  D7FE               	bra	u717
+  1469   002856  F000               	nop	
+  1470   002858  9CC1               	bcf	193,6,c	;volatile
+  1471   00285A                     
+  1472                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 55:     _delay((unsigned long)((5)*(64000000/4000.0)));
+  1473   00285A  0E68               	movlw	104
+  1474   00285C  6E03               	movwf	??_LCDinit^(0+1280),c
+  1475   00285E  0EE4               	movlw	228
+  1476   002860                     u727:
+  1477   002860  2EE8               	decfsz	wreg,f,c
+  1478   002862  D7FE               	bra	u727
+  1479   002864  2E03               	decfsz	??_LCDinit^(0+1280),f,c
+  1480   002866  D7FC               	bra	u727
+  1481   002868  D000               	nop2	
+  1482   00286A                     
+  1483                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 58:     LATD = (LATD & 0xF0) | 0x02;
+  1484   00286A  50C1               	movf	193,w,c	;volatile
+  1485   00286C  0BF0               	andlw	240
+  1486   00286E  0902               	iorlw	2
+  1487   002870  6EC1               	movwf	193,c	;volatile
+  1488   002872                     
+  1489                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 59:     LATDbits.LATD6 = 1; _delay((unsigned long)((1)*(64000000/4000000.0
+      +                          ))); LATDbits.LATD6 = 0;
+  1490   002872  8CC1               	bsf	193,6,c	;volatile
+  1491   002874  0E05               	movlw	5
+  1492   002876                     u737:
+  1493   002876  2EE8               	decfsz	wreg,f,c
+  1494   002878  D7FE               	bra	u737
+  1495   00287A  F000               	nop	
+  1496   00287C  9CC1               	bcf	193,6,c	;volatile
+  1497                           
+  1498                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 60:     _delay((unsigned long)((5)*(64000000/4000.0)));
+  1499   00287E  0E68               	movlw	104
+  1500   002880  6E03               	movwf	??_LCDinit^(0+1280),c
+  1501   002882  0EE4               	movlw	228
+  1502   002884                     u747:
+  1503   002884  2EE8               	decfsz	wreg,f,c
+  1504   002886  D7FE               	bra	u747
+  1505   002888  2E03               	decfsz	??_LCDinit^(0+1280),f,c
+  1506   00288A  D7FC               	bra	u747
+  1507   00288C  D000               	nop2	
+  1508   00288E                     
+  1509                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 63:     LCDinstruct(0x28);
+  1510   00288E  0E28               	movlw	40
+  1511   002890  EC6A  F015         	call	_LCDinstruct
+  1512   002894                     
+  1513                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 64:     LCDinstruct(0x08);
+  1514   002894  0E08               	movlw	8
+  1515   002896  EC6A  F015         	call	_LCDinstruct
+  1516   00289A                     
+  1517                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 65:     LCDinstruct(0x0F);
+  1518   00289A  0E0F               	movlw	15
+  1519   00289C  EC6A  F015         	call	_LCDinstruct
+  1520   0028A0                     
+  1521                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 66:     LCDinstruct(0x01);
+  1522   0028A0  0E01               	movlw	1
+  1523   0028A2  EC6A  F015         	call	_LCDinstruct
+  1524   0028A6                     
+  1525                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 67:     LCDinstruct(0x06);
+  1526   0028A6  0E06               	movlw	6
+  1527   0028A8  EC6A  F015         	call	_LCDinstruct
+  1528   0028AC  0012               	return		;funcret
+  1529   0028AE                     __end_of_LCDinit:
+  1530                           	callstack 0
+  1531                           
+  1532 ;; *************** function _LCDinstruct *****************
+  1533 ;; Defined at:
+  1534 ;;		line 15 in file "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+      +"
+  1535 ;; Parameters:    Size  Location     Type
+  1536 ;;  instr           1    wreg     unsigned char 
+  1537 ;; Auto vars:     Size  Location     Type
+  1538 ;;  instr           1    1[COMRAM] unsigned char 
+  1539 ;; Return value:  Size  Location     Type
+  1540 ;;                  1    wreg      void 
+  1541 ;; Registers used:
+  1542 ;;		wreg, status,2, status,0
+  1543 ;; Tracked objects:
+  1544 ;;		On entry : 0/0
+  1545 ;;		On exit  : 0/0
+  1546 ;;		Unchanged: 0/0
+  1547 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+  1548 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1549 ;;      Locals:         1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1550 ;;      Temps:          1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1551 ;;      Totals:         2       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1552 ;;Total ram usage:        2 bytes
+  1553 ;; Hardware stack levels used: 1
+  1554 ;; This function calls:
+  1555 ;;		Nothing
+  1556 ;; This function is called by:
+  1557 ;;		_LCDinit
+  1558 ;;		_main
+  1559 ;;		_RTCinit
+  1560 ;;		_LCDgoto
+  1561 ;; This function uses a non-reentrant model
+  1562 ;;
+  1563                           
+  1564                           	psect	text9
+  1565   002AD4                     __ptext9:
+  1566                           	callstack 0
+  1567   002AD4                     _LCDinstruct:
+  1568                           	callstack 126
+  1569                           
+  1570                           ;incstack = 0
+  1571                           ;LCDinstruct@instr stored from wreg
+  1572   002AD4  6E02               	movwf	LCDinstruct@instr^(0+1280),c
+  1573   002AD6                     
+  1574                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 17:     ANSELD = 0x0; TRISD = 0x0; WPUD = 0xFF; LATDbits.LATD7 = 1; _delay
+      +                          ((unsigned long)((1)*(64000000/4000000.0)));
+  1575   002AD6  0E00               	movlw	0
+  1576   002AD8  0104               	movlb	4	; () banked
+  1577   002ADA  6F18               	movwf	24,b	;volatile
+  1578   002ADC  0E00               	movlw	0
+  1579   002ADE  6EC9               	movwf	201,c	;volatile
+  1580   002AE0                     
+  1581                           ; BSR set to: 4
+  1582   002AE0  6919               	setf	25,b	;volatile
+  1583   002AE2                     
+  1584                           ; BSR set to: 4
+  1585   002AE2  8EC1               	bsf	193,7,c	;volatile
+  1586   002AE4                     
+  1587                           ; BSR set to: 4
+  1588   002AE4  0E05               	movlw	5
+  1589   002AE6                     u757:
+  1590   002AE6  2EE8               	decfsz	wreg,f,c
+  1591   002AE8  D7FE               	bra	u757
+  1592   002AEA  F000               	nop	
+  1593   002AEC                     
+  1594                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 20:     LATDbits.LATD5 = 0;
+  1595   002AEC  9AC1               	bcf	193,5,c	;volatile
+  1596   002AEE                     
+  1597                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 21:     LATDbits.LATD4 = 0;
+  1598   002AEE  98C1               	bcf	193,4,c	;volatile
+  1599   002AF0                     
+  1600                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 24:     LATD = (LATD & 0xF0)| (instr >> 4 & 0x0F);
+  1601   002AF0  C502  F501         	movff	LCDinstruct@instr,??_LCDinstruct
+  1602   002AF4  3A01               	swapf	??_LCDinstruct^(0+1280),f,c
+  1603   002AF6  0E0F               	movlw	15
+  1604   002AF8  1601               	andwf	??_LCDinstruct^(0+1280),f,c
+  1605   002AFA  0E0F               	movlw	15
+  1606   002AFC  1601               	andwf	??_LCDinstruct^(0+1280),f,c
+  1607   002AFE  50C1               	movf	193,w,c	;volatile
+  1608   002B00  0BF0               	andlw	240
+  1609   002B02  1001               	iorwf	??_LCDinstruct^(0+1280),w,c
+  1610   002B04  6EC1               	movwf	193,c	;volatile
+  1611   002B06                     
+  1612                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 25:     LATDbits.LATD6 = 1; _delay((unsigned long)((1)*(64000000/4000000.0
+      +                          ))); LATDbits.LATD6 = 0;
+  1613   002B06  8CC1               	bsf	193,6,c	;volatile
+  1614   002B08  0E05               	movlw	5
+  1615   002B0A                     u767:
+  1616   002B0A  2EE8               	decfsz	wreg,f,c
+  1617   002B0C  D7FE               	bra	u767
+  1618   002B0E  F000               	nop	
+  1619   002B10  9CC1               	bcf	193,6,c	;volatile
+  1620   002B12                     
+  1621                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 26:     _delay((unsigned long)((1)*(64000000/4000000.0)));
+  1622   002B12  0E05               	movlw	5
+  1623   002B14                     u777:
+  1624   002B14  2EE8               	decfsz	wreg,f,c
+  1625   002B16  D7FE               	bra	u777
+  1626   002B18  F000               	nop	
+  1627   002B1A                     
+  1628                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 27:     LATD = (LATD & 0xF0)|(instr & 0x0F);
+  1629   002B1A  C502  F501         	movff	LCDinstruct@instr,??_LCDinstruct
+  1630   002B1E  0E0F               	movlw	15
+  1631   002B20  1601               	andwf	??_LCDinstruct^(0+1280),f,c
+  1632   002B22  50C1               	movf	193,w,c	;volatile
+  1633   002B24  0BF0               	andlw	240
+  1634   002B26  1001               	iorwf	??_LCDinstruct^(0+1280),w,c
+  1635   002B28  6EC1               	movwf	193,c	;volatile
+  1636   002B2A                     
+  1637                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 28:     LATDbits.LATD6 = 1; _delay((unsigned long)((1)*(64000000/4000000.0
+      +                          ))); LATDbits.LATD6 = 0;
+  1638   002B2A  8CC1               	bsf	193,6,c	;volatile
+  1639   002B2C  0E05               	movlw	5
+  1640   002B2E                     u787:
+  1641   002B2E  2EE8               	decfsz	wreg,f,c
+  1642   002B30  D7FE               	bra	u787
+  1643   002B32  F000               	nop	
+  1644   002B34  9CC1               	bcf	193,6,c	;volatile
+  1645   002B36                     
+  1646                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
+      +                          ab6/lcd18f.c: 29:     _delay((unsigned long)((5)*(64000000/4000.0)));
+  1647   002B36  0E68               	movlw	104
+  1648   002B38  6E01               	movwf	??_LCDinstruct^(0+1280),c
+  1649   002B3A  0EE4               	movlw	228
+  1650   002B3C                     u797:
+  1651   002B3C  2EE8               	decfsz	wreg,f,c
+  1652   002B3E  D7FE               	bra	u797
+  1653   002B40  2E01               	decfsz	??_LCDinstruct^(0+1280),f,c
+  1654   002B42  D7FC               	bra	u797
+  1655   002B44  D000               	nop2	
+  1656   002B46  0012               	return		;funcret
+  1657   002B48                     __end_of_LCDinstruct:
+  1658                           	callstack 0
+  1659                           
+  1660                           	psect	rparam
+  1661   000000                     
+  1662                           	psect	idloc
+  1663                           
+  1664                           ;Config register IDLOC0 @ 0x200000
+  1665                           ;	unspecified, using default values
+  1666   200000                     	org	2097152
+  1667   200000  FFFF               	dw	65535
+  1668                           
+  1669                           ;Config register IDLOC1 @ 0x200002
+  1670                           ;	unspecified, using default values
+  1671   200002                     	org	2097154
+  1672   200002  FFFF               	dw	65535
+  1673                           
+  1674                           ;Config register IDLOC2 @ 0x200004
+  1675                           ;	unspecified, using default values
+  1676   200004                     	org	2097156
+  1677   200004  FFFF               	dw	65535
+  1678                           
+  1679                           ;Config register IDLOC3 @ 0x200006
+  1680                           ;	unspecified, using default values
+  1681   200006                     	org	2097158
+  1682   200006  FFFF               	dw	65535
+  1683                           
+  1684                           ;Config register IDLOC4 @ 0x200008
+  1685                           ;	unspecified, using default values
+  1686   200008                     	org	2097160
+  1687   200008  FFFF               	dw	65535
+  1688                           
+  1689                           ;Config register IDLOC5 @ 0x20000A
+  1690                           ;	unspecified, using default values
+  1691   20000A                     	org	2097162
+  1692   20000A  FFFF               	dw	65535
+  1693                           
+  1694                           ;Config register IDLOC6 @ 0x20000C
+  1695                           ;	unspecified, using default values
+  1696   20000C                     	org	2097164
+  1697   20000C  FFFF               	dw	65535
+  1698                           
+  1699                           ;Config register IDLOC7 @ 0x20000E
+  1700                           ;	unspecified, using default values
+  1701   20000E                     	org	2097166
+  1702   20000E  FFFF               	dw	65535
+  1703                           
+  1704                           ;Config register IDLOC8 @ 0x200010
+  1705                           ;	unspecified, using default values
+  1706   200010                     	org	2097168
+  1707   200010  FFFF               	dw	65535
+  1708                           
+  1709                           ;Config register IDLOC9 @ 0x200012
+  1710                           ;	unspecified, using default values
+  1711   200012                     	org	2097170
+  1712   200012  FFFF               	dw	65535
+  1713                           
+  1714                           ;Config register IDLOC10 @ 0x200014
+  1715                           ;	unspecified, using default values
+  1716   200014                     	org	2097172
+  1717   200014  FFFF               	dw	65535
+  1718                           
+  1719                           ;Config register IDLOC11 @ 0x200016
+  1720                           ;	unspecified, using default values
+  1721   200016                     	org	2097174
+  1722   200016  FFFF               	dw	65535
+  1723                           
+  1724                           ;Config register IDLOC12 @ 0x200018
+  1725                           ;	unspecified, using default values
+  1726   200018                     	org	2097176
+  1727   200018  FFFF               	dw	65535
+  1728                           
+  1729                           ;Config register IDLOC13 @ 0x20001A
+  1730                           ;	unspecified, using default values
+  1731   20001A                     	org	2097178
+  1732   20001A  FFFF               	dw	65535
+  1733                           
+  1734                           ;Config register IDLOC14 @ 0x20001C
+  1735                           ;	unspecified, using default values
+  1736   20001C                     	org	2097180
+  1737   20001C  FFFF               	dw	65535
+  1738                           
+  1739                           ;Config register IDLOC15 @ 0x20001E
+  1740                           ;	unspecified, using default values
+  1741   20001E                     	org	2097182
+  1742   20001E  FFFF               	dw	65535
+  1743                           
+  1744                           ;Config register IDLOC16 @ 0x200020
+  1745                           ;	unspecified, using default values
+  1746   200020                     	org	2097184
+  1747   200020  FFFF               	dw	65535
+  1748                           
+  1749                           ;Config register IDLOC17 @ 0x200022
+  1750                           ;	unspecified, using default values
+  1751   200022                     	org	2097186
+  1752   200022  FFFF               	dw	65535
+  1753                           
+  1754                           ;Config register IDLOC18 @ 0x200024
+  1755                           ;	unspecified, using default values
+  1756   200024                     	org	2097188
+  1757   200024  FFFF               	dw	65535
+  1758                           
+  1759                           ;Config register IDLOC19 @ 0x200026
+  1760                           ;	unspecified, using default values
+  1761   200026                     	org	2097190
+  1762   200026  FFFF               	dw	65535
+  1763                           
+  1764                           ;Config register IDLOC20 @ 0x200028
+  1765                           ;	unspecified, using default values
+  1766   200028                     	org	2097192
+  1767   200028  FFFF               	dw	65535
+  1768                           
+  1769                           ;Config register IDLOC21 @ 0x20002A
+  1770                           ;	unspecified, using default values
+  1771   20002A                     	org	2097194
+  1772   20002A  FFFF               	dw	65535
+  1773                           
+  1774                           ;Config register IDLOC22 @ 0x20002C
+  1775                           ;	unspecified, using default values
+  1776   20002C                     	org	2097196
+  1777   20002C  FFFF               	dw	65535
+  1778                           
+  1779                           ;Config register IDLOC23 @ 0x20002E
+  1780                           ;	unspecified, using default values
+  1781   20002E                     	org	2097198
+  1782   20002E  FFFF               	dw	65535
+  1783                           
+  1784                           ;Config register IDLOC24 @ 0x200030
+  1785                           ;	unspecified, using default values
+  1786   200030                     	org	2097200
+  1787   200030  FFFF               	dw	65535
+  1788                           
+  1789                           ;Config register IDLOC25 @ 0x200032
+  1790                           ;	unspecified, using default values
+  1791   200032                     	org	2097202
+  1792   200032  FFFF               	dw	65535
+  1793                           
+  1794                           ;Config register IDLOC26 @ 0x200034
+  1795                           ;	unspecified, using default values
+  1796   200034                     	org	2097204
+  1797   200034  FFFF               	dw	65535
+  1798                           
+  1799                           ;Config register IDLOC27 @ 0x200036
+  1800                           ;	unspecified, using default values
+  1801   200036                     	org	2097206
+  1802   200036  FFFF               	dw	65535
+  1803                           
+  1804                           ;Config register IDLOC28 @ 0x200038
+  1805                           ;	unspecified, using default values
+  1806   200038                     	org	2097208
+  1807   200038  FFFF               	dw	65535
+  1808                           
+  1809                           ;Config register IDLOC29 @ 0x20003A
+  1810                           ;	unspecified, using default values
+  1811   20003A                     	org	2097210
+  1812   20003A  FFFF               	dw	65535
+  1813                           
+  1814                           ;Config register IDLOC30 @ 0x20003C
+  1815                           ;	unspecified, using default values
+  1816   20003C                     	org	2097212
+  1817   20003C  FFFF               	dw	65535
+  1818                           
+  1819                           ;Config register IDLOC31 @ 0x20003E
+  1820                           ;	unspecified, using default values
+  1821   20003E                     	org	2097214
+  1822   20003E  FFFF               	dw	65535
+  1823                           
+  1824                           	psect	config
+  1825                           
+  1826                           ;Config register CONFIG1 @ 0x300000
+  1827                           ;	External Oscillator Selection
+  1828                           ;	FEXTOSC = OFF, Oscillator not enabled
+  1829                           ;	Reset Oscillator Selection
+  1830                           ;	RSTOSC = HFINTOSC_64MHZ, HFINTOSC with HFFRQ = 64 MHz and CDIV = 1:1
+  1831   300000                     	org	3145728
+  1832   300000  8C                 	db	140
+  1833                           
+  1834                           ;Config register CONFIG2 @ 0x300001
+  1835                           ;	Clock out Enable bit
+  1836                           ;	CLKOUTEN = OFF, CLKOUT function is disabled
+  1837                           ;	PRLOCKED One-Way Set Enable bit
+  1838                           ;	PR1WAY = ON, PRLOCKED bit can be cleared and set only once
+  1839                           ;	Clock Switch Enable bit
+  1840                           ;	CSWEN = ON, Writing to NOSC and NDIV is allowed
+  1841                           ;	Fail-Safe Clock Monitor Enable bit
+  1842                           ;	FCMEN = ON, Fail-Safe Clock Monitor enabled
+  1843   300001                     	org	3145729
+  1844   300001  FF                 	db	255
+  1845                           
+  1846                           ;Config register CONFIG3 @ 0x300002
+  1847                           ;	MCLR Enable bit
+  1848                           ;	MCLRE = EXTMCLR, If LVP = 0, MCLR pin is MCLR; If LVP = 1, RE3 pin function is MCLR
+  1849                           ;	Power-up timer selection bits
+  1850                           ;	PWRTS = PWRT_OFF, PWRT is disabled
+  1851                           ;	Multi-vector enable bit
+  1852                           ;	MVECEN = ON, Multi-vector enabled, Vector table used for interrupts
+  1853                           ;	IVTLOCK bit One-way set enable bit
+  1854                           ;	IVT1WAY = OFF, IVTLOCKED bit can be cleared and set repeatedly
+  1855                           ;	Low Power BOR Enable bit
+  1856                           ;	LPBOREN = OFF, Low-Power BOR disabled
+  1857                           ;	Brown-out Reset Enable bits
+  1858                           ;	BOREN = SBORDIS, Brown-out Reset enabled , SBOREN bit is ignored
+  1859   300002                     	org	3145730
+  1860   300002  EF                 	db	239
+  1861                           
+  1862                           ;Config register CONFIG4 @ 0x300003
+  1863                           ;	Brown-out Reset Voltage Selection bits
+  1864                           ;	BORV = VBOR_1P9, Brown-out Reset Voltage (VBOR) set to 1.9V
+  1865                           ;	ZCD Disable bit
+  1866                           ;	ZCD = OFF, ZCD module is disabled. ZCD can be enabled by setting the ZCDSEN bit of ZCD
+      +                          CON
+  1867                           ;	PPSLOCK bit One-Way Set Enable bit
+  1868                           ;	PPS1WAY = ON, PPSLOCKED bit can be cleared and set only once; PPS registers remain loc
+      +                          ked after one clear/set cycle
+  1869                           ;	Stack Full/Underflow Reset Enable bit
+  1870                           ;	STVREN = ON, Stack full/underflow will cause Reset
+  1871                           ;	Low Voltage Programming Enable bit
+  1872                           ;	LVP = ON, Low voltage programming enabled. MCLR/VPP pin function is MCLR. MCLRE config
+      +                          uration bit is ignored
+  1873                           ;	Extended Instruction Set Enable bit
+  1874                           ;	XINST = OFF, Extended Instruction Set and Indexed Addressing Mode disabled
+  1875   300003                     	org	3145731
+  1876   300003  FF                 	db	255
+  1877                           
+  1878                           ;Config register CONFIG5 @ 0x300004
+  1879                           ;	WDT Period selection bits
+  1880                           ;	WDTCPS = WDTCPS_31, Divider ratio 1:65536; software control of WDTPS
+  1881                           ;	WDT operating mode
+  1882                           ;	WDTE = OFF, WDT Disabled; SWDTEN is ignored
+  1883   300004                     	org	3145732
+  1884   300004  9F                 	db	159
+  1885                           
+  1886                           ;Config register CONFIG6 @ 0x300005
+  1887                           ;	WDT Window Select bits
+  1888                           ;	WDTCWS = WDTCWS_7, window always open (100%); software control; keyed access not requi
+      +                          red
+  1889                           ;	WDT input clock selector
+  1890                           ;	WDTCCS = SC, Software Control
+  1891   300005                     	org	3145733
+  1892   300005  FF                 	db	255
+  1893                           
+  1894                           ;Config register CONFIG7 @ 0x300006
+  1895                           ;	Boot Block Size selection bits
+  1896                           ;	BBSIZE = BBSIZE_512, Boot Block size is 512 words
+  1897                           ;	Boot Block enable bit
+  1898                           ;	BBEN = OFF, Boot block disabled
+  1899                           ;	Storage Area Flash enable bit
+  1900                           ;	SAFEN = OFF, SAF disabled
+  1901                           ;	Background Debugger
+  1902                           ;	DEBUG = OFF, Background Debugger disabled
+  1903   300006                     	org	3145734
+  1904   300006  FF                 	db	255
+  1905                           
+  1906                           ;Config register CONFIG8 @ 0x300007
+  1907                           ;	Boot Block Write Protection bit
+  1908                           ;	WRTB = OFF, Boot Block not Write protected
+  1909                           ;	Configuration Register Write Protection bit
+  1910                           ;	WRTC = OFF, Configuration registers not Write protected
+  1911                           ;	Data EEPROM Write Protection bit
+  1912                           ;	WRTD = OFF, Data EEPROM not Write protected
+  1913                           ;	SAF Write protection bit
+  1914                           ;	WRTSAF = OFF, SAF not Write Protected
+  1915                           ;	Application Block write protection bit
+  1916                           ;	WRTAPP = OFF, Application Block not write protected
+  1917   300007                     	org	3145735
+  1918   300007  FF                 	db	255
+  1919                           
+  1920                           ;Config register CONFIG10 @ 0x300009
+  1921                           ;	PFM and Data EEPROM Code Protection bit
+  1922                           ;	CP = OFF, PFM and Data EEPROM code protection disabled
+  1923   300009                     	org	3145737
+  1924   300009  FF                 	db	255
+  1925                           tosu	equ	0x4FF
+  1926                           tosh	equ	0x4FE
+  1927                           tosl	equ	0x4FD
+  1928                           stkptr	equ	0x4FC
+  1929                           pclatu	equ	0x4FB
+  1930                           pclath	equ	0x4FA
+  1931                           pcl	equ	0x4F9
+  1932                           tblptru	equ	0x4F8
+  1933                           tblptrh	equ	0x4F7
+  1934                           tblptrl	equ	0x4F6
+  1935                           tablat	equ	0x4F5
+  1936                           prodh	equ	0x4F4
+  1937                           prodl	equ	0x4F3
+  1938                           indf0	equ	0x4EF
+  1939                           postinc0	equ	0x4EE
+  1940                           postdec0	equ	0x4ED
+  1941                           preinc0	equ	0x4EC
+  1942                           plusw0	equ	0x4EB
+  1943                           fsr0h	equ	0x4EA
+  1944                           fsr0l	equ	0x4E9
+  1945                           wreg	equ	0x4E8
+  1946                           indf1	equ	0x4E7
+  1947                           postinc1	equ	0x4E6
+  1948                           postdec1	equ	0x4E5
+  1949                           preinc1	equ	0x4E4
+  1950                           plusw1	equ	0x4E3
+  1951                           fsr1h	equ	0x4E2
+  1952                           fsr1l	equ	0x4E1
+  1953                           bsr	equ	0x4E0
+  1954                           indf2	equ	0x4DF
+  1955                           postinc2	equ	0x4DE
+  1956                           postdec2	equ	0x4DD
+  1957                           preinc2	equ	0x4DC
+  1958                           plusw2	equ	0x4DB
+  1959                           fsr2h	equ	0x4DA
+  1960                           fsr2l	equ	0x4D9
+  1961                           status	equ	0x4D8
+
+Data Sizes:
+    Strings     19
+    Constant    0
+    Data        1
+    BSS         17
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMRAM           95     36      54
+    BANK5           160      0       0
+    BANK6           256      0       0
+    BANK7           256      0       0
+    BANK8           256      0       0
+    BANK9           256      0       0
+    BANK10          256      0       0
+    BANK11          256      0       0
+    BANK12          256      0       0
+    BANK13          256      0       0
+    BANK14          256      0       0
+    BANK15          256      0       0
+    BANK16          256      0       0
+    BANK17          256      0       0
+    BANK18          256      0       0
+    BANK19          256      0       0
+    BANK20          256      0       0
+    BANK21          256      0       0
+    BANK22          256      0       0
+    BANK23          256      0       0
+    BANK24          256      0       0
+    BANK25          256      0       0
+    BANK26          256      0       0
+    BANK27          256      0       0
+    BANK28          256      0       0
+    BANK29          256      0       0
+    BANK30          256      0       0
+    BANK31          256      0       0
+    BANK32          256      0       0
+    BANK33          256      0       0
+    BANK34          256      0       0
+    BANK35          256      0       0
+    BANK36          256      0       0
+
+Pointer List with Targets:
+
+    main@buffer	PTR unsigned char [1] size(2) Largest target is 6
+		 -> toString@string(COMRAM[6]), RTCinit@start_time(COMRAM[4]), NULL(NULL[0]), 
+
+    main@F16803	PTR unsigned char [1] size(2) Largest target is 0
+		 -> NULL(NULL[0]), 
+
+    main@adc_string	PTR unsigned char  size(2) Largest target is 6
+		 -> toString@string(COMRAM[6]), 
+
+    LCDprintf@inputs	PTR PTR unsigned char  size(2) Largest target is 8
+		 -> main@buffer(COMRAM[2]), RTCinit@current_time(COMRAM[8]), 
+
+    LCDprintf@shell	PTR unsigned char  size(2) Largest target is 16
+		 -> STR_2(CODE[3]), STR_1(CODE[16]), 
+
+    sp__toString	PTR unsigned char  size(2) Largest target is 6
+		 -> toString@string(COMRAM[6]), 
+
+    LCDprints@c	PTR unsigned char  size(2) Largest target is 6
+		 -> toString@string(COMRAM[6]), start_time.meridian(COMRAM[1]), start_time.seconds(COMRAM[1]), start_time.minutes(COMRAM[1]), 
+		 -> start_time.hours(COMRAM[1]), RTCinit@start_time(COMRAM[4]), NULL(NULL[0]), 
+
+    RTCinit@F16815	PTR unsigned char [4] size(2) Largest target is 0
+		 -> NULL(NULL[0]), 
+
+
+Critical Paths under _main in COMRAM
+
+    _main->_LCDprintf
+    _LCDprintf->_LCDprints
+    _toString->___lwdiv
+    _LCDprints->_toString
+    _LCDinit->_LCDinstruct
+
+Critical Paths under _main in BANK5
+
+    None.
+
+Critical Paths under _main in BANK6
+
+    None.
+
+Critical Paths under _main in BANK7
+
+    None.
+
+Critical Paths under _main in BANK8
+
+    None.
+
+Critical Paths under _main in BANK9
+
+    None.
+
+Critical Paths under _main in BANK10
+
+    None.
+
+Critical Paths under _main in BANK11
+
+    None.
+
+Critical Paths under _main in BANK12
+
+    None.
+
+Critical Paths under _main in BANK13
+
+    None.
+
+Critical Paths under _main in BANK14
+
+    None.
+
+Critical Paths under _main in BANK15
+
+    None.
+
+Critical Paths under _main in BANK16
+
+    None.
+
+Critical Paths under _main in BANK17
+
+    None.
+
+Critical Paths under _main in BANK18
+
+    None.
+
+Critical Paths under _main in BANK19
+
+    None.
+
+Critical Paths under _main in BANK20
+
+    None.
+
+Critical Paths under _main in BANK21
+
+    None.
+
+Critical Paths under _main in BANK22
+
+    None.
+
+Critical Paths under _main in BANK23
+
+    None.
+
+Critical Paths under _main in BANK24
+
+    None.
+
+Critical Paths under _main in BANK25
+
+    None.
+
+Critical Paths under _main in BANK26
+
+    None.
+
+Critical Paths under _main in BANK27
+
+    None.
+
+Critical Paths under _main in BANK28
+
+    None.
+
+Critical Paths under _main in BANK29
+
+    None.
+
+Critical Paths under _main in BANK30
+
+    None.
+
+Critical Paths under _main in BANK31
+
+    None.
+
+Critical Paths under _main in BANK32
+
+    None.
+
+Critical Paths under _main in BANK33
+
+    None.
+
+Critical Paths under _main in BANK34
+
+    None.
+
+Critical Paths under _main in BANK35
+
+    None.
+
+Critical Paths under _main in BANK36
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 8     8      0    3469
+                                             28 COMRAM     8     8      0
+                            _LCDinit
+                        _LCDinstruct
+                          _LCDprintf
+                         _analogRead
+                           _toString
+ ---------------------------------------------------------------------------------
+ (1) _analogRead                                          11     2      9     252
+                                              0 COMRAM    11     2      9
+ ---------------------------------------------------------------------------------
+ (1) _LCDprintf                                            9     5      4    1947
+                                             19 COMRAM     9     5      4
+                          _LCDprintc
+                          _LCDprints
+                           _toString
+ ---------------------------------------------------------------------------------
+ (1) _toString                                            10     7      3    1115
+                                              7 COMRAM    10     7      3
+                            ___lwdiv
+                            ___lwmod
+ ---------------------------------------------------------------------------------
+ (2) ___lwmod                                              5     1      4     311
+                                              0 COMRAM     5     1      4
+ ---------------------------------------------------------------------------------
+ (2) ___lwdiv                                              7     3      4     314
+                                              0 COMRAM     7     3      4
+ ---------------------------------------------------------------------------------
+ (2) _LCDprints                                            2     0      2     227
+                                             17 COMRAM     2     0      2
+                          _LCDprintc
+                           _toString (ARG)
+ ---------------------------------------------------------------------------------
+ (3) _LCDprintc                                            2     2      0      30
+                                              0 COMRAM     2     2      0
+ ---------------------------------------------------------------------------------
+ (1) _LCDinit                                              2     2      0      30
+                                              2 COMRAM     2     2      0
+                        _LCDinstruct
+ ---------------------------------------------------------------------------------
+ (1) _LCDinstruct                                          2     2      0      30
+                                              0 COMRAM     2     2      0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 3
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _LCDinit
+     _LCDinstruct
+   _LCDinstruct
+   _LCDprintf
+     _LCDprintc
+     _LCDprints
+       _LCDprintc
+       _toString (ARG)
+         ___lwdiv
+         ___lwmod
+     _toString
+   _analogRead
+   _toString
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BIGRAM            1FFF      0       0      70        0.0%
+EEDATA             400      0       0       0        0.0%
+BITBIGSFRll        3EA      0       0      79        0.0%
+BITBIGSFR_1        100      0       0      69        0.0%
+BITBANK36          100      0       0      67        0.0%
+BANK36             100      0       0      68        0.0%
+BITBANK35          100      0       0      65        0.0%
+BANK35             100      0       0      66        0.0%
+BITBANK34          100      0       0      63        0.0%
+BANK34             100      0       0      64        0.0%
+BITBANK33          100      0       0      61        0.0%
+BANK33             100      0       0      62        0.0%
+BITBANK32          100      0       0      59        0.0%
+BANK32             100      0       0      60        0.0%
+BITBANK31          100      0       0      56        0.0%
+BANK31             100      0       0      57        0.0%
+BITBANK30          100      0       0      54        0.0%
+BANK30             100      0       0      55        0.0%
+BITBANK29          100      0       0      52        0.0%
+BANK29             100      0       0      53        0.0%
+BITBANK28          100      0       0      50        0.0%
+BANK28             100      0       0      51        0.0%
+BITBANK27          100      0       0      48        0.0%
+BANK27             100      0       0      49        0.0%
+BITBANK26          100      0       0      46        0.0%
+BANK26             100      0       0      47        0.0%
+BITBANK25          100      0       0      44        0.0%
+BANK25             100      0       0      45        0.0%
+BITBANK24          100      0       0      42        0.0%
+BANK24             100      0       0      43        0.0%
+BITBANK23          100      0       0      40        0.0%
+BANK23             100      0       0      41        0.0%
+BITBANK22          100      0       0      38        0.0%
+BANK22             100      0       0      39        0.0%
+BITBANK21          100      0       0      36        0.0%
+BANK21             100      0       0      37        0.0%
+BITBANK20          100      0       0      34        0.0%
+BANK20             100      0       0      35        0.0%
+BITBANK19          100      0       0      32        0.0%
+BANK19             100      0       0      33        0.0%
+BITBANK18          100      0       0      30        0.0%
+BANK18             100      0       0      31        0.0%
+BITBANK17          100      0       0      28        0.0%
+BANK17             100      0       0      29        0.0%
+BITBANK16          100      0       0      26        0.0%
+BANK16             100      0       0      27        0.0%
+BITBANK15          100      0       0      24        0.0%
+BANK15             100      0       0      25        0.0%
+BITBANK14          100      0       0      22        0.0%
+BANK14             100      0       0      23        0.0%
+BITBANK13          100      0       0      20        0.0%
+BANK13             100      0       0      21        0.0%
+BITBANK12          100      0       0      18        0.0%
+BANK12             100      0       0      19        0.0%
+BITBANK11          100      0       0      16        0.0%
+BANK11             100      0       0      17        0.0%
+BITBANK10          100      0       0      14        0.0%
+BANK10             100      0       0      15        0.0%
+BITBANK9           100      0       0      12        0.0%
+BANK9              100      0       0      13        0.0%
+BITBANK8           100      0       0      10        0.0%
+BANK8              100      0       0      11        0.0%
+BITBANK7           100      0       0       8        0.0%
+BANK7              100      0       0       9        0.0%
+BITBANK6           100      0       0       6        0.0%
+BANK6              100      0       0       7        0.0%
+BITBIGSFRhhll       A6      0       0      74        0.0%
+BITBANK5            A0      0       0       4        0.0%
+BANK5               A0      0       0       5        0.0%
+BITCOMRAM           5F      0       0       0        0.0%
+COMRAM              5F     24      36       1       56.8%
+BITBIGSFRhhh        36      0       0      71        0.0%
+BITBIGSFRhlhl        F      0       0      76        0.0%
+BITBIGSFRhll         C      0       0      77        0.0%
+BITBIGSFRhlhh        7      0       0      75        0.0%
+BITBIGSFRlh          6      0       0      78        0.0%
+BITBIGSFRhhlhl       4      0       0      73        0.0%
+BITBIGSFRhhlhh       1      0       0      72        0.0%
+BIGSFR_1             0      0       0     200        0.0%
+BIGSFR               0      0       0     200        0.0%
+BITSFR_6             0      0       0     200        0.0%
+SFR_6                0      0       0     200        0.0%
+BITSFR_5             0      0       0     200        0.0%
+SFR_5                0      0       0     200        0.0%
+BITSFR_4             0      0       0     200        0.0%
+SFR_4                0      0       0     200        0.0%
+BITSFR_3             0      0       0     200        0.0%
+SFR_3                0      0       0     200        0.0%
+BITSFR_2             0      0       0     200        0.0%
+SFR_2                0      0       0     200        0.0%
+BITSFR_1             0      0       0     200        0.0%
+SFR_1                0      0       0     200        0.0%
+BITSFR               0      0       0     200        0.0%
+SFR                  0      0       0     200        0.0%
+STACK                0      0       0       2        0.0%
+NULL                 0      0       0       0        0.0%
+ABS                  0      0      36      58        0.0%
+DATA                 0      0      36       3        0.0%
+CODE                 0      0       0       0        0.0%
+
+
+Microchip Technology PIC18 Macro Assembler V2.40 build 20220703182018 
+Symbol Table                                                                                   Sun Apr 02 18:57:39 2023
+
+                      l11 2C22                        l14 2C42                        l60 28AC  
+                      l63 29EA                        l57 2B46                        l69 2BFC  
+                      l85 2A5E                        l97 27C2                       l632 2AD2  
+                     l625 2ACA                       l642 2BAA                       l811 2982  
+                     l635 2BA2                       l901 2B12                       l821 29A2  
+                     l813 2984                       l911 2B36                       l903 2B1A  
+                     l831 29C6                       l823 29AA                       l815 298C  
+                     l807 2976                       l905 2B2A                       l833 29CE  
+                     l825 29AC                       l817 298E                       l809 2980  
+                     l907 2B2C                       l835 29D0                       l827 29B4  
+                     l819 2990                       l909 2B34                       l837 29D8  
+                     l829 29B6                       l839 29DA                       l881 2AD6  
+                     l891 2AEE                       l883 2AE0                       l893 2AF0  
+                     l885 2AE2                       l895 2B06                       l887 2AE4  
+                     l897 2B08                       l889 2AEC                       l899 2B10  
+                     u300 2A98                       u301 2A94                       u310 2AB4  
+                     u311 2AB0                       u320 2B5A                       u400 265E  
+                     u321 2B56                       u401 265A                       u330 2B78  
+                     u410 26A2                       u331 2B74                       u411 269E  
+                     u340 2B8E                       u420 26CA                       u341 2B8A  
+                     u421 26C6                       u350 2BFC                       u430 2748  
+                     u351 2BF8                       u431 2744                       u440 2770  
+                     u361 29F2                       u441 276C                       u290 2A7A  
+                     u370 2A0A                       u450 27C2                       u530 28DA  
+                     u291 2A76                       u371 2A06                       u451 27BE  
+                     u531 28D2                       u380 2C30                       u540 28F8  
+                     u381 2C2C                       u541 28F0                       u390 2636  
+                     u607 29AE                       u391 2632                       u617 29C8  
+                     u538 28DC                       u707 283C                       u627 29D2  
+                     u548 28FA                       u717 2852                       u637 29E0  
+                     u557 295E                       u727 2860                       u647 27CE  
+                     u567 2BBC                       u737 2876                       u657 27EC  
+                     u577 2BC8                       u747 2884                       u667 27F8  
+                     u587 2986                       u757 2AE6                       u677 280A  
+                     u597 29A4                       u767 2B0A                       u687 2818  
+                     u777 2B14                       u697 282E                       u787 2B2E  
+                     u797 2B3C                       wreg 0004E8                      l1011 27E2  
+                    l1021 27FE                      l1013 27E6                      l1031 2822  
+                    l1023 2806                      l1015 27E8                      l1007 27C4  
+                    l1041 2850                      l1033 282A                      l1025 2808  
+                    l1017 27F2                      l1009 27DC                      l1201 2B9C  
+                    l1051 287C                      l1043 2858                      l1035 2834  
+                    l1027 2810                      l1019 27F4                      l1211 2BC2  
+                    l1203 2BAC                      l1061 28A6                      l1053 288E  
+                    l1045 285A                      l1037 2846                      l1029 2812  
+                    l1221 2BE4                      l1213 2BC4                      l1205 2BB6  
+                    l1055 2894                      l1047 286A                      l1039 284E  
+                    l1215 2BC6                      l1207 2BB8                      l1231 2A0E  
+                    l1223 29EC                      l1057 289A                      l1049 2872  
+                    l1217 2BD2                      l1209 2BBA                      l1233 2A34  
+                    l1225 29F8                      l1059 28A0                      l1219 2BE0  
+                    l1171 2A82                      l1235 2A50                      l1227 29FC  
+                    l1251 2C20                      l1243 2BFE                      l1181 2ABC  
+                    l1173 2A8A                      l1165 2A60                      l1261 2636  
+                    l1253 2C30                      l1245 2C08                      l1341 28BC  
+                    l1183 2ABE                      l1175 2A98                      l1167 2A68  
+                    l1191 2B62                      l1239 2A56                      l1271 26A2  
+                    l1263 265E                      l1247 2C0A                      l1351 2930  
+                    l1343 28C0                      l1185 2AC4                      l1177 2A9E  
+                    l1169 2A7A                      l1193 2B6A                      l1281 2748  
+                    l1273 26CA                      l1265 2672                      l1257 2616  
+                    l1249 2C1E                      l1353 2938                      l1345 28C6  
+                    l1179 2AB4                      l1195 2B78                      l1187 2B48  
+                    l1291 27A2                      l1283 2770                      l1275 2718  
+                    l1267 267A                      l1259 261A                      l1355 2940  
+                    l1347 2914                      l1339 28AE                      l1197 2B8E  
+                    l1189 2B5A                      l1277 2720                      l1269 2686  
+                    l1293 27A6                      l1357 2954                      l1349 2918  
+                    l1199 2B96                      l1279 272C                      l1289 2792  
+         __end_of_LCDinit 28AE                      STR_1 2601                      STR_2 2611  
+                    _LATC 0004C0                      _LATD 0004C1                      _WPUD 000419  
+             main@reading 0521                      _main 28AE                      fsr2h 0004DA  
+                    indf2 0004DF                      fsr2l 0004D9                      start FFFC  
+            ___param_bank 000000              ?_LCDinstruct 0501                     ?_main 0501  
+                   _ADPCH 0003EC           __end_of___lwdiv 2AD4           __end_of___lwmod 2BAC  
+                   _TRISC 0004C8                     _TRISD 0004C9                     tablat 0004F5  
+                   status 0004D8           __initialization 2C44              __end_of_main 2974  
+                  ??_main 051D             __activetblptr 000001                 ??_LCDinit 0503  
+                  _ADRESH 0003EB                    _ADRESL 0003EA                    _ANSELA 000400  
+                  _ANSELC 000410                    _ANSELD 000418         __end_of_LCDprintc 29EC  
+       __end_of_LCDprintf 27C4         __end_of_LCDprints 2BFE                 ??___lwdiv 0505  
+               ??___lwmod 0505                    clear_0 2C5C                    isa$std 000001  
+            __pdataCOMRAM 0536          __end_of_toString 2A60              __mediumconst 0000  
+                  tblptrh 0004F7                    tblptrl 0004F6                    tblptru 0004F8  
+          main@adc_string 051F                __accesstop 0560   __end_of__initialization 2C62  
+           ___rparam_used 000001            __pcstackCOMRAM 0501                _analogRead 2BFE  
+                 _LCDinit 27C4                   __Hparam 0000                   __Lparam 0000  
+               ?_toString 0508  analogRead@pin_designator 0509                   ___lwdiv 2A60  
+                 ___lwmod 2B48              __psmallconst 2600                   _nSetRTC 0536  
+                 __pcinit 2C44                   __ramtop 2600                   __ptext0 28AE  
+                 __ptext1 2BFE                   __ptext2 2616                   __ptext3 29EC  
+                 __ptext4 2B48                   __ptext5 2A60                   __ptext6 2BAC  
+                 __ptext7 2974                   __ptext8 27C4                   __ptext9 2AD4  
+    end_of_initialization 2C62          LCDinstruct@instr 0502               ?_analogRead 0501  
+               _LCDprintc 2974                 _LCDprintf 2616                 _LCDprints 2BAC  
+              _tick_count 0535                ??_toString 050B                   postdec2 0004DD  
+                 postinc0 0004EE                   postinc2 0004DE                main@F16803 0533  
+      analogRead@pin_tris 0505                 _TRISAbits 0004C6                main@buffer 0523  
+              ?_LCDprintc 0501                ?_LCDprintf 0514                ?_LCDprints 0512  
+           __pidataCOMRAM 2C70       start_initialization 2C44           LCDprintf@inputs 0516  
+           RTCinit@F16815 0525                LCDprintc@c 0502                LCDprints@c 0512  
+           ??_LCDinstruct 0501               __pbssCOMRAM 0525                  ?_LCDinit 0501  
+          toString@F16812 052D               ??_LCDprintc 0501               ??_LCDprintf 0518  
+             ??_LCDprints 0514          ___lwdiv@dividend 0501                  ?___lwdiv 0501  
+                ?___lwmod 0501            toString@length 050A            toString@number 0508  
+          toString@string 050B               __smallconst 2600       __end_of_LCDinstruct 2B48  
+        ___lwdiv@quotient 0505                  _LATDbits 0004C1              ??_analogRead 050A  
+              _ADCON0bits 0003F3        __end_of_analogRead 2C44            LCDprintf@shell 0514  
+                __Hrparam 0000                  __Lrparam 0000              __Lsmallconst 2600  
+             _LCDinstruct 2AD4                _ANSELAbits 000400           ___lwdiv@divisor 0503  
+         ___lwdiv@counter 0507                 toString@i 0511                  _toString 29EC  
+                isa$xinst 000000          ___lwmod@dividend 0501       analogRead@pin_ansel 0501  
+         ___lwmod@divisor 0503           ___lwmod@counter 0505  
