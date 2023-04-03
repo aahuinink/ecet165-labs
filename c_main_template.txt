@@ -18,9 +18,9 @@
 // ============================ MAIN FUNCTION ========================== //
 void main(void){
 
-    // ----- setup ----- //
+    // ----- hardware init ----- //
 
-
+    // ----- local variables ----- //
 
     // ----- main loop ----- //
     while(1){
