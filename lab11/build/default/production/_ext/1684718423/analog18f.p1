@@ -2639,3 +2639,36 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c: 43: }
 [e :UE 2364 ]
 }
+"57
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c: 57: double analogMap(
+[v _analogMap `(d ~T0 @X0 1 ef5`ui`ui`ui`d`d ]
+"63
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c: 63:     {
+{
+[e :U _analogMap ]
+"58
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c: 58:             unsigned int analog_reading,
+[v _analog_reading `ui ~T0 @X0 1 r1 ]
+"59
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c: 59:             unsigned int analog_max,
+[v _analog_max `ui ~T0 @X0 1 r2 ]
+"60
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c: 60:             unsigned int analog_min,
+[v _analog_min `ui ~T0 @X0 1 r3 ]
+"61
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c: 61:             double sensor_max,
+[v _sensor_max `d ~T0 @X0 1 r4 ]
+"62
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c: 62:             double sensor_min)
+[v _sensor_min `d ~T0 @X0 1 r5 ]
+"63
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c: 63:     {
+[f ]
+"64
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c: 64:     return (sensor_min + ((analog_reading-analog_min)/((double)(analog_max-analog_min)))*(sensor_max-sensor_min));
+[e ) + _sensor_min * / -> - _analog_reading _analog_min `d -> - _analog_max _analog_min `d - _sensor_max _sensor_min ]
+[e $UE 2368  ]
+"65
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c: 65:     }
+[e :UE 2368 ]
+}

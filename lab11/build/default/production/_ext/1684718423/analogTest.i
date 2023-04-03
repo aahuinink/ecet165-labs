@@ -28783,11 +28783,18 @@ unsigned char __t3rd16on(void);
 # 34 "C:/Users/a_hui/.mchp_packs/Microchip/PIC18F-Q_DFP/1.16.368/xc8\\pic\\include\\xc.h" 2 3
 # 14 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c" 2
 
-
 # 1 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.h" 1
 # 40 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.h"
 unsigned int analogRead(uint32_t pin_ansel, uint32_t pin_tris, unsigned char pin_designation);
-# 16 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c" 2
+# 54 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.h"
+double analogMap(
+            unsigned int analog_reading,
+            unsigned int analog_max,
+            unsigned int analog_min,
+            double sensor_max,
+            double sensor_min
+            );
+# 15 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c" 2
 
 # 1 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6\\lcd18f.h" 1
 # 18 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6\\lcd18f.h"
@@ -28861,7 +28868,10 @@ extern unsigned char LCDreturn(unsigned char pos);
 extern char* toString(unsigned int number, unsigned char length);
 # 111 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6\\lcd18f.h"
 extern void LCDprintf(char* shell, ... );
-# 17 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c" 2
+# 16 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c" 2
+
+
+
 
 
 
@@ -28873,10 +28883,13 @@ void main(void){
     LCDinit();
 
 
+    double pot_voltage;
+
+
     while(1){
-        unsigned int reading = analogRead(ANSELAbits.ANSELA3, TRISAbits.TRISA3, 0x03);
         LCDinstruct(0x02);
-        LCDprintf("%i4", reading);
+        pot_voltage = analogMap(analogRead(ANSELAbits.ANSELA3, TRISAbits.TRISA3, 0x03), 4000, 0, 5.00, 0.00);
+        LCDprintf("%i3", pot_voltage);
         _delay((unsigned long)((1000)*(64000000/4000.0)));
     };
     return;

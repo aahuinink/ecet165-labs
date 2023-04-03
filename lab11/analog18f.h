@@ -39,6 +39,25 @@ extern "C" {
 */
 unsigned int analogRead(uint32_t pin_ansel, uint32_t pin_tris, unsigned char pin_designation);
 
+// ----- analogMap ----- //
+/*
+* converts an analog reading to a voltage
+* ARGS: [
+ *          analog_reading<unsigned int> : the analog reading from the sensor;
+ *          analog_max<unsigned int> : the maximum possible analog reading;
+ *          analog_min<unsigned int> : the minimum possible analog reading;
+ *          sensor_max<double> : the maximum sensor measurement;
+ *          sensor_min<double> : the minimum readable voltage;
+ *      ]
+* RETURNS: [sensor_value<double> : the output value of the sensor]
+*/
+double analogMap(
+            unsigned int analog_reading,
+            unsigned int analog_max,
+            unsigned int analog_min,
+            double sensor_max,
+            double sensor_min
+            );
 #ifdef	__cplusplus
 }
 #endif

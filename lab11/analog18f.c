@@ -42,3 +42,24 @@ unsigned int analogRead(uint32_t pin_ansel, uint32_t pin_tris, unsigned char pin
      return ((ADRESH<<8)+ADRESL); // return the adc value
 }
 
+// ----- analogMap ----- //
+/*
+* converts an analog reading to a voltage
+* ARGS: [
+ *          analog_reading<unsigned int> : the analog reading from the sensor;
+ *          analog_max<unsigned int> : the maximum possible analog reading;
+ *          analog_min<unsigned int> : the minimum possible analog reading;
+ *          sensor_max<double> : the maximum sensor measurement;
+ *          sensor_min<double> : the minimum readable voltage;
+ *      ]
+* RETURNS: [sensor_value<double> : the output value of the sensor]
+*/
+double analogMap(
+            unsigned int analog_reading,
+            unsigned int analog_max,
+            unsigned int analog_min,
+            double sensor_max,
+            double sensor_min)
+    {
+    return (sensor_min + ((analog_reading-analog_min)/((double)(analog_max-analog_min)))*(sensor_max-sensor_min));
+    }
