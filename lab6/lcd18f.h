@@ -95,7 +95,7 @@ extern unsigned char LCDreturn(unsigned char pos);
  *      length<unsigned char> : the number of digits in the number;
 * RETURNS: [string<char*> : the address of the string containing the integer]
 */
-extern char* toString(unsigned int number, unsigned char length);
+extern char* toString(unsigned char number, unsigned char length);
 
 // ----- LCDprintf ----- //
 /*

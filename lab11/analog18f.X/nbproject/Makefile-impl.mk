@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=lab11
+PROJECTNAME=analog18f.X
 
 # Active Configuration
 DEFAULTCONF=default

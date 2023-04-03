@@ -130,11 +130,13 @@ unsigned char LCDreturn(unsigned char pos){
     
 }
 
-char* toString(unsigned int number, unsigned char length){
-    char string[6] = ""; // max number allowed by unsigned int is 65535, so max string length is 5 + \0
+char* toString(unsigned char number, unsigned char length){
+    char string[4] = ""; // max number is 255, so max string length is 3 + \0
+    unsigned char copy_num = number; // copy number for processing
+    
     for(signed char i = length-1; i > -1; i--){
-        string[i] = (number % 10) + '0';
-        number /= 10;
+        string[i] = (copy_num % 10) + '0';
+        copy_num /= 10;
     };
     return &string;
 }
