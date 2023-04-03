@@ -15,6 +15,8 @@ extern "C" {
 #endif
 
 #include <xc.h>
+#include <stdarg.h>
+    
 #define LCD_PORT PORTD
 #define LCD_LAT LATD
 #define LCD_TRIS TRISD
@@ -95,7 +97,7 @@ extern unsigned char LCDreturn(unsigned char pos);
  *      length<unsigned char> : the number of digits in the number;
 * RETURNS: [string<char*> : the address of the string containing the integer]
 */
-extern char* toString(unsigned char number, unsigned char length);
+extern char* toString(unsigned int number, unsigned char length);
 
 // ----- LCDprintf ----- //
 /*
@@ -106,7 +108,7 @@ extern char* toString(unsigned char number, unsigned char length);
  *      ]
 * RETURNS: [void]
 */
-extern void LCDprintf(char* shell, char* inputs[]);
+extern void LCDprintf(char* shell, ... );
 
 #ifdef	__cplusplus
 }

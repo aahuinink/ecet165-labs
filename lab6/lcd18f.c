@@ -130,34 +130,36 @@ unsigned char LCDreturn(unsigned char pos){
     
 }
 
-char* toString(unsigned char number, unsigned char length){
-    char string[4] = ""; // max number is 255, so max string length is 3 + \0
-    unsigned char copy_num = number; // copy number for processing
+char* toString(unsigned int number, unsigned char length){
+    char string[6] = ""; // max number is 65535, so max string length is 5 + \0
     
     for(signed char i = length-1; i > -1; i--){
-        string[i] = (copy_num % 10) + '0';
-        copy_num /= 10;
+        string[i] = (number % 10) + '0';
+        number /= 10;
     };
     return &string;
 }
 
-void LCDprintf(char* shell, char* inputs[]){
+void LCDprintf(char* shell, ... ){
+    va_list args;
+    va_start(args, shell);
+    
     while(*shell != 0x0){
         // if %s
         if((*shell == '%') & (*(shell+1) == 's')){
             // deref inputs, pass pointer, increment inputs
-            LCDprints(*inputs++);
+            LCDprints(va_arg(args, char*));
             shell+=2; //skip "%s"
         }
         // if %id, where d is the length of the integer to print
         else if((*shell == '%') & (*(shell+1) == 'i')){
             // deref inputs, deref pointer, convert to string, increment inputs
-            LCDprints(toString(**inputs++, (*(shell+2)-'0')));
+            LCDprints(toString(va_arg(args, int), (*(shell+2)-'0')));
             shell+=3; // skip "%id"
         // if %c
         }else if((*shell == '%') & (*(shell+1) == 'c')){
             // deref inputs, deref char pointer, 
-            LCDprintc(**inputs++); 
+            LCDprintc(va_arg(args, char)); 
             shell+=2; // skip "%c"
         }else{
             // print the char in shell and increment shell
