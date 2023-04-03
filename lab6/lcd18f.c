@@ -141,26 +141,64 @@ char* toString(unsigned int number, unsigned char length){
 }
 
 void LCDprintf(char* shell, ... ){
+    // variables for float processing
+    double f_input;
+    int f_int;
+    signed char indexer;
+    // variadic arg setup
     va_list args;
     va_start(args, shell);
     
     while(*shell != 0x0){
+        // if no format specifier
+        if(*shell != '%'){
+            LCDprintc(*shell++);
         // if %s
-        if((*shell == '%') & (*(shell+1) == 's')){
+        }else if(*(shell+1) == 's'){
             // deref inputs, pass pointer, increment inputs
             LCDprints(va_arg(args, char*));
             shell+=2; //skip "%s"
         }
         // if %id, where d is the length of the integer to print
-        else if((*shell == '%') & (*(shell+1) == 'i')){
+        else if(*(shell+1) == 'i'){
             // deref inputs, deref pointer, convert to string, increment inputs
-            LCDprints(toString(va_arg(args, int), (*(shell+2)-'0')));
+            LCDprints(toString(va_arg(args, unsigned int), (*(shell+2)-'0')));
             shell+=3; // skip "%id"
         // if %c
-        }else if((*shell == '%') & (*(shell+1) == 'c')){
+        }else if(*(shell+1) == 'c'){
             // deref inputs, deref char pointer, 
             LCDprintc(va_arg(args, char)); 
             shell+=2; // skip "%c"
+        // if %nfd, where n is the number of non-float digs to print and
+            // d is the number of float digs to print
+        }else if(*(shell+2) == 'f'){
+            // create a string to store the float in
+            char f_string[20] = "";
+            // copy the float
+            f_input = va_arg(args, float);
+            for(unsigned char i = 0; i<(*(shell+3)-'0'); i++){
+                f_input *= 10;
+            }
+            f_int = (int)f_input;
+            
+            // convert to string
+            // create indexer
+            indexer = (*(shell+1)-'0')+(*(shell+3)-'0');
+            while(indexer > -1){ // while in f_string
+                // if at the decimal point
+                if(indexer == (*(shell+1)-'0')){
+                    f_string[indexer] = '.';
+                // otherwise convert int to string
+                }else{
+                    f_string[indexer] = (f_int % 10) + '0';
+                    f_int /= 10;
+                }
+                indexer--;
+            }
+            // print the float string
+            LCDprints(f_string);
+            // skip %nfd
+            shell+=4;
         }else{
             // print the char in shell and increment shell
             LCDprintc(*shell++);
