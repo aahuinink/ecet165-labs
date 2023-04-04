@@ -20,10 +20,15 @@ Mark:
 **************************************************/
 #include "RealTimeClock.h"
 
-void RTCrun(time *start_time) {
-    // enable RTC to run
+// ----- RTCinit ----- //
+/*
+* initializes the real time clock
+* ARGS: [void]
+* RETURNS: [void]
+*/
+void RTCinit(void) {
+    // set nSetRTC
     nSetRTC = 1;
-    
     // initialize timer0
     timerInit();
     
@@ -42,37 +47,42 @@ void RTCrun(time *start_time) {
     IOCBF = 0x00;           // clear port b ioc flags.
     
     void __interrupt(irq(IOC),high_priority)setINT(void); // attach IOC
-    
-    // main loop
-    while(nSetRTC){
-        // check 10ms timer0 interrupt variable
-        if(tick_count > 99){ // if a second has past
-            tick_count -= 100; // remove 100 10ms cycles from the count
-            (start_time)->seconds++; // increment seconds
-            if((start_time)->seconds > 59){ // if a minute has past
-                (start_time)->seconds = 0; // rollover seconds
-                (start_time)->minutes++;  // increment minutes
-                if((start_time)->minutes>59){ // if an hour has past
-                    (start_time)->minutes = 0; // rollover minutes
-                    (start_time)->hours++; // increment hours
-                    if((start_time)->hours>11){ // if it's past 11am or 11pm
-                        if((start_time)->hours >12){ // if it's past midnight or noon
-                            (start_time)->hours = 1; // rollover hours
-                        }else{                 // if its midnight or noon 
-                        (start_time)->meridian = (   // toggle am/pm
-                                ((start_time)->meridian == 'a')? 'p' : // if am then pm
-                                    'a'                          // otherwise am
-                                );
+};
+
+// ----- RTCupdate ----- //
+/*
+* updates and displays the realtime clock 
+* ARGS: [
+ *          current_time<*time> : pointer to time variable containing the time to begin at;
+ *      ]
+* RETURNS: [void]
+*/
+void RTCupdate(time* current_time){
+    if(tick_count > 99){ // if a second has past
+        tick_count -= 100; // remove 100 10ms cycles from the count
+        (current_time)->seconds++; // increment seconds
+        if((current_time)->seconds > 59){ // if a minute has past
+            (current_time)->seconds = 0; // rollover seconds
+            (current_time)->minutes++;  // increment minutes
+            if((current_time)->minutes>59){ // if an hour has past
+                (current_time)->minutes = 0; // rollover minutes
+                (current_time)->hours++; // increment hours
+                if((current_time)->hours>11){ // if it's past 11am or 11pm
+                    if((current_time)->hours >12){ // if it's past midnight or noon
+                        (current_time)->hours = 1; // rollover hours
+                    }else{                 // if its midnight or noon 
+                    (current_time)->meridian = (   // toggle am/pm
+                            ((current_time)->meridian == 'a')? 'p' : // if am then pm
+                                'a'                          // otherwise am
+                            );
                     }
                 }
             }
         };
-        // print time to lcd
-        LCD_HOME;            
-        LCDprintf("%i2:%i2:%i2 %cm", start_time->hours, start_time->minutes, start_time->seconds, start_time->meridian);  
-        }
-    };
-};
+        LCD_HOME;
+        LCDprintf("%i2:&i2:%i2 %cm", current_time->hours, current_time->minutes, current_time->seconds, current_time->meridian);
+    }
+}
 
 
 void setINT(void){

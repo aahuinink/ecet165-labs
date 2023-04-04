@@ -7,6 +7,8 @@
       <itemPath>C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.h</itemPath>
       <itemPath>C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.h</itemPath>
       <itemPath>C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/analogconfigpic18f.h</itemPath>
+      <itemPath>C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.h</itemPath>
+      <itemPath>C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/matrixkeypad/keypad18f.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -19,7 +21,10 @@
       <itemPath>C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c</itemPath>
       <itemPath>C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c</itemPath>
       <itemPath>C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c</itemPath>
-      <itemPath>C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.h</itemPath>
+      <itemPath>C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/matrixkeypad/keypad18f.c</itemPath>
+      <itemPath>C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab8/timer0.c</itemPath>
+      <itemPath>C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab8/timer0.h</itemPath>
+      <itemPath>C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab8/timer0config.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -30,6 +35,8 @@
   <sourceRootList>
     <Elem>C:\Users\a_hui\OneDrive - Camosun College\term2\ecet165_embedded_mc\labs\ecet165-labs\lab6</Elem>
     <Elem>C:\Users\a_hui\OneDrive - Camosun College\term2\ecet165_embedded_mc\labs\ecet165-labs\lab9</Elem>
+    <Elem>C:\Users\a_hui\OneDrive - Camosun College\term2\ecet165_embedded_mc\labs\ecet165-labs\matrixkeypad</Elem>
+    <Elem>C:\Users\a_hui\OneDrive - Camosun College\term2\ecet165_embedded_mc\labs\ecet165-labs\lab8</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -83,7 +90,7 @@
         <property key="define-macros" value=""/>
         <property key="disable-optimizations" value="true"/>
         <property key="extra-include-directories"
-                  value="C:\Users\a_hui\OneDrive - Camosun College\term2\ecet165_embedded_mc\labs\ecet165-labs\lab8;C:\Users\a_hui\OneDrive - Camosun College\term2\ecet165_embedded_mc\labs\ecet165-labs\lab9;C:\Users\a_hui\OneDrive - Camosun College\term2\ecet165_embedded_mc\labs\ecet165-labs\lab6;C:\Users\a_hui\OneDrive - Camosun College\term2\ecet165_embedded_mc\labs\ecet165-labs\matrixkeypad;C:\Users\a_hui\OneDrive - Camosun College\term2\ecet165_embedded_mc\labs\ecet165-labs\lab11"/>
+                  value="C:\Users\a_hui\OneDrive - Camosun College\term2\ecet165_embedded_mc\labs\ecet165-labs\matrixkeypad;C:\Users\a_hui\OneDrive - Camosun College\term2\ecet165_embedded_mc\labs\ecet165-labs\lab9;C:\Users\a_hui\OneDrive - Camosun College\term2\ecet165_embedded_mc\labs\ecet165-labs\lab8;C:\Users\a_hui\OneDrive - Camosun College\term2\ecet165_embedded_mc\labs\ecet165-labs\lab6;C:\Users\a_hui\OneDrive - Camosun College\term2\ecet165_embedded_mc\labs\ecet165-labs\lab10"/>
         <property key="favor-optimization-for" value="-speed,+space"/>
         <property key="garbage-collect-data" value="true"/>
         <property key="garbage-collect-functions" value="true"/>

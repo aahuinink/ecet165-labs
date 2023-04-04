@@ -13,7 +13,6 @@
 
 #include <xc.h>
 #include "analog18f.h"
-#include "analogconfigpic18f.h"
 #include "keypad18f.h"
 #include "RealTimeClock.h"
 
@@ -52,25 +51,29 @@ void main(void){
     
     // ============================ MAIN LOOP =================================//
     while(1){
+        RTCinit();
+        
         // when the nSetRTC flag is de-asserted
-        if(nSetRTC){
-            RTCrun(&current_time);  // run the clock
+        while(nSetRTC){
             switch(tick_count){
                 case 10:
-                    lux = analogMap(LUX_READ, 2600, 0, 0 100);
+                    lux = analogMap(LUX_READ, 2600, 0, 0, 100);
                     break;
                 case 20:
-                    pot_voltage = analogMap(POT_READ, 4095, 5.00, 0.00);
+                    pot_voltage = analogMap(POT_READ, 4095, 0, 5.00, 0.00);
                     break;
                 case 30:
                     LCDgoto(0x40);
-                    LCDprintf("P: %1f2 V ", pot_voltage);
+                    LCDprintf("P:%1f2 V ", pot_voltage);
                     break;
                 case 40:
-                   LCDprintf("L: %i3 %", lux);
-                   break;
+                    LCDgoto(0x49);
+                    LCDprintf("L:%i3%", lux);
+                    break;
+                default:
+                    RTCupdate(&current_time);
+                    break;
             }
-            if(tick)
         };
         
         // transition state

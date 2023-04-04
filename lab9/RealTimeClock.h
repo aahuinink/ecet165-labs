@@ -28,6 +28,25 @@ typedef struct realtime{
     char meridian;
 }time;
 
+// ----- RTCinit ----- //
+/*
+* initializes the real time clock
+* ARGS: [void]
+* RETURNS: [void]
+*/
+
+void RTCinit(void);
+
+// ----- RTCupdate ----- //
+/*
+* updates and displays the realtime clock 
+* ARGS: [
+ *          start_time<*time> : pointer to time variable containing the time to begin at;
+ *      ]
+* RETURNS: [void]
+*/
+void RTCupdate(time* current_time);
+
 // ----- setINT ----- //
 /*
 * attaches an interrupt to pin RB4 that allows you to set the RTC clock
@@ -40,16 +59,6 @@ void __interrupt(irq(IOC),low_priority)setINT(void);
 
 // interrupt service routine protoype
 void setINT(void);
-
-// ----- RTCinit ----- //
-/*
-* initializes a real time clock 
-* ARGS: [
- *          start_time<*time> : pointer to time variable containing the time to begin at;
- *      ]
-* RETURNS: [void]
-*/
-void RTCrun(time *start_time);
 
 #ifdef	__cplusplus
 }
