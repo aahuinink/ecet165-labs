@@ -54,12 +54,16 @@ unsigned int analogRead(uint32_t pin_ansel, uint32_t pin_tris, unsigned char pin
  *      ]
 * RETURNS: [sensor_value<double> : the output value of the sensor]
 */
-double analogMap(
+float analogMap(
             unsigned int analog_reading,
             unsigned int analog_max,
             unsigned int analog_min,
             float sensor_max,
             float sensor_min)
     {
-    return (sensor_min + ((analog_reading-analog_min)/((float)(analog_max-analog_min)))*(sensor_max-sensor_min));
-    }
+    if(sensor_max > sensor_min){
+        return (sensor_min + ((analog_reading-analog_min)/((float)(analog_max-analog_min)))*(sensor_max-sensor_min));
+    }else{
+        return (sensor_min - ((analog_reading-analog_min)/((float)(analog_max-analog_min)))*(sensor_min-sensor_max));
+    };
+}

@@ -28787,7 +28787,7 @@ unsigned char __t3rd16on(void);
 # 41 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.h"
 unsigned int analogRead(uint32_t pin_ansel, uint32_t pin_tris, unsigned char pin_designation);
 # 55 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.h"
-double analogMap(
+float analogMap(
             unsigned int analog_reading,
             unsigned int analog_max,
             unsigned int analog_min,
@@ -28870,6 +28870,58 @@ extern char* toString(unsigned int number, unsigned char length);
 extern void LCDprintf(char* shell, ... );
 # 16 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c" 2
 
+# 1 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6\\analogconfigpic18f.h" 1
+# 21 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6\\analogconfigpic18f.h"
+#pragma config FEXTOSC = ECH
+#pragma config RSTOSC = HFINTOSC_64MHZ
+
+
+#pragma config CLKOUTEN = OFF
+#pragma config PR1WAY = ON
+#pragma config CSWEN = ON
+#pragma config FCMEN = ON
+
+
+#pragma config MCLRE = EXTMCLR
+#pragma config PWRTS = PWRT_OFF
+#pragma config MVECEN = ON
+#pragma config IVT1WAY = ON
+#pragma config LPBOREN = OFF
+#pragma config BOREN = SBORDIS
+
+
+#pragma config BORV = VBOR_1P9
+#pragma config ZCD = OFF
+#pragma config PPS1WAY = ON
+#pragma config STVREN = ON
+#pragma config LVP = ON
+#pragma config XINST = OFF
+
+
+#pragma config WDTCPS = WDTCPS_31
+#pragma config WDTE = OFF
+
+
+#pragma config WDTCWS = WDTCWS_7
+#pragma config WDTCCS = SC
+
+
+#pragma config BBSIZE = BBSIZE_512
+#pragma config BBEN = OFF
+#pragma config SAFEN = OFF
+#pragma config DEBUG = OFF
+
+
+#pragma config WRTB = OFF
+#pragma config WRTC = OFF
+#pragma config WRTD = OFF
+#pragma config WRTSAF = OFF
+#pragma config WRTAPP = OFF
+
+
+#pragma config CP = OFF
+# 17 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c" 2
+
 
 
 
@@ -28886,10 +28938,10 @@ void main(void){
 
     while(1){
         LCDinstruct(0x02);
-        pot_voltage = analogMap(analogRead(ANSELAbits.ANSELA3, TRISAbits.TRISA3, 0x03), 4000, 0, 5.00, 0.00);
+        pot_voltage = analogMap(analogRead(ANSELAbits.ANSELA4, TRISAbits.TRISA4, 0x04), 4095, 0, 0, 100);
         LCDprintf("Pot voltage: ");
         LCDgoto(0x40);
-        LCDprintf("%1f2 V", pot_voltage);
+        LCDprintf("%5f0 V", pot_voltage);
         _delay((unsigned long)((1000)*(64000000/4000.0)));
     };
     return;

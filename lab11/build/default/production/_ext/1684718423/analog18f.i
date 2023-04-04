@@ -28788,7 +28788,7 @@ unsigned char __t3rd16on(void);
 # 41 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.h"
 unsigned int analogRead(uint32_t pin_ansel, uint32_t pin_tris, unsigned char pin_designation);
 # 55 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.h"
-double analogMap(
+float analogMap(
             unsigned int analog_reading,
             unsigned int analog_max,
             unsigned int analog_min,
@@ -28812,12 +28812,16 @@ unsigned int analogRead(uint32_t pin_ansel, uint32_t pin_tris, unsigned char pin
      return ((ADRESH<<8)+ADRESL);
 }
 # 57 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c"
-double analogMap(
+float analogMap(
             unsigned int analog_reading,
             unsigned int analog_max,
             unsigned int analog_min,
             float sensor_max,
             float sensor_min)
     {
-    return (sensor_min + ((analog_reading-analog_min)/((float)(analog_max-analog_min)))*(sensor_max-sensor_min));
-    }
+    if(sensor_max > sensor_min){
+        return (sensor_min + ((analog_reading-analog_min)/((float)(analog_max-analog_min)))*(sensor_max-sensor_min));
+    }else{
+        return (sensor_min - ((analog_reading-analog_min)/((float)(analog_max-analog_min)))*(sensor_min-sensor_max));
+    };
+}

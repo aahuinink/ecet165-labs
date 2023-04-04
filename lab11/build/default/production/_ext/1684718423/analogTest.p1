@@ -7,8 +7,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6\lcd18f.h: 50: extern void LCDinstruct(unsigned char instr);
 [v _LCDinstruct `(v ~T0 @X0 0 ef1`uc ]
 "55 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.h
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.h: 55: double analogMap(
-[v _analogMap `(d ~T0 @X0 0 ef5`ui`ui`ui`f`f ]
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.h: 55: float analogMap(
+[v _analogMap `(f ~T0 @X0 0 ef5`ui`ui`ui`f`f ]
 "41
 [; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.h: 41: unsigned int analogRead(uint32_t pin_ansel, uint32_t pin_tris, unsigned char pin_designation);
 [v _analogRead `(ui ~T0 @X0 0 ef3`ul`ul`uc ]
@@ -2597,53 +2597,117 @@ Version 4.0 HI-TECH Software Intermediate Code
 "50272
 [; ;C:/Users/a_hui/.mchp_packs/Microchip/PIC18F-Q_DFP/1.16.368/xc8\pic\include\proc\pic18f57q43.h: 50272: __asm("TOSU equ 04FFh");
 [; <" TOSU equ 04FFh ;# ">
+"21 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6\analogconfigpic18f.h
+[p x FEXTOSC  =  ECH     ]
+"22
+[p x RSTOSC  =  HFINTOSC_64MHZ ]
+"25
+[p x CLKOUTEN  =  OFF    ]
+"26
+[p x PR1WAY  =  ON       ]
+"27
+[p x CSWEN  =  ON        ]
+"28
+[p x FCMEN  =  ON        ]
+"31
+[p x MCLRE  =  EXTMCLR   ]
+"32
+[p x PWRTS  =  PWRT_OFF  ]
+"33
+[p x MVECEN  =  ON       ]
+"34
+[p x IVT1WAY  =  ON      ]
+"35
+[p x LPBOREN  =  OFF     ]
+"36
+[p x BOREN  =  SBORDIS   ]
+"39
+[p x BORV  =  VBOR_1P9   ]
+"40
+[p x ZCD  =  OFF         ]
+"41
+[p x PPS1WAY  =  ON      ]
+"42
+[p x STVREN  =  ON       ]
+"43
+[p x LVP  =  ON          ]
+"44
+[p x XINST  =  OFF       ]
+"47
+[p x WDTCPS  =  WDTCPS_31 ]
+"48
+[p x WDTE  =  OFF        ]
+"51
+[p x WDTCWS  =  WDTCWS_7 ]
+"52
+[p x WDTCCS  =  SC       ]
+"55
+[p x BBSIZE  =  BBSIZE_512 ]
+"56
+[p x BBEN  =  OFF        ]
+"57
+[p x SAFEN  =  OFF       ]
+"58
+[p x DEBUG  =  OFF       ]
+"61
+[p x WRTB  =  OFF        ]
+"62
+[p x WRTC  =  OFF        ]
+"63
+[p x WRTD  =  OFF        ]
+"64
+[p x WRTSAF  =  OFF      ]
+"65
+[p x WRTAPP  =  OFF      ]
+"68
+[p x CP  =  OFF          ]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"22 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 22: void main(void){
+"23 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 23: void main(void){
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"25
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 25:     LCDinit();
+"26
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 26:     LCDinit();
 [e ( _LCDinit ..  ]
-"28
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 28:     float pot_voltage;
+"29
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 29:     float pot_voltage;
 [v _pot_voltage `f ~T0 @X0 1 a ]
-"31
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 31:     while(1){
+"32
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 32:     while(1){
 [e :U 2366 ]
 {
-"32
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 32:         LCDinstruct(0x02);
-[e ( _LCDinstruct (1 -> -> 2 `i `uc ]
 "33
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 33:         pot_voltage = analogMap(analogRead(ANSELAbits.ANSELA3, TRISAbits.TRISA3, 0x03), 4000, 0, 5.00, 0.00);
-[e = _pot_voltage -> ( _analogMap (4 , , , , ( _analogRead (3 , , -> . . _ANSELAbits 0 3 `ul -> . . _TRISAbits 0 3 `ul -> -> 3 `i `uc -> -> 4000 `i `ui -> -> 0 `i `ui -> .5.00 `f -> .0.00 `f `f ]
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 33:         LCDinstruct(0x02);
+[e ( _LCDinstruct (1 -> -> 2 `i `uc ]
 "34
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 34:         LCDprintf("Pot voltage: ");
-[e ( _LCDprintf :s 1C ]
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 34:         pot_voltage = analogMap(analogRead(ANSELAbits.ANSELA4, TRISAbits.TRISA4, 0x04), 4095, 0, 0, 100);
+[e = _pot_voltage ( _analogMap (4 , , , , ( _analogRead (3 , , -> . . _ANSELAbits 0 4 `ul -> . . _TRISAbits 0 4 `ul -> -> 4 `i `uc -> -> 4095 `i `ui -> -> 0 `i `ui -> -> 0 `i `f -> -> 100 `i `f ]
 "35
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 35:         LCDgoto(0x40);
-[e ( _LCDgoto (1 -> -> 64 `i `uc ]
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 35:         LCDprintf("Pot voltage: ");
+[e ( _LCDprintf :s 1C ]
 "36
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 36:         LCDprintf("%1f2 V", pot_voltage);
-[e ( _LCDprintf , (. :s 2C -> _pot_voltage `d ]
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 36:         LCDgoto(0x40);
+[e ( _LCDgoto (1 -> -> 64 `i `uc ]
 "37
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 37:         _delay((unsigned long)((1000)*(64000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 37:         LCDprintf("%5f0 V", pot_voltage);
+[e ( _LCDprintf , (. :s 2C -> _pot_voltage `d ]
 "38
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 38:     };
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 38:         _delay((unsigned long)((1000)*(64000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
+"39
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 39:     };
 }
 [e :U 2365 ]
 [e $U 2366  ]
 [e :U 2367 ]
-"39
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 39:     return;
-[e $UE 2364  ]
 "40
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 40: }
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 40:     return;
+[e $UE 2364  ]
+"41
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 41: }
 [e :UE 2364 ]
 }
-[a 2C 37 49 102 50 32 86 0 ]
+[a 2C 37 53 102 48 32 86 0 ]
 [a 1C 80 111 116 32 118 111 108 116 97 103 101 58 32 0 ]

@@ -6,8 +6,8 @@
 "30 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c
 [v _analogRead analogRead `(ui  1 e 2 0 ]
 "57
-[v _analogMap analogMap `(d  1 e 4 0 ]
-"22 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c
+[v _analogMap analogMap `(f  1 e 4 0 ]
+"23 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c
 [v _main main `(v  1 e 1 0 ]
 "15 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
 [v _LCDinstruct LCDinstruct `(v  1 e 1 0 ]
@@ -29,6 +29,8 @@
 [v ___awmod __awmod `(i  1 e 2 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fleq.c
 [v ___fleq __fleq `(b  1 e 0 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\flge.c
+[v ___flge __flge `(b  1 e 0 0 ]
 "62 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\float.c
 [v ___ftpack __ftpack `(f  1 e 4 0 ]
 "43 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fltol.c
@@ -150,12 +152,12 @@
 [v _TRISAbits TRISAbits `VES224  1 e 1 @1222 ]
 "48490
 [v _TRISD TRISD `VEuc  1 e 1 @1225 ]
-"22 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c
+"23 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c
 [v _main main `(v  1 e 1 0 ]
 {
-"28
+"29
 [v main@pot_voltage pot_voltage `f  1 a 4 39 ]
-"40
+"41
 } 0
 "30 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c
 [v _analogRead analogRead `(ui  1 e 2 0 ]
@@ -166,7 +168,7 @@
 "43
 } 0
 "57
-[v _analogMap analogMap `(d  1 e 4 0 ]
+[v _analogMap analogMap `(f  1 e 4 0 ]
 {
 "58
 [v analogMap@analog_reading analog_reading `ui  1 p 2 0 ]
@@ -178,7 +180,7 @@
 [v analogMap@sensor_max sensor_max `f  1 p 4 6 ]
 "62
 [v analogMap@sensor_min sensor_min `f  1 p 4 10 ]
-"65
+"69
 } 0
 "10 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]
@@ -217,6 +219,13 @@
 [v ___fladd@b b `d  1 p 4 39 ]
 [v ___fladd@a a `d  1 p 4 43 ]
 "237
+} 0
+"4 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\flge.c
+[v ___flge __flge `(b  1 e 0 0 ]
+{
+[v ___flge@ff1 ff1 `d  1 p 4 0 ]
+[v ___flge@ff2 ff2 `d  1 p 4 4 ]
+"19
 } 0
 "11 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcdiv.c
 [v ___fldiv __fldiv `(d  1 e 4 0 ]

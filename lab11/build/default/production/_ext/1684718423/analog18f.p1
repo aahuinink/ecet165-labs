@@ -2640,8 +2640,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :UE 2364 ]
 }
 "57
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c: 57: double analogMap(
-[v _analogMap `(d ~T0 @X0 1 ef5`ui`ui`ui`f`f ]
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c: 57: float analogMap(
+[v _analogMap `(f ~T0 @X0 1 ef5`ui`ui`ui`f`f ]
 "63
 [; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c: 63:     {
 {
@@ -2665,10 +2665,28 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c: 63:     {
 [f ]
 "64
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c: 64:     return (sensor_min + ((analog_reading-analog_min)/((float)(analog_max-analog_min)))*(sensor_max-sensor_min));
-[e ) -> + _sensor_min * / -> - _analog_reading _analog_min `f -> - _analog_max _analog_min `f - _sensor_max _sensor_min `d ]
-[e $UE 2368  ]
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c: 64:     if(sensor_max > sensor_min){
+[e $ ! > _sensor_max _sensor_min 2369  ]
+{
 "65
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c: 65:     }
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c: 65:         return (sensor_min + ((analog_reading-analog_min)/((float)(analog_max-analog_min)))*(sensor_max-sensor_min));
+[e ) + _sensor_min * / -> - _analog_reading _analog_min `f -> - _analog_max _analog_min `f - _sensor_max _sensor_min ]
+[e $UE 2368  ]
+"66
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c: 66:     }else{
+}
+[e $U 2370  ]
+[e :U 2369 ]
+{
+"67
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c: 67:         return (sensor_min - ((analog_reading-analog_min)/((float)(analog_max-analog_min)))*(sensor_min-sensor_max));
+[e ) - _sensor_min * / -> - _analog_reading _analog_min `f -> - _analog_max _analog_min `f - _sensor_min _sensor_max ]
+[e $UE 2368  ]
+"68
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c: 68:     };
+}
+[e :U 2370 ]
+"69
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c: 69: }
 [e :UE 2368 ]
 }

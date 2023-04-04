@@ -52,7 +52,7 @@ unsigned int analogRead(uint32_t pin_ansel, uint32_t pin_tris, unsigned char pin
  *      ]
 * RETURNS: [sensor_value<double> : the output value of the sensor]
 */
-double analogMap(
+float analogMap(
             unsigned int analog_reading,
             unsigned int analog_max,
             unsigned int analog_min,
