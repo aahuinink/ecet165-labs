@@ -2788,7 +2788,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 66:                     LCDgoto(0x40);
 [e ( _LCDgoto (1 -> -> 64 `i `uc ]
 "67
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 67:                     LCDprintf("P:%1f2 V ", pot_voltage);
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 67:                     LCDprintf("P:%1f2V ", pot_voltage);
 [e ( _LCDprintf , (. :s 1C -> _pot_voltage `d ]
 "68
 [; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 68:                     break;
@@ -3103,4 +3103,4 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :UE 2365 ]
 }
 [a 2C 76 58 37 105 51 37 0 ]
-[a 1C 80 58 37 49 102 50 32 86 32 0 ]
+[a 1C 80 58 37 49 102 50 86 32 0 ]

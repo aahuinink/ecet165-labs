@@ -2844,7 +2844,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 82:         LCDinstruct(0x02);
 [e ( _LCDinstruct (1 -> -> 2 `i `uc ]
 "83
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 83:         LCDprintf("%i2:&i2:%i2 %cm", current_time->hours, current_time->minutes, current_time->seconds, current_time->meridian);
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 83:         LCDprintf("%i2:%i2:%i2 %cm", current_time->hours, current_time->minutes, current_time->seconds, current_time->meridian);
 [e ( _LCDprintf , , , , (. :s 1C -> . *U _current_time 0 `i -> . *U _current_time 1 `i -> . *U _current_time 2 `i -> . *U _current_time 3 `i ]
 "84
 [; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 84:     }
@@ -2880,4 +2880,4 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 94: }
 [e :UE 2373 ]
 }
-[a 1C 37 105 50 58 38 105 50 58 37 105 50 32 37 99 109 0 ]
+[a 1C 37 105 50 58 37 105 50 58 37 105 50 32 37 99 109 0 ]

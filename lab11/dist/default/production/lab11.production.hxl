@@ -11,20 +11,18 @@
  Intel Hex-file ranges:
   0h - 3h		(dist/default/production\lab11.production.hex)
   8h - 105h		(dist/default/production\lab11.production.hex)
-  2600h - 2622h		(dist/default/production\lab11.production.hex)
-  2624h - 4A20h		(dist/default/production\lab11.production.hex)
-  4A24h - 4A49h		(dist/default/production\lab11.production.hex)
-  4A4Ch - 4A55h		(dist/default/production\lab11.production.hex)
+  2600h - 4A1Eh		(dist/default/production\lab11.production.hex)
+  4A20h - 4A45h		(dist/default/production\lab11.production.hex)
+  4A48h - 4A51h		(dist/default/production\lab11.production.hex)
   200000h - 20003Fh		(dist/default/production\lab11.production.hex)
   300000h - 300007h		(dist/default/production\lab11.production.hex)
   300009h - 300009h		(dist/default/production\lab11.production.hex)
  Unused ranges:
   4h - 7h
   106h - 25FFh
-  2623h - 2623h
-  4A21h - 4A23h
-  4A4Ah - 4A4Bh
-  4A56h - 1FFFFFh
+  4A1Fh - 4A1Fh
+  4A46h - 4A47h
+  4A52h - 1FFFFFh
   200040h - 2FFFFFh
   300008h - 300008h
 
@@ -55,7 +53,7 @@
 ----------------------------------------------------------
 00002600 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002610 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00002620 | H1 H1 H1 -- H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00002620 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002630 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002640 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002650 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
@@ -630,11 +628,11 @@
 000049E0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000049F0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00004A00 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00004A10 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00004A20 | H1 -- -- -- H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00004A10 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 --
+00004A20 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00004A30 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00004A40 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- -- H1 H1 H1 H1
-00004A50 | H1 H1 H1 H1 H1 H1 -- -- -- -- -- -- -- -- -- --
+00004A40 | H1 H1 H1 H1 H1 H1 -- -- H1 H1 H1 H1 H1 H1 H1 H1
+00004A50 | H1 H1 -- -- -- -- -- -- -- -- -- -- -- -- -- --
 ----------------------------------------------------------
 00200000 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00200010 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1

@@ -29015,7 +29015,7 @@ void main(void){
                     break;
                 case 30:
                     LCDgoto(0x40);
-                    LCDprintf("P:%1f2 V ", pot_voltage);
+                    LCDprintf("P:%1f2V ", pot_voltage);
                     break;
                 case 40:
                     LCDgoto(0x49);

@@ -29003,7 +29003,7 @@ void RTCupdate(time* current_time){
             }
         };
         LCDinstruct(0x02);
-        LCDprintf("%i2:&i2:%i2 %cm", current_time->hours, current_time->minutes, current_time->seconds, current_time->meridian);
+        LCDprintf("%i2:%i2:%i2 %cm", current_time->hours, current_time->minutes, current_time->seconds, current_time->meridian);
     }
 }
 
