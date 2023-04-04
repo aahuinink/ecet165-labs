@@ -41,11 +41,21 @@ void RTCinit(void);
 /*
 * updates and displays the realtime clock 
 * ARGS: [
- *          start_time<*time> : pointer to time variable containing the time to begin at;
+ *          current_time<*time> : pointer to time variable containing the time to begin at;
  *      ]
 * RETURNS: [void]
 */
 void RTCupdate(time* current_time);
+
+// ----- RTCset ----- //
+/*
+* uses the keypad to set the current_time variable 
+* ARGS: [
+ *          current_time<*time> : pointer to time variable containing the time to begin at;
+ *      ]
+* RETURNS: [void]
+*/
+void RTCset(time* current_time);
 
 // ----- setINT ----- //
 /*

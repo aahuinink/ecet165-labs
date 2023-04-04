@@ -50,12 +50,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "50 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6\lcd18f.h
 [; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6\lcd18f.h: 50: extern void LCDinstruct(unsigned char instr);
 [v _LCDinstruct `(v ~T0 @X0 0 ef1`uc ]
-"44 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/matrixkeypad\keypad18f.h
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/matrixkeypad\keypad18f.h: 44: extern char keyScan();
-[v _keyScan `(uc ~T0 @X0 0 e? ]
-"66 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6\lcd18f.h
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6\lcd18f.h: 66: extern void LCDprintc(char c);
-[v _LCDprintc `(v ~T0 @X0 0 ef1`uc ]
+"58 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9\RealTimeClock.h
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9\RealTimeClock.h: 58: void RTCset(time* current_time);
+[v _RTCset `(v ~T0 @X0 0 ef1`*S2364 ]
 "328 C:/Users/a_hui/.mchp_packs/Microchip/PIC18F-Q_DFP/1.16.368/xc8\pic\include\proc\pic18f57q43.h
 [; ;C:/Users/a_hui/.mchp_packs/Microchip/PIC18F-Q_DFP/1.16.368/xc8\pic\include\proc\pic18f57q43.h: 328: __asm("CLKRCON equ 039h");
 [; <" CLKRCON equ 039h ;# ">
@@ -2711,8 +2708,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 32:     unsigned char position = 0;
 [v _position `uc ~T0 @X0 1 a ]
 [e = _position -> -> 0 `i `uc ]
-[v F16831 `uc ~T0 @X0 -> 12 `i s ]
-[i F16831
+[v F16833 `uc ~T0 @X0 -> 12 `i s ]
+[i F16833
 :U ..
 "35
 [; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 35:     char indexer[12] = "HH:MM:SS Xm";
@@ -2731,7 +2728,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _indexer `uc ~T0 @X0 -> 12 `i a ]
-[e = _indexer F16831 ]
+[e = _indexer F16833 ]
 "38
 [; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 38:     char key;
 [v _key `uc ~T0 @X0 1 a ]
@@ -2840,266 +2837,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 81:         position = 0;
 [e = _position -> -> 0 `i `uc ]
 "84
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 84:         while(!nSetRTC){
-[e $U 2379  ]
-[e :U 2380 ]
-{
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 84:         RTCset(&current_time);
+[e ( _RTCset (1 &U _current_time ]
 "85
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 85:             key = keyScan();
-[e = _key ( _keyScan ..  ]
-"88
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 88:             switch (key) {
-[e $U 2383  ]
-{
-"89
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 89:                 case 'A':
-[e :U 2384 ]
-"90
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 90:                     LCDgoto(++position);
-[e ( _LCDgoto (1 =+ _position -> -> 1 `i `uc ]
-"91
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 91:                     break;
-[e $U 2382  ]
-"92
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 92:                 case 'B':
-[e :U 2385 ]
-"93
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 93:                     if(position != 0){
-[e $ ! != -> _position `i -> 0 `i 2386  ]
-{
-"94
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 94:                         LCDgoto(--position);
-[e ( _LCDgoto (1 =- _position -> -> 1 `i `uc ]
-"95
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 95:                     }
-}
-[e :U 2386 ]
-"96
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 96:                     break;
-[e $U 2382  ]
-"97
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 97:                 case 'C':
-[e :U 2387 ]
-"98
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 98:                     current_time.hours = 12;
-[e = . _current_time 0 -> -> 12 `i `uc ]
-"99
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 99:                     current_time.minutes = 0;
-[e = . _current_time 1 -> -> 0 `i `uc ]
-"100
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 100:                     current_time.seconds = 0;
-[e = . _current_time 2 -> -> 0 `i `uc ]
-"101
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 101:                     current_time.meridian = 'a';
-[e = . _current_time 3 -> -> 97 `ui `uc ]
-"102
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 102:                     nSetRTC = 1;
-[e = _nSetRTC -> -> 1 `i `uc ]
-"103
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 103:                     break;
-[e $U 2382  ]
-"104
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 104:                 case 'D':
-[e :U 2388 ]
-"105
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 105:                     nSetRTC = 1;
-[e = _nSetRTC -> -> 1 `i `uc ]
-"106
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 106:                     break;
-[e $U 2382  ]
-"107
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 107:                 case '#':
-[e :U 2389 ]
-"108
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 108:                     break;
-[e $U 2382  ]
-"109
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 109:                 case '*':
-[e :U 2390 ]
-"110
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 110:                     current_time.meridian = (current_time.meridian == 'a')? 'p' : 'a';
-[e = . _current_time 3 -> ? == -> . _current_time 3 `ui -> 97 `ui : -> 112 `ui -> 97 `ui `uc ]
-"111
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 111:                     LCDgoto(0x09);
-[e ( _LCDgoto (1 -> -> 9 `i `uc ]
-"112
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 112:                     LCDprintc(current_time.meridian);
-[e ( _LCDprintc (1 . _current_time 3 ]
-"113
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 113:                     LCDgoto(position);
-[e ( _LCDgoto (1 _position ]
-"114
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 114:                     break;
-[e $U 2382  ]
-"115
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 115:                 default:
-[e :U 2391 ]
-"117
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 117:                     switch(indexer[position]){
-[e $U 2393  ]
-{
-"118
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 118:                         case 'H':
-[e :U 2394 ]
-"119
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 119:                             if ((position % 3)==0){
-[e $ ! == % -> _position `i -> 3 `i -> 0 `i 2395  ]
-{
-"120
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 120:                                 current_time.hours = (current_time.hours % 10) + 10*(key-'0');
-[e = . _current_time 0 -> + -> % -> . _current_time 0 `i -> 10 `i `ui * -> -> 10 `i `ui - -> _key `ui -> 48 `ui `uc ]
-"121
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 121:                             }else{
-}
-[e $U 2396  ]
-[e :U 2395 ]
-{
-"122
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 122:                                 current_time.hours -= current_time.hours % 10;
-[e =- . _current_time 0 -> % -> . _current_time 0 `i -> 10 `i `uc ]
-"123
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 123:                                 current_time.hours += key - '0';
-[e =+ . _current_time 0 -> - -> _key `ui -> 48 `ui `uc ]
-"124
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 124:                             };
-}
-[e :U 2396 ]
-"125
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 125:                             current_time.hours = (current_time.hours - 1) % 12 + 1;
-[e = . _current_time 0 -> + % - -> . _current_time 0 `i -> 1 `i -> 12 `i -> 1 `i `uc ]
-"126
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 126:                             LCDprintc(key);
-[e ( _LCDprintc (1 _key ]
-"127
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 127:                             position++;
-[e ++ _position -> -> 1 `i `uc ]
-"128
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 128:                             break;
-[e $U 2392  ]
-"129
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 129:                         case 'M':
-[e :U 2397 ]
-"130
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 130:                             if ((position % 3)==0){
-[e $ ! == % -> _position `i -> 3 `i -> 0 `i 2398  ]
-{
-"131
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 131:                                 current_time.minutes = (current_time.minutes % 10) + 10*(key-'0');
-[e = . _current_time 1 -> + -> % -> . _current_time 1 `i -> 10 `i `ui * -> -> 10 `i `ui - -> _key `ui -> 48 `ui `uc ]
-"132
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 132:                             }else{
-}
-[e $U 2399  ]
-[e :U 2398 ]
-{
-"133
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 133:                                 current_time.minutes -= current_time.minutes % 10;
-[e =- . _current_time 1 -> % -> . _current_time 1 `i -> 10 `i `uc ]
-"134
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 134:                                 current_time.minutes += key - '0';
-[e =+ . _current_time 1 -> - -> _key `ui -> 48 `ui `uc ]
-"135
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 135:                             };
-}
-[e :U 2399 ]
-"136
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 136:                             current_time.minutes = current_time.minutes % 60;
-[e = . _current_time 1 -> % -> . _current_time 1 `i -> 60 `i `uc ]
-"137
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 137:                             LCDprintc(key);
-[e ( _LCDprintc (1 _key ]
-"138
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 138:                             position++;
-[e ++ _position -> -> 1 `i `uc ]
-"139
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 139:                             break;
-[e $U 2392  ]
-"140
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 140:                         case 'S':
-[e :U 2400 ]
-"141
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 141:                             if ((position % 3)==0){
-[e $ ! == % -> _position `i -> 3 `i -> 0 `i 2401  ]
-{
-"142
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 142:                                 current_time.seconds = (current_time.seconds % 10) + 10*(key-'0');
-[e = . _current_time 2 -> + -> % -> . _current_time 2 `i -> 10 `i `ui * -> -> 10 `i `ui - -> _key `ui -> 48 `ui `uc ]
-"143
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 143:                             }else{
-}
-[e $U 2402  ]
-[e :U 2401 ]
-{
-"144
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 144:                                 current_time.seconds -= current_time.seconds % 10;
-[e =- . _current_time 2 -> % -> . _current_time 2 `i -> 10 `i `uc ]
-"145
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 145:                                 current_time.seconds += key - '0';
-[e =+ . _current_time 2 -> - -> _key `ui -> 48 `ui `uc ]
-"146
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 146:                             };
-}
-[e :U 2402 ]
-"147
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 147:                             current_time.seconds = current_time.seconds % 60;
-[e = . _current_time 2 -> % -> . _current_time 2 `i -> 60 `i `uc ]
-"148
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 148:                             LCDprintc(key);
-[e ( _LCDprintc (1 _key ]
-"149
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 149:                             position++;
-[e ++ _position -> -> 1 `i `uc ]
-"150
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 150:                             break;
-[e $U 2392  ]
-"151
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 151:                         default:
-[e :U 2403 ]
-"152
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 152:                             break;
-[e $U 2392  ]
-"153
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 153:                     }
-}
-[e $U 2392  ]
-[e :U 2393 ]
-[e [\ -> *U + &U _indexer * -> _position `ux -> -> # *U &U _indexer `ui `ux `i , $ -> -> 72 `ui `i 2394
- , $ -> -> 77 `ui `i 2397
- , $ -> -> 83 `ui `i 2400
- 2403 ]
-[e :U 2392 ]
-"154
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 154:                     break;
-[e $U 2382  ]
-"155
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 155:             }
-}
-[e $U 2382  ]
-[e :U 2383 ]
-[e [\ -> _key `i , $ -> -> 65 `ui `i 2384
- , $ -> -> 66 `ui `i 2385
- , $ -> -> 67 `ui `i 2387
- , $ -> -> 68 `ui `i 2388
- , $ -> -> 35 `ui `i 2389
- , $ -> -> 42 `ui `i 2390
- 2391 ]
-[e :U 2382 ]
-"157
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 157:         }
-}
-[e :U 2379 ]
-"84
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 84:         while(!nSetRTC){
-[e $ ! != -> _nSetRTC `i -> 0 `i 2380  ]
-[e :U 2381 ]
-"158
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 158:     }
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 85:     }
 }
 [e :U 2366 ]
 [e $U 2367  ]
 [e :U 2368 ]
-"159
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 159: }
+"86
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c: 86: }
 [e :UE 2365 ]
 }
 [a 2C 76 58 37 105 51 37 0 ]

@@ -85,7 +85,108 @@ void RTCupdate(time* current_time){
     }
 }
 
+// ----- RTCset ----- //
+/*
+* uses the keypad to set the current_time variable 
+* ARGS: [
+ *          current_time<*time> : pointer to time variable containing the time to begin at;
+ *      ]
+* RETURNS: [void]
+*/
+void RTCset(time* current_time){
+    // ---- VARIABLES ---- //
+    // indexer array
+    char index[12] = "HH:MM:SS Xm";
+    // position variable
+    unsigned char pos;
+    // keypad variable
+    char key;
+    
+    // initialize position and cursor
+    pos = 0;
+    LCDinstruct(0x0F);
+    
+    // while setting
+    while(!nSetRTC){
+        key = keyScan(); // retrieve key value;
+        
+        // manage keypad inputs
+        switch (key) {
+            case 'A':
+                LCDgoto(++pos); // move cursor right;
+                break;
+            case 'B':
+                (pos != 0)? LCDgoto(--pos) : LCDgoto(0x0);
+                break;
+            case 'C':
+                current_time->hours = 12;
+                current_time->minutes = 0;
+                current_time->seconds = 0;
+                current_time->meridian = 'a';
+                nSetRTC = 1; // reset to midnight and de-assert nSetRTC
+                break;
+            case 'D':
+                nSetRTC = 1;
+                break;
+            case '*':
+                current_time->meridian = (current_time->meridian == 'a')? 'p' : 'a';
+                LCDgoto(0x09);  // go to am/pm
+                LCDprintc(current_time->meridian); // put the new value to the display
+                LCDgoto(pos); // go back to original cursor position
+                break; 
+            default:    // an integer
+                // match cursor position to attribute
+                switch(index[pos]){
+                    case 'H':   // if hours position
+                        if ((pos % 3)==0){  // if tens digit
+                            current_time->hours = (current_time->hours % 10) + 10*(key-'0');
+                        }else{
+                            current_time->hours -= current_time->hours % 10; // remove ones
+                            current_time->hours += key - '0'; // add key
+                        };
+                        current_time->hours = (current_time->hours - 1) % 12 + 1;
+                        LCDprintc(key); // put the new value to the display
+                        pos++;     // increase the pos tracker
+                        break;
+                    case 'M':   // if minutes pos
+                        if ((pos % 3)==0){  // if tens digit
+                            current_time->minutes = (current_time->minutes % 10) + 10*(key-'0');
+                        }else{
+                            current_time->minutes -= current_time->minutes % 10; // remove ones
+                            current_time->minutes += key - '0'; // add key value
+                        }; 
+                        current_time->minutes = current_time->minutes % 60; // prevent illegal states
+                        LCDprintc(key); // put the new value to the display
+                        pos++;     // increase the pos tracker
+                        break;
+                    case 'S':   // if seconds pos
+                        if ((pos % 3)==0){  // if tens digit
+                            current_time->seconds = (current_time->seconds % 10) + 10*(key-'0');
+                        }else{
+                            current_time->seconds -= current_time->seconds % 10; // remove ones
+                            current_time->seconds += key - '0'; // add key
+                        };
+                        current_time->seconds = current_time->seconds % 60;  // prevent illegal states
+                        LCDprintc(key); // put the new value to the display
+                        pos++;     // increase the pos tracker
+                        break;
+                    case ':':
+                        LCDgoto(++pos);
+                        break;
+                    case ' ':
+                        LCDgoto(++pos);
+                        break;
+                    default:
+                        break;
+                }
+                break;                   
+            }
+        LCD_HOME;
+        LCDprintf("%i2:%i2:%i2 %cm", current_time->hours, current_time->minutes, current_time->seconds, current_time->meridian);
+        }
+    }
 
+// IOC service routine
 void setINT(void){
     IOCBN4 = 0; // disable RB4 edge interrupt because of switch bounce
     IOCBF4 = 0; // clear rb4 ioc flags

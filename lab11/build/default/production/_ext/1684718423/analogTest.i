@@ -28960,6 +28960,8 @@ void RTCinit(void);
 # 48 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9\\RealTimeClock.h"
 void RTCupdate(time* current_time);
 # 58 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9\\RealTimeClock.h"
+void RTCset(time* current_time);
+# 68 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9\\RealTimeClock.h"
 void __attribute__((picinterrupt(("irq(IOC),low_priority"))))setINT(void);
 
 
@@ -29032,79 +29034,6 @@ void main(void){
         position = 0;
 
 
-        while(!nSetRTC){
-            key = keyScan();
-
-
-            switch (key) {
-                case 'A':
-                    LCDgoto(++position);
-                    break;
-                case 'B':
-                    if(position != 0){
-                        LCDgoto(--position);
-                    }
-                    break;
-                case 'C':
-                    current_time.hours = 12;
-                    current_time.minutes = 0;
-                    current_time.seconds = 0;
-                    current_time.meridian = 'a';
-                    nSetRTC = 1;
-                    break;
-                case 'D':
-                    nSetRTC = 1;
-                    break;
-                case '#':
-                    break;
-                case '*':
-                    current_time.meridian = (current_time.meridian == 'a')? 'p' : 'a';
-                    LCDgoto(0x09);
-                    LCDprintc(current_time.meridian);
-                    LCDgoto(position);
-                    break;
-                default:
-
-                    switch(indexer[position]){
-                        case 'H':
-                            if ((position % 3)==0){
-                                current_time.hours = (current_time.hours % 10) + 10*(key-'0');
-                            }else{
-                                current_time.hours -= current_time.hours % 10;
-                                current_time.hours += key - '0';
-                            };
-                            current_time.hours = (current_time.hours - 1) % 12 + 1;
-                            LCDprintc(key);
-                            position++;
-                            break;
-                        case 'M':
-                            if ((position % 3)==0){
-                                current_time.minutes = (current_time.minutes % 10) + 10*(key-'0');
-                            }else{
-                                current_time.minutes -= current_time.minutes % 10;
-                                current_time.minutes += key - '0';
-                            };
-                            current_time.minutes = current_time.minutes % 60;
-                            LCDprintc(key);
-                            position++;
-                            break;
-                        case 'S':
-                            if ((position % 3)==0){
-                                current_time.seconds = (current_time.seconds % 10) + 10*(key-'0');
-                            }else{
-                                current_time.seconds -= current_time.seconds % 10;
-                                current_time.seconds += key - '0';
-                            };
-                            current_time.seconds = current_time.seconds % 60;
-                            LCDprintc(key);
-                            position++;
-                            break;
-                        default:
-                            break;
-                    }
-                    break;
-            }
-
-        }
+        RTCset(&current_time);
     }
 }
