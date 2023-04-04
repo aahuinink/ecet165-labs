@@ -28873,7 +28873,7 @@ void LCDinstruct(unsigned char instr){
     _delay((unsigned long)((1)*(64000000/4000000.0)));
     LATD = (LATD & 0xF0)|(instr & 0x0F);
     LATDbits.LATD6 = 1; _delay((unsigned long)((1)*(64000000/4000000.0))); LATDbits.LATD6 = 0;
-    _delay((unsigned long)((5)*(64000000/4000.0)));
+    _delay((unsigned long)((1)*(64000000/4000.0)));
     return;
 };
 
@@ -28927,7 +28927,7 @@ void LCDprintc(char c){
     LATD = (LATD & 0xF0)|(c & 0x0F);
     _delay((unsigned long)((1)*(64000000/4000000.0)));
     LATDbits.LATD6 = 1; _delay((unsigned long)((1)*(64000000/4000000.0))); LATDbits.LATD6 = 0;
-    _delay((unsigned long)((5)*(64000000/4000.0)));
+    _delay((unsigned long)((100)*(64000000/4000000.0)));
     return;
 }
 void LCDprints(char *c){

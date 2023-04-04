@@ -42,6 +42,9 @@ void main(void){
     // pot voltage variable
     float pot_voltage;
     // ---- HARDWARE INIT ---- //
+    // make sure portf outputs are on LATxy
+    RF0PPS = 0x00;
+    RF1PPS = 0x00;
     // initialize LCD 
     LCDinit();
     

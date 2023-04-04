@@ -28997,6 +28997,9 @@ void main(void){
     float pot_voltage;
 
 
+    RF0PPS = 0x00;
+    RF1PPS = 0x00;
+
     LCDinit();
 
 
