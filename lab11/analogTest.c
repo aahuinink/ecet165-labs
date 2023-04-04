@@ -13,7 +13,6 @@
 
 #include <xc.h>
 #include "analog18f.h"
-#include "keypad18f.h"
 #include "RealTimeClock.h"
 
 // ============================ MAIN =================================//

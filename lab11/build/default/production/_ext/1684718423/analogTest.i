@@ -28796,11 +28796,6 @@ float analogMap(
             );
 # 15 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c" 2
 
-# 1 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/matrixkeypad\\keypad18f.h" 1
-# 44 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/matrixkeypad\\keypad18f.h"
-extern char keyScan();
-# 16 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c" 2
-
 # 1 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9\\RealTimeClock.h" 1
 # 17 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9\\RealTimeClock.h"
 # 1 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab8\\timer0.h" 1
@@ -28945,6 +28940,11 @@ extern void LCDprintf(char* shell, ... );
 #pragma config CP = OFF
 # 19 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9\\RealTimeClock.h" 2
 
+# 1 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/matrixkeypad\\keypad18f.h" 1
+# 44 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/matrixkeypad\\keypad18f.h"
+extern char keyScan();
+# 20 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9\\RealTimeClock.h" 2
+
 
     unsigned char nSetRTC = 1;
 
@@ -28955,18 +28955,18 @@ typedef struct realtime{
     char seconds;
     char meridian;
 }time;
-# 38 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9\\RealTimeClock.h"
+# 39 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9\\RealTimeClock.h"
 void RTCinit(void);
-# 48 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9\\RealTimeClock.h"
+# 49 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9\\RealTimeClock.h"
 void RTCupdate(time* current_time);
-# 58 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9\\RealTimeClock.h"
+# 59 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9\\RealTimeClock.h"
 void RTCset(time* current_time);
-# 68 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9\\RealTimeClock.h"
+# 69 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9\\RealTimeClock.h"
 void __attribute__((picinterrupt(("irq(IOC),low_priority"))))setINT(void);
 
 
 void setINT(void);
-# 17 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c" 2
+# 16 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c" 2
 
 
 

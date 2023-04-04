@@ -17,6 +17,7 @@ extern "C" {
 #include "timer0.h"
 #include "lcd18f.h"
 #include "timer0config.h"
+#include "keypad18f.h"
 
     unsigned char nSetRTC = 1;
     
