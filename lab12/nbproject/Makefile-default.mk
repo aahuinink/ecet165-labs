@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED="C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/serial18f.c"
+SOURCEFILES_QUOTED_IF_SPACED="C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/serial18f.c" "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/ADCwithSerial.c" "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c" "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c"
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1684718424/serial18f.p1
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1684718424/serial18f.p1.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1684718424/serial18f.p1 ${OBJECTDIR}/_ext/1684718424/ADCwithSerial.p1 ${OBJECTDIR}/_ext/1684718423/analog18f.p1 ${OBJECTDIR}/_ext/54345759/lcd18f.p1
+POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1684718424/serial18f.p1.d ${OBJECTDIR}/_ext/1684718424/ADCwithSerial.p1.d ${OBJECTDIR}/_ext/1684718423/analog18f.p1.d ${OBJECTDIR}/_ext/54345759/lcd18f.p1.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/1684718424/serial18f.p1
+OBJECTFILES=${OBJECTDIR}/_ext/1684718424/serial18f.p1 ${OBJECTDIR}/_ext/1684718424/ADCwithSerial.p1 ${OBJECTDIR}/_ext/1684718423/analog18f.p1 ${OBJECTDIR}/_ext/54345759/lcd18f.p1
 
 # Source Files
-SOURCEFILES=C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/serial18f.c
+SOURCEFILES=C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/serial18f.c C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/ADCwithSerial.c C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
 
 
 
@@ -92,65 +92,66 @@ ${OBJECTDIR}/_ext/1684718424/serial18f.p1: C:/Users/a_hui/OneDrive\ -\ Camosun\ 
 	@${MKDIR} "${OBJECTDIR}/_ext/1684718424" 
 	@${RM} ${OBJECTDIR}/_ext/1684718424/serial18f.p1.d 
 	@${RM} ${OBJECTDIR}/_ext/1684718424/serial18f.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=none   -mdfp="${DFP_DIR}/xc8"  -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/_ext/1684718424/serial18f.p1 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/serial18f.c" 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=none   -mdfp="${DFP_DIR}/xc8"  -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -I"C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11" -I"C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6" -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/_ext/1684718424/serial18f.p1 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/serial18f.c" 
 	@-${MV} ${OBJECTDIR}/_ext/1684718424/serial18f.d ${OBJECTDIR}/_ext/1684718424/serial18f.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/1684718424/serial18f.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1684718424/ADCwithSerial.p1: C:/Users/a_hui/OneDrive\ -\ Camosun\ College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/ADCwithSerial.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/_ext/1684718424" 
+	@${RM} ${OBJECTDIR}/_ext/1684718424/ADCwithSerial.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1684718424/ADCwithSerial.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=none   -mdfp="${DFP_DIR}/xc8"  -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -I"C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11" -I"C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6" -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/_ext/1684718424/ADCwithSerial.p1 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/ADCwithSerial.c" 
+	@-${MV} ${OBJECTDIR}/_ext/1684718424/ADCwithSerial.d ${OBJECTDIR}/_ext/1684718424/ADCwithSerial.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1684718424/ADCwithSerial.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1684718423/analog18f.p1: C:/Users/a_hui/OneDrive\ -\ Camosun\ College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/_ext/1684718423" 
+	@${RM} ${OBJECTDIR}/_ext/1684718423/analog18f.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1684718423/analog18f.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=none   -mdfp="${DFP_DIR}/xc8"  -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -I"C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11" -I"C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6" -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/_ext/1684718423/analog18f.p1 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c" 
+	@-${MV} ${OBJECTDIR}/_ext/1684718423/analog18f.d ${OBJECTDIR}/_ext/1684718423/analog18f.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1684718423/analog18f.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/54345759/lcd18f.p1: C:/Users/a_hui/OneDrive\ -\ Camosun\ College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/_ext/54345759" 
+	@${RM} ${OBJECTDIR}/_ext/54345759/lcd18f.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/54345759/lcd18f.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=none   -mdfp="${DFP_DIR}/xc8"  -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -I"C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11" -I"C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6" -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/_ext/54345759/lcd18f.p1 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c" 
+	@-${MV} ${OBJECTDIR}/_ext/54345759/lcd18f.d ${OBJECTDIR}/_ext/54345759/lcd18f.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/54345759/lcd18f.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 else
 ${OBJECTDIR}/_ext/1684718424/serial18f.p1: C:/Users/a_hui/OneDrive\ -\ Camosun\ College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/serial18f.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}/_ext/1684718424" 
 	@${RM} ${OBJECTDIR}/_ext/1684718424/serial18f.p1.d 
 	@${RM} ${OBJECTDIR}/_ext/1684718424/serial18f.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/_ext/1684718424/serial18f.p1 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/serial18f.c" 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -I"C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11" -I"C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6" -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/_ext/1684718424/serial18f.p1 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/serial18f.c" 
 	@-${MV} ${OBJECTDIR}/_ext/1684718424/serial18f.d ${OBJECTDIR}/_ext/1684718424/serial18f.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/1684718424/serial18f.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-endif
-
-# ------------------------------------------------------------------------------------
-# Rules for buildStep: assemble
-ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-else
-endif
-
-# ------------------------------------------------------------------------------------
-# Rules for buildStep: assembleWithPreprocess
-ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-else
-endif
-
-# ------------------------------------------------------------------------------------
-# Rules for buildStep: link
-ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${DISTDIR}/lab12.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk    
-	@${MKDIR} ${DISTDIR} 
-	${MP_CC} $(MP_EXTRA_LD_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -Wl,-Map=${DISTDIR}/lab12.${IMAGE_TYPE}.map  -D__DEBUG=1  -mdebugger=none  -DXPRJ_default=$(CND_CONF)  -Wl,--defsym=__MPLAB_BUILD=1   -mdfp="${DFP_DIR}/xc8"  -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto        $(COMPARISON_BUILD) -Wl,--memorysummary,${DISTDIR}/memoryfile.xml -o ${DISTDIR}/lab12.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}     
-	@${RM} ${DISTDIR}/lab12.${IMAGE_TYPE}.hex 
+${OBJECTDIR}/_ext/1684718424/ADCwithSerial.p1: C:/Users/a_hui/OneDrive\ -\ Camosun\ College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/ADCwithSerial.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/_ext/1684718424" 
+	@${RM} ${OBJECTDIR}/_ext/1684718424/ADCwithSerial.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1684718424/ADCwithSerial.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -I"C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11" -I"C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6" -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/_ext/1684718424/ADCwithSerial.p1 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/ADCwithSerial.c" 
+	@-${MV} ${OBJECTDIR}/_ext/1684718424/ADCwithSerial.d ${OBJECTDIR}/_ext/1684718424/ADCwithSerial.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1684718424/ADCwithSerial.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-else
-${DISTDIR}/lab12.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk   
-	@${MKDIR} ${DISTDIR} 
-	${MP_CC} $(MP_EXTRA_LD_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -Wl,-Map=${DISTDIR}/lab12.${IMAGE_TYPE}.map  -DXPRJ_default=$(CND_CONF)  -Wl,--defsym=__MPLAB_BUILD=1   -mdfp="${DFP_DIR}/xc8"  -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     $(COMPARISON_BUILD) -Wl,--memorysummary,${DISTDIR}/memoryfile.xml -o ${DISTDIR}/lab12.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}     
+${OBJECTDIR}/_ext/1684718423/analog18f.p1: C:/Users/a_hui/OneDrive\ -\ Camosun\ College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/_ext/1684718423" 
+	@${RM} ${OBJECTDIR}/_ext/1684718423/analog18f.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1684718423/analog18f.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -I"C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11" -I"C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6" -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/_ext/1684718423/analog18f.p1 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c" 
+	@-${MV} ${OBJECTDIR}/_ext/1684718423/analog18f.d ${OBJECTDIR}/_ext/1684718423/analog18f.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1684718423/analog18f.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/54345759/lcd18f.p1: C:/Users/a_hui/OneDrive\ -\ Camosun\ College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/_ext/54345759" 
+	@${RM} ${OBJECTDIR}/_ext/54345759/lcd18f.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/54345759/lcd18f.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -I"C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11" -I"C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6" -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/_ext/54345759/lcd18f.p1 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c" 
+	@-${MV} ${OBJECTDIR}/_ext/54345759/lcd18f.d ${OBJECTDIR}/_ext/54345759/lcd18f.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/54345759/lcd18f.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 endif
 
-
-# Subprojects
-.build-subprojects:
-
-
-# Subprojects
-.clean-subprojects:
-
-# Clean Targets
-.clean-conf: ${CLEAN_SUBPROJECTS}
-	${RM} -r ${OBJECTDIR}
-	${RM} -r ${DISTDIR}
-
-# Enable dependency checking
-.dep.inc: .depcheck-impl
-
-DEPFILES=$(shell mplabwildcard ${POSSIBLE_DEPFILES})
-ifneq (${DEPFILES},)
-include ${DEPFILES}
-endif
