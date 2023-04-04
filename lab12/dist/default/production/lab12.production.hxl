@@ -10,14 +10,14 @@
 ### Memory Usage ###
  Intel Hex-file ranges:
   0h - 3h		(dist/default/production\lab12.production.hex)
-  2600h - 43CFh		(dist/default/production\lab12.production.hex)
+  2600h - 43D9h		(dist/default/production\lab12.production.hex)
   1FFFCh - 1FFFFh		(dist/default/production\lab12.production.hex)
   200000h - 20003Fh		(dist/default/production\lab12.production.hex)
   300000h - 300007h		(dist/default/production\lab12.production.hex)
   300009h - 300009h		(dist/default/production\lab12.production.hex)
  Unused ranges:
   4h - 25FFh
-  43D0h - 1FFFBh
+  43DAh - 1FFFBh
   20000h - 1FFFFFh
   200040h - 2FFFFFh
   300008h - 300008h
@@ -508,6 +508,7 @@
 000043A0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000043B0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000043C0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+000043D0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- -- -- --
 ----------------------------------------------------------
 0001FFF0 | -- -- -- -- -- -- -- -- -- -- -- -- H1 H1 H1 H1
 ----------------------------------------------------------

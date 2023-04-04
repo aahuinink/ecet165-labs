@@ -28899,6 +28899,58 @@ extern char* toString(unsigned int number, unsigned char length);
 extern void LCDprintf(char* shell, ... );
 # 17 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/ADCwithSerial.c" 2
 
+# 1 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11\\ADCwithSerialCONFIG.h" 1
+# 21 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11\\ADCwithSerialCONFIG.h"
+#pragma config FEXTOSC = ECH
+#pragma config RSTOSC = HFINTOSC_64MHZ
+
+
+#pragma config CLKOUTEN = OFF
+#pragma config PR1WAY = ON
+#pragma config CSWEN = ON
+#pragma config FCMEN = ON
+
+
+#pragma config MCLRE = EXTMCLR
+#pragma config PWRTS = PWRT_OFF
+#pragma config MVECEN = ON
+#pragma config IVT1WAY = ON
+#pragma config LPBOREN = OFF
+#pragma config BOREN = SBORDIS
+
+
+#pragma config BORV = VBOR_1P9
+#pragma config ZCD = OFF
+#pragma config PPS1WAY = ON
+#pragma config STVREN = ON
+#pragma config LVP = ON
+#pragma config XINST = OFF
+
+
+#pragma config WDTCPS = WDTCPS_31
+#pragma config WDTE = OFF
+
+
+#pragma config WDTCWS = WDTCWS_7
+#pragma config WDTCCS = SC
+
+
+#pragma config BBSIZE = BBSIZE_512
+#pragma config BBEN = OFF
+#pragma config SAFEN = OFF
+#pragma config DEBUG = OFF
+
+
+#pragma config WRTB = OFF
+#pragma config WRTC = OFF
+#pragma config WRTD = OFF
+#pragma config WRTSAF = OFF
+#pragma config WRTAPP = OFF
+
+
+#pragma config CP = OFF
+# 18 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/ADCwithSerial.c" 2
+
 
 
 
@@ -28914,6 +28966,8 @@ void main(void){
     LCDinit();
     UART5init();
 
+    LCDinstruct(0x02);
+    LCDinstruct(0xC);
     LCDprints("Analog readings");
 
 

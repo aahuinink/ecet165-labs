@@ -15,6 +15,7 @@
 #include "serial18f.h"
 #include "analog18f.h"
 #include "lcd18f.h"
+#include "ADCwithSerialCONFIG.h"
 
 // ============================ VARIABLES & FLAGS ========================== //
 
@@ -30,6 +31,8 @@ void main(void){
     LCDinit();
     UART5init();
     
+    LCD_HOME;
+    LCDinstruct(0xC);
     LCDprints("Analog readings");
     
     // ----- main loop ----- //
@@ -40,11 +43,11 @@ void main(void){
         pot_voltage = analogMap(pot_value, 4095, 0, 5.00, 0.00); //~us
         LCDgoto(0x40);    // ~80 us    
         UART5write(pot_value>>8); //~1ms
-        LCDprintf("P:%1f2V", pot_voltage); // ~600us
+        LCDprintf("P:%1f2V", pot_voltage); // ~700us
         lux_value = LUX_READ; //~30us
         UART5write(lux_value & 0x00FF); //~1ms
         lux_percent = analogMap(lux_value, 4095, 0, 0, 100); // ~us
-        LCDprintf(" L:%i2%", lux_percent); //~480us
+        LCDprintf(" L:%i2%", lux_percent); //~600us
         UART5write(lux_value>>8);
         UART5write(0xFC); // trailer for data visualizer
     };

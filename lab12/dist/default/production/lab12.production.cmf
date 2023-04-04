@@ -11,37 +11,37 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\a_hui\AppData\Local\Temp\xcAs3s8.o
+$C:\Users\a_hui\AppData\Local\Temp\xcAs12dc.o
 idloc IDLOC 5 200000 200000 40 1 1
 init CODE 0 1FFFC 1FFFC 4 1 2
 reset_vec CODE 0 0 0 4 1 2
 config CONFIG 4 300000 300000 A 1 1
 $dist/default/production\lab12.production.o
-cinit CODE 0 4398 4398 16 1 2
+cinit CODE 0 43A2 43A2 16 1 2
 idloc IDLOC 5 200000 200000 40 1 1
-text0 CODE 0 383E 383E 1CE 1 2
-text1 CODE 0 42E6 42E6 46 1 2
+text0 CODE 0 383E 383E 1DA 1 2
+text1 CODE 0 42F0 42F0 46 1 2
 text2 CODE 0 3626 3626 218 1 2
-text3 CODE 0 3A0C 3A0C 1B4 1 2
-text4 CODE 0 432C 432C 46 1 2
+text3 CODE 0 3A18 3A18 1B4 1 2
+text4 CODE 0 4336 4336 46 1 2
 text5 CODE 0 2622 2622 4C0 1 2
-text6 CODE 0 3CC8 3CC8 104 1 2
+text6 CODE 0 3CD4 3CD4 104 1 2
 text7 CODE 0 2F0C 2F0C 39A 1 2
-text8 CODE 0 43AE 43AE 16 1 2
-text9 CODE 0 4372 4372 26 1 2
+text8 CODE 0 43B8 43B8 16 1 2
+text9 CODE 0 437C 437C 26 1 2
 text10 CODE 0 32A6 32A6 380 1 2
-text11 CODE 0 4126 4126 74 1 2
-text12 CODE 0 4282 4282 64 1 2
-text13 CODE 0 419A 419A 74 1 2
-text14 CODE 0 3BC0 3BC0 108 1 2
+text11 CODE 0 4130 4130 74 1 2
+text12 CODE 0 428C 428C 64 1 2
+text13 CODE 0 41A4 41A4 74 1 2
+text14 CODE 0 3BCC 3BCC 108 1 2
 text15 CODE 0 2AE2 2AE2 42A 1 2
-text16 CODE 0 3F7A 3F7A B0 1 2
-text17 CODE 0 3EB6 3EB6 C4 1 2
-text18 CODE 0 402A 402A 84 1 2
-text19 CODE 0 40AE 40AE 78 1 2
-text20 CODE 0 3DCC 3DCC EA 1 2
-text21 CODE 0 43C4 43C4 C 1 2
-text22 CODE 0 420E 420E 74 1 2
+text16 CODE 0 3F86 3F86 B0 1 2
+text17 CODE 0 3EC2 3EC2 C4 1 2
+text18 CODE 0 4036 4036 84 1 2
+text19 CODE 0 40BA 40BA 76 1 2
+text20 CODE 0 3DD8 3DD8 EA 1 2
+text21 CODE 0 43CE 43CE C 1 2
+text22 CODE 0 4218 4218 74 1 2
 cstackCOMRAM COMRAM 1 501 501 5E 1 1
 cstackBANK5 BANK5 1 560 560 55 1 1
 bssBANK5 BANK5 1 5B5 5B5 1A 1 1
@@ -62,10 +62,10 @@ BANK7 700-7FF 1
 BANK8 800-8FF 1
 BANK9 900-9FF 1
 CONST 4-25FF 1
-CONST 43D0-1FFFB 1
-SMALLCONST 43D0-1FFFB 1
+CONST 43DA-1FFFB 1
+SMALLCONST 43DA-1FFFB 1
 CODE 4-25FF 1
-CODE 43D0-1FFFB 1
+CODE 43DA-1FFFB 1
 BANK10 A00-AFF 1
 BANK11 B00-BFF 1
 BANK12 C00-CFF 1
@@ -100,7 +100,7 @@ BIGSFR 2500-25FF 1
 COMRAM 55F-55F 1
 CONFIG 30000A-300011 1
 EEDATA 380000-3803FF 1
-MEDIUMCONST 43D0-FFFF 1
+MEDIUMCONST 43DA-FFFF 1
 MEDIUMCONST 12600-1FFFB 1
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
@@ -116,111 +116,111 @@ MEDIUMCONST 12600-1FFFB 1
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\lab12.production.o
-420E text22 CODE >15:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-4210 text22 CODE >17:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-4226 text22 CODE >20:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-4228 text22 CODE >21:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-422A text22 CODE >24:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-4240 text22 CODE >25:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-424C text22 CODE >26:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-4254 text22 CODE >27:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-4264 text22 CODE >28:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-4270 text22 CODE >29:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-4280 text22 CODE >31:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-43C4 text21 CODE >107:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-43C6 text21 CODE >108:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-43CE text21 CODE >110:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-3DCC text20 CODE >34:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-3DCC text20 CODE >35:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-3DE4 text20 CODE >37:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-3DFA text20 CODE >39:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-3DFC text20 CODE >40:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-3DFE text20 CODE >42:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-3E06 text20 CODE >45:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-3E0E text20 CODE >46:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-3E1A text20 CODE >47:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-3E2A text20 CODE >49:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-3E32 text20 CODE >50:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-3E3E text20 CODE >51:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-3E4E text20 CODE >53:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-3E56 text20 CODE >54:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-3E62 text20 CODE >55:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-3E72 text20 CODE >58:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-3E7A text20 CODE >59:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-3E86 text20 CODE >60:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-3E96 text20 CODE >63:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-3E9C text20 CODE >64:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-3EA2 text20 CODE >65:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-3EA8 text20 CODE >66:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-3EAE text20 CODE >67:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-3EB4 text20 CODE >69:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-40AE text19 CODE >71:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-40B0 text19 CODE >72:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-40C6 text19 CODE >73:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-40C8 text19 CODE >74:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-40CA text19 CODE >77:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-40DC text19 CODE >78:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-40E4 text19 CODE >79:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-40F0 text19 CODE >80:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-4100 text19 CODE >81:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-4108 text19 CODE >82:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-4114 text19 CODE >83:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-4124 text19 CODE >85:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-402A text18 CODE >86:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-402A text18 CODE >88:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-4040 text18 CODE >91:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-4042 text18 CODE >92:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-4044 text18 CODE >94:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-404C text18 CODE >98:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-4050 text18 CODE >100:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-407A text18 CODE >98:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-40AC text18 CODE >103:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-3EB6 text17 CODE >7:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
-3EB6 text17 CODE >13:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
-3EBA text17 CODE >14:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
-3EC8 text17 CODE >15:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
-3ED0 text17 CODE >16:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
-3ED4 text17 CODE >18:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
-3EE2 text17 CODE >19:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
-3EEA text17 CODE >20:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
-3EEE text17 CODE >22:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
-3EF6 text17 CODE >23:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
-3F08 text17 CODE >24:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
-3F0C text17 CODE >25:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
-3F10 text17 CODE >26:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
-3F16 text17 CODE >27:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
+4218 text22 CODE >15:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+421A text22 CODE >17:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+4230 text22 CODE >20:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+4232 text22 CODE >21:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+4234 text22 CODE >24:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+424A text22 CODE >25:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+4256 text22 CODE >26:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+425E text22 CODE >27:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+426E text22 CODE >28:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+427A text22 CODE >29:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+428A text22 CODE >31:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+43CE text21 CODE >107:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+43D0 text21 CODE >108:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+43D8 text21 CODE >110:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+3DD8 text20 CODE >34:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+3DD8 text20 CODE >35:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+3DF0 text20 CODE >37:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+3E06 text20 CODE >39:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+3E08 text20 CODE >40:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+3E0A text20 CODE >42:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+3E12 text20 CODE >45:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+3E1A text20 CODE >46:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+3E26 text20 CODE >47:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+3E36 text20 CODE >49:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+3E3E text20 CODE >50:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+3E4A text20 CODE >51:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+3E5A text20 CODE >53:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+3E62 text20 CODE >54:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+3E6E text20 CODE >55:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+3E7E text20 CODE >58:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+3E86 text20 CODE >59:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+3E92 text20 CODE >60:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+3EA2 text20 CODE >63:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+3EA8 text20 CODE >64:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+3EAE text20 CODE >65:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+3EB4 text20 CODE >66:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+3EBA text20 CODE >67:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+3EC0 text20 CODE >69:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+40BA text19 CODE >71:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+40BC text19 CODE >72:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+40D2 text19 CODE >73:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+40D4 text19 CODE >74:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+40D6 text19 CODE >77:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+40E8 text19 CODE >78:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+40F0 text19 CODE >79:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+40FC text19 CODE >80:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+410C text19 CODE >81:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+4114 text19 CODE >82:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+4120 text19 CODE >83:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+412E text19 CODE >85:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+4036 text18 CODE >86:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+4036 text18 CODE >88:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+404C text18 CODE >91:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+404E text18 CODE >92:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+4050 text18 CODE >94:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+4058 text18 CODE >98:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+405C text18 CODE >100:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+4086 text18 CODE >98:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+40B8 text18 CODE >103:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+3EC2 text17 CODE >7:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
+3EC2 text17 CODE >13:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
+3EC6 text17 CODE >14:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
+3ED4 text17 CODE >15:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
+3EDC text17 CODE >16:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
+3EE0 text17 CODE >18:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
+3EEE text17 CODE >19:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
+3EF6 text17 CODE >20:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
+3EFA text17 CODE >22:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
+3F02 text17 CODE >23:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
+3F14 text17 CODE >24:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
 3F18 text17 CODE >25:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
-3F26 text17 CODE >30:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
-3F2C text17 CODE >31:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
-3F42 text17 CODE >32:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
-3F4A text17 CODE >33:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
-3F4C text17 CODE >35:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
-3F52 text17 CODE >36:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
-3F58 text17 CODE >38:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
-3F68 text17 CODE >39:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
-3F70 text17 CODE >40:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
-3F78 text17 CODE >41:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
-3F7A text16 CODE >7:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awmod.c
-3F7A text16 CODE >12:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awmod.c
-3F7E text16 CODE >13:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awmod.c
-3F8C text16 CODE >14:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awmod.c
-3F94 text16 CODE >15:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awmod.c
-3F98 text16 CODE >17:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awmod.c
-3FA6 text16 CODE >18:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awmod.c
-3FAE text16 CODE >19:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awmod.c
-3FC0 text16 CODE >20:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awmod.c
-3FC4 text16 CODE >21:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awmod.c
-3FC8 text16 CODE >22:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awmod.c
-3FCE text16 CODE >23:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awmod.c
+3F1C text17 CODE >26:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
+3F22 text17 CODE >27:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
+3F24 text17 CODE >25:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
+3F32 text17 CODE >30:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
+3F38 text17 CODE >31:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
+3F4E text17 CODE >32:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
+3F56 text17 CODE >33:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
+3F58 text17 CODE >35:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
+3F5E text17 CODE >36:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
+3F64 text17 CODE >38:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
+3F74 text17 CODE >39:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
+3F7C text17 CODE >40:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
+3F84 text17 CODE >41:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
+3F86 text16 CODE >7:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awmod.c
+3F86 text16 CODE >12:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awmod.c
+3F8A text16 CODE >13:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awmod.c
+3F98 text16 CODE >14:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awmod.c
+3FA0 text16 CODE >15:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awmod.c
+3FA4 text16 CODE >17:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awmod.c
+3FB2 text16 CODE >18:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awmod.c
+3FBA text16 CODE >19:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awmod.c
+3FCC text16 CODE >20:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awmod.c
 3FD0 text16 CODE >21:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awmod.c
-3FDE text16 CODE >26:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awmod.c
-3FF4 text16 CODE >27:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awmod.c
-3FFC text16 CODE >28:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awmod.c
-4002 text16 CODE >29:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awmod.c
-4008 text16 CODE >31:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awmod.c
-4018 text16 CODE >32:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awmod.c
-4020 text16 CODE >33:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awmod.c
-4028 text16 CODE >34:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awmod.c
+3FD4 text16 CODE >22:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awmod.c
+3FDA text16 CODE >23:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awmod.c
+3FDC text16 CODE >21:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awmod.c
+3FEA text16 CODE >26:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awmod.c
+4000 text16 CODE >27:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awmod.c
+4008 text16 CODE >28:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awmod.c
+400E text16 CODE >29:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awmod.c
+4014 text16 CODE >31:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awmod.c
+4024 text16 CODE >32:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awmod.c
+402C text16 CODE >33:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awmod.c
+4034 text16 CODE >34:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awmod.c
 2AE2 text15 CODE >8:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcmul.c
 2AE2 text15 CODE >17:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcmul.c
 2AE8 text15 CODE >18:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcmul.c
@@ -308,63 +308,63 @@ $dist/default/production\lab12.production.o
 2EF6 text15 CODE >201:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcmul.c
 2EFA text15 CODE >203:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcmul.c
 2F0A text15 CODE >205:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcmul.c
-3BC0 text14 CODE >43:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fltol.c
-3BC0 text14 CODE >47:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fltol.c
-3BD8 text14 CODE >48:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fltol.c
-3BEC text14 CODE >49:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fltol.c
-3C16 text14 CODE >50:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fltol.c
-3C18 text14 CODE >51:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fltol.c
-3C28 text14 CODE >52:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fltol.c
-3C2C text14 CODE >53:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fltol.c
-3C3A text14 CODE >54:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fltol.c
-3C52 text14 CODE >57:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fltol.c
-3C66 text14 CODE >60:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fltol.c
-3C7A text14 CODE >63:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fltol.c
-3C84 text14 CODE >64:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fltol.c
-3C86 text14 CODE >62:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fltol.c
-3C96 text14 CODE >67:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fltol.c
-3CA6 text14 CODE >68:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fltol.c
-3CB6 text14 CODE >69:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fltol.c
-3CC6 text14 CODE >70:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fltol.c
-419A text13 CODE >7:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
-419A text13 CODE >13:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
-41A2 text13 CODE >14:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
-41B4 text13 CODE >15:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
-41B8 text13 CODE >16:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
-41BC text13 CODE >17:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
-41C2 text13 CODE >18:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
-41C4 text13 CODE >16:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
-41D2 text13 CODE >21:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
-41D8 text13 CODE >22:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
-41EE text13 CODE >23:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
-41F6 text13 CODE >24:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
-41F8 text13 CODE >26:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
-41FE text13 CODE >27:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
-4204 text13 CODE >28:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
-4204 text13 CODE >29:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
-420C text13 CODE >30:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
-4282 text12 CODE >7:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwmod.c
-4282 text12 CODE >12:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwmod.c
-4294 text12 CODE >13:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwmod.c
-4298 text12 CODE >14:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwmod.c
-429C text12 CODE >15:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwmod.c
-42A2 text12 CODE >16:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwmod.c
-42A4 text12 CODE >14:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwmod.c
-42B2 text12 CODE >19:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwmod.c
-42C8 text12 CODE >20:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwmod.c
-42D0 text12 CODE >21:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwmod.c
-42D6 text12 CODE >22:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwmod.c
-42DC text12 CODE >23:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwmod.c
-42DC text12 CODE >24:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwmod.c
-42E4 text12 CODE >25:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwmod.c
-4126 text11 CODE >133:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-4126 text11 CODE >134:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-4132 text11 CODE >136:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-4148 text11 CODE >137:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-416E text11 CODE >138:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-418A text11 CODE >139:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-4190 text11 CODE >140:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-4198 text11 CODE >141:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+3BCC text14 CODE >43:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fltol.c
+3BCC text14 CODE >47:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fltol.c
+3BE4 text14 CODE >48:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fltol.c
+3BF8 text14 CODE >49:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fltol.c
+3C22 text14 CODE >50:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fltol.c
+3C24 text14 CODE >51:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fltol.c
+3C34 text14 CODE >52:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fltol.c
+3C38 text14 CODE >53:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fltol.c
+3C46 text14 CODE >54:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fltol.c
+3C5E text14 CODE >57:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fltol.c
+3C72 text14 CODE >60:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fltol.c
+3C86 text14 CODE >63:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fltol.c
+3C90 text14 CODE >64:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fltol.c
+3C92 text14 CODE >62:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fltol.c
+3CA2 text14 CODE >67:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fltol.c
+3CB2 text14 CODE >68:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fltol.c
+3CC2 text14 CODE >69:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fltol.c
+3CD2 text14 CODE >70:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fltol.c
+41A4 text13 CODE >7:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
+41A4 text13 CODE >13:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
+41AC text13 CODE >14:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
+41BE text13 CODE >15:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
+41C2 text13 CODE >16:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
+41C6 text13 CODE >17:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
+41CC text13 CODE >18:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
+41CE text13 CODE >16:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
+41DC text13 CODE >21:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
+41E2 text13 CODE >22:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
+41F8 text13 CODE >23:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
+4200 text13 CODE >24:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
+4202 text13 CODE >26:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
+4208 text13 CODE >27:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
+420E text13 CODE >28:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
+420E text13 CODE >29:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
+4216 text13 CODE >30:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
+428C text12 CODE >7:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwmod.c
+428C text12 CODE >12:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwmod.c
+429E text12 CODE >13:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwmod.c
+42A2 text12 CODE >14:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwmod.c
+42A6 text12 CODE >15:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwmod.c
+42AC text12 CODE >16:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwmod.c
+42AE text12 CODE >14:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwmod.c
+42BC text12 CODE >19:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwmod.c
+42D2 text12 CODE >20:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwmod.c
+42DA text12 CODE >21:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwmod.c
+42E0 text12 CODE >22:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwmod.c
+42E6 text12 CODE >23:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwmod.c
+42E6 text12 CODE >24:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwmod.c
+42EE text12 CODE >25:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwmod.c
+4130 text11 CODE >133:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+4130 text11 CODE >134:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+413C text11 CODE >136:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+4152 text11 CODE >137:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+4178 text11 CODE >138:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+4194 text11 CODE >139:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+419A text11 CODE >140:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
+41A2 text11 CODE >141:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
 32A6 text10 CODE >143:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
 32A6 text10 CODE >150:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
 32B0 text10 CODE >152:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
@@ -401,23 +401,23 @@ $dist/default/production\lab12.production.o
 35F4 text10 CODE >204:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
 3608 text10 CODE >152:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
 3624 text10 CODE >208:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
-4372 text9 CODE >25:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/serial18f.c
-4372 text9 CODE >26:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/serial18f.c
-4374 text9 CODE >27:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/serial18f.c
-4378 text9 CODE >28:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/serial18f.c
-437A text9 CODE >29:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/serial18f.c
-437C text9 CODE >30:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/serial18f.c
-4382 text9 CODE >31:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/serial18f.c
-4386 text9 CODE >33:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/serial18f.c
-438A text9 CODE >35:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/serial18f.c
-438E text9 CODE >38:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/serial18f.c
-4392 text9 CODE >39:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/serial18f.c
-4396 text9 CODE >41:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/serial18f.c
-43AE text8 CODE >69:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/serial18f.c
-43B0 text8 CODE >70:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/serial18f.c
-43B0 text8 CODE >71:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/serial18f.c
-43BE text8 CODE >72:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/serial18f.c
-43C2 text8 CODE >73:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/serial18f.c
+437C text9 CODE >25:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/serial18f.c
+437C text9 CODE >26:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/serial18f.c
+437E text9 CODE >27:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/serial18f.c
+4382 text9 CODE >28:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/serial18f.c
+4384 text9 CODE >29:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/serial18f.c
+4386 text9 CODE >30:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/serial18f.c
+438C text9 CODE >31:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/serial18f.c
+4390 text9 CODE >33:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/serial18f.c
+4394 text9 CODE >35:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/serial18f.c
+4398 text9 CODE >38:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/serial18f.c
+439C text9 CODE >39:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/serial18f.c
+43A0 text9 CODE >41:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/serial18f.c
+43B8 text8 CODE >69:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/serial18f.c
+43BA text8 CODE >70:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/serial18f.c
+43BA text8 CODE >71:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/serial18f.c
+43C8 text8 CODE >72:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/serial18f.c
+43CC text8 CODE >73:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/serial18f.c
 2F0C text7 CODE >11:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcdiv.c
 2F0C text7 CODE >26:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcdiv.c
 2F12 text7 CODE >27:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcdiv.c
@@ -504,19 +504,19 @@ $dist/default/production\lab12.production.o
 3298 text7 CODE >180:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcdiv.c
 329A text7 CODE >182:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcdiv.c
 32A4 text7 CODE >185:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcdiv.c
-3CC8 text6 CODE >4:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\flge.c
-3CC8 text6 CODE >7:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\flge.c
-3CF6 text6 CODE >8:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\flge.c
-3D06 text6 CODE >9:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\flge.c
-3D34 text6 CODE >10:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\flge.c
-3D44 text6 CODE >12:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\flge.c
-3D52 text6 CODE >13:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\flge.c
-3D64 text6 CODE >14:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\flge.c
-3D72 text6 CODE >15:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\flge.c
-3D84 text6 CODE >16:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\flge.c
-3D94 text6 CODE >17:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\flge.c
-3DA4 text6 CODE >18:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\flge.c
-3DCA text6 CODE >19:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\flge.c
+3CD4 text6 CODE >4:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\flge.c
+3CD4 text6 CODE >7:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\flge.c
+3D02 text6 CODE >8:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\flge.c
+3D12 text6 CODE >9:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\flge.c
+3D40 text6 CODE >10:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\flge.c
+3D50 text6 CODE >12:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\flge.c
+3D5E text6 CODE >13:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\flge.c
+3D70 text6 CODE >14:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\flge.c
+3D7E text6 CODE >15:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\flge.c
+3D90 text6 CODE >16:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\flge.c
+3DA0 text6 CODE >17:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\flge.c
+3DB0 text6 CODE >18:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\flge.c
+3DD6 text6 CODE >19:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\flge.c
 2622 text5 CODE >10:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcadd.c
 2622 text5 CODE >21:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcadd.c
 2628 text5 CODE >22:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcadd.c
@@ -638,86 +638,88 @@ $dist/default/production\lab12.production.o
 2ACE text5 CODE >234:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcadd.c
 2AD0 text5 CODE >236:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcadd.c
 2AE0 text5 CODE >237:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcadd.c
-432C text4 CODE >245:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcadd.c
-432C text4 CODE >248:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcadd.c
-433C text4 CODE >249:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcadd.c
-4370 text4 CODE >250:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcadd.c
-3A0C text3 CODE >10:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
-3A0E text3 CODE >15:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
-3A2C text3 CODE >16:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
-3A5E text3 CODE >17:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
-3A62 text3 CODE >18:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
-3A62 text3 CODE >19:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
-3A72 text3 CODE >21:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
-3A88 text3 CODE >22:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
-3A9C text3 CODE >23:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
-3AA0 text3 CODE >24:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
-3AA4 text3 CODE >25:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
-3AA6 text3 CODE >26:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
-3AB0 text3 CODE >24:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
-3AE2 text3 CODE >29:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
-3AE4 text3 CODE >30:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
-3AF0 text3 CODE >31:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
-3AFA text3 CODE >28:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
-3AFA text3 CODE >32:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
-3B2C text3 CODE >34:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
-3B2E text3 CODE >35:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
-3B38 text3 CODE >33:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
-3B56 text3 CODE >37:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
-3B64 text3 CODE >38:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
-3B66 text3 CODE >39:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
-3B6A text3 CODE >40:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
-3B8E text3 CODE >41:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
-3BAC text3 CODE >42:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
-3BAE text3 CODE >43:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
-3BBE text3 CODE >44:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
+4336 text4 CODE >245:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcadd.c
+4336 text4 CODE >248:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcadd.c
+4346 text4 CODE >249:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcadd.c
+437A text4 CODE >250:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcadd.c
+3A18 text3 CODE >10:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
+3A1A text3 CODE >15:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
+3A38 text3 CODE >16:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
+3A6A text3 CODE >17:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
+3A6E text3 CODE >18:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
+3A6E text3 CODE >19:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
+3A7E text3 CODE >21:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
+3A94 text3 CODE >22:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
+3AA8 text3 CODE >23:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
+3AAC text3 CODE >24:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
+3AB0 text3 CODE >25:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
+3AB2 text3 CODE >26:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
+3ABC text3 CODE >24:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
+3AEE text3 CODE >29:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
+3AF0 text3 CODE >30:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
+3AFC text3 CODE >31:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
+3B06 text3 CODE >28:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
+3B06 text3 CODE >32:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
+3B38 text3 CODE >34:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
+3B3A text3 CODE >35:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
+3B44 text3 CODE >33:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
+3B62 text3 CODE >37:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
+3B70 text3 CODE >38:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
+3B72 text3 CODE >39:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
+3B76 text3 CODE >40:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
+3B9A text3 CODE >41:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
+3BB8 text3 CODE >42:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
+3BBA text3 CODE >43:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
+3BCA text3 CODE >44:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
 3626 text2 CODE >57:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c
 3626 text2 CODE >64:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c
 3658 text2 CODE >65:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c
 374C text2 CODE >67:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c
 383C text2 CODE >69:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c
-42E6 text1 CODE >30:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c
-42E6 text1 CODE >32:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c
-42F0 text1 CODE >33:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c
-42F2 text1 CODE >34:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c
-42F6 text1 CODE >36:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c
-4306 text1 CODE >37:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c
-4308 text1 CODE >39:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c
-430A text1 CODE >40:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c
-430A text1 CODE >41:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c
-4318 text1 CODE >42:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c
-432A text1 CODE >43:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c
-383E text0 CODE >22:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/ADCwithSerial.c
-383E text0 CODE >30:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/ADCwithSerial.c
-3842 text0 CODE >31:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/ADCwithSerial.c
-3846 text0 CODE >33:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/ADCwithSerial.c
-3852 text0 CODE >37:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/ADCwithSerial.c
-3858 text0 CODE >38:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/ADCwithSerial.c
-38AC text0 CODE >39:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/ADCwithSerial.c
-38B4 text0 CODE >40:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/ADCwithSerial.c
-3900 text0 CODE >41:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/ADCwithSerial.c
-3906 text0 CODE >42:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/ADCwithSerial.c
-390E text0 CODE >43:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/ADCwithSerial.c
-392C text0 CODE >44:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/ADCwithSerial.c
-3980 text0 CODE >45:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/ADCwithSerial.c
-3988 text0 CODE >46:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/ADCwithSerial.c
-39E0 text0 CODE >47:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/ADCwithSerial.c
-39F6 text0 CODE >48:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/ADCwithSerial.c
-39FE text0 CODE >49:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/ADCwithSerial.c
-4398 cinit CODE >7046:C:\Users\a_hui\AppData\Local\Temp\xcAs3s8.s
-4398 cinit CODE >7048:C:\Users\a_hui\AppData\Local\Temp\xcAs3s8.s
-4398 cinit CODE >7051:C:\Users\a_hui\AppData\Local\Temp\xcAs3s8.s
-4398 cinit CODE >7064:C:\Users\a_hui\AppData\Local\Temp\xcAs3s8.s
-439C cinit CODE >7065:C:\Users\a_hui\AppData\Local\Temp\xcAs3s8.s
-439E cinit CODE >7066:C:\Users\a_hui\AppData\Local\Temp\xcAs3s8.s
-439E cinit CODE >7067:C:\Users\a_hui\AppData\Local\Temp\xcAs3s8.s
-43A0 cinit CODE >7068:C:\Users\a_hui\AppData\Local\Temp\xcAs3s8.s
-43A2 cinit CODE >7069:C:\Users\a_hui\AppData\Local\Temp\xcAs3s8.s
-43A4 cinit CODE >7075:C:\Users\a_hui\AppData\Local\Temp\xcAs3s8.s
-43A4 cinit CODE >7078:C:\Users\a_hui\AppData\Local\Temp\xcAs3s8.s
-43A6 cinit CODE >7079:C:\Users\a_hui\AppData\Local\Temp\xcAs3s8.s
-43A8 cinit CODE >7080:C:\Users\a_hui\AppData\Local\Temp\xcAs3s8.s
-43AA cinit CODE >7081:C:\Users\a_hui\AppData\Local\Temp\xcAs3s8.s
+42F0 text1 CODE >30:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c
+42F0 text1 CODE >32:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c
+42FA text1 CODE >33:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c
+42FC text1 CODE >34:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c
+4300 text1 CODE >36:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c
+4310 text1 CODE >37:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c
+4312 text1 CODE >39:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c
+4314 text1 CODE >40:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c
+4314 text1 CODE >41:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c
+4322 text1 CODE >42:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c
+4334 text1 CODE >43:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c
+383E text0 CODE >23:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/ADCwithSerial.c
+383E text0 CODE >31:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/ADCwithSerial.c
+3842 text0 CODE >32:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/ADCwithSerial.c
+3846 text0 CODE >34:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/ADCwithSerial.c
+384C text0 CODE >35:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/ADCwithSerial.c
+3852 text0 CODE >36:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/ADCwithSerial.c
+385E text0 CODE >40:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/ADCwithSerial.c
+3864 text0 CODE >41:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/ADCwithSerial.c
+38B8 text0 CODE >42:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/ADCwithSerial.c
+38C0 text0 CODE >43:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/ADCwithSerial.c
+390C text0 CODE >44:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/ADCwithSerial.c
+3912 text0 CODE >45:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/ADCwithSerial.c
+391A text0 CODE >46:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/ADCwithSerial.c
+3938 text0 CODE >47:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/ADCwithSerial.c
+398C text0 CODE >48:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/ADCwithSerial.c
+3994 text0 CODE >49:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/ADCwithSerial.c
+39EC text0 CODE >50:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/ADCwithSerial.c
+3A02 text0 CODE >51:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/ADCwithSerial.c
+3A0A text0 CODE >52:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/ADCwithSerial.c
+43A2 cinit CODE >7079:C:\Users\a_hui\AppData\Local\Temp\xcAs12dc.s
+43A2 cinit CODE >7081:C:\Users\a_hui\AppData\Local\Temp\xcAs12dc.s
+43A2 cinit CODE >7084:C:\Users\a_hui\AppData\Local\Temp\xcAs12dc.s
+43A2 cinit CODE >7097:C:\Users\a_hui\AppData\Local\Temp\xcAs12dc.s
+43A6 cinit CODE >7098:C:\Users\a_hui\AppData\Local\Temp\xcAs12dc.s
+43A8 cinit CODE >7099:C:\Users\a_hui\AppData\Local\Temp\xcAs12dc.s
+43A8 cinit CODE >7100:C:\Users\a_hui\AppData\Local\Temp\xcAs12dc.s
+43AA cinit CODE >7101:C:\Users\a_hui\AppData\Local\Temp\xcAs12dc.s
+43AC cinit CODE >7102:C:\Users\a_hui\AppData\Local\Temp\xcAs12dc.s
+43AE cinit CODE >7108:C:\Users\a_hui\AppData\Local\Temp\xcAs12dc.s
+43AE cinit CODE >7111:C:\Users\a_hui\AppData\Local\Temp\xcAs12dc.s
+43B0 cinit CODE >7112:C:\Users\a_hui\AppData\Local\Temp\xcAs12dc.s
+43B2 cinit CODE >7113:C:\Users\a_hui\AppData\Local\Temp\xcAs12dc.s
+43B4 cinit CODE >7114:C:\Users\a_hui\AppData\Local\Temp\xcAs12dc.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -737,20 +739,20 @@ __Hspace_0 20000 0 ABS 0 - dist/default/production\lab12.production.o
 __Hspace_1 5CF 0 ABS 0 - dist/default/production\lab12.production.o
 __Hspace_2 0 0 ABS 0 - dist/default/production\lab12.production.o
 __Hspace_4 60000A 0 ABS 0 - dist/default/production\lab12.production.o
-_analogMap$935 56E 0 BANK5 1 cstackBANK5 dist/default/production\lab12.production.o
-_analogMap$936 572 0 BANK5 1 cstackBANK5 dist/default/production\lab12.production.o
+_analogMap$937 56E 0 BANK5 1 cstackBANK5 dist/default/production\lab12.production.o
+_analogMap$938 572 0 BANK5 1 cstackBANK5 dist/default/production\lab12.production.o
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\lab12.production.o
-_analogRead 42E6 0 CODE 0 text1 dist/default/production\lab12.production.o
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\a_hui\AppData\Local\Temp\xcAs3s8.o
+_analogRead 42F0 0 CODE 0 text1 dist/default/production\lab12.production.o
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\a_hui\AppData\Local\Temp\xcAs12dc.o
 LCDgoto@pos 503 0 COMRAM 1 cstackCOMRAM dist/default/production\lab12.production.o
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\lab12.production.o
 analogRead@pin_designation 509 0 COMRAM 1 cstackCOMRAM dist/default/production\lab12.production.o
 __Lsmallconst 2600 0 SMALLCONST 0 smallconst dist/default/production\lab12.production.o
 _LATD 4C1 0 ABS 0 - dist/default/production\lab12.production.o
 _WPUD 419 0 ABS 0 - dist/default/production\lab12.production.o
-___sp 0 0 STACK 2 stack C:\Users\a_hui\AppData\Local\Temp\xcAs3s8.o
+___sp 0 0 STACK 2 stack C:\Users\a_hui\AppData\Local\Temp\xcAs12dc.o
 _main 383E 0 CODE 0 text0 dist/default/production\lab12.production.o
-start 1FFFC 0 CODE 0 init C:\Users\a_hui\AppData\Local\Temp\xcAs3s8.o
+start 1FFFC 0 CODE 0 init C:\Users\a_hui\AppData\Local\Temp\xcAs12dc.o
 ___flmul@aexp 551 0 COMRAM 1 cstackCOMRAM dist/default/production\lab12.production.o
 ___flmul@bexp 552 0 COMRAM 1 cstackCOMRAM dist/default/production\lab12.production.o
 ___flmul@prod 553 0 COMRAM 1 cstackCOMRAM dist/default/production\lab12.production.o
@@ -761,11 +763,11 @@ LCDprintf@f_string 58B 0 BANK5 1 cstackBANK5 dist/default/production\lab12.produ
 toString@i 511 0 COMRAM 1 cstackCOMRAM dist/default/production\lab12.production.o
 __Hpowerup 0 0 CODE 0 powerup dist/default/production\lab12.production.o
 ___awmod@sign 506 0 COMRAM 1 cstackCOMRAM dist/default/production\lab12.production.o
-__accesstop 560 0 ABS 0 - C:\Users\a_hui\AppData\Local\Temp\xcAs3s8.o
-intlevel0 0 0 CODE 0 text C:\Users\a_hui\AppData\Local\Temp\xcAs3s8.o
-intlevel1 0 0 CODE 0 text C:\Users\a_hui\AppData\Local\Temp\xcAs3s8.o
-intlevel2 0 0 CODE 0 text C:\Users\a_hui\AppData\Local\Temp\xcAs3s8.o
-intlevel3 0 0 CODE 0 text C:\Users\a_hui\AppData\Local\Temp\xcAs3s8.o
+__accesstop 560 0 ABS 0 - C:\Users\a_hui\AppData\Local\Temp\xcAs12dc.o
+intlevel0 0 0 CODE 0 text C:\Users\a_hui\AppData\Local\Temp\xcAs12dc.o
+intlevel1 0 0 CODE 0 text C:\Users\a_hui\AppData\Local\Temp\xcAs12dc.o
+intlevel2 0 0 CODE 0 text C:\Users\a_hui\AppData\Local\Temp\xcAs12dc.o
+intlevel3 0 0 CODE 0 text C:\Users\a_hui\AppData\Local\Temp\xcAs12dc.o
 LCDprintc@c 502 0 COMRAM 1 cstackCOMRAM dist/default/production\lab12.production.o
 LCDprintf@i 59F 0 BANK5 1 cstackBANK5 dist/default/production\lab12.production.o
 LCDprints@c 512 0 COMRAM 1 cstackCOMRAM dist/default/production\lab12.production.o
@@ -773,8 +775,8 @@ __LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\lab12.production.o
 LCDprintf@f_input 5A0 0 BANK5 1 cstackBANK5 dist/default/production\lab12.production.o
 ?_LCDprintf 57E 0 BANK5 1 cstackBANK5 dist/default/production\lab12.production.o
 __Hifardata 0 0 CODE 0 ifardata dist/default/production\lab12.production.o
-__end_of_analogRead 432C 0 CODE 0 text1 dist/default/production\lab12.production.o
-_LCDinstruct 420E 0 CODE 0 text22 dist/default/production\lab12.production.o
+__end_of_analogRead 4336 0 CODE 0 text1 dist/default/production\lab12.production.o
+_LCDinstruct 4218 0 CODE 0 text22 dist/default/production\lab12.production.o
 ___awdiv@sign 506 0 COMRAM 1 cstackCOMRAM dist/default/production\lab12.production.o
 __Hclrtext 0 0 ABS 0 clrtext dist/default/production\lab12.production.o
 LCDprintf@indexer 5A6 0 BANK5 1 cstackBANK5 dist/default/production\lab12.production.o
@@ -782,9 +784,9 @@ _ADRESH 3EB 0 ABS 0 - dist/default/production\lab12.production.o
 _ADRESL 3EA 0 ABS 0 - dist/default/production\lab12.production.o
 _ANSELD 418 0 ABS 0 - dist/default/production\lab12.production.o
 ___awdiv@dividend 501 0 COMRAM 1 cstackCOMRAM dist/default/production\lab12.production.o
-___inthi_sp 0 0 STACK 2 stack C:\Users\a_hui\AppData\Local\Temp\xcAs3s8.o
-___intlo_sp 0 0 STACK 2 stack C:\Users\a_hui\AppData\Local\Temp\xcAs3s8.o
-__end_of___flge 3DCC 0 CODE 0 text6 dist/default/production\lab12.production.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\a_hui\AppData\Local\Temp\xcAs12dc.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\a_hui\AppData\Local\Temp\xcAs12dc.o
+__end_of___flge 3DD8 0 CODE 0 text6 dist/default/production\lab12.production.o
 _U5RXPPS 27A 0 ABS 0 - dist/default/production\lab12.production.o
 __Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\lab12.production.o
 ___fldiv@aexp 527 0 COMRAM 1 cstackCOMRAM dist/default/production\lab12.production.o
@@ -793,17 +795,17 @@ ___fldiv@sign 51F 0 COMRAM 1 cstackCOMRAM dist/default/production\lab12.producti
 __Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\lab12.production.o
 ___awdiv@divisor 503 0 COMRAM 1 cstackCOMRAM dist/default/production\lab12.production.o
 ___lwmod@divisor 503 0 COMRAM 1 cstackCOMRAM dist/default/production\lab12.production.o
-__end_of___awdiv 3F7A 0 CODE 0 text17 dist/default/production\lab12.production.o
-__end_of___awmod 402A 0 CODE 0 text16 dist/default/production\lab12.production.o
+__end_of___awdiv 3F86 0 CODE 0 text17 dist/default/production\lab12.production.o
+__end_of___awmod 4036 0 CODE 0 text16 dist/default/production\lab12.production.o
 __end_of___fladd 2AE2 0 CODE 0 text5 dist/default/production\lab12.production.o
 __end_of___fldiv 32A6 0 CODE 0 text7 dist/default/production\lab12.production.o
 __end_of___flmul 2F0C 0 CODE 0 text15 dist/default/production\lab12.production.o
-__end_of___flsub 4372 0 CODE 0 text4 dist/default/production\lab12.production.o
-__end_of___fltol 3CC8 0 CODE 0 text14 dist/default/production\lab12.production.o
-__end_of___lwdiv 420E 0 CODE 0 text13 dist/default/production\lab12.production.o
-__end_of___lwmod 42E6 0 CODE 0 text12 dist/default/production\lab12.production.o
-__end_of_LCDgoto 43D0 0 CODE 0 text21 dist/default/production\lab12.production.o
-__end_of_LCDinit 3EB6 0 CODE 0 text20 dist/default/production\lab12.production.o
+__end_of___flsub 437C 0 CODE 0 text4 dist/default/production\lab12.production.o
+__end_of___fltol 3CD4 0 CODE 0 text14 dist/default/production\lab12.production.o
+__end_of___lwdiv 4218 0 CODE 0 text13 dist/default/production\lab12.production.o
+__end_of___lwmod 42F0 0 CODE 0 text12 dist/default/production\lab12.production.o
+__end_of_LCDgoto 43DA 0 CODE 0 text21 dist/default/production\lab12.production.o
+__end_of_LCDinit 3EC2 0 CODE 0 text20 dist/default/production\lab12.production.o
 ___lwdiv@quotient 505 0 COMRAM 1 cstackCOMRAM dist/default/production\lab12.production.o
 ___fladd@a 52C 0 COMRAM 1 cstackCOMRAM dist/default/production\lab12.production.o
 ___fladd@b 528 0 COMRAM 1 cstackCOMRAM dist/default/production\lab12.production.o
@@ -814,7 +816,7 @@ ___flmul@b 540 0 COMRAM 1 cstackCOMRAM dist/default/production\lab12.production.
 ___flsub@a 53C 0 COMRAM 1 cstackCOMRAM dist/default/production\lab12.production.o
 ___flsub@b 538 0 COMRAM 1 cstackCOMRAM dist/default/production\lab12.production.o
 ___lwmod@dividend 501 0 COMRAM 1 cstackCOMRAM dist/default/production\lab12.production.o
-start_initialization 4398 0 CODE 0 cinit dist/default/production\lab12.production.o
+start_initialization 43A2 0 CODE 0 cinit dist/default/production\lab12.production.o
 __HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\lab12.production.o
 _TRISAbits 4C6 0 ABS 0 - dist/default/production\lab12.production.o
 ___rparam_used 1 0 ABS 0 - dist/default/production\lab12.production.o
@@ -829,8 +831,8 @@ _U5CON0 2F7 0 ABS 0 - dist/default/production\lab12.production.o
 _U5CON1 2F8 0 ABS 0 - dist/default/production\lab12.production.o
 _U5RXIF 25D8 0 ABS 0 - dist/default/production\lab12.production.o
 _U5TXIF 25D9 0 ABS 0 - dist/default/production\lab12.production.o
-isa$xinst 0 0 ABS 0 - C:\Users\a_hui\AppData\Local\Temp\xcAs3s8.o
-_toString 4126 0 CODE 0 text11 dist/default/production\lab12.production.o
+isa$xinst 0 0 ABS 0 - C:\Users\a_hui\AppData\Local\Temp\xcAs12dc.o
+_toString 4130 0 CODE 0 text11 dist/default/production\lab12.production.o
 analogMap@analog_reading 560 0 BANK5 1 cstackBANK5 dist/default/production\lab12.production.o
 __Hbank5 0 0 ABS 0 bank5 dist/default/production\lab12.production.o
 __Hbank6 0 0 ABS 0 bank6 dist/default/production\lab12.production.o
@@ -888,8 +890,8 @@ analogMap@analog_min 564 0 BANK5 1 cstackBANK5 dist/default/production\lab12.pro
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\lab12.production.o
 __Hbigram 0 0 ABS 0 bigram dist/default/production\lab12.production.o
 __Hbigsfr 0 0 ABS 0 bigsfr dist/default/production\lab12.production.o
-__smallconst 2600 0 SMALLCONST 0 smallconst C:\Users\a_hui\AppData\Local\Temp\xcAs3s8.o
-__end_of_toString 419A 0 CODE 0 text11 dist/default/production\lab12.production.o
+__smallconst 2600 0 SMALLCONST 0 smallconst C:\Users\a_hui\AppData\Local\Temp\xcAs12dc.o
+__end_of_toString 41A4 0 CODE 0 text11 dist/default/production\lab12.production.o
 ___xxtofl@arg 50B 0 COMRAM 1 cstackCOMRAM dist/default/production\lab12.production.o
 ___xxtofl@exp 50A 0 COMRAM 1 cstackCOMRAM dist/default/production\lab12.production.o
 ___xxtofl@val 501 0 COMRAM 1 cstackCOMRAM dist/default/production\lab12.production.o
@@ -939,7 +941,7 @@ __Lrbit 0 0 COMRAM 1 rbit dist/default/production\lab12.production.o
 __Lrbss 0 0 COMRAM 1 rbss dist/default/production\lab12.production.o
 __Ltemp 0 0 COMRAM 1 temp dist/default/production\lab12.production.o
 __Ltext 0 0 ABS 0 text dist/default/production\lab12.production.o
-___flge 3CC8 0 CODE 0 text6 dist/default/production\lab12.production.o
+___flge 3CD4 0 CODE 0 text6 dist/default/production\lab12.production.o
 __LcstackBANK5 0 0 ABS 0 cstackBANK5 dist/default/production\lab12.production.o
 __HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\lab12.production.o
 __Hirdata 0 0 CODE 0 irdata dist/default/production\lab12.production.o
@@ -954,15 +956,15 @@ LCDprintf@shell 57E 0 BANK5 1 cstackBANK5 dist/default/production\lab12.producti
 __Lbigdata 0 0 BIGRAM 1 bigdata dist/default/production\lab12.production.o
 main@pot_voltage 5AB 0 BANK5 1 cstackBANK5 dist/default/production\lab12.production.o
 __Hnvrram 0 0 COMRAM 1 nvrram dist/default/production\lab12.production.o
-___xxtofl 3A0C 0 CODE 0 text3 dist/default/production\lab12.production.o
+___xxtofl 3A18 0 CODE 0 text3 dist/default/production\lab12.production.o
 _analogMap 3626 0 CODE 0 text2 dist/default/production\lab12.production.o
-__end_of_LCDinstruct 4282 0 CODE 0 text22 dist/default/production\lab12.production.o
+__end_of_LCDinstruct 428C 0 CODE 0 text22 dist/default/production\lab12.production.o
 __Hramtop 2600 0 RAM 0 ramtop dist/default/production\lab12.production.o
 __Hrparam 0 0 COMRAM 1 rparam dist/default/production\lab12.production.o
-__end_of_LCDprintc 4126 0 CODE 0 text19 dist/default/production\lab12.production.o
+__end_of_LCDprintc 4130 0 CODE 0 text19 dist/default/production\lab12.production.o
 __end_of_LCDprintf 3626 0 CODE 0 text10 dist/default/production\lab12.production.o
-__end_of_LCDprints 40AE 0 CODE 0 text18 dist/default/production\lab12.production.o
-__end_of___xxtofl 3BC0 0 CODE 0 text3 dist/default/production\lab12.production.o
+__end_of_LCDprints 40BA 0 CODE 0 text18 dist/default/production\lab12.production.o
+__end_of___xxtofl 3BCC 0 CODE 0 text3 dist/default/production\lab12.production.o
 __activetblptr 2 0 ABS 0 - dist/default/production\lab12.production.o
 __Hstruct 0 0 COMRAM 1 struct dist/default/production\lab12.production.o
 __LbssBANK5 0 0 ABS 0 bssBANK5 dist/default/production\lab12.production.o
@@ -983,27 +985,27 @@ ___awmod@counter 505 0 COMRAM 1 cstackCOMRAM dist/default/production\lab12.produ
 toString@length 50A 0 COMRAM 1 cstackCOMRAM dist/default/production\lab12.production.o
 ___fladd@signs 534 0 COMRAM 1 cstackCOMRAM dist/default/production\lab12.production.o
 __ptext10 32A6 0 CODE 0 text10 dist/default/production\lab12.production.o
-__ptext11 4126 0 CODE 0 text11 dist/default/production\lab12.production.o
-__ptext12 4282 0 CODE 0 text12 dist/default/production\lab12.production.o
-__ptext13 419A 0 CODE 0 text13 dist/default/production\lab12.production.o
-__ptext14 3BC0 0 CODE 0 text14 dist/default/production\lab12.production.o
+__ptext11 4130 0 CODE 0 text11 dist/default/production\lab12.production.o
+__ptext12 428C 0 CODE 0 text12 dist/default/production\lab12.production.o
+__ptext13 41A4 0 CODE 0 text13 dist/default/production\lab12.production.o
+__ptext14 3BCC 0 CODE 0 text14 dist/default/production\lab12.production.o
 __ptext15 2AE2 0 CODE 0 text15 dist/default/production\lab12.production.o
-__ptext16 3F7A 0 CODE 0 text16 dist/default/production\lab12.production.o
-__ptext17 3EB6 0 CODE 0 text17 dist/default/production\lab12.production.o
-__ptext18 402A 0 CODE 0 text18 dist/default/production\lab12.production.o
-__ptext19 40AE 0 CODE 0 text19 dist/default/production\lab12.production.o
-__ptext20 3DCC 0 CODE 0 text20 dist/default/production\lab12.production.o
-__ptext21 43C4 0 CODE 0 text21 dist/default/production\lab12.production.o
-__ptext22 420E 0 CODE 0 text22 dist/default/production\lab12.production.o
-___awdiv 3EB6 0 CODE 0 text17 dist/default/production\lab12.production.o
-___awmod 3F7A 0 CODE 0 text16 dist/default/production\lab12.production.o
+__ptext16 3F86 0 CODE 0 text16 dist/default/production\lab12.production.o
+__ptext17 3EC2 0 CODE 0 text17 dist/default/production\lab12.production.o
+__ptext18 4036 0 CODE 0 text18 dist/default/production\lab12.production.o
+__ptext19 40BA 0 CODE 0 text19 dist/default/production\lab12.production.o
+__ptext20 3DD8 0 CODE 0 text20 dist/default/production\lab12.production.o
+__ptext21 43CE 0 CODE 0 text21 dist/default/production\lab12.production.o
+__ptext22 4218 0 CODE 0 text22 dist/default/production\lab12.production.o
+___awdiv 3EC2 0 CODE 0 text17 dist/default/production\lab12.production.o
+___awmod 3F86 0 CODE 0 text16 dist/default/production\lab12.production.o
 ___fladd 2622 0 CODE 0 text5 dist/default/production\lab12.production.o
 ___fldiv 2F0C 0 CODE 0 text7 dist/default/production\lab12.production.o
 ___flmul 2AE2 0 CODE 0 text15 dist/default/production\lab12.production.o
-___flsub 432C 0 CODE 0 text4 dist/default/production\lab12.production.o
-___fltol 3BC0 0 CODE 0 text14 dist/default/production\lab12.production.o
-___lwdiv 419A 0 CODE 0 text13 dist/default/production\lab12.production.o
-___lwmod 4282 0 CODE 0 text12 dist/default/production\lab12.production.o
+___flsub 4336 0 CODE 0 text4 dist/default/production\lab12.production.o
+___fltol 3BCC 0 CODE 0 text14 dist/default/production\lab12.production.o
+___lwdiv 41A4 0 CODE 0 text13 dist/default/production\lab12.production.o
+___lwmod 428C 0 CODE 0 text12 dist/default/production\lab12.production.o
 __Lbank10 0 0 ABS 0 bank10 dist/default/production\lab12.production.o
 __Lbank11 0 0 ABS 0 bank11 dist/default/production\lab12.production.o
 __Lbank12 0 0 ABS 0 bank12 dist/default/production\lab12.production.o
@@ -1035,14 +1037,14 @@ __Lbigbss 0 0 BIGRAM 1 bigbss dist/default/production\lab12.production.o
 __Lbigram 0 0 ABS 0 bigram dist/default/production\lab12.production.o
 __Lbigsfr 0 0 ABS 0 bigsfr dist/default/production\lab12.production.o
 toString@number 508 0 COMRAM 1 cstackCOMRAM dist/default/production\lab12.production.o
-_LCDprintc 40AE 0 CODE 0 text19 dist/default/production\lab12.production.o
+_LCDprintc 40BA 0 CODE 0 text19 dist/default/production\lab12.production.o
 _LCDprintf 32A6 0 CODE 0 text10 dist/default/production\lab12.production.o
-_LCDprints 402A 0 CODE 0 text18 dist/default/production\lab12.production.o
+_LCDprints 4036 0 CODE 0 text18 dist/default/production\lab12.production.o
 UART5write@txData 501 0 COMRAM 1 cstackCOMRAM dist/default/production\lab12.production.o
 __Lcomram 0 0 ABS 0 comram dist/default/production\lab12.production.o
 __Lconfig 0 0 CONFIG 4 config dist/default/production\lab12.production.o
-_LCDgoto 43C4 0 CODE 0 text21 dist/default/production\lab12.production.o
-_LCDinit 3DCC 0 CODE 0 text20 dist/default/production\lab12.production.o
+_LCDgoto 43CE 0 CODE 0 text21 dist/default/production\lab12.production.o
+_LCDinit 3DD8 0 CODE 0 text20 dist/default/production\lab12.production.o
 _LATDbits 4C1 0 ABS 0 - dist/default/production\lab12.production.o
 ___fldiv@grs 522 0 COMRAM 1 cstackCOMRAM dist/default/production\lab12.production.o
 ___fldiv@rem 51B 0 COMRAM 1 cstackCOMRAM dist/default/production\lab12.production.o
@@ -1050,11 +1052,11 @@ ___fldiv@rem 51B 0 COMRAM 1 cstackCOMRAM dist/default/production\lab12.productio
 __Lfarbss 0 0 FARRAM 0 farbss dist/default/production\lab12.production.o
 ___lwdiv@divisor 503 0 COMRAM 1 cstackCOMRAM dist/default/production\lab12.production.o
 __Lfardata 0 0 FARRAM 0 fardata dist/default/production\lab12.production.o
-isa$std 1 0 ABS 0 - C:\Users\a_hui\AppData\Local\Temp\xcAs3s8.o
+isa$std 1 0 ABS 0 - C:\Users\a_hui\AppData\Local\Temp\xcAs12dc.o
 ___fldiv@new_exp 520 0 COMRAM 1 cstackCOMRAM dist/default/production\lab12.production.o
 toString@string 50B 0 COMRAM 1 cstackCOMRAM dist/default/production\lab12.production.o
-stackhi 0 0 ABS 0 - C:\Users\a_hui\AppData\Local\Temp\xcAs3s8.o
-stacklo 0 0 ABS 0 - C:\Users\a_hui\AppData\Local\Temp\xcAs3s8.o
+stackhi 0 0 ABS 0 - C:\Users\a_hui\AppData\Local\Temp\xcAs12dc.o
+stacklo 0 0 ABS 0 - C:\Users\a_hui\AppData\Local\Temp\xcAs12dc.o
 LCDprintf@args 5A7 0 BANK5 1 cstackBANK5 dist/default/production\lab12.production.o
 __Lirdata 0 0 CODE 0 irdata dist/default/production\lab12.production.o
 _ADCON0bits 3F3 0 ABS 0 - dist/default/production\lab12.production.o
@@ -1070,7 +1072,7 @@ analogMap@sensor_max 566 0 BANK5 1 cstackBANK5 dist/default/production\lab12.pro
 analogMap@sensor_min 56A 0 BANK5 1 cstackBANK5 dist/default/production\lab12.production.o
 __LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\lab12.production.o
 ___fltol@exp1 55E 0 COMRAM 1 cstackCOMRAM dist/default/production\lab12.production.o
-end_of_initialization 43A4 0 CODE 0 cinit dist/default/production\lab12.production.o
+end_of_initialization 43AE 0 CODE 0 cinit dist/default/production\lab12.production.o
 __Lnvrram 0 0 COMRAM 1 nvrram dist/default/production\lab12.production.o
 ___awdiv@quotient 507 0 COMRAM 1 cstackCOMRAM dist/default/production\lab12.production.o
 ?___awdiv 501 0 COMRAM 1 cstackCOMRAM dist/default/production\lab12.production.o
@@ -1084,23 +1086,23 @@ ___lwdiv@dividend 501 0 COMRAM 1 cstackCOMRAM dist/default/production\lab12.prod
 ?___lwdiv 501 0 COMRAM 1 cstackCOMRAM dist/default/production\lab12.production.o
 ?___lwmod 501 0 COMRAM 1 cstackCOMRAM dist/default/production\lab12.production.o
 __Hreset_vec 4 0 CODE 0 reset_vec dist/default/production\lab12.production.o
-__end_of_UART5init 4398 0 CODE 0 text9 dist/default/production\lab12.production.o
+__end_of_UART5init 43A2 0 CODE 0 text9 dist/default/production\lab12.production.o
 __HbssBANK5 0 0 ABS 0 bssBANK5 dist/default/production\lab12.production.o
 ___awmod@dividend 501 0 COMRAM 1 cstackCOMRAM dist/default/production\lab12.production.o
 __Lramtop 2600 0 RAM 0 ramtop dist/default/production\lab12.production.o
 __Lrparam 0 0 COMRAM 1 rparam dist/default/production\lab12.production.o
-__pcinit 4398 0 CODE 0 cinit dist/default/production\lab12.production.o
+__pcinit 43A2 0 CODE 0 cinit dist/default/production\lab12.production.o
 __ptext0 383E 0 CODE 0 text0 dist/default/production\lab12.production.o
-__ptext1 42E6 0 CODE 0 text1 dist/default/production\lab12.production.o
+__ptext1 42F0 0 CODE 0 text1 dist/default/production\lab12.production.o
 __ptext2 3626 0 CODE 0 text2 dist/default/production\lab12.production.o
-__ptext3 3A0C 0 CODE 0 text3 dist/default/production\lab12.production.o
-__ptext4 432C 0 CODE 0 text4 dist/default/production\lab12.production.o
+__ptext3 3A18 0 CODE 0 text3 dist/default/production\lab12.production.o
+__ptext4 4336 0 CODE 0 text4 dist/default/production\lab12.production.o
 __ptext5 2622 0 CODE 0 text5 dist/default/production\lab12.production.o
-__ptext6 3CC8 0 CODE 0 text6 dist/default/production\lab12.production.o
+__ptext6 3CD4 0 CODE 0 text6 dist/default/production\lab12.production.o
 __ptext7 2F0C 0 CODE 0 text7 dist/default/production\lab12.production.o
-__ptext8 43AE 0 CODE 0 text8 dist/default/production\lab12.production.o
-__ptext9 4372 0 CODE 0 text9 dist/default/production\lab12.production.o
-_UART5write 43AE 0 CODE 0 text8 dist/default/production\lab12.production.o
+__ptext8 43B8 0 CODE 0 text8 dist/default/production\lab12.production.o
+__ptext9 437C 0 CODE 0 text9 dist/default/production\lab12.production.o
+_UART5write 43B8 0 CODE 0 text8 dist/default/production\lab12.production.o
 __Lstruct 0 0 COMRAM 1 struct dist/default/production\lab12.production.o
 __Ltext10 0 0 ABS 0 text10 dist/default/production\lab12.production.o
 __Ltext11 0 0 ABS 0 text11 dist/default/production\lab12.production.o
@@ -1115,7 +1117,7 @@ __Ltext19 0 0 ABS 0 text19 dist/default/production\lab12.production.o
 __Ltext20 0 0 ABS 0 text20 dist/default/production\lab12.production.o
 __Ltext21 0 0 ABS 0 text21 dist/default/production\lab12.production.o
 __Ltext22 0 0 ABS 0 text22 dist/default/production\lab12.production.o
-__ramtop 2600 0 RAM 0 ramtop C:\Users\a_hui\AppData\Local\Temp\xcAs3s8.o
+__ramtop 2600 0 RAM 0 ramtop C:\Users\a_hui\AppData\Local\Temp\xcAs12dc.o
 __Lpowerup 0 0 CODE 0 powerup dist/default/production\lab12.production.o
 ?___xxtofl 501 0 COMRAM 1 cstackCOMRAM dist/default/production\lab12.production.o
 __Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\lab12.production.o
@@ -1123,22 +1125,22 @@ ___fladd@aexp 535 0 COMRAM 1 cstackCOMRAM dist/default/production\lab12.producti
 ___fladd@bexp 536 0 COMRAM 1 cstackCOMRAM dist/default/production\lab12.production.o
 ___fltol@sign1 55D 0 COMRAM 1 cstackCOMRAM dist/default/production\lab12.production.o
 __psmallconst 2600 0 SMALLCONST 0 smallconst dist/default/production\lab12.production.o
-_UART5init 4372 0 CODE 0 text9 dist/default/production\lab12.production.o
+_UART5init 437C 0 CODE 0 text9 dist/default/production\lab12.production.o
 __Lreset_vec 0 0 CODE 0 reset_vec dist/default/production\lab12.production.o
-___heap_hi 0 0 ABS 0 - C:\Users\a_hui\AppData\Local\Temp\xcAs3s8.o
-___heap_lo 0 0 ABS 0 - C:\Users\a_hui\AppData\Local\Temp\xcAs3s8.o
+___heap_hi 0 0 ABS 0 - C:\Users\a_hui\AppData\Local\Temp\xcAs12dc.o
+___heap_lo 0 0 ABS 0 - C:\Users\a_hui\AppData\Local\Temp\xcAs12dc.o
 ___fltol@f1 576 0 BANK5 1 cstackBANK5 dist/default/production\lab12.production.o
 ___param_bank 0 0 ABS 0 - dist/default/production\lab12.production.o
 __Hbigdata 0 0 BIGRAM 1 bigdata dist/default/production\lab12.production.o
-__end_of__initialization 43A4 0 CODE 0 cinit dist/default/production\lab12.production.o
+__end_of__initialization 43AE 0 CODE 0 cinit dist/default/production\lab12.production.o
 ___awmod@divisor 503 0 COMRAM 1 cstackCOMRAM dist/default/production\lab12.production.o
 main@lux_value 5B3 0 BANK5 1 cstackBANK5 dist/default/production\lab12.production.o
 __Libigdata 0 0 CODE 0 ibigdata dist/default/production\lab12.production.o
 __Lclrtext 0 0 ABS 0 clrtext dist/default/production\lab12.production.o
 analogRead@pin_tris 505 0 COMRAM 1 cstackCOMRAM dist/default/production\lab12.production.o
 __pcstackCOMRAM 501 0 COMRAM 1 cstackCOMRAM dist/default/production\lab12.production.o
-__end_of_main 3A0C 0 CODE 0 text0 dist/default/production\lab12.production.o
-__end_of_UART5write 43C4 0 CODE 0 text8 dist/default/production\lab12.production.o
+__end_of_main 3A18 0 CODE 0 text0 dist/default/production\lab12.production.o
+__end_of_UART5write 43CE 0 CODE 0 text8 dist/default/production\lab12.production.o
 _ADPCH 3EC 0 ABS 0 - dist/default/production\lab12.production.o
 _TRISD 4C9 0 ABS 0 - dist/default/production\lab12.production.o
 _U5TXB 2EF 0 ABS 0 - dist/default/production\lab12.production.o
@@ -1152,7 +1154,7 @@ __Lram 0 0 ABS 0 ram dist/default/production\lab12.production.o
 __Lsfr 0 0 ABS 0 sfr dist/default/production\lab12.production.o
 main@pot_value 5B1 0 BANK5 1 cstackBANK5 dist/default/production\lab12.production.o
 analogRead@pin_ansel 501 0 COMRAM 1 cstackCOMRAM dist/default/production\lab12.production.o
-__initialization 4398 0 CODE 0 cinit dist/default/production\lab12.production.o
+__initialization 43A2 0 CODE 0 cinit dist/default/production\lab12.production.o
 ___xxtofl@sign 509 0 COMRAM 1 cstackCOMRAM dist/default/production\lab12.production.o
 __pbssBANK5 5B5 0 BANK5 1 bssBANK5 dist/default/production\lab12.production.o
 __Hfardata 0 0 FARRAM 0 fardata dist/default/production\lab12.production.o
@@ -1184,7 +1186,7 @@ __Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\lab12.producti
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-text5 0 2622 2622 1DAE 1
+text5 0 2622 2622 1DB8 1
 cstackCOMRAM 1 501 501 5E 1
 cstackBANK5 1 560 560 6F 1
 init 0 1FFFC 1FFFC 4 1

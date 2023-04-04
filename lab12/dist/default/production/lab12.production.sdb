@@ -7,7 +7,7 @@
 [v _analogRead analogRead `(ui  1 e 2 0 ]
 "57
 [v _analogMap analogMap `(f  1 e 4 0 ]
-"22 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/ADCwithSerial.c
+"23 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/ADCwithSerial.c
 [v _main main `(v  1 e 1 0 ]
 "25 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/serial18f.c
 [v _UART5init UART5init `(v  1 e 1 0 ]
@@ -85,7 +85,7 @@
 [v _ADRESH ADRESH `VEuc  1 e 1 @1003 ]
 "37674
 [v _ADPCH ADPCH `VEuc  1 e 1 @1004 ]
-[s S151 . 1 `uc 1 GO 1 0 :1:0 
+[s S156 . 1 `uc 1 GO 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 FM 1 0 :2:2 
 `uc 1 CS 1 0 :1:4 
@@ -94,7 +94,7 @@
 `uc 1 ON 1 0 :1:7 
 ]
 "38276
-[s S159 . 1 `uc 1 ADGO 1 0 :1:0 
+[s S164 . 1 `uc 1 ADGO 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 ADFM 1 0 :2:2 
 `uc 1 ADCS 1 0 :1:4 
@@ -103,24 +103,24 @@
 `uc 1 ADON 1 0 :1:7 
 ]
 "38276
-[s S167 . 1 `uc 1 DONE 1 0 :1:0 
+[s S172 . 1 `uc 1 DONE 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 FM0 1 0 :1:2 
 ]
 "38276
-[s S171 . 1 `uc 1 GO_NOT_DONE 1 0 :1:0 
+[s S176 . 1 `uc 1 GO_NOT_DONE 1 0 :1:0 
 ]
 "38276
-[s S173 . 1 `uc 1 GO_nDONE 1 0 :1:0 
+[s S178 . 1 `uc 1 GO_nDONE 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 ADFM0 1 0 :1:2 
 ]
 "38276
-[u S177 . 1 `S151 1 . 1 0 `S159 1 . 1 0 `S167 1 . 1 0 `S171 1 . 1 0 `S173 1 . 1 0 ]
+[u S182 . 1 `S156 1 . 1 0 `S164 1 . 1 0 `S172 1 . 1 0 `S176 1 . 1 0 `S178 1 . 1 0 ]
 "38276
 "38276
-[v _ADCON0bits ADCON0bits `VES177  1 e 1 @1011 ]
-[s S60 . 1 `uc 1 ANSELA0 1 0 :1:0 
+[v _ADCON0bits ADCON0bits `VES182  1 e 1 @1011 ]
+[s S65 . 1 `uc 1 ANSELA0 1 0 :1:0 
 `uc 1 ANSELA1 1 0 :1:1 
 `uc 1 ANSELA2 1 0 :1:2 
 `uc 1 ANSELA3 1 0 :1:3 
@@ -130,17 +130,17 @@
 `uc 1 ANSELA7 1 0 :1:7 
 ]
 "39133
-[u S69 . 1 `S60 1 . 1 0 ]
+[u S74 . 1 `S65 1 . 1 0 ]
 "39133
 "39133
-[v _ANSELAbits ANSELAbits `VES69  1 e 1 @1024 ]
+[v _ANSELAbits ANSELAbits `VES74  1 e 1 @1024 ]
 "40604
 [v _ANSELD ANSELD `VEuc  1 e 1 @1048 ]
 "40666
 [v _WPUD WPUD `VEuc  1 e 1 @1049 ]
 "48148
 [v _LATD LATD `VEuc  1 e 1 @1217 ]
-[s S233 . 1 `uc 1 LATD0 1 0 :1:0 
+[s S238 . 1 `uc 1 LATD0 1 0 :1:0 
 `uc 1 LATD1 1 0 :1:1 
 `uc 1 LATD2 1 0 :1:2 
 `uc 1 LATD3 1 0 :1:3 
@@ -150,11 +150,11 @@
 `uc 1 LATD7 1 0 :1:7 
 ]
 "48165
-[u S242 . 1 `S233 1 . 1 0 ]
+[u S247 . 1 `S238 1 . 1 0 ]
 "48165
 "48165
-[v _LATDbits LATDbits `VES242  1 e 1 @1217 ]
-[s S81 . 1 `uc 1 TRISA0 1 0 :1:0 
+[v _LATDbits LATDbits `VES247  1 e 1 @1217 ]
+[s S86 . 1 `uc 1 TRISA0 1 0 :1:0 
 `uc 1 TRISA1 1 0 :1:1 
 `uc 1 TRISA2 1 0 :1:2 
 `uc 1 TRISA3 1 0 :1:3 
@@ -164,10 +164,10 @@
 `uc 1 TRISA7 1 0 :1:7 
 ]
 "48321
-[u S90 . 1 `S81 1 . 1 0 ]
+[u S95 . 1 `S86 1 . 1 0 ]
 "48321
 "48321
-[v _TRISAbits TRISAbits `VES90  1 e 1 @1222 ]
+[v _TRISAbits TRISAbits `VES95  1 e 1 @1222 ]
 "48490
 [v _TRISD TRISD `VEuc  1 e 1 @1225 ]
 "51896
@@ -182,18 +182,18 @@
 [v _U5RXIF U5RXIF `VEb  1 e 0 @9688 ]
 "61556
 [v _U5TXIF U5TXIF `VEb  1 e 0 @9689 ]
-"22 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/ADCwithSerial.c
+"23 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab12/ADCwithSerial.c
 [v _main main `(v  1 e 1 0 ]
 {
-"25
-[v main@pot_voltage pot_voltage `f  1 a 4 75 ]
 "26
-[v main@lux_value lux_value `ui  1 a 2 83 ]
-"24
-[v main@pot_value pot_value `ui  1 a 2 81 ]
+[v main@pot_voltage pot_voltage `f  1 a 4 75 ]
 "27
+[v main@lux_value lux_value `ui  1 a 2 83 ]
+"25
+[v main@pot_value pot_value `ui  1 a 2 81 ]
+"28
 [v main@lux_percent lux_percent `ui  1 a 2 79 ]
-"52
+"55
 } 0
 "30 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c
 [v _analogRead analogRead `(ui  1 e 2 0 ]
@@ -362,17 +362,17 @@
 "8 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S614 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S618 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S619 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
-[u S622 . 4 `l 1 i 4 0 `d 1 f 4 0 `S614 1 fAsBytes 4 0 `S619 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S622  1 a 4 82 ]
+[s S623 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
+[u S626 . 4 `l 1 i 4 0 `d 1 f 4 0 `S618 1 fAsBytes 4 0 `S623 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S626  1 a 4 82 ]
 "12
 [v ___flmul@grs grs `ul  1 a 4 76 ]
-[s S690 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[s S694 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S693 . 2 `s 1 i 2 0 `us 1 n 2 0 `S690 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S693  1 a 2 86 ]
+[u S697 . 2 `s 1 i 2 0 `us 1 n 2 0 `S694 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S697  1 a 2 86 ]
 "10
 [v ___flmul@bexp bexp `uc  1 a 1 81 ]
 "11
