@@ -21,9 +21,6 @@ Mark:
 #include "RealTimeClock.h"
 
 void RTCrun(time *start_time) {
-    // array of pointers for printf statement
-    char* current_time[4] = {&start_time->hours, &start_time->minutes, &start_time->seconds, &start_time->meridian};
-    
     // enable RTC to run
     nSetRTC = 1;
     
@@ -72,10 +69,11 @@ void RTCrun(time *start_time) {
         };
         // print time to lcd
         LCD_HOME;            
-        LCDprintf("%i2:%i2:%i2 %cm", current_time);  
+        LCDprintf("%i2:%i2:%i2 %cm", start_time->hours, start_time->minutes, start_time->seconds, start_time->meridian);  
         }
     };
 };
+
 
 void setINT(void){
     IOCBN4 = 0; // disable RB4 edge interrupt because of switch bounce
