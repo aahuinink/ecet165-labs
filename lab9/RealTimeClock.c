@@ -58,6 +58,7 @@ void RTCinit(void) {
 * RETURNS: [void]
 */
 void RTCupdate(time* current_time){
+    LCDinstruct(0x0C); // cursor & blink off
     if(tick_count > 99){ // if a second has past
         tick_count -= 100; // remove 100 10ms cycles from the count
         (current_time)->seconds++; // increment seconds

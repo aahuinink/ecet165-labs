@@ -2775,109 +2775,112 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _current_time `*S2364 ~T0 @X0 1 r1 ]
 [f ]
 "61
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 61:     if(tick_count > 99){
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 61:     LCDinstruct(0x0C);
+[e ( _LCDinstruct (1 -> -> 12 `i `uc ]
+"62
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 62:     if(tick_count > 99){
 [e $ ! > -> _tick_count `i -> 99 `i 2367  ]
 {
-"62
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 62:         tick_count -= 100;
-[e =- _tick_count -> -> 100 `i `Vuc ]
 "63
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 63:         (current_time)->seconds++;
-[e ++ . *U _current_time 2 -> -> 1 `i `uc ]
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 63:         tick_count -= 100;
+[e =- _tick_count -> -> 100 `i `Vuc ]
 "64
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 64:         if((current_time)->seconds > 59){
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 64:         (current_time)->seconds++;
+[e ++ . *U _current_time 2 -> -> 1 `i `uc ]
+"65
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 65:         if((current_time)->seconds > 59){
 [e $ ! > -> . *U _current_time 2 `i -> 59 `i 2368  ]
 {
-"65
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 65:             (current_time)->seconds = 0;
-[e = . *U _current_time 2 -> -> 0 `i `uc ]
 "66
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 66:             (current_time)->minutes++;
-[e ++ . *U _current_time 1 -> -> 1 `i `uc ]
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 66:             (current_time)->seconds = 0;
+[e = . *U _current_time 2 -> -> 0 `i `uc ]
 "67
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 67:             if((current_time)->minutes>59){
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 67:             (current_time)->minutes++;
+[e ++ . *U _current_time 1 -> -> 1 `i `uc ]
+"68
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 68:             if((current_time)->minutes>59){
 [e $ ! > -> . *U _current_time 1 `i -> 59 `i 2369  ]
 {
-"68
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 68:                 (current_time)->minutes = 0;
-[e = . *U _current_time 1 -> -> 0 `i `uc ]
 "69
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 69:                 (current_time)->hours++;
-[e ++ . *U _current_time 0 -> -> 1 `i `uc ]
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 69:                 (current_time)->minutes = 0;
+[e = . *U _current_time 1 -> -> 0 `i `uc ]
 "70
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 70:                 if((current_time)->hours>11){
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 70:                 (current_time)->hours++;
+[e ++ . *U _current_time 0 -> -> 1 `i `uc ]
+"71
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 71:                 if((current_time)->hours>11){
 [e $ ! > -> . *U _current_time 0 `i -> 11 `i 2370  ]
 {
-"71
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 71:                     if((current_time)->hours >12){
+"72
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 72:                     if((current_time)->hours >12){
 [e $ ! > -> . *U _current_time 0 `i -> 12 `i 2371  ]
 {
-"72
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 72:                         (current_time)->hours = 1;
-[e = . *U _current_time 0 -> -> 1 `i `uc ]
 "73
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 73:                     }else{
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 73:                         (current_time)->hours = 1;
+[e = . *U _current_time 0 -> -> 1 `i `uc ]
+"74
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 74:                     }else{
 }
 [e $U 2372  ]
 [e :U 2371 ]
 {
-"74
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 74:                     (current_time)->meridian = (
+"75
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 75:                     (current_time)->meridian = (
 [e = . *U _current_time 3 -> ? == -> . *U _current_time 3 `ui -> 97 `ui : -> 112 `ui -> 97 `ui `uc ]
-"78
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 78:                     }
+"79
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 79:                     }
 }
 [e :U 2372 ]
-"79
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 79:                 }
+"80
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 80:                 }
 }
 [e :U 2370 ]
-"80
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 80:             }
+"81
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 81:             }
 }
 [e :U 2369 ]
-"81
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 81:         };
+"82
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 82:         };
 }
 [e :U 2368 ]
-"82
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 82:         LCDinstruct(0x02);
-[e ( _LCDinstruct (1 -> -> 2 `i `uc ]
 "83
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 83:         LCDprintf("%i2:%i2:%i2 %cm", current_time->hours, current_time->minutes, current_time->seconds, current_time->meridian);
-[e ( _LCDprintf , , , , (. :s 1C -> . *U _current_time 0 `i -> . *U _current_time 1 `i -> . *U _current_time 2 `i -> . *U _current_time 3 `i ]
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 83:         LCDinstruct(0x02);
+[e ( _LCDinstruct (1 -> -> 2 `i `uc ]
 "84
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 84:     }
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 84:         LCDprintf("%i2:%i2:%i2 %cm", current_time->hours, current_time->minutes, current_time->seconds, current_time->meridian);
+[e ( _LCDprintf , , , , (. :s 1C -> . *U _current_time 0 `i -> . *U _current_time 1 `i -> . *U _current_time 2 `i -> . *U _current_time 3 `i ]
+"85
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 85:     }
 }
 [e :U 2367 ]
-"85
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 85: }
+"86
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 86: }
 [e :UE 2366 ]
 }
 [v $root$_setINT `(v ~T0 @X0 0 e ]
-"88
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 88: void setINT(void){
+"89
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 89: void setINT(void){
 [v _setINT `(v ~T6 @X0 1 ef ]
 {
 [e :U _setINT ]
 [f ]
-"89
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 89:     IOCBN4 = 0;
-[e = _IOCBN4 -> -> 0 `i `b ]
 "90
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 90:     IOCBF4 = 0;
-[e = _IOCBF4 -> -> 0 `i `b ]
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 90:     IOCBN4 = 0;
+[e = _IOCBN4 -> -> 0 `i `b ]
 "91
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 91:     T0CON0bits.EN = 0;
-[e = . . _T0CON0bits 0 4 -> -> 0 `i `uc ]
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 91:     IOCBF4 = 0;
+[e = _IOCBF4 -> -> 0 `i `b ]
 "92
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 92:     nSetRTC = 0;
-[e = _nSetRTC -> -> 0 `i `uc ]
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 92:     T0CON0bits.EN = 0;
+[e = . . _T0CON0bits 0 4 -> -> 0 `i `uc ]
 "93
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 93:     return;
-[e $UE 2373  ]
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 93:     nSetRTC = 0;
+[e = _nSetRTC -> -> 0 `i `uc ]
 "94
-[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 94: }
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 94:     return;
+[e $UE 2373  ]
+"95
+[; ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c: 95: }
 [e :UE 2373 ]
 }
 [a 1C 37 105 50 58 37 105 50 58 37 105 50 32 37 99 109 0 ]

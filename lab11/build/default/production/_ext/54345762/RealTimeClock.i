@@ -28981,6 +28981,7 @@ void RTCinit(void) {
 };
 # 60 "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab9/RealTimeClock.c"
 void RTCupdate(time* current_time){
+    LCDinstruct(0x0C);
     if(tick_count > 99){
         tick_count -= 100;
         (current_time)->seconds++;
