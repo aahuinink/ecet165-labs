@@ -45,7 +45,7 @@ void UART5init(void){
 * Initializes the UART
 * ARGS: []
 * RETURNS: [U5RXIF<unsigned char> : the status of the receive interrupt flag]
-*/    
+*/
 unsigned char UART5RXready(void){
     return (unsigned char)(U5RXIF);
 }

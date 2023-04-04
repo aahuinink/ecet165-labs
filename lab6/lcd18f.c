@@ -26,7 +26,7 @@ void LCDinstruct(unsigned char instr){
     __delay_us(1);
     LCD_LAT = (LCD_LAT & 0xF0)|(instr & 0x0F);   // send LSnibble
     LCD_STROBE;
-    __delay_ms(5); // allow busy flag to clear
+    __delay_us(80); // allow busy flag to clear
     return;
 };
 
@@ -80,7 +80,7 @@ void LCDprintc(char c){
     LCD_LAT = (LCD_LAT & 0xF0)|(c & 0x0F);   // send LSnibble
     __delay_us(1);
     LCD_STROBE;
-    __delay_ms(5);  // allow busy flag to clear
+    __delay_us(80);  // allow busy flag to clear
     return;
 }
 void LCDprints(char *c){
