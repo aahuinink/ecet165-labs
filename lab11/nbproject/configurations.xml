@@ -6,6 +6,7 @@
                    projectFiles="true">
       <itemPath>C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.h</itemPath>
       <itemPath>C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.h</itemPath>
+      <itemPath>C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/analogconfigpic18f.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -17,7 +18,6 @@
       <itemPath>C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c</itemPath>
       <itemPath>C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c</itemPath>
       <itemPath>C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c</itemPath>
-      <itemPath>C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/setRTC.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -81,7 +81,7 @@
         <property key="define-macros" value=""/>
         <property key="disable-optimizations" value="true"/>
         <property key="extra-include-directories"
-                  value="C:\Users\a_hui\OneDrive - Camosun College\term2\ecet165_embedded_mc\labs\ecet165-labs\lab8;C:\Users\a_hui\OneDrive - Camosun College\term2\ecet165_embedded_mc\labs\ecet165-labs\lab9;C:\Users\a_hui\OneDrive - Camosun College\term2\ecet165_embedded_mc\labs\ecet165-labs\lab6;C:\Users\a_hui\OneDrive - Camosun College\term2\ecet165_embedded_mc\labs\ecet165-labs\matrixkeypad"/>
+                  value="C:\Users\a_hui\OneDrive - Camosun College\term2\ecet165_embedded_mc\labs\ecet165-labs\lab8;C:\Users\a_hui\OneDrive - Camosun College\term2\ecet165_embedded_mc\labs\ecet165-labs\lab9;C:\Users\a_hui\OneDrive - Camosun College\term2\ecet165_embedded_mc\labs\ecet165-labs\lab6;C:\Users\a_hui\OneDrive - Camosun College\term2\ecet165_embedded_mc\labs\ecet165-labs\matrixkeypad;C:\Users\a_hui\OneDrive - Camosun College\term2\ecet165_embedded_mc\labs\ecet165-labs\lab11"/>
         <property key="favor-optimization-for" value="-speed,+space"/>
         <property key="garbage-collect-data" value="true"/>
         <property key="garbage-collect-functions" value="true"/>
@@ -253,6 +253,8 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-1ffff"/>
         <property key="poweroptions.powerenable" value="false"/>
+        <property key="programmerToGoFilePath"
+                  value="C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/debug/default/default_ptg"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.preservedataflash" value="false"/>
         <property key="programoptions.preservedataflash.ranges"

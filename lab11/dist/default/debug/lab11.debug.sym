@@ -403,7 +403,7 @@ text5 2618 4053 CODE 2618 0
 %locals
 dist/default/debug\lab11.debug.o
 C:/Users/a_hui/.mchp_packs/Microchip/PIC18F-Q_DFP/1.16.368/xc8\pic\include\proc\pic18f57q43.h
-C:\Users\a_hui\AppData\Local\Temp\xcAs10dk.s
+C:\Users\a_hui\AppData\Local\Temp\xcAsss4.s
 5301 402E 0 CODE 0
 5303 402E 0 CODE 0
 5306 402E 0 CODE 0
@@ -421,15 +421,15 @@ C:\Users\a_hui\AppData\Local\Temp\xcAs10dk.s
 5337 4042 0 CODE 0
 5338 4044 0 CODE 0
 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c
-24 38D4 0 CODE 0
-27 38D4 0 CODE 0
-33 38D8 0 CODE 0
-34 38D8 0 CODE 0
-35 38DE 0 CODE 0
-36 3978 0 CODE 0
-37 3984 0 CODE 0
-38 398A 0 CODE 0
-39 39A6 0 CODE 0
+22 38D4 0 CODE 0
+25 38D4 0 CODE 0
+31 38D8 0 CODE 0
+32 38D8 0 CODE 0
+33 38DE 0 CODE 0
+34 3978 0 CODE 0
+35 3984 0 CODE 0
+36 398A 0 CODE 0
+37 39A6 0 CODE 0
 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c
 30 3FA2 0 CODE 0
 32 3FA2 0 CODE 0

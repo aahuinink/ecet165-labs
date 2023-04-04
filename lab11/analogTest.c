@@ -14,9 +14,8 @@
 #include <xc.h>
 #include "analog18f.h"
 #include "lcd18f.h"
+#include "analogconfigpic18f.h"
 
-#define POT_READ analogRead(ANSELAbits.ANSELA3, TRISAbits.TRISA3, ADC_A3)
-#define LUX_READ analogRead(ANSELAbits.ANSELA4, TRISAbits.TRISA4, ADC_A4)
 
 // ============================ VARIABLES & FLAGS ========================== //
 
@@ -27,7 +26,7 @@ void main(void){
     LCDinit(); // initialize the LCD display
     
     // ----- local variables ----- //
-    double pot_voltage;
+    float pot_voltage;
     
     // ----- main loop ----- //
     while(1){

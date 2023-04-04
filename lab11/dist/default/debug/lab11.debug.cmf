@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\a_hui\AppData\Local\Temp\xcAs10dk.o
+$C:\Users\a_hui\AppData\Local\Temp\xcAsss4.o
 idloc IDLOC 5 200000 200000 40 1 1
 init CODE 0 1FFFC 1FFFC 4 1 2
 reset_vec CODE 0 0 0 4 1 2
@@ -652,31 +652,31 @@ $dist/default/debug\lab11.debug.o
 3FC6 text1 CODE >41:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c
 3FD4 text1 CODE >42:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c
 3FE6 text1 CODE >43:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c
-38D4 text0 CODE >24:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c
-38D4 text0 CODE >27:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c
-38D8 text0 CODE >33:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c
-38D8 text0 CODE >34:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c
-38DE text0 CODE >35:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c
-3978 text0 CODE >36:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c
-3984 text0 CODE >37:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c
-398A text0 CODE >38:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c
-39A6 text0 CODE >39:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c
-402E cinit CODE >5301:C:\Users\a_hui\AppData\Local\Temp\xcAs10dk.s
-402E cinit CODE >5303:C:\Users\a_hui\AppData\Local\Temp\xcAs10dk.s
-402E cinit CODE >5306:C:\Users\a_hui\AppData\Local\Temp\xcAs10dk.s
-402E cinit CODE >5319:C:\Users\a_hui\AppData\Local\Temp\xcAs10dk.s
-4032 cinit CODE >5320:C:\Users\a_hui\AppData\Local\Temp\xcAs10dk.s
-4034 cinit CODE >5321:C:\Users\a_hui\AppData\Local\Temp\xcAs10dk.s
-4034 cinit CODE >5322:C:\Users\a_hui\AppData\Local\Temp\xcAs10dk.s
-4036 cinit CODE >5323:C:\Users\a_hui\AppData\Local\Temp\xcAs10dk.s
-4038 cinit CODE >5324:C:\Users\a_hui\AppData\Local\Temp\xcAs10dk.s
-403A cinit CODE >5330:C:\Users\a_hui\AppData\Local\Temp\xcAs10dk.s
-403A cinit CODE >5333:C:\Users\a_hui\AppData\Local\Temp\xcAs10dk.s
-403C cinit CODE >5334:C:\Users\a_hui\AppData\Local\Temp\xcAs10dk.s
-403E cinit CODE >5335:C:\Users\a_hui\AppData\Local\Temp\xcAs10dk.s
-4040 cinit CODE >5336:C:\Users\a_hui\AppData\Local\Temp\xcAs10dk.s
-4042 cinit CODE >5337:C:\Users\a_hui\AppData\Local\Temp\xcAs10dk.s
-4044 cinit CODE >5338:C:\Users\a_hui\AppData\Local\Temp\xcAs10dk.s
+38D4 text0 CODE >22:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c
+38D4 text0 CODE >25:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c
+38D8 text0 CODE >31:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c
+38D8 text0 CODE >32:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c
+38DE text0 CODE >33:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c
+3978 text0 CODE >34:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c
+3984 text0 CODE >35:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c
+398A text0 CODE >36:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c
+39A6 text0 CODE >37:C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c
+402E cinit CODE >5301:C:\Users\a_hui\AppData\Local\Temp\xcAsss4.s
+402E cinit CODE >5303:C:\Users\a_hui\AppData\Local\Temp\xcAsss4.s
+402E cinit CODE >5306:C:\Users\a_hui\AppData\Local\Temp\xcAsss4.s
+402E cinit CODE >5319:C:\Users\a_hui\AppData\Local\Temp\xcAsss4.s
+4032 cinit CODE >5320:C:\Users\a_hui\AppData\Local\Temp\xcAsss4.s
+4034 cinit CODE >5321:C:\Users\a_hui\AppData\Local\Temp\xcAsss4.s
+4034 cinit CODE >5322:C:\Users\a_hui\AppData\Local\Temp\xcAsss4.s
+4036 cinit CODE >5323:C:\Users\a_hui\AppData\Local\Temp\xcAsss4.s
+4038 cinit CODE >5324:C:\Users\a_hui\AppData\Local\Temp\xcAsss4.s
+403A cinit CODE >5330:C:\Users\a_hui\AppData\Local\Temp\xcAsss4.s
+403A cinit CODE >5333:C:\Users\a_hui\AppData\Local\Temp\xcAsss4.s
+403C cinit CODE >5334:C:\Users\a_hui\AppData\Local\Temp\xcAsss4.s
+403E cinit CODE >5335:C:\Users\a_hui\AppData\Local\Temp\xcAsss4.s
+4040 cinit CODE >5336:C:\Users\a_hui\AppData\Local\Temp\xcAsss4.s
+4042 cinit CODE >5337:C:\Users\a_hui\AppData\Local\Temp\xcAsss4.s
+4044 cinit CODE >5338:C:\Users\a_hui\AppData\Local\Temp\xcAsss4.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -699,16 +699,16 @@ __Hspace_4 60000A 0 ABS 0 - dist/default/debug\lab11.debug.o
 _analogMap$890 56E 0 BANK5 1 cstackBANK5 dist/default/debug\lab11.debug.o
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/debug\lab11.debug.o
 _analogRead 3FA2 0 CODE 0 text1 dist/default/debug\lab11.debug.o
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\a_hui\AppData\Local\Temp\xcAs10dk.o
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\a_hui\AppData\Local\Temp\xcAsss4.o
 LCDgoto@pos 503 0 COMRAM 1 cstackCOMRAM dist/default/debug\lab11.debug.o
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/debug\lab11.debug.o
 analogRead@pin_designation 509 0 COMRAM 1 cstackCOMRAM dist/default/debug\lab11.debug.o
 __Lsmallconst 2600 0 SMALLCONST 0 smallconst dist/default/debug\lab11.debug.o
 _LATD 4C1 0 ABS 0 - dist/default/debug\lab11.debug.o
 _WPUD 419 0 ABS 0 - dist/default/debug\lab11.debug.o
-___sp 0 0 STACK 2 stack C:\Users\a_hui\AppData\Local\Temp\xcAs10dk.o
+___sp 0 0 STACK 2 stack C:\Users\a_hui\AppData\Local\Temp\xcAsss4.o
 _main 38D4 0 CODE 0 text0 dist/default/debug\lab11.debug.o
-start 1FFFC 0 CODE 0 init C:\Users\a_hui\AppData\Local\Temp\xcAs10dk.o
+start 1FFFC 0 CODE 0 init C:\Users\a_hui\AppData\Local\Temp\xcAsss4.o
 ___flmul@aexp 551 0 COMRAM 1 cstackCOMRAM dist/default/debug\lab11.debug.o
 ___flmul@bexp 552 0 COMRAM 1 cstackCOMRAM dist/default/debug\lab11.debug.o
 ___flmul@prod 553 0 COMRAM 1 cstackCOMRAM dist/default/debug\lab11.debug.o
@@ -719,11 +719,11 @@ LCDprintf@f_string 567 0 BANK5 1 cstackBANK5 dist/default/debug\lab11.debug.o
 toString@i 511 0 COMRAM 1 cstackCOMRAM dist/default/debug\lab11.debug.o
 __Hpowerup 0 0 CODE 0 powerup dist/default/debug\lab11.debug.o
 ___awmod@sign 506 0 COMRAM 1 cstackCOMRAM dist/default/debug\lab11.debug.o
-__accesstop 560 0 ABS 0 - C:\Users\a_hui\AppData\Local\Temp\xcAs10dk.o
-intlevel0 0 0 CODE 0 text C:\Users\a_hui\AppData\Local\Temp\xcAs10dk.o
-intlevel1 0 0 CODE 0 text C:\Users\a_hui\AppData\Local\Temp\xcAs10dk.o
-intlevel2 0 0 CODE 0 text C:\Users\a_hui\AppData\Local\Temp\xcAs10dk.o
-intlevel3 0 0 CODE 0 text C:\Users\a_hui\AppData\Local\Temp\xcAs10dk.o
+__accesstop 560 0 ABS 0 - C:\Users\a_hui\AppData\Local\Temp\xcAsss4.o
+intlevel0 0 0 CODE 0 text C:\Users\a_hui\AppData\Local\Temp\xcAsss4.o
+intlevel1 0 0 CODE 0 text C:\Users\a_hui\AppData\Local\Temp\xcAsss4.o
+intlevel2 0 0 CODE 0 text C:\Users\a_hui\AppData\Local\Temp\xcAsss4.o
+intlevel3 0 0 CODE 0 text C:\Users\a_hui\AppData\Local\Temp\xcAsss4.o
 LCDprintc@c 502 0 COMRAM 1 cstackCOMRAM dist/default/debug\lab11.debug.o
 LCDprintf@i 57B 0 BANK5 1 cstackBANK5 dist/default/debug\lab11.debug.o
 LCDprints@c 512 0 COMRAM 1 cstackCOMRAM dist/default/debug\lab11.debug.o
@@ -740,8 +740,8 @@ _ADRESH 3EB 0 ABS 0 - dist/default/debug\lab11.debug.o
 _ADRESL 3EA 0 ABS 0 - dist/default/debug\lab11.debug.o
 _ANSELD 418 0 ABS 0 - dist/default/debug\lab11.debug.o
 ___awdiv@dividend 501 0 COMRAM 1 cstackCOMRAM dist/default/debug\lab11.debug.o
-___inthi_sp 0 0 STACK 2 stack C:\Users\a_hui\AppData\Local\Temp\xcAs10dk.o
-___intlo_sp 0 0 STACK 2 stack C:\Users\a_hui\AppData\Local\Temp\xcAs10dk.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\a_hui\AppData\Local\Temp\xcAsss4.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\a_hui\AppData\Local\Temp\xcAsss4.o
 __Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/debug\lab11.debug.o
 ___fldiv@aexp 527 0 COMRAM 1 cstackCOMRAM dist/default/debug\lab11.debug.o
 ___fldiv@bexp 526 0 COMRAM 1 cstackCOMRAM dist/default/debug\lab11.debug.o
@@ -776,7 +776,7 @@ _TRISAbits 4C6 0 ABS 0 - dist/default/debug\lab11.debug.o
 ___rparam_used 1 0 ABS 0 - dist/default/debug\lab11.debug.o
 LCDinstruct@instr 502 0 COMRAM 1 cstackCOMRAM dist/default/debug\lab11.debug.o
 __pcstackBANK5 560 0 BANK5 1 cstackBANK5 dist/default/debug\lab11.debug.o
-isa$xinst 0 0 ABS 0 - C:\Users\a_hui\AppData\Local\Temp\xcAs10dk.o
+isa$xinst 0 0 ABS 0 - C:\Users\a_hui\AppData\Local\Temp\xcAsss4.o
 _toString 3D90 0 CODE 0 text8 dist/default/debug\lab11.debug.o
 analogMap@analog_reading 560 0 BANK5 1 cstackBANK5 dist/default/debug\lab11.debug.o
 __Hbank5 0 0 ABS 0 bank5 dist/default/debug\lab11.debug.o
@@ -835,7 +835,7 @@ analogMap@analog_min 564 0 BANK5 1 cstackBANK5 dist/default/debug\lab11.debug.o
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/debug\lab11.debug.o
 __Hbigram 0 0 ABS 0 bigram dist/default/debug\lab11.debug.o
 __Hbigsfr 0 0 ABS 0 bigsfr dist/default/debug\lab11.debug.o
-__smallconst 2600 0 SMALLCONST 0 smallconst C:\Users\a_hui\AppData\Local\Temp\xcAs10dk.o
+__smallconst 2600 0 SMALLCONST 0 smallconst C:\Users\a_hui\AppData\Local\Temp\xcAsss4.o
 __end_of_toString 3E04 0 CODE 0 text8 dist/default/debug\lab11.debug.o
 ___xxtofl@arg 50B 0 COMRAM 1 cstackCOMRAM dist/default/debug\lab11.debug.o
 ___xxtofl@exp 50A 0 COMRAM 1 cstackCOMRAM dist/default/debug\lab11.debug.o
@@ -986,11 +986,11 @@ ___fldiv@rem 51B 0 COMRAM 1 cstackCOMRAM dist/default/debug\lab11.debug.o
 __Lfarbss 0 0 FARRAM 0 farbss dist/default/debug\lab11.debug.o
 ___lwdiv@divisor 503 0 COMRAM 1 cstackCOMRAM dist/default/debug\lab11.debug.o
 __Lfardata 0 0 FARRAM 0 fardata dist/default/debug\lab11.debug.o
-isa$std 1 0 ABS 0 - C:\Users\a_hui\AppData\Local\Temp\xcAs10dk.o
+isa$std 1 0 ABS 0 - C:\Users\a_hui\AppData\Local\Temp\xcAsss4.o
 ___fldiv@new_exp 520 0 COMRAM 1 cstackCOMRAM dist/default/debug\lab11.debug.o
 toString@string 50B 0 COMRAM 1 cstackCOMRAM dist/default/debug\lab11.debug.o
-stackhi 0 0 ABS 0 - C:\Users\a_hui\AppData\Local\Temp\xcAs10dk.o
-stacklo 0 0 ABS 0 - C:\Users\a_hui\AppData\Local\Temp\xcAs10dk.o
+stackhi 0 0 ABS 0 - C:\Users\a_hui\AppData\Local\Temp\xcAsss4.o
+stacklo 0 0 ABS 0 - C:\Users\a_hui\AppData\Local\Temp\xcAsss4.o
 LCDprintf@args 583 0 BANK5 1 cstackBANK5 dist/default/debug\lab11.debug.o
 __Lirdata 0 0 CODE 0 irdata dist/default/debug\lab11.debug.o
 _ADCON0bits 3F3 0 ABS 0 - dist/default/debug\lab11.debug.o
@@ -1044,7 +1044,7 @@ __Ltext16 0 0 ABS 0 text16 dist/default/debug\lab11.debug.o
 __Ltext17 0 0 ABS 0 text17 dist/default/debug\lab11.debug.o
 __Ltext18 0 0 ABS 0 text18 dist/default/debug\lab11.debug.o
 __Ltext19 0 0 ABS 0 text19 dist/default/debug\lab11.debug.o
-__ramtop 2600 0 RAM 0 ramtop C:\Users\a_hui\AppData\Local\Temp\xcAs10dk.o
+__ramtop 2600 0 RAM 0 ramtop C:\Users\a_hui\AppData\Local\Temp\xcAsss4.o
 __Lpowerup 0 0 CODE 0 powerup dist/default/debug\lab11.debug.o
 ?___xxtofl 501 0 COMRAM 1 cstackCOMRAM dist/default/debug\lab11.debug.o
 __Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/debug\lab11.debug.o
@@ -1053,8 +1053,8 @@ ___fladd@bexp 536 0 COMRAM 1 cstackCOMRAM dist/default/debug\lab11.debug.o
 ___fltol@sign1 509 0 COMRAM 1 cstackCOMRAM dist/default/debug\lab11.debug.o
 __psmallconst 2600 0 SMALLCONST 0 smallconst dist/default/debug\lab11.debug.o
 __Lreset_vec 0 0 CODE 0 reset_vec dist/default/debug\lab11.debug.o
-___heap_hi 0 0 ABS 0 - C:\Users\a_hui\AppData\Local\Temp\xcAs10dk.o
-___heap_lo 0 0 ABS 0 - C:\Users\a_hui\AppData\Local\Temp\xcAs10dk.o
+___heap_hi 0 0 ABS 0 - C:\Users\a_hui\AppData\Local\Temp\xcAsss4.o
+___heap_lo 0 0 ABS 0 - C:\Users\a_hui\AppData\Local\Temp\xcAsss4.o
 ___fltol@f1 501 0 COMRAM 1 cstackCOMRAM dist/default/debug\lab11.debug.o
 ___param_bank 0 0 ABS 0 - dist/default/debug\lab11.debug.o
 __Hbigdata 0 0 BIGRAM 1 bigdata dist/default/debug\lab11.debug.o

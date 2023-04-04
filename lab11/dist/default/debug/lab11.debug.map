@@ -6,9 +6,9 @@ Linker command line:
   --edf=C:/Users/a_hui/.mchp_packs/Microchip/PIC18F-Q_DFP/1.16.368/xc8\pic\dat\20230209155309_en.msgs \
   -cn -h+dist/default/debug\lab11.debug.sym \
   --cmf=dist/default/debug\lab11.debug.cmf -z -Q18F57Q43 \
-  -oC:\Users\a_hui\AppData\Local\Temp\xcAs10dk.4 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\a_hui\AppData\Local\Temp\xcAsss4.4 --defsym=__MPLAB_BUILD=1 \
   --fixupoverflow=error -Mdist/default/debug/lab11.debug.map \
-  --md=C:\Users\a_hui\AppData\Local\Temp\xcAs10dk.dat -E1 -ver=XC8 Compiler \
+  --md=C:\Users\a_hui\AppData\Local\Temp\xcAsss4.dat -E1 -ver=XC8 Compiler \
   --acfsm=1493 -ACODE=00h-01FFFFh -ACONST=00h-01FFFFh \
   -ASMALLCONST=02600h-026FFhx474 \
   -AMEDIUMCONST=02600h-0FFFFh,012600h-01FFFFh -ACOMRAM=0501h-055Fh \
@@ -34,7 +34,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\a_hui\AppData\Local\Temp\xcAs10dk.o \
+  C:\Users\a_hui\AppData\Local\Temp\xcAsss4.o \
   dist/default/debug\lab11.debug.o 
 
 Object code version is 3.11
@@ -44,7 +44,7 @@ Machine type is 18F57Q43
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\a_hui\AppData\Local\Temp\xcAs10dk.o
+C:\Users\a_hui\AppData\Local\Temp\xcAsss4.o
                 idloc                            200000   200000       40        0       5
                 config                           300000   300000        A        0       4
                 init                              1FFFC    1FFFC        4     FFFE       0

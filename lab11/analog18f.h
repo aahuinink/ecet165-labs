@@ -22,7 +22,8 @@ extern "C" {
 
 #define ADC_A3 0x03
 #define ADC_A4 0x04
-
+#define POT_READ analogRead(ANSELAbits.ANSELA3, TRISAbits.TRISA3, ADC_A3)
+#define LUX_READ analogRead(ANSELAbits.ANSELA4, TRISAbits.TRISA4, ADC_A4)
 // ============================ GLOBAL VARIABLES ========================== //
 
 // ============================ FUNCTION PROTOTYPES ========================== //

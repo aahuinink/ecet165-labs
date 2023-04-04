@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.40 build 20220703182018 
-                                                                                               Mon Apr 03 17:00:06 2023
+                                                                                               Mon Apr 03 17:23:16 2023
 
 Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1 
      1                           	processor	18F57Q43
@@ -517,12 +517,12 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    503 ;;
    504 ;; *************** function _main *****************
    505 ;; Defined at:
-   506 ;;		line 24 in file "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogT
+   506 ;;		line 22 in file "C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogT
       +est.c"
    507 ;; Parameters:    Size  Location     Type
    508 ;;		None
    509 ;; Auto vars:     Size  Location     Type
-   510 ;;  pot_voltage     4   39[BANK5 ] PTR unsigned char 
+   510 ;;  pot_voltage     4   39[BANK5 ] float 
    511 ;; Return value:  Size  Location     Type
    512 ;;                  1    wreg      void 
    513 ;; Registers used:
@@ -567,17 +567,17 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    542                           	callstack 124
    543   0038D4                     
    544                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
-      +                          ab11/analogTest.c: 27:     LCDinit();
+      +                          ab11/analogTest.c: 25:     LCDinit();
    545   0038D4  EC5D  F01D         	call	_LCDinit	;wreg free
    546   0038D8                     l113:
    547                           
    548                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
-      +                          ab11/analogTest.c: 34:         LCDinstruct(0x02);
+      +                          ab11/analogTest.c: 32:         LCDinstruct(0x02);
    549   0038D8  0E02               	movlw	2
    550   0038DA  EC3C  F01F         	call	_LCDinstruct
    551   0038DE                     
    552                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
-      +                          ab11/analogTest.c: 35:         pot_voltage = analogMap(analogRead(ANSELAbits.ANSELA3, TR
+      +                          ab11/analogTest.c: 33:         pot_voltage = analogMap(analogRead(ANSELAbits.ANSELA3, TR
       +                          ISAbits.TRISA3, 0x03), 4000, 0, 5.00, 0.00);
    553   0038DE  0104               	movlb	4	; () banked
    554   0038E0  B700               	btfsc	0,3,b	;volatile
@@ -650,7 +650,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    621   003974  C563  F58A         	movff	?_analogMap+3,main@pot_voltage+3
    622   003978                     
    623                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
-      +                          ab11/analogTest.c: 36:         LCDprintf("Pot voltage: ");
+      +                          ab11/analogTest.c: 34:         LCDprintf("Pot voltage: ");
    624   003978  0E01               	movlw	low STR_1
    625   00397A  6E59               	movwf	LCDprintf@shell^(0+1280),c
    626   00397C  0E26               	movlw	high STR_1
@@ -658,12 +658,12 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    628   003980  EC4E  F019         	call	_LCDprintf	;wreg free
    629   003984                     
    630                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
-      +                          ab11/analogTest.c: 37:         LCDgoto(0x40);
+      +                          ab11/analogTest.c: 35:         LCDgoto(0x40);
    631   003984  0E40               	movlw	64
    632   003986  EC24  F020         	call	_LCDgoto
    633   00398A                     
    634                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
-      +                          ab11/analogTest.c: 38:         LCDprintf("%1f2 V", pot_voltage);
+      +                          ab11/analogTest.c: 36:         LCDprintf("%1f2 V", pot_voltage);
    635   00398A  0E0F               	movlw	low STR_2
    636   00398C  6E59               	movwf	LCDprintf@shell^(0+1280),c
    637   00398E  0E26               	movlw	high STR_2
@@ -675,7 +675,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    643   0039A2  EC4E  F019         	call	_LCDprintf	;wreg free
    644   0039A6                     
    645                           ;C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/l
-      +                          ab11/analogTest.c: 39:         _delay((unsigned long)((1000)*(64000000/4000.0)));
+      +                          ab11/analogTest.c: 37:         _delay((unsigned long)((1000)*(64000000/4000.0)));
    646   0039A6  0E52               	movlw	82
    647   0039A8  0105               	movlb	5	; () banked
    648   0039AA  6F86               	movwf	(??_main+1)& (0+255),b
@@ -5784,7 +5784,7 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.40 build 20220703182018 
-Symbol Table                                                                                   Mon Apr 03 17:00:06 2023
+Symbol Table                                                                                   Mon Apr 03 17:23:16 2023
 
              ___fldiv@aexp 0527               ___fldiv@bexp 0526               ___fldiv@sign 051F  
                        l22 3BA2                         l31 3FA0                         l25 3D8E  

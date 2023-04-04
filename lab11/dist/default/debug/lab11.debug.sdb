@@ -7,7 +7,7 @@
 [v _analogRead analogRead `(ui  1 e 2 0 ]
 "57
 [v _analogMap analogMap `(d  1 e 4 0 ]
-"24 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c
+"22 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c
 [v _main main `(v  1 e 1 0 ]
 "15 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab6/lcd18f.c
 [v _LCDinstruct LCDinstruct `(v  1 e 1 0 ]
@@ -150,12 +150,12 @@
 [v _TRISAbits TRISAbits `VES224  1 e 1 @1222 ]
 "48490
 [v _TRISD TRISD `VEuc  1 e 1 @1225 ]
-"24 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c
+"22 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analogTest.c
 [v _main main `(v  1 e 1 0 ]
 {
-"30
-[v main@pot_voltage pot_voltage `d  1 a 4 39 ]
-"42
+"28
+[v main@pot_voltage pot_voltage `f  1 a 4 39 ]
+"40
 } 0
 "30 C:/Users/a_hui/OneDrive - Camosun College/term2/ecet165_embedded_mc/labs/ecet165-labs/lab11/analog18f.c
 [v _analogRead analogRead `(ui  1 e 2 0 ]
